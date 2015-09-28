@@ -23,7 +23,6 @@
 <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-<div class="container-fluid">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -43,18 +42,19 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    
-    <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-          <div class="embed-responsive embed-responsive-16by9">
-    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j3CaHeakZF4"></iframe>
-		  </div>
-      </div>
-	</div>
+    <div class="container-full" style="background:#000000">
+	    <div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	          <div class="embed-responsive embed-responsive-16by9">
+	    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j3CaHeakZF4"></iframe>
+			  </div>
+	      </div>
+		</div>
+	    </div>
     </div>
     
-<nav class="navbar navbar-default navbar-static-bottom fill">
+<nav class="navbar navbar-default navbar-static-bottom">
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
@@ -83,10 +83,12 @@
 		  </div><br />
        	</div>
       </div>
-    
-</div>
+      <br />
+      <p class="text-center">Justal "Latsuj" Kevin - 2015 Polytech'Nice Sophia</p>
+      
+	</div>
 </nav>
-</div>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
