@@ -3,9 +3,35 @@
 body,html {
 	height: 100%;
 	background-color: #f8f8f8;
+	overflow-y: 0;
 }
 
 .navbar {
 	margin-bottom: 0px;
 	border: none;
+}
+
+.navbar-brand {
+	line-height: 40px;
+	margin-top: -12px;
+}
+
+@media(max-width:767px){
+	h2{font-size: 12px;}
+	h4{font-size: 8px;}
+}
+
+@media(min-width:768px){
+	h2{font-size: 10px;}
+	h4{font-size: 10px;}
+}
+
+@media(min-width:992px){
+	h2{font-size: 14px;}
+	h4{font-size: 10px;}
+}
+
+@media(min-width:1200px){
+	h2{font-size: 16px;}
+	h4{font-size: 14px;}
 }
