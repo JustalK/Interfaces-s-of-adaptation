@@ -8,6 +8,11 @@
 	<link rel="import" href="title-top.html">
 	<link rel="import" href="col-top.html">
     <link rel="import" href="my-row.html">
+    <link rel="import" href="my-login.html">
+    <link rel="import" href="my-join.html">
+    
+    <link rel="import" href="my-container-full.html">
+    <link rel="import" href="my-movie.html">
     
     
     <style is="custom-style">
@@ -18,9 +23,26 @@
   <body>
   
     <bar-top>
-    		<my-container>
+    	<my-container>
+    		<my-row>
+    			<col-top>
+    				<title-top></title-top>
+    				<my-login></my-login>
+    				<my-join></my-join>
+    			</col-top>
+    		</my-row>
     	</my-container>
     </bar-top>
+    
+    <my-container-full>
+    	<my-container>
+    		<my-row>
+    			<col-top>
+					<my-movie></my-movie>
+    			</col-top>    		
+    		</my-row>
+    	</my-container>    
+    </my-container-full>
   </body>
 </html>
 
