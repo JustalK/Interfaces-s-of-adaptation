@@ -25,7 +25,7 @@
 \begin{document}
 
 \begin{center}
-\textbf{\Huge{Bootstrap contre Xamarin}}
+\textbf{\Huge{Bootstrap contre Polymer}}
 \line(1,0){300}\\
 DOSSIER D'ANALYSE DES DIFFERENCES\\
 \vspace{3cm}
@@ -47,6 +47,14 @@ DOSSIER D'ANALYSE DES DIFFERENCES\\
 \hspace*{0.6cm}Le premier probl\`eme rencontr\'e fut lorsque que j'essaya de coder une balise div de telle mani\`ere que celle-ci remplisse enti\`erement l'espace de l'application. Cette chose extr\`emement simple n'est pourtant pas impl\'ement\'e dans Bootstrap 3.0 et les versions sup\'erieur alors que cela se trouvait dans les versions ant\'erieur avec la class span. Apr\'es de longue recherches, il apparait donc impossible en pur Bootstrap de remplir un div \`a cent pour cent de la balise parent.De ce fait, j'ai du modifi\'e le CSS pour r\'ealiser le remplissage de la page. Pourquoi un tel choix des d\'eveloppeur de bootstrap ?
 
 margin-bottom : Seriously ?
+
+Compatibilite : WTF polymer !
+
+min-height ? WTF do not work !OK parce que tous ces putain d'elements sont en inline et non en block...Ok l'erreur
+
+Suivre un ordre pour appeler les modules au depart, les enfant en premier.
+
+encapsulation des elements ? content :X Merci la doc....pourrie.
 
 \section{Simple trouvaille d'optimisation}
 En farfouillant sur les documentations de Bootstrap, je suis tomb\'e sur une optimisation qui a retenu mon attention. Une chose simple et pourtant efficace que je ne faisait pas moi non plus. Les developpeurs de Bootstrap mettent toujours les scripts javascript en fin de page afin d'accelerer le chargement de la page. Cela peut paraitre stupide comme remarque mais je tiens \`a m'en souvenir, j'en fait donc par dans mon document.

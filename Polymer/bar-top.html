@@ -1,0 +1,29 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+    
+<dom-module id="bar-top">
+
+	<template>
+		<style>
+		/* CSS rules for your element */
+		:host {
+			display: block;
+			position:relative;
+			min-height:50px;
+			margin-bottom:20px;
+			z-index:1000;
+			border-width:0 0 1px;
+			background-color:#f8f8f8;
+			border-color:#e7e7e7;
+		}		
+		</style>
+    	<content></content>
+    		
+  </template>
+  
+  <script>
+  Polymer({
+    is: "bar-top"
+  });
+  </script>
+  
+</dom-module>
