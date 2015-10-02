@@ -1,0 +1,34 @@
+<dom-module id="pull-right">
+
+	<template>
+		<style>
+			:host {
+		  		display: block;
+		  		    float: right!important;
+		  		box-sizing: border-box;
+		  		
+		  		    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 40px;
+    margin-top: -12px;
+		  	}
+		  	
+		  			@media (min-width:768px) {
+			:host {
+				margin-left: -15px;
+			}
+		}
+		</style>
+		
+    	<content></content>
+    	
+  </template>
+
+  <script>
+  Polymer({
+    is: "pull-right"
+  });
+  </script>
+  
+</dom-module>

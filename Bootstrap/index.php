@@ -209,11 +209,9 @@
 		  </div><br />
        	</div>
       </div>
-      <br />
-      <h4 class="text-center">Justal "Latsuj" Kevin - 2015 Polytech'Nice Sophia</h4>
-      
 	</div>
 </nav>
+<h4 style="position: absolute;bottom: 10px;text-align:center;width:100%;">Justal "Latsuj" Kevin - 2015 Polytech'Nice Sophia</h4>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

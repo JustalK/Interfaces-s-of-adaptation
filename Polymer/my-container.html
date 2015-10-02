@@ -6,16 +6,18 @@
 		<style>
 		/* CSS rules for your element */		
 		:host {
-			display: block;
-			margin-right:auto;
-			margin-left:auto;
-			max-width:100%;	
+			/* From Boostrap */
+				padding-right: 15px;
+    			padding-left: 15px;
+    			margin-right: auto;
+    			margin-left: auto;
+    			box-sizing: border-box;
+    			display: block;
+    			height: 50px;
 		}
 		
 		@media (min-width:768px) {
 			:host {
-					padding-right:60px;
-		padding-left:60px;
 				width:750px;
 			}
 		}
@@ -28,6 +30,21 @@
 			:host {
 				width:1170px;
 			}
+		}
+		
+		:host::before {
+		    display: table;
+    		content: " ";
+		}
+		
+		:host::after {
+			clear: both;
+		}
+		
+		:after, :before {
+    		-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+    		box-sizing: border-box;
 		}
 		</style>
 		<content></content>

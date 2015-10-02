@@ -1,6 +1,6 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
     
-<dom-module id="bar-top">
+<dom-module id="bar-bot">
 
 	<template>
 		<style>
@@ -11,10 +11,11 @@
     		border-color: #e7e7e7;
 			z-index: 1000;
     		border-width: 0 0 1px;
-    		position: relative;
+    		position: absolute;
     		min-height: 50px;
     		display: block;
 			box-sizing: border-box;
+			width: 100%;
 			
 			/* From main.css */
     		border: none;
@@ -47,7 +48,7 @@
   
   <script>
   Polymer({
-    is: "bar-top"
+    is: "bar-bot"
   });
   </script>
   

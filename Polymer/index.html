@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="ISO-8859-1">
+  
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
   	<link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="bar-top.html">
+    <link rel="import" href="bar-bot.html">
+    <link rel="import" href="resp-div.html">
     <link rel="import" href="my-container.html">
 	<link rel="import" href="title-top.html">
 	<link rel="import" href="col-top.html">
     <link rel="import" href="my-row.html">
+    <link rel="import" href="pull-left.html">
+    <link rel="import" href="pull-right.html">
     <link rel="import" href="my-login.html">
     <link rel="import" href="my-join.html">
     
     <link rel="import" href="my-container-full.html">
     <link rel="import" href="my-movie.html">
+    <link rel="import" href="my-footer.html">
+    <link rel="import" href="col-mid.html">
     
     
     <style is="custom-style">
-   		html,body {width: 100%;margin: 0px;}
+   		html,body {
+   				width: 100%;
+   				height: 100%;
+   				margin: 0px;
+   				font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    			background-color: #f8f8f8;
+   			}
 	</style>
 	
   </head>
@@ -26,9 +40,13 @@
     	<my-container>
     		<my-row>
     			<col-top>
-    				<title-top></title-top>
-    				<my-login></my-login>
-    				<my-join></my-join>
+    				<pull-left>
+    					<title-top></title-top>
+    				</pull-left>
+    				<pull-right>
+	    				<my-join></my-join>
+	    				<my-login></my-login>
+    				</pull-right>
     			</col-top>
     		</my-row>
     	</my-container>
@@ -37,12 +55,24 @@
     <my-container-full>
     	<my-container>
     		<my-row>
-    			<col-top>
-					<my-movie></my-movie>
-    			</col-top>    		
+    			<col-mid>
+					<my-movie link="https://www.youtube.com/embed/RgKAFK5djSk"></my-movie>
+    			</col-mid>    		
     		</my-row>
-    	</my-container>    
+    	</my-container>
     </my-container-full>
+    
+    <bar-bot>
+    	<my-container>
+    		<my-row>
+    			<resp-div name="Aon Luckkana" link="http://www.viki.com/player/1035091v"></resp-div>
+    			<resp-div name="My Jam" link="https://www.youtube.com/embed/5dN3JV6sE9Q"></resp-div>
+    			<resp-div name="Five More Hours" link="https://www.youtube.com/embed/j3CaHeakZF4"></resp-div>
+    			<resp-div name="Nyan Nyan" link="http://www.dailymotion.com/embed/video/xj20tk"></resp-div>
+    		</my-row>
+    	</my-container>
+    </bar-bot>
+    	<my-footer></my-footer>
   </body>
 </html>
 

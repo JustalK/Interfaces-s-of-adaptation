@@ -1,0 +1,63 @@
+
+	<link rel="import" href="title-top.html">
+
+<dom-module id="my-footer">
+
+	<template>
+		<style>
+		/* CSS rules for your element */		
+		:host {
+			/* From Boostrap */
+			text-align: center;
+		    color: #333333;
+		
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+			
+			    margin-top: 10px;
+    margin-bottom: 10px;
+		
+		    display: block;
+	        
+	        font-size: 18px;
+    		z-idnex: 5000;
+		}
+
+		@media(max-width:767px){
+			:host{
+				font-size: 8px;
+			}
+		}
+		
+		@media(min-width:768px){
+			:host{
+				font-size: 10px;
+			}
+		}
+		
+		@media(min-width:992px){
+			:host{
+				font-size: 10px;
+			}
+		}
+		
+		@media(min-width:1200px){
+			:host{
+				font-size: 14px;
+			}
+		}
+		
+		</style>
+		
+		Justal "Latsuj" Kevin - 2015 Polytech'Nice Sophia
+		
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-footer"
+  });
+  </script>
+  
+</dom-module>

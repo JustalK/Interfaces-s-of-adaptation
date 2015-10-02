@@ -20,12 +20,15 @@
     		height: 100%;
 		}
 		</style>
-		<iframe src="https://www.youtube.com/embed/RgKAFK5djSk" frameBorder="0"></iframe>
+		<iframe src="{{link}}" frameBorder="0"></iframe>
   </template>
 
   <script>
   Polymer({
-    is: "my-movie"
+    is: "my-movie",
+    properties: {
+		link: String
+	}
   });
   </script>
   
