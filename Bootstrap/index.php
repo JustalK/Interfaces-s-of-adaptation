@@ -82,11 +82,6 @@
 	    			<div class="row">
 	      				<div class="col-md-12">
 	          				<div class="embed-responsive embed-responsive-16by9" style="background:#000000">
-	    						<br />
-	    							<div style="background:#f8f8f8">
-	    							qsd
-	    							</div>
-	    						<br />
 			  				</div>
 	      				</div>
 					</div>
@@ -211,7 +206,6 @@
       </div>
 	</div>
 </nav>
-<h4 style="position: absolute;bottom: 10px;text-align:center;width:100%;">Justal "Latsuj" Kevin - 2015 Polytech'Nice Sophia</h4>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

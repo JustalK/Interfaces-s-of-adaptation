@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="ISO-8859-1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="UTF-8">
+  
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
   
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
   	<link rel="import" href="/bower_components/polymer/polymer.html">
@@ -22,6 +26,8 @@
     <link rel="import" href="my-footer.html">
     <link rel="import" href="col-mid.html">
     
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
     
     <style is="custom-style">
    		html,body {
@@ -31,8 +37,10 @@
    				font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     			background-color: #f8f8f8;
    			}
+   		.slick-slider {
+   			margin-bottom: 0px;
+   		}
 	</style>
-	
   </head>
   <body>
   
@@ -56,7 +64,12 @@
     	<my-container>
     		<my-row>
     			<col-mid>
-					<my-movie link="https://www.youtube.com/embed/RgKAFK5djSk"></my-movie>
+    				<div class="your-class">
+					  <div><my-movie link="https://www.youtube.com/embed/RgKAFK5djSk"></my-movie></div>
+					  <div><my-movie link="https://www.youtube.com/embed/j3CaHeakZF4"></my-movie></div>
+					  <div><my-movie link="https://www.youtube.com/embed/5dN3JV6sE9Q"></my-movie></div>
+					  <div><my-movie link="https://www.youtube.com/embed/YqeW9_5kURI"></my-movie></div>
+					</div>
     			</col-mid>    		
     		</my-row>
     	</my-container>
@@ -72,7 +85,14 @@
     		</my-row>
     	</my-container>
     </bar-bot>
-    	<my-footer></my-footer>
+    
+    	  <script type="text/javascript">
+    $(document).ready(function(){   		
+      $('.your-class').slick({
+    	  arrows: true  
+      });
+    });
+  </script>
   </body>
 </html>
 
