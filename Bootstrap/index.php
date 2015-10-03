@@ -76,104 +76,526 @@
 		</div>
 	</div>
 	</div>
-  
-  	<div id="elementSlide2" class="container-full" style="background:#000000">
-        		<div class="container">
-	    			<div class="row">
-	      				<div class="col-md-12">
-	          				<div class="embed-responsive embed-responsive-16by9" style="background:#000000">
-			  				</div>
-	      				</div>
-					</div>
-	    		</div>
-  	</div>
-  
-    <div id="elementSlide" class="container-full" style="background:#000000">
+   
+    <div class="container-fluid black">
     
     	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-  
-  		<!-- Indicators -->
-  		<ol class="carousel-indicators">
-    		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    		<li data-target="#myCarousel" data-slide-to="1"></li>
-    		<li data-target="#myCarousel" data-slide-to="2"></li>
-    		<li data-target="#myCarousel" data-slide-to="3"></li>
-  		</ol>
 
   		<!-- Wrapper for slides -->
   		<div class="carousel-inner" role="listbox">
   		
-    		<div class="item active">
+    		<div class="item active" >
     			<div class="container">
 	    			<div class="row">
 	      				<div class="col-md-12">
+	      					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="z-index:1000;width:5%;">
+    							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    							<span class="sr-only">Previous</span>
+  							</a> 
+					  		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="z-index:1000;width:5%;">
+					    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    		<span class="sr-only">Next</span>
+					  		</a>
 	          				<div class="embed-responsive embed-responsive-16by9">
 	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RgKAFK5djSk"></iframe>
 			  				</div>
 	      				</div>
 					</div>
 	    		</div>
+	    		
+	    		<!-- AFFICHAGE --> 
+				<div class="title text-center">
+					<strong>See you again</strong>
+				</div>
+				<div class="row lyric">
+					<div class="col-md-6">
+						<br />
+						<div class="row">
+							<div class="col-md-6 text-center">
+								<img src="https://upload.wikimedia.org/wikipedia/en/0/08/Wiz_Khalifa_Feat._Charlie_Puth_-_See_You_Again_%28Official_Single_Cover%29.png" class="img-responsive" alt="Responsive image">
+								<br />
+							</div>
+							<div class="col-md-6">
+								  <table class="table table-bordered">
+								    <tbody>
+								      <tr>
+								        <td>Studio</td>
+								        <td>Atlantic Records</td>
+								      </tr>
+								      <tr>
+								        <td>Singer</td>
+								        <td>Wiz Khalifa & Charlie Puth</td>
+								      </tr>
+								      <tr>
+								        <td>Duration</td>
+								        <td>3:49</td>
+								      </tr>
+								      <tr>
+								        <td>Genre</td>
+								        <td>Hip-hop/Pop</td>
+								      </tr>
+								      <tr>
+								        <td>Publication</td>
+								        <td>17 mars 2015</td>
+								      </tr>
+								      <tr>
+								        <td>Prix</td>
+								        <td>1.99 $</td>
+								      </tr>
+								    </tbody>
+								  </table>
+								  <br />
+								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+							</div>
+						</div>
+				</div>
+	      		<div class="col-md-6">
+	      			<br />
+						<div class="text-center write">
+							<h2>It's been a long day without you, my friend<br />
+							And I'll tell you all about it when I see you again<br />
+							We've come a long way from where we began<br />
+							Oh, I'll tell you all about it when I see you again<br />
+							When I see you again<br /><br />
+							
+							Damn, who knew?<br />
+							All the planes we flew<br />
+							Good things we've been through<br />
+							That I'll be standing right here talking to you<br />
+							'Bout another path<br />
+							I know we loved to hit the road and laugh<br />
+							But something told me that it wouldn't last<br />
+							Had to switch up<br />
+							Look at things different, see the bigger picture<br />
+							Those were the days<br />
+							Hard work forever pays<br />
+							Now I see you in a better place <br /><br />
+							
+							How can we not talk about family when family's all that we got?<br />
+							Everything I went through you were standing there by my side<br />
+							And now you gon' be with me for the last ride<br /><br />
+							
+							It's been a long day without you, my friend<br />
+							And I'll tell you all about it when I see you again<br />
+							We've come a long way (yeah, we came a long way) from where we began<br />
+							Oh, I'll tell you all about it when I see you again<br />
+							When I see you again<br /><br />
+							
+							First you both go out your way<br />
+							And the vibe is feeling strong<br />
+							And what's small turn to a friendship<br />
+							A friendship turn to a bond<br />
+							And that bond will never be broken<br />
+							The love will never get lost<br />
+							And when brotherhood come first<br />
+							Then the line will never be crossed<br />
+							Established it on our own<br />
+							When that line had to be drawn<br />
+							And that line is what we reach<br />
+							So remember me when I'm gone<br /><br />
+							
+							How can we not talk about family when family's all that we got?<br />
+							Everything I went through you were standing there by my side<br />
+							And now you gon' be with me for the last ride<br />
+							
+							So let the light guide your way, yeah<br />
+							Hold every memory as you go<br />
+							And every road you take, will always lead you home, home<br /><br />
+							
+							It's been a long day without you, my friend<br />
+							And I'll tell you all about it when I see you again<br />
+							We've come a long way from where we began<br />
+							Oh, I'll tell you all about it when I see you again<br />
+							When I see you again<br /></h2>
+						</div>
+					</div>
+				</div>
     		</div>
+    		<!-- END AFFICHAGE --> 
 
     		<div class="item">
         		<div class="container">
 	    			<div class="row">
 	      				<div class="col-md-12">
+		      					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="z-index:1000;width:5%;">
+	    							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    							<span class="sr-only">Previous</span>
+	  							</a> 
+						  		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="z-index:1000;width:5%;">
+						    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    		<span class="sr-only">Next</span>
+						  		</a>
 	          				<div class="embed-responsive embed-responsive-16by9">
 	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j3CaHeakZF4"></iframe>
 			  				</div>
 	      				</div>
 					</div>
 	    		</div>
+	    		
+	    		<!-- AFFICHAGE --> 
+				<div class="title text-center">
+					<strong>Five more hours</strong>
+				</div>
+				<div class="row lyric">
+					<div class="col-md-6">
+						<br />
+						<div class="row">
+							<div class="col-md-6 text-center">
+								<img src="http://paroles-et-traduction.com/wp-content/uploads/2015/03/deorro-five-more-hours-chris-brown.jpg" class="img-responsive" alt="Responsive image">
+								<br />
+							</div>
+							<div class="col-md-6">
+								  <table class="table table-bordered">
+								    <tbody>
+								      <tr>
+								        <td>Studio</td>
+								        <td>LE7ELS</td>
+								      </tr>
+								      <tr>
+								        <td>Singer</td>
+								        <td>Chris Brown</td>
+								      </tr>
+								      <tr>
+								        <td>Duration</td>
+								        <td>5:26</td>
+								      </tr>
+								      <tr>
+								        <td>Genre</td>
+								        <td>Electro house</td>
+								      </tr>
+								      <tr>
+								        <td>Publication</td>
+								        <td>7 April 2014</td>
+								      </tr>
+								      <tr>
+								        <td>Prix</td>
+								        <td>1.99 $</td>
+								      </tr>
+								    </tbody>
+								  </table>
+								  <br />
+								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+							</div>
+						</div>
+				</div>
+	      		<div class="col-md-6">
+	      			<br />
+						<div class="text-center write">
+							<h2>What you wanna do baby? Where you wanna go?<br />
+							I'll take you to the moon baby, I'll take you to the floor<br />
+							I'll treat you like a real lady, no matter where you go<br />
+							Just give me some time baby, cause you know<br />
+							Even when we're apart I know my heart is still there with you<br />
+							5 more hours till the night is ours and I'm in bed with you<br /><br />
+							
+							This right here is my type of party<br />
+							5 more hours, we're just getting started<br />
+							This right here is my type of party<br />
+							5 more hours, we're just getting started<br />
+							(5 more hours, we're just getting started)<br />
+							
+							How you wanna feel baby? What you wanna know?<br />
+							Just pour another drink baby, come on pour a little more<br />
+							I'll treat you like a real lady, I'll keep you out the cold<br />
+							I'll give you all my time baby, you know even when we're apart<br />
+							I know my heart is still there with you<br />
+							5 more hours till the night is ours and I'm in bed with you<br /><br />
+							
+							This right here is my type of party<br />
+							5 more hours, we're just getting started<br />
+							This right here is my type of party<br />
+							5 more hours, we're just getting started<br /><br />
+							
+							I follow the sound of your heartbeat<br />
+							How it always calls me, finding my way back to you<br />
+							I'm feeling it more now than ever<br />
+							I'll do this forever, just to spend a night with you<br />
+							
+							This right here is my type of party<br />
+							5 more hours, we're just getting started<br />
+							This right here is my type of party<br />
+							5 more hours, we're just getting started<br /><br /></h2>
+						</div>
+					</div>
+				</div>
     		</div>
+    		<!-- END AFFICHAGE --> 	    		
 
     		<div class="item">
             	<div class="container">
 	    			<div class="row">
 	      				<div class="col-md-12">
+		      					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="z-index:1000;width:5%;">
+	    							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    							<span class="sr-only">Previous</span>
+	  							</a> 
+						  		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="z-index:1000;width:5%;">
+						    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    		<span class="sr-only">Next</span>
+						  		</a>
 	          				<div class="embed-responsive embed-responsive-16by9">
 	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5dN3JV6sE9Q"></iframe>
 			  				</div>
 	      				</div>
 					</div>
 	    		</div>
+	    		
+	    		<!-- AFFICHAGE --> 
+				<div class="title text-center">
+					<strong>My Jam</strong>
+				</div>
+				<div class="row lyric">
+					<div class="col-md-6">
+						<br />
+						<div class="row">
+							<div class="col-md-6 text-center">
+								<img src="http://ecx.images-amazon.com/images/I/612e4seyGML._SY300_.jpg" class="img-responsive" alt="Responsive image">
+								<br />
+							</div>
+							<div class="col-md-6">
+								  <table class="table table-bordered">
+								    <tbody>
+								      <tr>
+								        <td>Studio</td>
+								        <td>Tycoon</td>
+								      </tr>
+								      <tr>
+								        <td>Singer</td>
+								        <td>Boddy Brackins</td>
+								      </tr>
+								      <tr>
+								        <td>Duration</td>
+								        <td>3:50</td>
+								      </tr>
+								      <tr>
+								        <td>Genre</td>
+								        <td>Hip-hop/Pop</td>
+								      </tr>
+								      <tr>
+								        <td>Publication</td>
+								        <td>8 February 2015</td>
+								      </tr>
+								      <tr>
+								        <td>Prix</td>
+								        <td>1.99 $</td>
+								      </tr>
+								    </tbody>
+								  </table>
+								  <br />
+								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+							</div>
+						</div>
+				</div>
+	      		<div class="col-md-6">
+	      			<br />
+						<div class="text-center write">
+							<h2>Made another hit for the radio station<br /><br />
+
+								It's alright<br />
+								Ooh baby it's alright<br />
+								Do a movin' like a long flight<br />
+								Turn up, yeah I just might<br />
+								Get it poppin' I'ma have some fun<br />
+								Yeah baby think you are the one<br />
+								On replay like my favorite song<br />
+								Do you, don't take too long<br />
+								I was mobbin' to the bay with my J's on<br />
+								Vibing to the beat, I'm in my zone<br />
+								Movin' in like it was a dance song<br /><br />
+								
+								I think I hear my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								This my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								I hear the 808 kicking in<br />
+								Whoa, whoa, whoa<br />
+								This my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								
+								Made another hit, it's way past the sequel<br />
+								Catch me in trafffic turnin' up with my people<br />
+								May be in the East End, double d's regal<br />
+								She wanna find me, she ain't trippin' off Nemo<br />
+								Bat to LA, I built a new bridge<br />
+								Take you to the crib, show you how a boss live<br />
+								Gonna stay mobbin' with a Fairfax fit<br />
+								Turn up, boo thang cause that's my ish<br />
+								I was mobbin' to the bay, A's hat on<br />
+								Vibing to the beat, I'm in my zone<br />
+								Mobbin' hard, yeah I get my jam on<br />
+								Turn up<br /><br />
+								
+								I think I hear my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								This my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								I hear the 808 kicking in<br />
+								Whoa, whoa, whoa<br />
+								This my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								
+								It ain't loud enough, I wanna hear my jam bang<br />
+								Keep it on blast, don't you think about changing<br />
+								Still going hard darling, please be patient<br />
+								More slaps coming and they all is amazing<br />
+								We could hit the function or play slaps and stay in<br />
+								Hotel, motel, or the Holiday Inn<br />
+								Girl keep my jams on heavy rotation<br />
+								Made another hit for the radio station<br /><br />
+								
+								I was mobbin' in LA in my Lambo<br />
+								Vibing to the beat in my zone<br />
+								Swaggin' out like it was a dance song<br />
+								
+								I think I hear my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								This my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								I hear the 808 kicking in<br />
+								Whoa, whoa, whoa<br />
+								This my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br /><br />
+								
+								Oh, yeah that's my shit<br />
+								Sittin' shotgun yeah that's my chick<br />
+								Leave it out front, don't move my whip<br />
+								Oh, I just raised my price<br />
+								Hands in the air I just raised my ice<br />
+								Looking for a young Holly that'll spend one night<br /><br />
+								
+								I was mobbin' in LA in my Lambo<br />
+								Vibing to the beat in my zone<br />
+								Swaggin' out like it was a dance song<br /><br />
+								
+								I think I hear my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								This my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br />
+								I hear the 808 kicking in<br />
+								Whoa, whoa, whoa<br />
+								This my jam coming in<br />
+								Whoa, whoa, whoa, whoa<br /><br /></h2>
+						</div>
+					</div>
+				</div>
     		</div>
+    		<!-- END AFFICHAGE --> 	    		
 
     		<div class="item">
             	<div class="container">
 	    			<div class="row">
 	      				<div class="col-md-12">
+		      					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="z-index:1000;width:5%;">
+	    							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    							<span class="sr-only">Previous</span>
+	  							</a> 
+						  		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="z-index:1000;width:5%;">
+						    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    		<span class="sr-only">Next</span>
+						  		</a>
 	          				<div class="embed-responsive embed-responsive-16by9">
 	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YqeW9_5kURI"></iframe>
 			  				</div>
 	      				</div>
 					</div>
 	    		</div>
+	    		
+	    		<!-- AFFICHAGE --> 
+				<div class="title text-center">
+					<strong>Lean on</strong>
+				</div>
+				<div class="row lyric">
+					<div class="col-md-6">
+						<br />
+						<div class="row">
+							<div class="col-md-6 text-center">
+								<img src="http://img.allformusic.fr/pochette/300/m/major-lazer/lean-on-single.jpg" class="img-responsive" alt="Responsive image">
+								<br />
+							</div>
+							<div class="col-md-6">
+								  <table class="table table-bordered">
+								    <tbody>
+								      <tr>
+								        <td>Studio</td>
+								        <td>Mad Decent</td>
+								      </tr>
+								      <tr>
+								        <td>Singer</td>
+								        <td>Major Lazer</td>
+								      </tr>
+								      <tr>
+								        <td>Duration</td>
+								        <td>2:56</td>
+								      </tr>
+								      <tr>
+								        <td>Genre</td>
+								        <td>EDM</td>
+								      </tr>
+								      <tr>
+								        <td>Publication</td>
+								        <td>2 mars 2015</td>
+								      </tr>
+								      <tr>
+								        <td>Prix</td>
+								        <td>1.99 $</td>
+								      </tr>
+								    </tbody>
+								  </table>
+								  <br />
+								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+							</div>
+						</div>
+				</div>
+	      		<div class="col-md-6">
+	      			<br />
+						<div class="text-center write">
+							<h2>Do you recall, not long ago<br />
+									We would walk on the sidewalk<br />
+									Innocent, remember?<br />
+									All we did was care for each other<br /><br />
+									
+									But the night was warm<br />
+									We were bold and young<br />
+									All around the wind blows<br />
+									We would only hold on to let go<br /><br />
+									
+									Blow a kiss, fire a gun<br />
+									We need someone to lean on<br />
+									Blow a kiss, fire a gun<br />
+									All we need is somebody to lean on<br /><br />
+									
+									What will we do when we get old?<br />
+									Will we walk down the same road?<br />
+									Will you be there by my side?<br />
+									Standing strong as the waves roll over<br /><br />
+									
+									When the nights are long<br />
+									Longing for you to come home<br />
+									All around the wind blows<br />
+									We would only hold on to let go<br /><br />
+									
+									Blow a kiss, fire a gun<br />
+									We need someone to lean on<br />
+									Blow a kiss, fire a gun<br />
+									All we need is somebody to lean on<br /><br />
+									
+									All we need is somebody to lean on<br />
+									All we need is somebody to lean on<br />
+									Lean on, lean on, lean on, lean on...<br /><br />
+									
+									Blow a kiss, fire a gun<br />
+									We need someone to lean on<br />
+									Blow a kiss, fire a gun<br />
+									All we need is somebody to lean on<br /><br /></h2>
+						</div>
+					</div>
+				</div>
     		</div>
-  		
-  		</div>
-  
-    	<!-- Left and right controls -->
-  		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    		<span class="sr-only">Previous</span>
-  		</a>
-  		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    		<span class="sr-only">Next</span>
-  		</a>
-
-	</div>
-	      	
-	      	<!-- 
-	          <div class="embed-responsive embed-responsive-16by9">
-	    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j3CaHeakZF4"></iframe>
-			  </div>
-			  -->
+    		<!-- END AFFICHAGE --> 	    		
 	      </div>
 		</div>
-	    </div>
-    </div>
+	    </div>   
+    <br />  
     
 <nav class="navbar navbar-default navbar-static-bottom">
     <div class="container">

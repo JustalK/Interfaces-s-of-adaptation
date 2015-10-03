@@ -1,3 +1,7 @@
 $( document ).ready(function() {
-	$('#elementSlide2').hide();
+	$( ".lyric" ).hide();
+	$( ".title" ).click(function() {
+		$( ".lyric" ).slideToggle( "fast" );
+	});
+
 });

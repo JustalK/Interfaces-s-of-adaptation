@@ -3,7 +3,10 @@
 body,html {
 	height: 100%;
 	background-color: #f8f8f8;
-	overflow-y: 0;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 .navbar {
@@ -34,4 +37,47 @@ body,html {
 @media(min-width:1200px){
 	h2{font-size: 16px;}
 	h4{font-size: 14px;}
+}
+
+.black {
+	background:#000000;
+}
+
+.carousel-control.left {
+	background-image: none;
+}
+
+.carousel-control.right {
+	background-image: none;
+}
+
+.container-fluid {
+	padding-left:0;
+	padding-right:0;
+}
+
+.lyric {
+	background:#EEEEEE;
+}
+
+.write {
+	overflow-y:scroll;
+	max-height:300px;
+	background: #F8F8F8;
+	border: 1px solid #000000;
+}
+
+.full {
+	width:100%;
+}
+
+.title {
+	height: 50px;
+	line-height: 50px;
+	background:#c0c0c0;
+}
+
+.row {
+	margin-right: 0;
+	margin-left: 0;
 }
