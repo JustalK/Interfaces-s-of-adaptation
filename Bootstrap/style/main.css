@@ -74,10 +74,18 @@ body,html {
 .title {
 	height: 50px;
 	line-height: 50px;
-	background:#c0c0c0;
+	background:#82d0ff;
 }
 
 .row {
 	margin-right: 0;
 	margin-left: 0;
+}
+
+img {
+	display: block;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: auto;
 }

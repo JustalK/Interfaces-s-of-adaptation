@@ -88,16 +88,16 @@
     			<div class="container">
 	    			<div class="row">
 	      				<div class="col-md-12">
-	      					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="z-index:1000;width:5%;">
+	      					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="z-index:1000;width:5%;height:90%;">
     							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     							<span class="sr-only">Previous</span>
   							</a> 
-					  		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="z-index:1000;width:5%;">
+					  		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="z-index:1000;width:5%;height:90%;">
 					    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					    		<span class="sr-only">Next</span>
 					  		</a>
-	          				<div class="embed-responsive embed-responsive-16by9">
-	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RgKAFK5djSk"></iframe>
+	          				<div id="aze" class="embed-responsive embed-responsive-16by9">
+	    						<iframe class="movie embed-responsive-item" src="https://www.youtube.com/embed/RgKAFK5djSk?rel=0&loop=1&hd=1&playlist=RgKAFK5djSk"></iframe>
 			  				</div>
 	      				</div>
 					</div>
@@ -107,15 +107,15 @@
 				<div class="title text-center">
 					<strong>See you again</strong>
 				</div>
-				<div class="row lyric">
-					<div class="col-md-6">
+				<div class="row lyric" style="padding-bottom:10px;">
+					<div class="col-md-12 col-lg-6">
 						<br />
 						<div class="row">
-							<div class="col-md-6 text-center">
+							<div class="hidden-xs hidden-sm col-md-6 col-lg-6 text-center pagination-centered" style="position:relative;vertical-align:middle;min-height:300px;">
 								<img src="https://upload.wikimedia.org/wikipedia/en/0/08/Wiz_Khalifa_Feat._Charlie_Puth_-_See_You_Again_%28Official_Single_Cover%29.png" class="img-responsive" alt="Responsive image">
-								<br />
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6 col-lg-6 text-center pagination-centered center-block" style="display: flex;justify-content: center;min-height: 300px;">
+							<div style="align-self: center;width:100%;">
 								  <table class="table table-bordered">
 								    <tbody>
 								      <tr>
@@ -124,7 +124,7 @@
 								      </tr>
 								      <tr>
 								        <td>Singer</td>
-								        <td>Wiz Khalifa & Charlie Puth</td>
+								        <td>Wiz Khalifa</td>
 								      </tr>
 								      <tr>
 								        <td>Duration</td>
@@ -138,18 +138,14 @@
 								        <td>Publication</td>
 								        <td>17 mars 2015</td>
 								      </tr>
-								      <tr>
-								        <td>Prix</td>
-								        <td>1.99 $</td>
-								      </tr>
 								    </tbody>
 								  </table>
-								  <br />
-								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+								  	<button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+								  </div>
 							</div>
 						</div>
 				</div>
-	      		<div class="col-md-6">
+	      		<div class="col-md-12 col-lg-6">
 	      			<br />
 						<div class="text-center write">
 							<h2>It's been a long day without you, my friend<br />
@@ -211,6 +207,7 @@
 					</div>
 				</div>
     		</div>
+
     		<!-- END AFFICHAGE --> 
 
     		<div class="item">
@@ -226,7 +223,7 @@
 						    		<span class="sr-only">Next</span>
 						  		</a>
 	          				<div class="embed-responsive embed-responsive-16by9">
-	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j3CaHeakZF4"></iframe>
+	    						<iframe class="movie embed-responsive-item" src="https://www.youtube.com/embed/j3CaHeakZF4"></iframe>
 			  				</div>
 	      				</div>
 					</div>
