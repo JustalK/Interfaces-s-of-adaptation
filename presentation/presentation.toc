@@ -1,2 +1,5 @@
-\contentsline {section}{\numberline {1}Difficult\'es rencontr\'es}{3}
-\contentsline {section}{\numberline {2}Simple trouvaille d'optimisation}{3}
+\contentsline {section}{\numberline {1}Site Web Adaptatif}{3}
+\contentsline {section}{\numberline {2}Boostraps}{4}
+\contentsline {section}{\numberline {3}Documentations, Outils, liens utiles}{4}
+\contentsline {section}{\numberline {4}Difficult\'es rencontr\'es}{4}
+\contentsline {section}{\numberline {5}Simple trouvaille d'optimisation}{4}

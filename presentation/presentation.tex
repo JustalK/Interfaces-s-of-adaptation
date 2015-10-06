@@ -29,12 +29,14 @@
 \line(1,0){300}\\
 DOSSIER D'ANALYSE DES DIFFERENCES\\
 \vspace{3cm}
+\includegraphics[width=1.0\textwidth]{pc}\\
+\vspace{3cm}
 \textbf{\Large{JUSTAL KEVIN}}\\
 2015\\
 \vspace{2cm}
 \textbf{Justal Kevin - \color{blue}{\underline{justal@polytech.unice.fr}} \color{black}{- SI5 - IHM}}\\
-\vspace{13cm}
-\textbf{Encadrant :}\\
+\vspace{4cm}
+\textbf{Enseignant :}\\
 \textbf{Anne Marie Dery - \color{blue}{\underline{dery@polytech.unice.fr}}}
 \end{center}
 
@@ -43,6 +45,46 @@ DOSSIER D'ANALYSE DES DIFFERENCES\\
 \tableofcontents
 
 \newpage
+
+\section{Site Web Adaptatif}
+
+Le site a \'et\'e pens\'e sur le principe du RWD (\textit{responsive web design}) ou site web adaptatif dans la langue de mol\'ere. Ce concept s'appuit sur l'usage des \textit{Media queries}, des grille ou encore des images flexibles. Au fur et \`a mesure que nous creuserons les deux frameworks, nous verrons que Polymer s'appuie principalement sur les media queries tandis que Boostrap lui, poss\'ede en plus un syst\`eme de grille tr\`es utile. 
+\vspace{0.5cm}\\
+Pour d\'evelopper, je suis parti de la version ordinateur, puis j'ai remis en forme les \'el\'ements \`a mesure que la largeur de l'\'ecran diminuait voire je les supprimais. Nous verrons un peu plus loin pourquoi j'ai choisi de supprimer des \'el\'ements.
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=0.8\textwidth]{pc2}
+\vspace{0.5cm}
+\end{center}
+
+Le site a un d\'ecoupage en quatre grands blocs. En rose sur l'image ci-dessus, on trouve la barre de connexion. En bleu, la zone de visionnage des vid\'eo. En Jaune, une zone d'information. Enfin, en rouge, une zone pour afficher les vid\'eos o\`u le chanteur est le m\^eme que la vid\'eo dans la zone bleu.\\
+Pour observer pr\'ecis\'ement le principe de RWD, nous allons nous int\'erresser particuli\`erement \`a la zone rouge en bas du site. Cette derni\'ere illustre \`a la perfection tous les aspects que l'on attend d'un site adaptatif. Colorions chaque divisions de cette partie du site d'une couleur unique.
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=0.8\textwidth]{pc4}
+\vspace{0.5cm}
+\end{center}
+Si nous r\'eduisons la largeur de la fenetre, le contenu s'adaptera. Dans un premier temps, il n'y aura plus que deux blocs par ligne. Puis, si nous continuons de r\'eduire la fen\`etre, il n'y aura plus qu'un seul bloc par ligne et les deux derniers auront \'et\'e cach\'e.
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=0.8\textwidth]{pc7}
+\vspace{0.5cm}\\
+\end{center}
+
+Le site s'adapte donc aux dimensions de notre appareil ou fen\`etre.\`A quoi cela peut-il bien servir ? Il serait plus adapté de se demander quels sont probl\`emes que cela r\'esout-il ? Comme on le voit autour de nous, les ordinateurs ne sont plus les seuls \'el\'ements ou gadgets nous entourant, ils existent maintenant une innombrable quantit\'e d'apareil informatique de tous types et de toutes dimensions. Il est important qu'un site internet ne laisse aucun utilisateur sur le bas cot\'e. Comme il est impensable de concevoir une application ou un site internet pour chaque appareil, il faut donc faire un site qui puisse s'adapter suivant les dimensions de l'appareil. 
+
+\section{Boostraps}
+
+
+\section{Documentations, Outils, liens utiles} 
+
+
+
+
+
+
+
+
 \section{Difficult\'es rencontr\'es}
 \hspace*{0.6cm}Le premier probl\`eme rencontr\'e fut lorsque que j'essaya de coder une balise div de telle mani\`ere que celle-ci remplisse enti\`erement l'espace de l'application. Cette chose extr\`emement simple n'est pourtant pas impl\'ement\'e dans Bootstrap 3.0 et les versions sup\'erieur alors que cela se trouvait dans les versions ant\'erieur avec la class span. Apr\'es de longue recherches, il apparait donc impossible en pur Bootstrap de remplir un div \`a cent pour cent de la balise parent.De ce fait, j'ai du modifi\'e le CSS pour r\'ealiser le remplissage de la page. Pourquoi un tel choix des d\'eveloppeur de bootstrap ?
 

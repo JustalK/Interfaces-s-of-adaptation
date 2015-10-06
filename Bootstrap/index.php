@@ -26,10 +26,9 @@
 <script src="js/main.js"></script>
 </head>
 <body>
-    <!-- MENU -->
+    <!-- TOP BAR -->
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
-      		<!-- Example row of columns -->
       		<div class="row">
         		<div class="col-xs-12 col-sm-12 col-md-12">
        	        	<div class="pull-left">
@@ -43,7 +42,7 @@
         	</div>
         </div>
     </nav>
-    
+    <!-- END TOP BAR -->
     
     
     <!-- Modal -->
@@ -140,7 +139,7 @@
 								      </tr>
 								    </tbody>
 								  </table>
-								  	<button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+								  	<a href="ddl/WizKhalifa-SeeYouAgain.mp3" class="btn btn-success btn-sm full" download>DOWNLOAD</a>
 								  </div>
 							</div>
 						</div>
@@ -599,33 +598,32 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-xs-push col-sm-6 col-md-6 col-lg-3">
-          <h2><strong>Aon Luckkana</strong></h2>
+          <h2><strong>Say So</strong></h2>
           <div class="embed-responsive embed-responsive-16by9">
-    		<iframe class="embed-responsive-item" src="http://www.viki.com/player/1035091v"></iframe>
+    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WjK0n57Hwb0"></iframe>
 		  </div><br />
        	</div>
         <div class="col-xs-push col-sm-6 col-md-6 col-lg-3">
-          <h2><strong>My Jam</strong></h2>
+          <h2><strong>Lit</strong></h2>
           <div class="embed-responsive embed-responsive-16by9">
-    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5dN3JV6sE9Q"></iframe>
+    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WZ3pkBM7j0M"></iframe>
 		  </div><br />
        	</div>
-        <div class="col-xs-push col-sm-6 col-md-6 col-lg-3">
-          <h2><strong>Five More Hours</strong></h2>
+        <div class="hidden-xs col-sm-6 col-md-6 col-lg-3">
+          <h2><strong>The Play</strong></h2>
           <div class="embed-responsive embed-responsive-16by9">
-    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j3CaHeakZF4"></iframe>
+    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Z6uCHtXWxqY"></iframe>
 		  </div><br />
        	</div>
-       	<div class="col-xs-push col-sm-6 col-md-6 col-lg-3">
-          <h2><strong>Nyan Nyan</strong></h2>
+       	<div class="hidden-xs col-sm-6 col-md-6 col-lg-3">
+          <h2><strong>No Permission</strong></h2>
           <div class="embed-responsive embed-responsive-16by9">
-    		<iframe class="embed-responsive-item" src="http://www.dailymotion.com/embed/video/xj20tk"></iframe>
+    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Lmxcp_i9T3s"></iframe>
 		  </div><br />
        	</div>
       </div>
 	</div>
 </nav>
-
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

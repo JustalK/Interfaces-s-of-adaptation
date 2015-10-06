@@ -5,6 +5,11 @@ body,html {
 	background-color: #f8f8f8;
 }
 
+body {
+	overflow-x: hidden;	
+	overflow-y: scroll;	
+}
+
 ::-webkit-scrollbar { 
     display: none; 
 }
@@ -17,6 +22,8 @@ body,html {
 .navbar-brand {
 	line-height: 40px;
 	margin-top: -12px;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 
 @media(max-width:767px){
@@ -89,3 +96,4 @@ img {
 	left: 0;
 	margin: auto;
 }
+
