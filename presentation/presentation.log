@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  7 OCT 2015 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  7 OCT 2015 18:35
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -108,6 +108,18 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks17
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen120
+\WF@size=\dimen121
+\c@WF@wrappedlines=\count92
+\WF@box=\box26
+\WF@everypar=\toks18
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count93
+)
 (presentation.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
@@ -124,17 +136,17 @@ LaTeX Font Info:    ... okay on input line 25.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count92
-\scratchdimen=\dimen120
-\scratchbox=\box26
-\nofMPsegments=\count93
-\nofMParguments=\count94
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count95
-\MPscratchDim=\dimen121
-\MPnumerator=\count96
-\makeMPintoPDFobject=\count97
-\everyMPtoPDFconversion=\toks19
+\scratchcounter=\count94
+\scratchdimen=\dimen122
+\scratchbox=\box27
+\nofMPsegments=\count95
+\nofMParguments=\count96
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen123
+\MPnumerator=\count98
+\makeMPintoPDFobject=\count99
+\everyMPtoPDFconversion=\toks20
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -181,60 +193,76 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 37.
  [1
 
-{C:/Users/Latsuj/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pc.png>]
- (presentation.toc)
+{D:/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pc.png>] (presentatio
+n.toc)
 \tf@toc=\write3
-
-[2] <pc2.png, id=12, 1927.2pt x 1022.82124pt>
+ [2]
+<pc2.png, id=12, 1927.2pt x 1022.82124pt>
 File: pc2.png Graphic file (type png)
  <use pc2.png>
-Package pdftex.def Info: pc2.png used on input line 56.
+Package pdftex.def Info: pc2.png used on input line 55.
 (pdftex.def)             Requested size: 344.005pt x 182.57039pt.
 
 <pc4.png, id=13, 1927.2pt x 1022.82124pt>
 File: pc4.png Graphic file (type png)
  <use pc4.png>
-Package pdftex.def Info: pc4.png used on input line 64.
+Package pdftex.def Info: pc4.png used on input line 63.
 (pdftex.def)             Requested size: 344.005pt x 182.57039pt.
- [3 <./pc2.png> <./pc4.png>] <pc7.png, id=18, 1788.6825pt x 745.78625pt>
+
+<pc7.png, id=14, 1788.6825pt x 745.78625pt>
 File: pc7.png Graphic file (type png)
  <use pc7.png>
-Package pdftex.def Info: pc7.png used on input line 70.
+Package pdftex.def Info: pc7.png used on input line 69.
 (pdftex.def)             Requested size: 344.005pt x 143.43059pt.
+ [3 <./pc2.png> <./pc4.png>]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--77
+Underfull \hbox (badness 10000) in paragraph at lines 73--77
 
  []
 
+<textes.png, id=20, 990.70125pt x 301.125pt>
+File: textes.png Graphic file (type png)
+ <use textes.png>
+Package pdftex.def Info: textes.png used on input line 81.
+(pdftex.def)             Requested size: 344.005pt x 104.55907pt.
+ [4 <./pc7.png> <./textes.png>]
+Underfull \hbox (badness 3323) in paragraph at lines 91--91
+\OT1/cmr/m/it/10 site sous Black-Berry
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+<blackberry.png, id=26, 589.20125pt x 1022.82124pt>
+File: blackberry.png Graphic file (type png)
+ <use blackberry.png>
+Package pdftex.def Info: blackberry.png used on input line 92.
+(pdftex.def)             Requested size: 99.58464pt x 172.86285pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--93
 
  []
 
+[5 <./blackberry.png>] [6] (presentation.aux) )
+(\end occurred inside a group at level 1)
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
-
- []
-
-[4 <./pc7.png>] [5] (presentation.aux) ) 
+### simple group (level 1) entered at line 94 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 1769 strings out of 493673
- 24167 string characters out of 3141527
- 92042 words of memory out of 3000000
- 5134 multiletter control sequences out of 15000+200000
+ 2041 strings out of 493673
+ 27508 string characters out of 3141527
+ 195079 words of memory out of 3000000
+ 5396 multiletter control sequences out of 15000+200000
  5206 words of font info for 19 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 25i,5n,19p,728b,184s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmti10.pfb>
-Output written on presentation.pdf (5 pages, 3829874 bytes).
+ 25i,6n,19p,1513b,186s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
+10.pfb>
+Output written on presentation.pdf (6 pages, 4402619 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
+ 46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
