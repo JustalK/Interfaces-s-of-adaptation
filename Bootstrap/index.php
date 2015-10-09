@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-	$time = microtime();
-	$time = explode(' ', $time);
-	$time = $time[1] + $time[0];
-	$start = $time;
+	$timestart=microtime(true);
 ?>
 
 <html lang="en">
@@ -60,11 +57,11 @@
         		  	</div>
         		  	<div class="pull-right navbar-brand">
 	        		  	<ul class="nav nav-tabs">
-						  <li role="presentation" class="dropdown">
+						  <li role="presentation" class="dropdown text-right">
 						    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 						      Menu <span class="caret"></span>
 						    </a>
-						    <ul class="dropdown-menu">
+						    <ul class="dropdown-menu" >
 						      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account</a></li>
 						      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profil</a></li>
 						      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
@@ -651,11 +648,27 @@
       </div>
 	</div>
 </nav>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+
+    <nav class="navbar navbar-default " style="bottom: 0;border-top: 1px solid #000000;background: #82d0ff;min-height: 0px;border-radius:none;">
+        <div class="container">
+        	<div class="row">	
+        		<div class="col-xs-12">
+        			<?php 
+        				$timeend=microtime(true);
+        				$time=$timeend-$timestart;
+        			?>
+		        	<?php echo gethostname()." Temps de chargement : ".$page_load_time = number_format($time, 3)." | Memoire alloué : ".round(memory_get_usage()/1024,2)." ko";?>
+        		</div>
+      		</div>
+        </div>
+    </nav>   
+     
 </body>
 </html>

@@ -17,6 +17,7 @@ body {
 .navbar {
 	margin-bottom: 0px;
 	border: none;
+	border-radius: none;
 }
 
 .navbar-brand {
