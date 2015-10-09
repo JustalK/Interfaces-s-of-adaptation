@@ -1,15 +1,19 @@
 $( document ).ready(function() {
 	$( ".lyric" ).hide();
+	$( ".menu" ).hide();
+	$( ".titleMenu" ).click(function() {
+		$( ".menu" ).slideToggle( "fast" );
+	});
 	$( ".title" ).click(function() {
 		$( ".lyric" ).slideToggle( "fast" );
 	});
 	
-	$(".title").mouseenter(function(){
+	$(".title,.menu,.titleMenu").mouseenter(function(){
 		$(this).css('background','#17a8ff')
 		$(".title").css('cursor','pointer');
 	});
 
-	$(".title").mouseleave(function(){
+	$(".title,.menu,.titleMenu").mouseleave(function(){
 		$(this).css('background','#82d0ff');
 	});
 	

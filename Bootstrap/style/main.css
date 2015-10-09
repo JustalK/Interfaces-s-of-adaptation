@@ -26,6 +26,10 @@ body {
 	padding-left: 0px;
 }
 
+.non-float {
+	float: none;
+}
+
 @media(max-width:767px){
 	h2{font-size: 12px;}
 	h4{font-size: 8px;}
@@ -84,6 +88,19 @@ body {
 	background:#82d0ff;
 }
 
+.titleMenu {
+	height: 50px;
+	line-height: 50px;
+	background:#82d0ff;
+}
+
+.menu {
+	height: 40px;
+	line-height: 40px;
+	background:#82d0ff;	
+	border-top: 1px solid #000000;
+}
+
 .row {
 	margin-right: 0;
 	margin-left: 0;
@@ -97,3 +114,10 @@ img {
 	margin: auto;
 }
 
+.nav-tabs>li>a ,.nav-tabs>li, .nav-tabs {
+	border-bottom: none;
+}
+
+.inline {
+	display:inline;
+}

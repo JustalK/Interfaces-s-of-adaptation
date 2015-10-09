@@ -27,16 +27,59 @@
 </head>
 <body>
     <!-- TOP BAR -->
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-      		<div class="row">
-        		<div class="col-xs-12 col-sm-12 col-md-12">
+    <nav class="navbar navbar-default navbar-static-top hidden-sm hidden-md hidden-lg">
+        <div class="container-fluid">
+        	<div class="row">
+      			<div class="col-xs-12 text-center titleMenu">
+      				<strong class="navbar-brand text-center non-float">Menu</strong>
+      			</div>
+      			<div class="menu">
+      			<a role="menuitem" tabindex="-1" href="#">
+	      			<div class="col-xs-12 text-center menu inline">
+	      				<p class="navbar-brand text-center non-float">Account</p>
+	      			</div>
+      			</a>
+      			<a role="menuitem" tabindex="-1" href="#">
+	      			<div class="col-xs-12 text-center menu inline">
+	      				<p class="navbar-brand text-center non-float">Profil</p>
+	      			</div>
+      			</a>
+      			<a role="menuitem" tabindex="-1" href="#">
+	      			<div class="col-xs-12 text-center menu inline">
+	      				<p class="navbar-brand text-center non-float">Logout</p>
+	      			</div>
+      			</a>  
+       			<a role="menuitem" tabindex="-1" href="#">
+	      			<div class="col-xs-12 text-center menu inline">
+	      				<p class="navbar-brand text-center non-float">About us</p>
+	      			</div>
+      			</a>      			
+      			</div>
+      		</div>
+        </div>
+    </nav>    
+    
+    <nav class="navbar navbar-default navbar-static-top hidden-xs">
+        <div class="container">    
+        		<div class="col-sm-12 col-md-12 col-lg-12">
        	        	<div class="pull-left">
         				<strong class="navbar-brand">Latsuj</strong>
         		  	</div>
         		  	<div class="pull-right navbar-brand">
-        		  		<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal">JOIN US!</button>
-       	          		<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">LOGIN</button>
+	        		  	<ul class="nav nav-tabs">
+						  <li role="presentation" class="dropdown">
+						    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						      Menu <span class="caret"></span>
+						    </a>
+						    <ul class="dropdown-menu">
+						      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account</a></li>
+						      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profil</a></li>
+						      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+						      <li role="presentation" class="divider"></li>
+						      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+						    </ul>
+						  </li>
+						</ul>
 					</div>
         		</div>
         	</div>
