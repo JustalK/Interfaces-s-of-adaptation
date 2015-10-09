@@ -121,3 +121,8 @@ img {
 .inline {
 	display:inline;
 }
+
+.dropdown-menu {
+  min-width:auto;
+  width:100%;
+}

@@ -29,32 +29,25 @@
     <!-- TOP BAR -->
     <nav class="navbar navbar-default navbar-static-top hidden-sm hidden-md hidden-lg">
         <div class="container-fluid">
-        	<div class="row">
-      			<div class="col-xs-12 text-center titleMenu">
-      				<strong class="navbar-brand text-center non-float">Menu</strong>
-      			</div>
-      			<div class="menu">
-      			<a role="menuitem" tabindex="-1" href="#">
-	      			<div class="col-xs-12 text-center menu inline">
-	      				<p class="navbar-brand text-center non-float">Account</p>
-	      			</div>
-      			</a>
-      			<a role="menuitem" tabindex="-1" href="#">
-	      			<div class="col-xs-12 text-center menu inline">
-	      				<p class="navbar-brand text-center non-float">Profil</p>
-	      			</div>
-      			</a>
-      			<a role="menuitem" tabindex="-1" href="#">
-	      			<div class="col-xs-12 text-center menu inline">
-	      				<p class="navbar-brand text-center non-float">Logout</p>
-	      			</div>
-      			</a>  
-       			<a role="menuitem" tabindex="-1" href="#">
-	      			<div class="col-xs-12 text-center menu inline">
-	      				<p class="navbar-brand text-center non-float">About us</p>
-	      			</div>
-      			</a>      			
-      			</div>
+        	<div class="row">	
+        	<div class="col-xs-12 navbar-brand">
+		        <div class="dropdown">
+		        	        		  	<ul class="nav nav-tabs" style="width:100%;">
+						  <li role="presentation" class="dropdown text-center" style="width:100%;">
+						    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						      Menu <span class="caret"></span>
+						    </a>
+		   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+		      <li class="text-center"><a tabindex="-1" href="#">Account</a></li>
+		      <li class="text-center"><a tabindex="-1" href="#">Profil</a></li>
+		      <li class="text-center"><a tabindex="-1" href="#">Logout</a></li>
+		      <li class="divider"></li>
+		      <li class="text-center"><a tabindex="-1" href="#">About us</a></li>
+		    </ul>
+		    </li>
+		    </ul>
+		  </div>
+        </div>
       		</div>
         </div>
     </nav>    
@@ -139,7 +132,7 @@
 					    		<span class="sr-only">Next</span>
 					  		</a>
 	          				<div id="aze" class="embed-responsive embed-responsive-16by9">
-	    						<iframe class="movie embed-responsive-item" src="https://www.youtube.com/embed/RgKAFK5djSk?rel=0&loop=1&hd=1&playlist=RgKAFK5djSk"></iframe>
+	          					<iframe class="movie embed-responsive-item" src="https://www.youtube.com/embed/RgKAFK5djSk?rel=0&loop=1&hd=1&vq=hd1080&playlist=RgKAFK5djSk&modestbranding=1"></iframe>
 			  				</div>
 	      				</div>
 					</div>
@@ -265,7 +258,7 @@
 						    		<span class="sr-only">Next</span>
 						  		</a>
 	          				<div class="embed-responsive embed-responsive-16by9">
-	    						<iframe class="movie embed-responsive-item" src="https://www.youtube.com/embed/j3CaHeakZF4"></iframe>
+	    						<iframe class="movie embed-responsive-item" src="https://www.youtube.com/embed/j3CaHeakZF4?rel=0&loop=1&hd=1&vq=hd1080&playlist=j3CaHeakZF4&modestbranding=1"></iframe>
 			  				</div>
 	      				</div>
 					</div>
@@ -275,15 +268,15 @@
 				<div class="title text-center">
 					<strong>Five more hours</strong>
 				</div>
-				<div class="row lyric">
-					<div class="col-md-6">
+				<div class="row lyric" style="padding-bottom:10px;">
+					<div class="col-md-12 col-lg-6">
 						<br />
 						<div class="row">
-							<div class="col-md-6 text-center">
+							<div class="hidden-xs hidden-sm col-md-6 col-lg-6 text-center pagination-centered" style="position:relative;vertical-align:middle;min-height:300px;">
 								<img src="http://paroles-et-traduction.com/wp-content/uploads/2015/03/deorro-five-more-hours-chris-brown.jpg" class="img-responsive" alt="Responsive image">
-								<br />
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6 col-lg-6 text-center pagination-centered center-block" style="display: flex;justify-content: center;min-height: 300px;">
+							<div style="align-self: center;width:100%;">
 								  <table class="table table-bordered">
 								    <tbody>
 								      <tr>
@@ -306,18 +299,15 @@
 								        <td>Publication</td>
 								        <td>7 April 2014</td>
 								      </tr>
-								      <tr>
-								        <td>Prix</td>
-								        <td>1.99 $</td>
-								      </tr>
 								    </tbody>
 								  </table>
 								  <br />
-								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal" download>DOWNLOAD</button>
+								  </div>
 							</div>
 						</div>
 				</div>
-	      		<div class="col-md-6">
+	      		<div class="col-md-12 col-lg-6">
 	      			<br />
 						<div class="text-center write">
 							<h2>What you wanna do baby? Where you wanna go?<br />
@@ -373,7 +363,7 @@
 						    		<span class="sr-only">Next</span>
 						  		</a>
 	          				<div class="embed-responsive embed-responsive-16by9">
-	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5dN3JV6sE9Q"></iframe>
+	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5dN3JV6sE9Q?rel=0&loop=1&hd=1&playlist=5dN3JV6sE9Q"></iframe>
 			  				</div>
 	      				</div>
 					</div>
@@ -383,15 +373,15 @@
 				<div class="title text-center">
 					<strong>My Jam</strong>
 				</div>
-				<div class="row lyric">
-					<div class="col-md-6">
+				<div class="row lyric" style="padding-bottom:10px;">
+					<div class="col-md-12 col-lg-6">
 						<br />
 						<div class="row">
-							<div class="col-md-6 text-center">
+							<div class="hidden-xs hidden-sm col-md-6 col-lg-6 text-center pagination-centered" style="position:relative;vertical-align:middle;min-height:300px;">
 								<img src="http://ecx.images-amazon.com/images/I/612e4seyGML._SY300_.jpg" class="img-responsive" alt="Responsive image">
-								<br />
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6 col-lg-6 text-center pagination-centered center-block" style="display: flex;justify-content: center;min-height: 300px;">
+							<div style="align-self: center;width:100%;">
 								  <table class="table table-bordered">
 								    <tbody>
 								      <tr>
@@ -414,18 +404,15 @@
 								        <td>Publication</td>
 								        <td>8 February 2015</td>
 								      </tr>
-								      <tr>
-								        <td>Prix</td>
-								        <td>1.99 $</td>
-								      </tr>
 								    </tbody>
 								  </table>
 								  <br />
-								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal" download>DOWNLOAD</button>
+								  </div>
 							</div>
 						</div>
 				</div>
-	      		<div class="col-md-6">
+	      		<div class="col-md-12 col-lg-6">
 	      			<br />
 						<div class="text-center write">
 							<h2>Made another hit for the radio station<br /><br />
@@ -533,25 +520,25 @@
 						    		<span class="sr-only">Next</span>
 						  		</a>
 	          				<div class="embed-responsive embed-responsive-16by9">
-	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YqeW9_5kURI"></iframe>
+	    						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YqeW9_5kURI?rel=0&loop=1&hd=1&playlist=YqeW9_5kURI"></iframe>
 			  				</div>
 	      				</div>
 					</div>
 	    		</div>
 	    		
 	    		<!-- AFFICHAGE --> 
-				<div class="title text-center">
+				<div class="title text-center">	
 					<strong>Lean on</strong>
 				</div>
-				<div class="row lyric">
-					<div class="col-md-6">
+				<div class="row lyric" style="padding-bottom:10px;">
+					<div class="col-md-12 col-lg-6">
 						<br />
 						<div class="row">
-							<div class="col-md-6 text-center">
+							<div class="hidden-xs hidden-sm col-md-6 col-lg-6 text-center pagination-centered" style="position:relative;vertical-align:middle;min-height:300px;">
 								<img src="http://img.allformusic.fr/pochette/300/m/major-lazer/lean-on-single.jpg" class="img-responsive" alt="Responsive image">
-								<br />
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6 col-lg-6 text-center pagination-centered center-block" style="display: flex;justify-content: center;min-height: 300px;">
+							<div style="align-self: center;width:100%;">
 								  <table class="table table-bordered">
 								    <tbody>
 								      <tr>
@@ -574,18 +561,15 @@
 								        <td>Publication</td>
 								        <td>2 mars 2015</td>
 								      </tr>
-								      <tr>
-								        <td>Prix</td>
-								        <td>1.99 $</td>
-								      </tr>
 								    </tbody>
 								  </table>
 								  <br />
-								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal">DOWNLOAD</button>
+								  <button type="button" class="btn btn-success btn-sm full" data-toggle="modal" data-target="#myModal" download>DOWNLOAD</button>
+								  </div>
 							</div>
 						</div>
 				</div>
-	      		<div class="col-md-6">
+	      		<div class="col-md-12 col-lg-6">
 	      			<br />
 						<div class="text-center write">
 							<h2>Do you recall, not long ago<br />
