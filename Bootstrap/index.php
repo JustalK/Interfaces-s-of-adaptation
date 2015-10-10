@@ -25,11 +25,8 @@
 <link rel="stylesheet" href="style/main.css">
 <!-- The JS of the page -->
 <script src="js/main.js"></script>
-
-    <!-- Custom CSS -->
-    <link href="style/simple-sidebar.css" rel="stylesheet">
 </head>
-<body>
+<body >
 <div id="content" style="width:100%;height:auto;float: left;">
 	
     <!-- TOP BAR LOW RESOLUTION -->
@@ -228,7 +225,30 @@
 				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 				-->
 			</div>
-			<div id="menu" style="position:relative;width:0%;height:auto;background:#000000;float: right;">s</div>
+			<div id="menu" style="width:0%;background:#000000;float: right;">
+		            <ul class="sidebar-nav">
+		                <li class="sidebar-brand">
+		                    <a class="menu-toggle">
+		                        Retour au site
+		                    </a>
+		                </li>
+		                <li style="line-height: 20px;text-align: justify;margin: 20px;">
+		                	<div>
+		                		<img src="pub/MySign.png" class="img-responsive" alt="Responsive image" style="position:relative;"><br />
+		                	</div>
+		                	A little website showing my skill with Bootstrap, I have used Php, Jquery, CSS and Bootsrap for making a whole website about musics.
+		                </li>
+		                <li>
+		                    <a href="index.php">Index</a>
+		                </li>
+		                <li>
+		                    <a href="https://github.com/Latsuj/Interfaces-s-of-adaptation">GitHub</a>
+		                </li>
+		                <li>
+		                    <a href="http://www.latsuj.com">About me</a>
+		                </li>
+		            </ul>
+			</div>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
