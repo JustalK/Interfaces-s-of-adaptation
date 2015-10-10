@@ -1,0 +1,23 @@
+<dom-module id="my-img-responsive">
+
+	<template>
+		<style>
+		/* CSS rules for your element */		
+		:host {		
+			width:100%;
+			height: auto;
+		}
+		</style>
+		<img src="{{link}}"></img>
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-img-responsive",
+    properties: {
+		link: String
+	}
+  });
+  </script>
+  
+</dom-module>

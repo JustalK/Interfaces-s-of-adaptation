@@ -1,0 +1,49 @@
+<dom-module id="my-button">
+
+	<template>
+		<style>
+		/* CSS rules for your element */		
+		:host {	
+			color: #333;
+			background-color: #FFF;
+			display: inline-block;
+			margin-bottom: 0px;
+			font-weight: normal;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			background-image: none;
+			border: 1px solid #CCC;
+			white-space: nowrap;
+			padding: 6px 12px;
+			font-size: 14px;
+			line-height: 1.42857;
+			border-radius: 4px;
+			-moz-user-select: none;
+			box-sizing: border-box;
+		}
+		:host(:focus){
+			color: #333;
+			background-color: #E6E6E6;
+			border-color: #8C8C8C;		
+		}
+		
+		:host(:active) {
+			color: #333;
+			background-color: #D4D4D4;
+			border-color: #8C8C8C;
+			outline: 0px none;
+			background-image: none;
+			box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.125) inset;
+		}
+		</style>
+		<div>Menu Hide/Show</div>
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-button"
+  });
+  </script>
+  
+</dom-module>

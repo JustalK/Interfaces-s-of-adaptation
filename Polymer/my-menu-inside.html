@@ -1,0 +1,98 @@
+<dom-module id="my-menu-inside">
+
+	<template>
+		<style>
+		/* CSS rules for your element */		
+			#sidebar-wrapper {
+			    width: 20%;
+			    height: 100%;
+			    margin-left: -250px;
+			    overflow-y: auto;
+			    background: #000;
+			    -webkit-transition: all 0.5s ease;
+			    -moz-transition: all 0.5s ease;
+			    -o-transition: all 0.5s ease;
+			    transition: all 0.5s ease;
+			}
+			
+			.sidebar-nav {
+			    margin: 0;
+			    padding: 0;
+			    list-style: none;
+			}
+			
+			.sidebar-nav li {
+			    text-indent: 20px;
+			    line-height: 40px;
+			}
+			
+			.sidebar-nav li a {
+			    display: block;
+			    text-decoration: none;
+			    color: #999999;
+			}
+			
+			.sidebar-nav li a:hover {
+			    text-decoration: none;
+			    color: #fff;
+			    background: rgba(255,255,255,0.2);
+			}
+			
+			.sidebar-nav li a:active,
+			.sidebar-nav li a:focus {
+			    text-decoration: none;
+			}
+			
+			.sidebar-nav > .sidebar-brand {
+			    height: 65px;
+			    font-size: 18px;
+			    line-height: 60px;
+			}
+			
+			.sidebar-nav > .sidebar-brand a:hover {
+			    color: #fff;
+			    background: none;
+			}
+			
+			.menu-toggle {
+				cursor: pointer;
+			}
+			
+			.img-responsive {
+			    width: 100%;
+    			height: auto;
+			}
+		</style>
+		
+           <ul class="sidebar-nav">
+               <li class="sidebar-brand">
+                   <a class="menu-toggle">
+                       Retour au site
+                   </a>
+               </li>
+               <li style="line-height: 20px;text-align: justify;margin: 20px;">
+               	<div>
+               		<img src="pub/MySign.png" class="img-responsive" alt="Responsive image" style="position:relative;"><br />
+               	</div>
+               	A little website showing my skill with Polymer and the web components, I have used Php, Jquery, CSS and Polymer for making a whole website about musics.
+               </li>
+               <li>
+                   <a href="index.php">Index</a>
+               </li>
+               <li>
+                   <a href="https://github.com/Latsuj/Interfaces-s-of-adaptation">GitHub</a>
+               </li>
+               <li>
+                   <a href="http://www.latsuj.com">About me</a>
+               </li>
+           </ul>		
+		
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-menu-inside"
+  });
+  </script>
+  
+</dom-module>

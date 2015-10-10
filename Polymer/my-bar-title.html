@@ -1,0 +1,29 @@
+<dom-module id="my-bar-title">
+
+	<template>
+		<style>
+		/* CSS rules for your element */		
+		:host {		
+			background: #82D0FF none repeat scroll 0% 0%;
+			cursor: pointer;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			box-sizing: border-box;
+			float: left;
+			width: 100%;
+		}
+		</style>
+		<strong>{{title}}</strong>
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-bar-title",
+    properties: {
+		title: String
+	}
+  });
+  </script>
+  
+</dom-module>

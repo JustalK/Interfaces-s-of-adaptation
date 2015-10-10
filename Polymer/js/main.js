@@ -1,0 +1,98 @@
+$( document ).ready(function() {
+	
+	$( "bloc-information" ).hide();
+	
+	var lyrichide = true;
+	$( "my-bar-title" ).click(function() {
+		$( "bloc-information" ).slideToggle( "fast",function(){
+				if($("my-content").height()>$("body").height()) {
+		    		$("my-menu").height($("my-content").height());	
+				} else {
+		    		$("my-menu").height($("body").height());	
+				}		
+		});
+		lyrichide = !lyrichide;
+	});
+	
+	$("my-bar-title").mouseenter(function(){
+		$(this).css('background','#17a8ff')
+		$(".title").css('cursor','pointer');
+	});
+
+	$("my-bar-title").mouseleave(function(){
+		$(this).css('background','#82d0ff');
+	});	
+	
+    $('.your-class').slick({
+  	  arrows: true  
+    });
+
+	var windowsContent = 100*$(window).width()/100;
+	var windowsMenu = 0;	
+	$( window ).resize(function() {
+		if($("my-content").height()>$("body").height()) {
+    		$("my-menu").height($("my-content").height());	
+		} else {
+    		$("my-menu").height($("body").height());	
+		}	
+		
+		if(!isHidden) {
+			adaptation();
+			
+			$("my-content").css("width",windowsContent+"px");
+			$("my-menu").css("width",windowsMenu+"px");
+		}
+	});    
+    
+	function adaptation() {
+		/* Media Queries */
+		if($(window).width()>1500) {
+			windowsContent = 80*$(window).width()/100;	
+		} else if($(window).width()<1500 && $(window).width()>=1200) {
+			windowsContent = 80*$(window).width()/100;		
+		} else if($(window).width()<1300 && $(window).width()>=850) {
+			windowsContent = 82*$(window).width()/100;		
+		} else if($(window).width()<850 && $(window).width()>=600) {
+			windowsContent = 50*$(window).width()/100;
+			if(!isHidden) {
+				$("my-content").show();
+			}
+		} else if($(window).width()<600) {
+			windowsContent = 0*$(window).width()/100;
+			if(!isHidden) {
+				$("my-content").hide();
+			}
+		}
+		windowsMenu = $(window).width()-windowsContent;		
+	}    
+    
+	var isHidden = true;
+	$("my-menu").hide();
+    $("my-button").click(function() {
+    	if(isHidden) {
+    		adaptation();
+    		if($(window).width()<600) {
+    			$("my-content").hide();
+    		}
+    		$("my-content").animate({width: windowsContent+"px"},300,function(){
+        		$("my-menu").show();
+        		if($("my-content").height()>$("body").height()) {
+            		$("my-menu").height($("my-content").height());	
+        		} else {
+            		$("my-menu").height($("body").height());	
+        		}	
+        		$("my-menu").animate({width: windowsMenu+"px"},100);
+    		});
+    		isHidden = false;
+    	} else {
+    		$("my-menu").animate({width: "0%"},100,function(){
+    			$("my-menu").hide();
+        		if($(window).width()<600) {
+        			$("my-content").show();
+        		}
+        		$("my-content").animate({width: "100%"},300);
+    		});
+    		isHidden = true;
+    	}	
+    });    
+});
