@@ -1,11 +1,20 @@
 $( document ).ready(function() {
+	var sizelyric = $('.lyric').height();
 	$( ".lyric" ).hide();
 	$( ".menu" ).hide();
 	$( ".titleMenu" ).click(function() {
 		$( ".menu" ).slideToggle( "fast" );
+		$("#menu").height($("#content").height());
 	});
+	var lyrichide = true;
 	$( ".title" ).click(function() {
 		$( ".lyric" ).slideToggle( "fast" );
+		if(lyrichide) {
+			$("#menu").height($('body').height()+sizelyric);
+		} else {
+			$("#menu").height($('body').height());		
+		}
+		lyrichide = !lyrichide;
 	});
 	
 	$(".title,.menu,.titleMenu").mouseenter(function(){
@@ -25,9 +34,23 @@ $( document ).ready(function() {
 		});
 	});
 	
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+	var isHidden = false;
+	$("#menu").show();
+    $(".menu-toggle").click(function(e) {
+    	if(isHidden) {
+    		$("#content").animate({width: "80%"},300);
+    		if(!lyrichide) {
+    			$("#menu").height($('body').height()+sizelyric);
+    		} else {
+    			$("#menu").height($('body').height());		
+    		}
+    		$("#menu").animate({width: "20%"},300);
+    		isHidden = false;
+    	} else {
+    		$("#menu").animate({width: "0%"},300);
+    		$("#content").animate({width: "100%"},300);
+    		isHidden = true;
+    	}
     });
 	
 });
