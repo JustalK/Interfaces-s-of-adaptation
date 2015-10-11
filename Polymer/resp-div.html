@@ -15,58 +15,28 @@
     			color: #333;
 		}		
 
-  		h2 {
-  				font-family: inherit;
-			    font-weight: 500;
-			    line-height: 1.1;
-				font-size: 16px;
-			    margin-top: 20px;
-			    margin-bottom: 10px;
-			    box-sizing: border-box;
-  		}
-
-		@media (max-width:749px) {
-			:host {    
-				float: left;
-				width: 100%;
-			}
-			h2 {
-				font-size: 12px;
-			}
+		h2 {
+			font-family: inherit;
+			font-weight: 500;
+			line-height: 1.1;
+			color: inherit;
+			font-size: 14px;
 		}
 		
-		@media (min-width:750px) {
-			:host {    
-				float: left;
-				width: 100%;
-			}
-			h2 {
-				font-size: 12px;
-			}
-		}
-		@media (min-width:770px) {
-			:host {
-				float: left;
-				width: 50%;
-			}
-			h2 {
-				font-size: 14px;
-			}
-		}
-		@media (min-width:1205px) {
-			:host {
-				float: left;
-				width: 25%;
-			}
-			h2 {
-				font-size: 16px;
-			}
+		@media(max-width:600px){
+			h2{font-size: 10px;}
 		}
 		
-		:after, :before {
-    		-webkit-box-sizing: border-box;
-    		-moz-box-sizing: border-box;
-    		box-sizing: border-box;
+		@media(min-width:601px){
+			h2{font-size: 14px;}
+		}
+		
+		@media(min-width:1200px){
+			h2{font-size: 14px;}
+		}
+		
+		@media(min-width:1500px){
+			h2{font-size: 14px;}
 		}
 		
 		b,strong {

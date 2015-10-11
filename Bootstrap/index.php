@@ -172,28 +172,28 @@
 			    				<!-- START ROW2 -->
 			      				<div class="row">
 			      				
-			       	 				<div class="col-xs-push col-sm-6 col-md-6 col-lg-3">
+			       	 				<div class="col-xs-push col-sm-6 col-md-6 col-lg-3 text-center">
 			          					<h2><strong><?php echo $pubs[0]['TITLE1']; ?></strong></h2>
 			          					<div class="embed-responsive embed-responsive-16by9">
 			    							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $pubs[0]['LINK1']; ?>?showinfo=0&controls=0"></iframe>
 					  					</div><br />
 			       					</div>
 			       					
-			        				<div class="col-xs-push col-sm-6 col-md-6 col-lg-3">
+			        				<div class="col-xs-push col-sm-6 col-md-6 col-lg-3 text-center">
 			          					<h2><strong><?php echo $pubs[0]['TITLE2']; ?></strong></h2>
 			          					<div class="embed-responsive embed-responsive-16by9">
 			    							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $pubs[0]['LINK2']; ?>?showinfo=0&controls=0"></iframe>
 					  					</div><br />
 			       					</div>
 			       					
-			        				<div class="hidden-xs col-sm-6 col-md-6 col-lg-3">
+			        				<div class="hidden-xs col-sm-6 col-md-6 col-lg-3 text-center">
 			          					<h2><strong><?php echo $pubs[0]['TITLE3']; ?></strong></h2>
 			          					<div class="embed-responsive embed-responsive-16by9">
 			    							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $pubs[0]['LINK3']; ?>?showinfo=0&controls=0"></iframe>
 					  					</div><br />
 			       					</div>
 			       					
-			       					<div class="hidden-xs col-sm-6 col-md-6 col-lg-3">
+			       					<div class="hidden-xs col-sm-6 col-md-6 col-lg-3 text-center">
 			          					<h2><strong><?php echo $pubs[0]['TITLE4']; ?></strong></h2>
 			          					<div class="embed-responsive embed-responsive-16by9">
 			    							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $pubs[0]['LINK4']; ?>?showinfo=0&controls=0"></iframe>

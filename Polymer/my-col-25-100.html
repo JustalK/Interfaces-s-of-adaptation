@@ -1,0 +1,38 @@
+<dom-module id="my-col-25-100">
+
+	<template>
+		<style>
+		/* CSS rules for your element */		
+		:host {		
+			position: relative;
+			min-height: 1px;
+			padding-left: 15px;
+			padding-right: 15px;
+			float:left;
+			width:25%;
+			box-sizing: border-box;
+		}
+		
+		@media (max-width:1500px) {
+			:host {
+				width:50%;
+			}
+		}
+		
+		@media (max-width:900px) {
+			:host {
+				width:100%;
+			}
+		}		
+		</style>
+		
+		<content></content>
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-col-25-100"
+  });
+  </script>
+  
+</dom-module>

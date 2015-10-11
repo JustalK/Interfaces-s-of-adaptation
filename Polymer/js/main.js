@@ -68,7 +68,7 @@ $( document ).ready(function() {
     
 	var isHidden = true;
 	$("my-menu").hide();
-    $("my-button").click(function() {
+    $("my-button,.menu-toggle").click(function() {
     	if(isHidden) {
     		adaptation();
     		if($(window).width()<600) {
