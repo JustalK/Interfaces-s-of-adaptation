@@ -9,15 +9,14 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="UTF-8">
   
   	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
   
   	<link rel="import" href="//www.polymer-project.org/0.5/components/core-media-query/core-media-query.html">
   
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
   	<link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="bar-top.html">
-    <link rel="import" href="bar-bot.html">
     <link rel="import" href="resp-div.html">
     <link rel="import" href="my-container.html">
 	<link rel="import" href="title-top.html">
@@ -25,20 +24,14 @@
     <link rel="import" href="my-row.html">
     <link rel="import" href="pull-left.html">
     <link rel="import" href="pull-right.html">
-    <link rel="import" href="my-login.html">
-    <link rel="import" href="my-join.html">
-    
     <link rel="import" href="my-container-full.html">
     <link rel="import" href="my-movie.html">
-    <link rel="import" href="my-footer.html">
-    <link rel="import" href="col-mid.html">
-    
+    <link rel="import" href="col-mid.html">  
     <link rel="import" href="my-button.html">
     <link rel="import" href="my-menu.html">
     <link rel="import" href="my-menu-inside.html">
     <link rel="import" href="my-bar-title.html">
     <link rel="import" href="bloc-information.html">
-    
     <link rel="import" href="my-col-25-100.html">
     <link rel="import" href="my-col-50-100.html">
     <link rel="import" href="my-col-50-50.html">
@@ -46,12 +39,9 @@
     <link rel="import" href="my-col-hidden-1200.html">
     <link rel="import" href="my-img-responsive.html">
     <link rel="import" href="my-lyric.html">
-    <link rel="import" href="my-informations.html">
-    
+    <link rel="import" href="my-informations.html">  
     <link rel="import" href="my-left.html">
     <link rel="import" href="my-right.html">
-    
-    
     <link rel="import" href="my-bar-pubs.html">
     
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
