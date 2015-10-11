@@ -48,6 +48,9 @@
     <link rel="import" href="my-lyric.html">
     <link rel="import" href="my-informations.html">
     
+    <link rel="import" href="my-left.html">
+    <link rel="import" href="my-right.html">
+    
     
     <link rel="import" href="my-bar-pubs.html">
     
@@ -108,16 +111,21 @@
     <?php 
 		$rsl = select("MOVIES");
 		$rows = count($rsl);
-  		for ($i = 1; $i <= 1; $i++) {
+  		for ($i = 1; $i <= $rows; $i++) {
   			$movie = select("MOVIES","*","ID=".$i);
   			$id_pubs = select("MAPS_MOVIES_PUBS","*","ID_MOVIES=".$i);
   			$pubs = select("PUBS","*","ID=".$id_pubs[0]["ID_PUBS"]);
+  			if($i>1) {
+  				echo '<my-container-full id="'.$i.'" style="left:-20000px;">';
+  			} else {
+  				echo '<my-container-full id="'.$i.'">';
+  			}
   	?>
-    
-    <my-container-full>
 	    		<my-container>
 	    			<my-row>
 	    				<col-mid>
+	    					<my-left></my-left>
+	    					<my-right></my-right>
 						  	<my-movie link="https://www.youtube.com/embed/<?php echo $movie[0]['CODE']; ?>?rel=0&loop=1&hd=1&vq=hd1080&playlist=<?php echo $movie[0]['CODE']; ?>&modestbranding=1&showinfo=0"></my-movie>
 						</col-mid>    		
 	    			</my-row>
@@ -157,7 +165,7 @@
 	    		</my-bar-pubs>   		
     </my-container-full>
     
-    <?php } ?>   
+    <?php } ?>         
     
 </my-content>
 

@@ -1,0 +1,35 @@
+<dom-module id="my-left">
+
+	<template>
+		<style>
+		/* CSS rules for your element */	
+		:host {
+		
+		}
+			
+		img {		
+			position:absolute;
+			left:1%;
+			top:0;
+			bottom:0;
+			margin:auto;
+			z-index:1000;
+			opacity: 0.4;
+			transform:scale(1.1,1.1);
+			cursor:pointer;
+		}
+		
+		img:hover {
+			opacity: 1;
+		}
+		</style>
+		<img src="leftw.png"></img>
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-left"
+  });
+  </script>
+  
+</dom-module>

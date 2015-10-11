@@ -1,6 +1,41 @@
 $( document ).ready(function() {
 	
 	$( "bloc-information" ).hide();
+	var slide=1;
+	
+	$("my-left").click(function() {
+		$("#"+slide).css("right","0px");
+		$("#"+slide).animate({right: -$(window).width()+"px"},500);
+		slide++;
+		nextslide();
+		$("#"+slide).css("left","auto");
+		$("#"+slide).css("right",$(window).width()+"px");
+		$("#"+slide).animate({right: $("my-menu").width()+"px"},350,function() {
+			$("#"+slide).css("right","auto");
+		
+		});
+	});
+	
+	$("my-right").click(function() {
+		$("#"+slide).css("left","0px");
+		$("#"+slide).animate({left: -$(window).width()+"px"},500);
+		slide--;
+		nextslide();
+		$("#"+slide).css("right","auto");
+		$("#"+slide).css("left",$(window).width()+"px");
+		$("#"+slide).animate({left: $("my-menu").width()+"px"},350,function() {
+			$("#"+slide).css("left","auto");
+		});		
+	});
+	
+	function nextslide() {
+		if(slide<1) {
+			slide=4;
+		} 
+		if(slide>4) {
+			slide=1;
+		}
+	}
 	
 	var lyrichide = true;
 	$( "my-bar-title" ).click(function() {
@@ -74,7 +109,7 @@ $( document ).ready(function() {
     		if($(window).width()<600) {
     			$("my-content").hide();
     		}
-    		$("my-content").animate({width: windowsContent+"px"},300,function(){
+    		$("my-content,my-container-full").animate({width: windowsContent+"px"},300,function(){
         		$("my-menu").show();
         		if($("my-content").height()>$("body").height()) {
             		$("my-menu").height($("my-content").height());	
@@ -90,7 +125,7 @@ $( document ).ready(function() {
         		if($(window).width()<600) {
         			$("my-content").show();
         		}
-        		$("my-content").animate({width: "100%"},300);
+        		$("my-content,my-container-full").animate({width: "100%"},300);
     		});
     		isHidden = true;
     	}	

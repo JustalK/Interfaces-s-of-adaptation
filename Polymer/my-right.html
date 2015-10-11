@@ -1,0 +1,32 @@
+<dom-module id="my-right">
+
+	<template>
+		<style>
+		/* CSS rules for your element */		
+		img {		
+			position:absolute;
+			right:1%;
+			top:0;
+			bottom:0;
+			margin:auto;
+			z-index:1000;
+			opacity: 0.4;
+			transform:scale(1.1,1.1);
+			cursor:pointer;
+		}
+		
+		img:hover {
+			opacity: 1;
+		}
+		
+		</style>
+		<img src="rightw.png"></img>
+  </template>
+
+  <script>
+  Polymer({
+    is: "my-right"
+  });
+  </script>
+  
+</dom-module>
