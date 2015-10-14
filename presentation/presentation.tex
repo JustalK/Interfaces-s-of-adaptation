@@ -3,7 +3,10 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{tabularx}
-
+\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 \usepackage{geometry,wrapfig,lipsum}
  \geometry{
@@ -48,16 +51,221 @@ DOSSIER D'ANALYSE DES DIFFERENCES\\
 
 \section{Comment avez vous r\'ealis\'e l'exemple ?}
 
-Pour r\'ealiser mon exemple, je me suis dans un premier temps int\'eress\'e \`a la d\'efinition m\^eme d'un site web adaptatif. Le principe du RWD (\textit{responsive web design}) ou site web adaptatif dans la langue de moli\'ere consiste \`a s'appuyer sur l'usage des \textit{Media queries}, de grilles de positionnement ou encore d'images flexibles pour rendre un site adaptable \`a son support.\\
-Pour d\'evelopper, je suis parti de la version ordinateur, puis j'ai remis en forme les \'el\'ements \`a mesure que la largeur de l'\'ecran diminuait voire je les supprimais totalement. Nous verrons un peu plus loin pourquoi j'ai fait ces choix.
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p2}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Le site pour PC}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+Pour r\'ealiser mon exemple, je me suis dans un premier temps int\'eress\'e \`a la d\'efinition m\^eme d'un site web adaptatif. Le principe du RWD (\textit{responsive web design}) ou site web adaptatif dans la langue de moli\'ere consiste \`a s'appuyer sur l'usage des \textit{Media queries} que l'on peux aussi appeler \og points de rupture \fg , de grilles de positionnement et d'images flexibles pour rendre un site adaptable \`a son support.\\
+Pour d\'evelopper, je suis parti de la version ordinateur \`a une taille relativement imposante, puis j'ai remis en forme les \'el\'ements \`a mesure que la largeur de l'\'ecran diminuait voire je les supprimais totalement. J'ai essay\'e autant que faire se peut d'ajouter un maximum d'\'el\'ements diff\'erents. On retrouve ainsi des vid\'eos, un menu, des tableaux, des images, du texte, des \'el\'ements interactifs comme des boutons... Il y a donc l'ensemble des \'el\'ements que l'on peux retrouver sur n'importe quels sites lambda. \\
+
+\subsection{Structure du site}
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p3}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Structure du site}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+Les deux technologies que j'ai choisie partage la m\^eme structure de base. C'est \`a dire un d\'ecoupage en cinq grands blocs. Sur la figure 2, le bloc en rouge repr\'esente la barre principale. En jaune, on retrouve la zone de lecture principale des clips musicaux. En vert, il s'agit d'un bouton permettant d'ouvrir un bloc d'information concernant le clip de la zone jaune. En bleu, il s'agit simplement d'autres clips musicaux en rapport avec le chanteur chantant dans le clip de la zone jaune. En rose, on retrouve un menu que l'on peux ou non affich\'e gr\^ace \`a un bouton se trouvant dans la zone rouge. Si le menu est rentr\'e, la zone violet n'existe plus et on se retrouve avec seulement quatres blocs qui prendront la totalit\'e de la fen\^etre comme on peux l'observ\'e sur l'image suivante :\\
+
 \begin{center}
-\vspace{0.5cm}
-\includegraphics[width=0.8\textwidth]{pc2}
-\vspace{0.5cm}
+  \includegraphics[width=0.8\textwidth]{p1}
 \end{center}
 
-Les deux technologies que j'ai choisie partage la m\^eme structure de base. C'est \`a dire un d\'ecoupage en quatre grands blocs. En rose sur l'image ci-dessus, on trouve la barre de connexion. En bleu, la zone de visionnage des vid\'eo. En Jaune, une zone d'information. Enfin, en rouge, une zone pour afficher les vid\'eos o\`u le chanteur est le m\^eme que la vid\'eo dans la zone bleu.\\
-Pour observer pr\'ecis\'ement le principe de RWD, nous allons nous int\'erresser particuli\`erement \`a la zone rouge en bas du site. Cette derni\'ere illustre \`a la perfection tous les aspects que l'on attend d'un site adaptatif. Colorions chaque divisions de cette partie du site d'une couleur unique.
+\subsection{Images flexibles}
+
+Pour observer pr\'ecis\'ement les diff\'erents principes de RWD sur notre site, nous allons nous int\'erresser \`a certaines zones du site. Pour commencer, nous allons d'abord nous int\'eress\'e au menu (zone violet). Cette derni\'ere illustre \`a la perfection le principe d'image flexible que l'on attend d'un site adaptatif. Qu'est ce qu'une image flexible ? Il s'agit d'une image qui se redimensionnera en fonction de la taille de la fen\^etre. Pour r\'ealiser cela, il faut simplement donner \`a une image quelques attributs CSS. Il faut lui sp\'ecifi\'e de prendre toute la longueur disponible dans le bloc o\`u elle se trouve et de prendre une hauteur automatiquement en fonction de son rapport. En CSS, cela se traduit par : \textit{\og width:100\%;height:auto; \fg{} }. Avec Polymer, j'ai cr\'e\'e un object image qui ajoutait automatiquement des images responsives. Sous Bootstrap, c'est on ne peux plus simple, une classe existe nomm\'e \textit{\og img-responsive \fg} et il suffit de la rajouter sur une balise IMG. Cela permet d'obtenir le r\'esultat suivant lorsque l'on r\'eduit la taille de la fen\^etre :\\
+
+\begin{center}
+  \includegraphics[width=0.8\textwidth]{p4}
+\end{center}
+
+Dans mon exemple ci-dessus, on remarque bien que l'image s'adapte \`a la taille de la fen\^etre. On remarque de plus que le site est totalement diff\'erent, il s'agit l\`a de l'application des points de rupture ou Media queries dont je parlais pr\'ec\'edemment et que nous allons voir au prochain point.
+
+\subsection{Media queries ou Points de rupture}
+
+Les \textbf{media queries} ou points de rupture sont des r\`egles CSS appliqu\'ees en fonction de la largeur de l'\'ecran. Ce sont ces diff\'erentes largeurs qui sont appel\'ees \og points de rupture \fg{}, elles correpondent \`a un besoin de modifier la page \`a partir d'un seuil critique pour la facilitation de la navigation et de la lecture du contenu. Pour que cette d\'efinition soit clair, nous allons montrer leur application sur le site. \\
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p5}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Les blocs}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Sur la figure 3, j'ai colori\'e les diff\'erents blocs chacun d'une couleur diff\'erente. Ces blocs sont simplements repr\'esent\'es par des balises DIV avec des r\`egles CSS fonction de la taille de l'\'ecran. Prenons l'exemple du bloc violet, ce bloc fait exactement 25\% du conteneur qui lui prend 100\% de la longueur de l'\'ecran. Lorsque l'on r\'eduit la fen\^etre jusqu'\`a un certain point, ce bloc prendra alors 50\% sur ces 100\%. Puis si l'on continue \`a r\'eduire la fen\^etre, ce bloc disparait.\\  
+
+\begin{center}
+  \includegraphics[width=0.8\textwidth]{p8}
+\end{center}
+
+Sur Bootstrap, il est assez simple de r\'ealiser ceci. Cet technologie inclue un syst\`eme de grille relativement bien ficell\'e. Il faut dans un premier temps, d\'efinir notre zone o\`u on souhaite r\'ealiser le d\'ecoupage en utilisant la classe \og container \fg{} dans une balise DIV :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{<div class="container">\\
+</div>}}
+\vspace{0.5cm}
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p9}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Zone du container}
+  \vspace{-10pt}
+\end{wrapfigure} 
+\hspace*{0.6cm}On a ainsi sp\'ecifi\'e o\`u se trouvait notre zone par dessus laquelle nous allons poser une grille. J'entrerais dans les d\'etails au chapitre suivant, pour l'instant il faut voir cela comme une subdivision en 12 partie de la partie rouge sur la figure 4. Comme je l'ai d\'ej\`a sp\'ecifi\'e pr\'ec\'edement, l'image dans la partie rouge ne repr\'esente que 25\% de cette zone lorsque l'\'ecran est sup\'erieur \`a 1500px (valeur choisie par mes soins). Pour ensuite, sp\'ecifi\'e \`a Bootstrap que nous allons couper notre container en plusieurs parties, il faut utiliser la classe \og row \fg{} : 
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{<div class="container">\\
+\hspace*{0.6cm}<div class="row">\\
+\hspace*{0.6cm}</div>\\
+</div>}}
+\vspace{0.5cm}\\
+Nous allons maintenant entrer dans le vif du sujet, comme dit plus haut, le container est divis\'e en 12 parties que j'appellerais dans la suite colonne. On peux fixer le nombre de colonne que peux prendre un \'el\'ement. Reprenons et analysons pr\'ecisement la figure 3. Sur cette derni\`ere, la zone jaune prend 6 colonnes et les 6 colonnes restantes sont r\'eparties \'equitablement entre la zone violette et verte. Niveau code, on sp\'ecifie cela en utilisant les classes \og col-xs-X \fg,\og col-sm-X \fg,\og col-md-X \fg ou \og col-lg-X \fg. Xs, sm, md et lg repr\'esentent la taille minimum de l'\'ecran pour que les r\`egles que ces classes contiennent prennent effets. Tandis que le X dans ces classes repr\'esente tout simplement le nombre de colonnes que prendra l'\'el\'ement utilisant ces classes. Je reviendrais un peu plus loin sur ce point, pour l'instant, il est plus important de comprendre la diff\'erence entre les classes xs, sm, md et lg :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{<div class="container">\\
+\hspace*{0.6cm}<div class="row">\\
+\textbf{\hspace*{1.2cm}\color{red}{<div class="col-md-12 col-lg-6">}}\\
+\hspace*{1.8cm}<div class="row">\\
+\textbf{\hspace*{2.4cm}\color{blue}{<div class="hidden-xs hidden-sm col-md-6 col-lg-6>}}\\
+\hspace*{3.0cm}...\\
+\hspace*{2.4cm}</div>\\
+\hspace*{2.4cm}...\\
+\hspace*{1.8cm}</div>\\
+\hspace*{1.2cm}</div>\\
+\hspace*{1.2cm}...\\
+\hspace*{0.6cm}</div>\\
+</div>}}
+\vspace{0.5cm}\\
+Ce bout de code est suffisant pour comprendre et expliqu\'e clairement les mouvements de l'image violette dans la figure 3. Le texte en rouge pr\'ecise qu'\`a grande taille lg (sup\'erieur \`a 1500px), la zone violette et verte ont 50\% du container, soit 6 colonnes : \og col-lg-6 \fg{} . Le texte en bleu est la balise DIV directe qui contient l'image violette. Ces classes sp\'ecifies qu'\`a grande taille, ce bloc ne peux exc\'eder 6 colonnes, soit 50\%. Or, 50\% de 50\% fait bien 25\% comme je l'avais dit plus haut. Cependant cela n'est valide que lorsque la fen\^etre est sup\'erieur \`a 1500px. En dessous, les autres classes prennent le relais.\\ 
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \begin{tabular*}{0.48\textwidth}{@{\extracolsep{\fill}} | c | l | }
+  \hline
+  xs & 600px\\
+  \hline
+  sm & 900px\\
+  \hline
+  md & 1200px\\
+  \hline
+  lg & 1500px\\
+  \hline
+\end{tabular*}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Points de rupture}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Pour comprendre pr\'ecisement quelles sont les classes qui sont actives \`a une grandeur de fen\^etre donn\'e, il faut simplement retenir les dimensions que repr\'esentent les sigles xs, sm, md, lg. Les dimensions qui sont affich\'ees ne sont pas celles par d\'efauts de BootStrap mais celles que j'ai utilis\'e pour mon site. J'ai chang\'e les points de rupture pour que mon menu puisse s'ins\'errer joliment sur mon site. Sans cela, il se pouvait que le bouton de la barre de menu chevauche le menu, ce qui donnait un r\'esultat pl\^utot moche. La seule mani\`ere de r\'egler le probl\`eme a \'et\'e de construire une version personnalis\'e de Boostrap. Il est possible d'\'effectuer cette op\'eration sur le site officiel de Bootstrap.\\
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p6}
+  \end{center}
+  \vspace{-20pt}
+  \caption{50\% de la fen\^etre}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Dans notre cas, si la fen\^etre est inf\'erieur \`a 1500px alors les classes lg ne sont plus utilis\'e. Prenons une fen\^etre de 1300px, si l'on regarde le tableau de la figure 5, on remarque que pour toutes les dimensions situ\'es entre 1200 px et 1500 px md est la classe qui est actif. On reprend notre bout de code pr\'ec\'edent et on remarque que le texte en rouge mentionne \og col-md-12 \fg{}. Cela signifie que cette div qui repr\'esente la zone violette et verte de la figure 3 prendra 100\% du container. On regarde notre texte en bleu et on lit \og col-md-6 \fg{}. L'image violette prendra donc 50\% de 100\%, elle prendra donc la moiti\'e de la longueur de la fen\^etre.\\
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p7}
+  \end{center}
+  \vspace{-20pt}
+  \caption{L'image a disparu}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Maintenant, si nous continuons de r\'eduire la fen\^etre et atteignons une taille inf\'erieur \`a 1200px, nous arrivons dans les classes sm. Si on regarde le texte en bleu dans le bout de code pr\'ec\'edent, on voit qu'il est \'ecrit \og hidden-sm \fg{}. Cette classe signifie que le nombre de colonne prise par cet \'el\'ement sera r\'eduit \`a z\'ero. Cela se traduit par une disparition compl\`ete de l'\'el\'ement comme on peux le voir sur la figure 7. Notons au passage que je n'ai pas pr\'ecis\'e dans le texte en rouge le nombre de colonne pour les dimensions sm et xs. Je n'ai pas eu \`a le faire car Bootstrap utilise les r\`egle CSS pour r\'ealiser ces modifications. Plus pr\'ecisement, Bootstrap utilise l'h\'eritage et le cascading de CSS pour pouvoir r\'e\'ecrire des r\`egles sur des r\`egles. Si on ne d\'efini pas de xs, alors les r\`egles CSS seront celles de sm. Si elles aussi ne sont pas d\'efinis, alors ce seront celles de md qui seront prise en compte...Cela ne constitue pas une faute mais j'aurais pu omettre le \og col-md-6 \fg{} dans mon texte bleu et cela donnerais toujours le m\^eme r\'esultat.\\
+
+Nous avons vu comment mettre cela en place sur Bootstrap, on peux \'evidemment faire la m\^eme chose avec Polymer. Le r\'esultat obtenue est le m\^eme mais la mani\`ere d'y arriver est diff\'erente. Cependant, notons que cela est totalement contraire \`a l'id\'ee de Polymer. J'ai discut\'e de cela avec Monsieur Bidelman lui-m\^eme qui est un des fondateurs de Polymer et qui travaille actuellement chez Google. Le but est de cr\'eer des \'el\'ements r\'eutilisables. Or \`a partir du moment o\`u l'on utilise des m\'edias queries, l'\'el\'ement devient ancr\'e au site qui les utilisent. Prenons l'exemple pr\'ec\'edent, pour que l'image disparaisse \`a un certain point de rupture, j'ai cr\'e\'e un \'el\'ement qui change son attribut \og display \fg{} lorsque l'on atteint ce fameux point.
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-col-hidden-900">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>\\				
+\hspace*{1.8cm}\color{blue}{@media (max-width:900px) \{\\
+\hspace*{2.4cm}:host \{\\
+\hspace*{3.0cm}display: none;\\
+\hspace*{2.4cm}\}\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}}\color{black}{</style>\\
+\hspace*{1.2cm}<content></content>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{1.2cm}Polymer({\\
+\hspace*{1.8cm}is: "my-col-hidden-900"\\
+\hspace*{1.2cm}});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>}}}
+\vspace{0.5cm}\\
+On a donc cr\'e\'e une nouvelle node HTML nomm\'e my-col-hidden-900. Le code en bleu est la partie la plus importante. Elle sp\'ecifie que le code se situant entre les balises \og my-col-hidden-900 \fg{} aura l'attribut \og display:none \fg{} si la taille de la fen\^etre est inf\'erieur \`a 900px. Autrement dit, tous le contenue \`a l'int\'erieur ne sera pas affich\'e.\\
+Dans le m\^eme style, j'ai cr\'e\'e un \'el\'ement du DOM dont la longueur s'adapte en fonction la largeur de la fen\^etre. La longueur ainsi que le position naturel des balises DIV avec l'attribut \og float:left \fg{} permet de r\'ealiser un semblant de grille sous Polymer :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-col-25-100">
+	<template>
+		<style>		
+		:host {		
+			position: relative;
+			min-height: 1px;
+			padding-left: 15px;
+			padding-right: 15px;
+			float:left;
+			width:25%;
+			box-sizing: border-box;
+		}		
+		@media (max-width:1500px) {
+			:host {
+				width:50%;
+			}
+		}		
+		@media (max-width:900px) {
+			:host {
+				width:100%;
+			}
+		}		
+		</style>		
+		<content></content>
+  </template>
+  <script>
+  Polymer({
+    is: "my-col-25-100"
+  });
+  </script>  
+</dom-module>}}
+\vspace{0.5cm}\\
+
+
+Mais cela n'est qu'un hack qui permet de faire ce que je d\'esire. On peux le faire mais on ne devrais pas le faire. Le gros probl\`eme ici est que ce code est non maintenable. Si jamais je changeais de point de rupture par exemple, je devrais changer la valeur de ce m\'edia query. Si il n'y a que celui-l\`a, ce n'est trop long et fatiguant. Mais si le projet a quelques milliers de modules, cela risque d'\^etre tr\`es long.
+
+
+
+\newpage
+
+
+Ne pas oublier de detailler le changement de point de rupture.
+
+Colorions chaque divisions de cette partie du site d'une couleur unique.
 \begin{center}
 \vspace{0.5cm}
 \includegraphics[width=0.8\textwidth]{pc4}
@@ -134,8 +342,11 @@ Un article qui traite du responsible typesetting.\\
 La description de la loi de Fitt\\
 \textit{https://en.wikipedia.org/wiki/Fitts's\_law}\\
 \textit{http://webdesign.tutsplus.com/articles/applying-fitts-law-to-mobile-interface-design--webdesign-6919}
-
-
+\vspace{0.5cm}\\
+\textbf{Media queries}\\
+Les medias queries sont int\'erressants mais limit\'es. Le futur serait plutot du cot\'e des \'el\'ements queries.\\
+\textit{http://ianstormtaylor.com/media-queries-are-a-hack/}\\
+\textit{http://www.smashingmagazine.com/2013/06/media-queries-are-not-the-answer-element-query-polyfill/}\\
 
 \section{Difficult\'es rencontr\'es}
 \hspace*{0.6cm}Le premier probl\`eme rencontr\'e fut lorsque que j'essaya de coder une balise div de telle mani\`ere que celle-ci remplisse enti\`erement l'espace de l'application. Cette chose extr\`emement simple n'est pourtant pas impl\'ement\'e dans Bootstrap 3.0 et les versions sup\'erieur alors que cela se trouvait dans les versions ant\'erieur avec la class span. Apr\'es de longue recherches, il apparait donc impossible en pur Bootstrap de remplir un div \`a cent pour cent de la balise parent.De ce fait, j'ai du modifi\'e le CSS pour r\'ealiser le remplissage de la page. Pourquoi un tel choix des d\'eveloppeur de bootstrap ?
