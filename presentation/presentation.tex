@@ -263,7 +263,7 @@ Dans le m\^eme style, j'ai cr\'e\'e un \'el\'ement du DOM dont la longueur s'ada
     \includegraphics[width=0.48\textwidth]{pc4}
   \end{center}
   \vspace{-20pt}
-  \caption{L'image a disparu}
+  \caption{Les 4 blocs}
   \vspace{-10pt}
 \end{wrapfigure} 
 
@@ -279,7 +279,55 @@ Ce module permet d'ajouter une nouvelle node HTML nomm\'e \og my-col-25-100 \fg{
 
 \subsection{Grille de positionnement}
 
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p10}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Le container du bas de page}
+  \vspace{-10pt}
+\end{wrapfigure} 
 
+Les grilles de positionnements consiste en un dimensionnement relatif des diff\'erents blocs de la page. J'ai d\'ej\`a partiellement \'evoqu\'e ce point. Je vais essayer de me concentrer ici sur ce point en particulier. Comme dit dans le chapitre pr\'ec\'dent, les grilles se placent dans des containers. Qu'est qu'un container ? Sur la figure 9, j'ai repr\'sent\'e en violet, le container du bas de la page. On peux aussi l'obtenir en analysant le code avec Firebug (F12). Cet espace violet est la place maximale que peux prendre le contenue ici.\\
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p12}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Les 12 divisions d'un container}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Lorsque l'on utilise la classe \og row \fg{} dans Bootstrap, on divise ce container en 12 parties \'egales. Avec Polymer, le principe que j'ai d\'evelopp\'e est globalement le m\^eme cependant j'ai d\`u reconstruire ces divisions de A \`a Z via les m\'edia queries et les attributs CSS (en particulier : width). Sur la figure 10, j'ai repr\'esent\'e chacune des divisions d'une couleur diff\'erente. Ensuite, on peux d\'efinir combien de colonnes ou divisions pourra prendre un \'el\'ement. (voir les explication du chapitre pr\'ec\'edent).\\
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p11}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Les 12 divisions d'un container}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Pour les clips musicaux en bas de page, j'ai d\'efini pour chacun d'entre eux 3 divisions. Sur Bootstrap, cela se traduit par \og col-XX-3 \fg{} o\`u XX repr\'esente tout simplement les points de rupture que j'ai \'evoqu\'e dans le chapitre pr\'ec\'edent. Avec Polymer, pour r\'ealiser cela, il faut imbriqu\'e deux modules ou balises l'une dans l'autre. La premi\`ere servira de container pour r\'ealiser la m\^eme chose que sur la figure 9 tandis que la deuxi\`eme servira a r\'ealiser les divisions comme sur l'image de droite.\\
+
+Le point important est que les \'el\'ements des grilles sont d\'efinis comme \og float:left \fg{} que ce soit sur Bootstrap ou sur Polymer. Ce qui veut dire qu'un \'el\'ement, ce positionnera toujours le plus \`a gauche possible sur la m\^eme ligne si il y a la place disponible, sinon l'\'el\'ement se positionnera sur une nouvelle ligne. De m\^eme, il y a toujours 12 colonnes sur une ligne peux importe la taille de la fen\^etre. Si jamais les \'el\'ements \'ex\'edent le nombre de colonnes disponibles sur la ligne, il se place automatiquement sur la ligne en dessous.\\
+
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=0.8\textwidth]{p13}
+\vspace{0.5cm}\\
+\end{center}
+
+Comme vue dans les exemples pr\'ec\'edent, les clips musicaux du bas de la page \'etaient affich\'e sur 1 ligne. Sur Bootstrap, cela \'equivaut \`a utiliser la classe \og col-XX-3 \fg{}. Il y a 4 vid\'eos qui utilisent chacune 3 divisions. Sur Polymer, on pr\'ecisera que le bloc utilise 25\% du container en CSS avec l'attribut \og width \fg{}. Maintenant sur l'image ci-dessus, il y a deux lignes. Chacune utilise un syst\`eme de 12 colonnes. La diff\'erence r\'eside simplement dans le nombre de colonne qu'on a permis \`a l'\'el\'ement d'utiliser. Ici, j'ai utilis\'e la classe \og col-XX-6 \fg{} sur Bootstrap. Pour indiquer que chaque vid\'eo prendrait 6 colonnes. Comme il y a 4 clips, les deux premieres vid\'eos ont remplit la premi\`ere ligne puis la troisi\`eme vid\'eo est automatiquement pass\'e \`a la ligne en dessous pour compl\'eter le container.\\
+
+Ainsi, nous avons un tr\`es gros aper\c{c}u des moyens et technologies utilis\'e dans mes sites pour en faire un site suivant les notions de web adaptatif. Les deux technologies, Bootstrap et Polymer permettent de faire la m\^eme chose. Mais quelle technologie est la plus simple ? Quelle technologie permet de r\'ealiser le plus rapidement un site responsive ? Quelles sont les contraintes de chacunes des technologies ? Quels sont leurs avantages respectifs ? C'est ce dont je discuterais dans le chapitre suivant.
+
+  
 
 \newpage
 Mais cela n'est qu'un hack qui permet de faire ce que je d\'esire. On peux le faire mais on ne devrais pas le faire. Le gros probl\`eme ici est que ce code est non maintenable. Si jamais je changeais de point de rupture par exemple, je devrais changer la valeur de ce m\'edia query. Si il n'y a que celui-l\`a, ce n'est trop long et fatiguant. Mais si le projet a quelques milliers de modules, cela risque d'\^etre tr\`es long.
