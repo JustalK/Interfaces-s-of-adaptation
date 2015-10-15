@@ -327,7 +327,23 @@ Comme vue dans les exemples pr\'ec\'edent, les clips musicaux du bas de la page 
 
 Ainsi, nous avons un tr\`es gros aper\c{c}u des moyens et technologies utilis\'e dans mes sites pour en faire un site suivant les notions de web adaptatif. Les deux technologies, Bootstrap et Polymer permettent de faire la m\^eme chose. Mais quelle technologie est la plus simple ? Quelle technologie permet de r\'ealiser le plus rapidement un site responsive ? Quelles sont les contraintes de chacunes des technologies ? Quels sont leurs avantages respectifs ? C'est ce dont je discuterais dans le chapitre suivant.
 
-  
+\newpage
+\section{Bootstrap ou Polymer}
+
+\subsection{Compatibilit\'e}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p14}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Compatibilit\'e des technologies}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+Il s'agit sans doute de la premi\`ere chose \`a comparer. Bootstrap est support\'e par presque tout les navigateurs, Bootstrap n'est pas compatible avec Op\'era sur t\'el\'ephone et Safari sur Windows. Tandis que Polymer n'est compatible totalement qu'avec Google Chrome. Pour les autres navigateurs, Polymer est partiellement support\'e ou encore n'est pas du tout support\'e comme sur Internet explorer.En s'int\'eressant seulement \`a nos utilisateurs, on peux d\`es le d\'epart \'eliminer une des technologie. Polymer n'est clairement pas destin\'e \`a viser un large public. Notons de plus que les d\'eveloppeur de Mozilla Firefox ont d'ores et d\'ej\`a annonc\'e qu'il ne ferait aucun effort pour que leur navigateur supporte Polymer.\\
+
 
 \newpage
 Mais cela n'est qu'un hack qui permet de faire ce que je d\'esire. On peux le faire mais on ne devrais pas le faire. Le gros probl\`eme ici est que ce code est non maintenable. Si jamais je changeais de point de rupture par exemple, je devrais changer la valeur de ce m\'edia query. Si il n'y a que celui-l\`a, ce n'est trop long et fatiguant. Mais si le projet a quelques milliers de modules, cela risque d'\^etre tr\`es long.
