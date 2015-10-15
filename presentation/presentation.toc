@@ -3,8 +3,9 @@
 \contentsline {subsection}{\numberline {1.1}Structure du site}{3}
 \contentsline {subsection}{\numberline {1.2}Images flexibles}{4}
 \contentsline {subsection}{\numberline {1.3}Media queries ou Points de rupture}{4}
-\contentsline {section}{\numberline {2}Comment teste-t-on les capacit\'es d'adaptations ?}{10}
-\contentsline {section}{\numberline {3}Boostraps}{11}
-\contentsline {section}{\numberline {4}Documentations, Outils, liens utiles}{11}
-\contentsline {section}{\numberline {5}Difficult\'es rencontr\'es}{11}
-\contentsline {section}{\numberline {6}Simple trouvaille d'optimisation}{12}
+\contentsline {subsection}{\numberline {1.4}Grille de positionnement}{9}
+\contentsline {section}{\numberline {2}Comment teste-t-on les capacit\'es d'adaptations ?}{13}
+\contentsline {section}{\numberline {3}Boostraps}{14}
+\contentsline {section}{\numberline {4}Documentations, Outils, liens utiles}{14}
+\contentsline {section}{\numberline {5}Difficult\'es rencontr\'es}{14}
+\contentsline {section}{\numberline {6}Simple trouvaille d'optimisation}{15}

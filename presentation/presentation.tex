@@ -222,40 +222,66 @@ On a donc cr\'e\'e une nouvelle node HTML nomm\'e my-col-hidden-900. Le code en 
 Dans le m\^eme style, j'ai cr\'e\'e un \'el\'ement du DOM dont la longueur s'adapte en fonction la largeur de la fen\^etre. La longueur ainsi que le position naturel des balises DIV avec l'attribut \og float:left \fg{} permet de r\'ealiser un semblant de grille sous Polymer :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
-<dom-module id="my-col-25-100">
-	<template>
-		<style>		
-		:host {		
-			position: relative;
-			min-height: 1px;
-			padding-left: 15px;
-			padding-right: 15px;
-			float:left;
-			width:25%;
-			box-sizing: border-box;
-		}		
-		@media (max-width:1500px) {
-			:host {
-				width:50%;
-			}
-		}		
-		@media (max-width:900px) {
-			:host {
-				width:100%;
-			}
-		}		
-		</style>		
-		<content></content>
-  </template>
-  <script>
-  Polymer({
-    is: "my-col-25-100"
-  });
-  </script>  
-</dom-module>}}
+<dom-module id="my-col-25-100">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>\\
+\hspace*{1.8cm}\color{blue}{:host \{	\\	
+\hspace*{2.4cm}position: relative;\\
+\hspace*{2.4cm}min-height: 1px;\\
+\hspace*{2.4cm}padding-left: 15px;\\
+\hspace*{2.4cm}padding-right: 15px;\\
+\hspace*{2.4cm}float:left;\\
+\hspace*{2.4cm}width:25\%;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{1.8cm}\} }\\
+\hspace*{1.8cm}\color{red}{@media (max-width:1500px) \{\\
+\hspace*{2.4cm}:host \{\\
+\hspace*{3.0cm}width:50\%;\\
+\hspace*{2.4cm}\}\\
+\hspace*{1.8cm}\}}	\\	
+}}\\
+\fbox{\parbox{\textwidth}{
+\hspace*{1.8cm}\color{green}{@media (max-width:900px) \{\\
+\hspace*{2.4cm}:host \{\\
+\hspace*{3.0cm}width:100\%;\\
+\hspace*{2.4cm}\}\\
+\hspace*{1.8cm}\}}		\\
+\hspace*{1.8cm}\color{black}{</style>\\
+\hspace*{1.8cm}<content></content>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "my-col-25-100"\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script> \\ 
+</dom-module>}}}
 \vspace{0.5cm}\\
 
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{pc4}
+  \end{center}
+  \vspace{-20pt}
+  \caption{L'image a disparu}
+  \vspace{-10pt}
+\end{wrapfigure} 
 
+Ce module permet d'ajouter une nouvelle node HTML nomm\'e \og my-col-25-100 \fg{}. Ce dernier permet de faire la division et le repositionnement des clips musicaux en bas de page. J'ai colori\'e chacun des \'el\'ements utilisant ce module sur la figure 8. Sur cette figure, la dimension de la fen\^etre est sup\'erieur \`a 1500px. Dans le code pr\'ec\'edent, les r\`egles en bleu sont celles actives. On remarque que la taille (\og width \fg{} ) est sp\'ecifi\'e \`a 25\% du container. Chacun des clips prend donc 25\%, ce qui apparait bien sur la figure \`a droite. Ensuite, si l'on r\'eduit la fen\^etre, nous arriverons au point d'ancrage \`a 1500px. Les r\`egles appliqu\'es seront donc celles \'ecrites en bleu puis en rouge. Les r\`egles rouges donneront de nouvelles valeurs aux r\`egles en bleu, elles seront r\'e\'ecrites. Dans notre cas, la longueur maximal que pourra prendre un de nos clips musicaux sera de 50\% du container. Ainsi, lorsque 100\% du container est pris par 2 vide\'eos, les suivantes se placeront en dessous. Maintenant, imaginons que nous continuions \`a r\'eduire la fen\^etre jusqu'au point de rupture \`a 900px, chaque vid\'eos prendra la totalit\'e de la largeur de la fen\^etre. L'image ci-dessous montre le r\'esultat obtenue via ces points de rupture avec les mdoules pr\'ec\'dents :
+
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=0.8\textwidth]{pc7}
+\vspace{0.5cm}\\
+\end{center}
+
+\`A travers ces diff\'erents exemples, nous avons pu voir comment faire des points de ruptures sous les deux technologies diff\'erentes. Sur Bootstrap, il est bien plus simple d'utiliser ces points de ruptures. L'utilisation des classes xs, sm, md et lg rendent le principe facile \`a comprendre. Cependant, nous sommes limit\'es par Bootstrap \`a suivre ces quatres points de ruptures. Si le site contient de nombreux autres points de ruptures, Bootstrap perd de sa superbe car cela reviendrait \`a faire du CSS classique. Sur Polymer, il faut bien comprendre les m\'edia queries (points de ruptures) pour pouvoir les utiliser. Comme Polymer fractionne notre code, on se retrouve avec du CSS et donc des points de ruptures qui se retrouvent \'eparpill\'e dans le code. En cas de changement de points de rupture, la maintenance peut vide devenir difficile. 
+
+\subsection{Grille de positionnement}
+
+
+
+\newpage
 Mais cela n'est qu'un hack qui permet de faire ce que je d\'esire. On peux le faire mais on ne devrais pas le faire. Le gros probl\`eme ici est que ce code est non maintenable. Si jamais je changeais de point de rupture par exemple, je devrais changer la valeur de ce m\'edia query. Si il n'y a que celui-l\`a, ce n'est trop long et fatiguant. Mais si le projet a quelques milliers de modules, cela risque d'\^etre tr\`es long.
 
 
