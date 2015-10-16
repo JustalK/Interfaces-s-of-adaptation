@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  16 OCT 2015 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  16 OCT 2015 22:09
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -520,11 +520,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 40.
  [1
 
-{C:/Users/Latsuj/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pc.png>]
-
-(presentation.toc)
+{D:/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pc.png>] (presentatio
+n.toc)
 \tf@toc=\write3
- [2] <p2.png, id=12, 1864.9675pt x 987.69pt>
+ [2]
+<p2.png, id=12, 1864.9675pt x 987.69pt>
 File: p2.png Graphic file (type png)
  <use p2.png>
 Package pdftex.def Info: p2.png used on input line 57.
@@ -719,164 +719,239 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
-[10 <./p13.png>] <p14.png, id=58, 1927.2pt x 373.395pt>
+[10 <./p13.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+<p18.png, id=58, 1864.9675pt x 987.69pt>
+File: p18.png Graphic file (type png)
+ <use p18.png>
+Package pdftex.def Info: p18.png used on input line 342.
+(pdftex.def)             Requested size: 206.40038pt x 109.30936pt.
+
+Underfull \hbox (badness 1540) in paragraph at lines 349--350
+[][]\T1/lmr/m/n/10 Sur mon exemple, il y a deux grands
+ []
+
+
+Underfull \hbox (badness 3098) in paragraph at lines 349--350
+\T1/lmr/m/n/10 site (cou-leur rouge sur l'image à droite)
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 349--350
+\T1/lmr/m/n/10 et une par-tie conte-nue qui est en fait un
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 349--350
+\T1/lmr/m/n/10 tie du site qui sera animé via un script
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 351--389
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 351--389
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 351--389
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--389
+
+ []
+
+[11 <./p18.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 390--487
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 390--487
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 390--487
+[]
+ []
+
+[12] [13] <p19.png, id=69, 1848.9075pt x 50.1875pt>
+File: p19.png Graphic file (type png)
+ <use p19.png>
+Package pdftex.def Info: p19.png used on input line 492.
+(pdftex.def)             Requested size: 430.00462pt x 11.67229pt.
+ [14 <./p19.png>] <p14.png, id=73, 1927.2pt x 373.395pt>
 File: p14.png Graphic file (type png)
  <use p14.png>
-Package pdftex.def Info: p14.png used on input line 338.
+Package pdftex.def Info: p14.png used on input line 505.
 (pdftex.def)             Requested size: 206.40038pt x 39.98534pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
+Underfull \hbox (badness 10000) in paragraph at lines 512--513
 
  []
 
-<p15.png, id=59, 1543.7675pt x 843.15pt>
+<p15.png, id=74, 1543.7675pt x 843.15pt>
 File: p15.png Graphic file (type png)
  <use p15.png>
-Package pdftex.def Info: p15.png used on input line 356.
+Package pdftex.def Info: p15.png used on input line 523.
 (pdftex.def)             Requested size: 206.40038pt x 112.72678pt.
- [11 <./p14.png> <./p15.png>] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+ [15 <./p14.png> <./p15.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
 
  []
 
-<double.png, id=67, 1489.565pt x 849.1725pt>
+<double.png, id=79, 1489.565pt x 849.1725pt>
 File: double.png Graphic file (type png)
  <use double.png>
-Package pdftex.def Info: double.png used on input line 378.
+Package pdftex.def Info: double.png used on input line 542.
 (pdftex.def)             Requested size: 206.40038pt x 117.66534pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 549--550
 
  []
 
-<p16.png, id=68, 1543.7675pt x 843.15pt>
+<p16.png, id=80, 1543.7675pt x 843.15pt>
 File: p16.png Graphic file (type png)
  <use p16.png>
-Package pdftex.def Info: p16.png used on input line 390.
+Package pdftex.def Info: p16.png used on input line 554.
 (pdftex.def)             Requested size: 206.40038pt x 112.72678pt.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-399.
+563.
 
-<p17.png, id=69, 1527.7075pt x 781.92125pt>
+<p17.png, id=81, 1527.7075pt x 781.92125pt>
 File: p17.png Graphic file (type png)
  <use p17.png>
-Package pdftex.def Info: p17.png used on input line 402.
+Package pdftex.def Info: p17.png used on input line 566.
 (pdftex.def)             Requested size: 206.40038pt x 105.63832pt.
 
-Underfull \hbox (badness 2970) in paragraph at lines 397--407
+Underfull \hbox (badness 2970) in paragraph at lines 561--571
 \T1/lmr/m/n/10 ou-til re-di-men-sion-nant la fe-nêtre à la di-
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 397--407
+Underfull \hbox (badness 1596) in paragraph at lines 561--571
 \T1/lmr/m/n/10 J'ai uti-lisé cet ou-til pour voir le ré-sul-tat
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 397--407
+Underfull \hbox (badness 1552) in paragraph at lines 561--571
 \T1/lmr/m/n/10 sous dif-fé-rentes ta-blettes et té-lé-phones ac-
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 397--407
+Underfull \hbox (badness 3635) in paragraph at lines 561--571
 \T1/lmr/m/n/10 op-tion sous le na-vi-ga-teur, il suf-fit d'ap-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--407
+Underfull \hbox (badness 10000) in paragraph at lines 561--571
 
  []
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 40
-7.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 57
+1.
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 409--410
+Underfull \hbox (badness 1275) in paragraph at lines 573--574
 [][]\T1/lmr/m/n/10 Il est aussi pos-sible de pas-ser par des
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 409--410
+Underfull \hbox (badness 1389) in paragraph at lines 573--574
 \T1/lmr/m/n/10 sites qui per-mettent de tes-ter l'adap-ta-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
+Underfull \hbox (badness 10000) in paragraph at lines 573--574
 
  []
 
-[13 <./double.png> <./p16.png> <./p17.png>]
-Overfull \hbox (4.69139pt too wide) in paragraph at lines 418--444
+[16 <./double.png> <./p16.png> <./p17.png>]
+Overfull \hbox (4.69139pt too wide) in paragraph at lines 582--608
 \T1/lmr/m/it/10 http ://webdesign.tutsplus.com/articles/applying-fitts-law-to-m
 obile-interface-design--webdesign-6919
  []
 
 
-Overfull \hbox (20.07568pt too wide) in paragraph at lines 418--444
+Overfull \hbox (20.07568pt too wide) in paragraph at lines 582--608
 \T1/lmr/m/it/10 http ://www.smashingmagazine.com/2013/06/media-queries-are-not-
 the-answer-element-query-polyfill/ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--444
+Underfull \hbox (badness 10000) in paragraph at lines 582--608
 
  []
 
-[14] [15]
+[17] [18]
 File: pc4.png Graphic file (type png)
  <use pc4.png>
-Package pdftex.def Info: pc4.png used on input line 458.
+Package pdftex.def Info: pc4.png used on input line 622.
 (pdftex.def)             Requested size: 344.005pt x 182.57039pt.
 File: pc7.png Graphic file (type png)
  <use pc7.png>
-Package pdftex.def Info: pc7.png used on input line 464.
+Package pdftex.def Info: pc7.png used on input line 628.
 (pdftex.def)             Requested size: 344.005pt x 143.43059pt.
 
-Overfull \hbox (74.09496pt too wide) in paragraph at lines 468--472
+Overfull \hbox (74.09496pt too wide) in paragraph at lines 632--636
 \T1/lmr/m/n/10 adap-ta-tif. Le créa-teur de cette vi-sion, Mr. Ethan Mar-cotte,
  a im-ple-menté un site (\T1/lmr/m/it/10 http ://alistapart.com/d/responsive-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--472
+Underfull \hbox (badness 10000) in paragraph at lines 632--636
 
  []
 
-[16] <textes.png, id=83, 990.70125pt x 301.125pt>
+[19] <textes.png, id=95, 990.70125pt x 301.125pt>
 File: textes.png Graphic file (type png)
  <use textes.png>
-Package pdftex.def Info: textes.png used on input line 476.
+Package pdftex.def Info: textes.png used on input line 640.
 (pdftex.def)             Requested size: 344.005pt x 104.55907pt.
- [17 <./textes.png>] <blackberry.png, id=88, 589.20125pt x 1022.82124pt>
+ [20 <./textes.png>] <blackberry.png, id=100, 589.20125pt x 1022.82124pt>
 File: blackberry.png Graphic file (type png)
 
 <use blackberry.png>
-Package pdftex.def Info: blackberry.png used on input line 486.
+Package pdftex.def Info: blackberry.png used on input line 650.
 (pdftex.def)             Requested size: 85.35826pt x 148.17262pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--487
+Underfull \hbox (badness 10000) in paragraph at lines 651--651
 \T1/lmr/m/it/10 Black-Berry (via
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--488
+Underfull \hbox (badness 10000) in paragraph at lines 646--652
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--490
+Underfull \hbox (badness 10000) in paragraph at lines 652--654
 
  []
 
-[18 <./blackberry.png>] [19] (presentation.aux) ) 
+[21 <./blackberry.png>] [22] (presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3730 strings out of 493673
- 50161 string characters out of 3141527
+ 3741 strings out of 493673
+ 50276 string characters out of 3141527
  225344 words of memory out of 3000000
- 6999 multiletter control sequences out of 15000+200000
+ 7008 multiletter control sequences out of 15000+200000
  43448 words of font info for 34 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  28i,7n,30p,1534b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -886,9 +961,9 @@ Here is how much of TeX's memory you used:
 /lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb>
-Output written on presentation.pdf (19 pages, 15231322 bytes).
+Output written on presentation.pdf (22 pages, 15636723 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 125 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

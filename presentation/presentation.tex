@@ -325,7 +325,174 @@ Le point important est que les \'el\'ements des grilles sont d\'efinis comme \og
 
 Comme vue dans les exemples pr\'ec\'edent, les clips musicaux du bas de la page \'etaient affich\'e sur 1 ligne. Sur Bootstrap, cela \'equivaut \`a utiliser la classe \og col-XX-3 \fg{}. Il y a 4 vid\'eos qui utilisent chacune 3 divisions. Sur Polymer, on pr\'ecisera que le bloc utilise 25\% du container en CSS avec l'attribut \og width \fg{}. Maintenant sur l'image ci-dessus, il y a deux lignes. Chacune utilise un syst\`eme de 12 colonnes. La diff\'erence r\'eside simplement dans le nombre de colonne qu'on a permis \`a l'\'el\'ement d'utiliser. Ici, j'ai utilis\'e la classe \og col-XX-6 \fg{} sur Bootstrap. Pour indiquer que chaque vid\'eo prendrait 6 colonnes. Comme il y a 4 clips, les deux premieres vid\'eos ont remplit la premi\`ere ligne puis la troisi\`eme vid\'eo est automatiquement pass\'e \`a la ligne en dessous pour compl\'eter le container.\\
 
-Ainsi, nous avons un tr\`es gros aper\c{c}u des moyens et technologies utilis\'e dans mes sites pour en faire un site suivant les notions de web adaptatif. Les deux technologies, Bootstrap et Polymer permettent de faire la m\^eme chose. Mais quelle technologie est la plus simple ? Quelle technologie permet de r\'ealiser le plus rapidement un site responsive ? Quelles sont les contraintes de chacunes des technologies ? Quels sont leurs avantages respectifs ? C'est ce dont je discuterais dans le chapitre suivant.
+Ainsi, nous avons une id\'ee g\'en\'erale des moyens que j'ai utilis\'e pour faire mon site ainsi qu'une compr\'ehension pouss\'e des techniques que je vais employ\'e pour comprendre comment j'ai form\'e mon site.
+
+\newpage
+\section{L'exemple de A \`a Z}
+
+\subsection{Installation}
+Installation ?
+\subsection{Creation des containers}
+
+Il est maintenant temps de commencer l'application de ce que nous avons vu pr\'ec\'edent dans un exemple concret. Nous allons reproduire l'ensemble de mon site sous les deux technologies que sont Polymer et Bootstrap. Si vous avez compris ce que j'ai expliqu\'e dans le chapitre suivant, il faut commencer par cr\'eer nos container. C'est \`a dire nos \'el\'ements qui serviront de base \`a nos grilles de positionnement.\\
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p18}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Les 12 divisions d'un container}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Sur mon exemple, il y a deux grands blocs principaux. Un container ou plutot une barre principale qui se trouve en haut du site (couleur rouge sur l'image \`a droite) et une partie contenue qui est en fait un grand carousel (couleur violette sur l'image \`a droite). La partie violette sera une partie du site qui sera anim\'e via un script JQuery mais suivra globalement la m\^eme structure.\\
+
+Sous Bootstrap, j'ai utilis\' trois classes sur des balises HTML pour r\'ealiser cela facilement : \og container-fluid \fg{}, \og navbar \fg{} et \og container \fg{}. La premi\`ere permet de sp\'ecifi\'e que nous utiliserons 100\% de la largeur de la fen\^etre. La seconde est la balise pour sp\'ecifi\'e o\`u se trouve notre menu de navigation. La derni\`ere permet de prendre la dimension en pixel avant le point de rupture. Les autres classes qui se trouvent dans l'exemple ci-dessous ne sont que des classes am\'eliorant le design et ne sont donc pas n\'ec\'essaire pour reproduire mon exemple. Ainsi je n'expliquerais pas leurs utilit\'e, la plupart \'etant expliqu\'e dans la documentation de Bootstrap. 
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+...\\
+<body>\\
+\hspace*{0.6cm}<nav class="navbar navbar-default navbar-static-top">\\
+\hspace*{1.2cm}<div class="container-fluid black">\\
+\hspace*{1.2cm}</div>\\
+\hspace*{0.6cm}</nav>\\
+\hspace*{0.6cm}<div class="container-fluid black">\\
+\hspace*{0.6cm}</div>\\
+</body>\\
+...
+}}
+\vspace{0.5cm}\\
+Sous Polymer, nous allons simplement reproduire le comportement des classes pr\'ec\'edentes et en faire de nouveaux \'el\'ements   du DOM (Document Object Model). Pour faire cela proprement, j'ai utilis\'e Firebugs et est analys\'e le CSS utilis\'e sur Bootstrap pour reproduire le style de ces classes. Le code sous Polymer dans la page index est le suivant :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+...\\
+<body>\\
+\hspace*{0.6cm}<bar-top>\\
+\hspace*{1.2cm}<my-container>\\
+\hspace*{1.2cm}</my-container>\\
+\hspace*{0.6cm}</bar-top>\\
+\hspace*{0.6cm}<my-container-full>\\
+\hspace*{0.6cm}</my-container-full>\\
+</body>\\
+...
+}}
+\vspace{0.5cm}\\
+Pour que ce code fonctionne correctement, il faut bien \'evidemment cr\'eer les modules. Un module est simplement une page HTML avec une certaine syntaxe que nous incorporons dans la page principale (index.html) avec le code suivant \`a placer entre les balises HEAD :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<link rel="import" href="bar-top.html">\\
+<link rel="import" href="my-container.html">\\
+<link rel="import" href="my-container-full.html">
+}}
+\vspace{0.5cm}\\
+
+Le fichier bar-top.html qui repr\'esentera notre nouveau \'el\'ement du DOM aura son style CSS fix\'e \`a lui. \`A noter que la syntaxe est extr\^emement importante. Un module doit obligatoirement \^etre nomm\'e de la fa\c{c}on suivante (xxxx-xxxx). Le code ci-dessous est \`a ajouter au m\^eme niveau que index.html dans le fichier \textbf{bar-top.html} :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="bar-top">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>\\
+\hspace*{1.8cm}\color{red}{:host} \{	\\		
+\hspace*{2.4cm}\color{black}{background-color: \#f8f8f8;\\
+\hspace*{2.4cm}border-color: \#e7e7e7;\\
+\hspace*{2.4cm}z-index: 1000;\\
+\hspace*{2.4cm}border-width: 0 0 1px;\\
+\hspace*{2.4cm}position: relative;\\
+\hspace*{2.4cm}min-height: 50px;\\
+\hspace*{2.4cm}display: block;\\
+\hspace*{2.4cm}box-sizing: border-box;\\		
+\hspace*{2.4cm}border: none;\\
+\hspace*{1.8cm}\}		\\		
+\hspace*{1.8cm}@media (min-width: 768px) \{\\
+\hspace*{2.4cm}:host \{\\
+\hspace*{3.0cm}border-radius: 0;\\
+\hspace*{2.4cm}\}	\\	
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}</style>}\\
+\hspace*{1.2cm}\color{red}{<content></content>}\\		
+\hspace*{0.6cm}\color{black}{</template>\\
+\hspace*{0.6cm}<script>}\\
+\hspace*{0.6cm}\color{red}{Polymer(\{\\
+\hspace*{1.2cm}is: "bar-top"\\
+\hspace*{0.6cm}\});}\\
+\hspace*{0.6cm}\color{black}{</script>\\
+</dom-module>}
+}}
+\vspace{0.5cm}\\
+Comme dit plus haut, il s'agit du module \og bar-top \fg{}, le lien avec ce code est r\'ealiser avec l'id du dom-module ainsi que le script qui sp\'ecifie son nom. \og :host \fg{} repr\'esente le module lui-m\^eme. Tous les r\`egles CSS inscritent dans ce tag prendra automatiquement effet pour tout \'el\'ement <bar-top></bar-top>. Enfin la balise \og content \fg{} est le point d'ancrage du nouvelle \'el\'ement. C'est \`a dire que le code se trouvant entre les balises <bar-top> et </bar-top> se positionnera \`a l'int\'erieur des balises \og content \fg{}. Pour les m\'edia queries, j'ai d\'ej\`a expliqu\'e leurs fonctionnements dans le chapitre pr\'ec\'edent.\\
+Ainsi la cr\'eation de module prendra toujours la m\^eme forme, il faut reproduire l'op\'eration pour que les deux autres modules prennent eux aussi effet :   
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-container">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>\\
+\hspace*{1.8cm}:host \{\\
+\hspace*{2.4cm}padding-right: 15px;\\
+\hspace*{2.4cm}padding-left: 15px;\\
+\hspace*{2.4cm}margin-right: auto;\\
+\hspace*{2.4cm}margin-left: auto;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{2.4cm}display: block;\\
+\hspace*{2.4cm}height: auto;\\
+\hspace*{1.8cm}\}\\	
+\hspace*{1.8cm}@media (min-width:900px) \{\\
+\hspace*{2.4cm}:host \{\\
+\hspace*{3.0cm}width:700px;\\
+\hspace*{2.4cm}\}\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.8cm}@media (min-width:1200px) \{\\
+\hspace*{2.4cm}:host \{\\
+\hspace*{3.0cm}width:970px;\\
+\hspace*{2.4cm}\}\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.8cm}@media (min-width:1500px) \{\\
+\hspace*{2.4cm}:host \{\\
+\hspace*{3.0cm}width:1170px;\\
+\hspace*{2.4cm}\}\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}</style>\\
+\hspace*{1.2cm}<content></content>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{0.6cm}Polymer(\{\\
+\hspace*{1.2cm}is: "my-container"\\
+\hspace*{0.6cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-container-full">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>	\\	
+\hspace*{1.8cm}:host \{\\	
+\hspace*{2.4cm}display: block;	\\
+\hspace*{2.4cm}position: absolute;\\
+\hspace*{2.4cm}width: 100\%;\\
+\hspace*{2.4cm}height: auto;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}</style>\\
+\hspace*{1.2cm}<content></content>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{0.6cm}Polymer(\{\\
+\hspace*{1.2cm}is: "my-container-full"\\
+\hspace*{0.6cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}\\
+Ainsi nous obtenons le m\^eme r\'esultat avec les deux technologies. Nos containers \'etant maintenant pr\^et, nous allons nous occup\'e de la barre du haut (zone rouge dans la figure 12).
+
+\subsection{Barre de menu}
+
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=\textwidth]{p19}
+\vspace{0.5cm}\\
+\end{center}
+
 
 \newpage
 \section{Bootstrap ou Polymer}
@@ -361,9 +528,6 @@ La documentation est aussi un point fondamentale d'une technologie. Elle permet 
 \end{wrapfigure}
 
 En terme de performance, j'ai utilis\'e la fen\^etre de degoguage de Google Chrome pour savoir la vitesse d'\'ex\'ecution de nos deux technologies. Les deux site donnant le m\^eme r\'esultat, il serait normal de croire que le temps n\'ecessaire pour que le site soit pr\^et pour l'utilisateur soit identique. Malheuresement, ce n'est pas le cas. Pour Bootstrap, leur script est charg\'e en 3,33 secondes en moyenne tandis que celui de Polymer met 6,2 en moyenne. Ensuite, celui de Polymer doit effectuer ses traitements pour tranformer les \'el\'ements. Tout ceci a \'evidemment un cout en terme de performance. Avec Polymer, le site met en moyenne 400 ms pour apparaitre tandis qu'avec Bootstrap, cela tombe \`a 200 ms. L\`a encore, Polymer est encore en dessous de Bootstrap.
-
-\newpage
-\section{L'exemple de A \`a Z}
 
 \newpage
 \section{Comment teste-t-on les capacit\'es d'adaptations ?}
