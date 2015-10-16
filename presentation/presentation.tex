@@ -344,6 +344,67 @@ Ainsi, nous avons un tr\`es gros aper\c{c}u des moyens et technologies utilis\'e
 
 Il s'agit sans doute de la premi\`ere chose \`a comparer. Bootstrap est support\'e par presque tout les navigateurs, Bootstrap n'est pas compatible avec Op\'era sur t\'el\'ephone et Safari sur Windows. Tandis que Polymer n'est compatible totalement qu'avec Google Chrome. Pour les autres navigateurs, Polymer est partiellement support\'e ou encore n'est pas du tout support\'e comme sur Internet explorer.En s'int\'eressant seulement \`a nos utilisateurs, on peux d\`es le d\'epart \'eliminer une des technologie. Polymer n'est clairement pas destin\'e \`a viser un large public. Notons de plus que les d\'eveloppeur de Mozilla Firefox ont d'ores et d\'ej\`a annonc\'e qu'il ne ferait aucun effort pour que leur navigateur supporte Polymer.\\
 
+\subsection{Documentation}
+
+La documentation est aussi un point fondamentale d'une technologie. Elle permet de faire la liason entre les utilisateurs et les nouvelles m\'ethodes de programmation. Sur Bootstrap, la documentation est claire et concise avec \`a chaque fois un exemple claire et simple \`a comprendre. Sur Polymer, ce point est mauvais. J'ai pass\'e de long moment \`a arpenter la documentation pour trouver certaines informations essentielles, ce qui repr\'esente une perte de temps non n\'egligeable. Par exemple, le point d'ancrage du nouveau composant est indiqu\'e par l'utilisation de la balise <content> dans le nouveau module. Cette information fondamentale ne se retrouve pas sur les exemples de base sur l'API (Application Program Interface) de Polymer.
+
+\subsection{Vitesse de chargement}
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p15}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Compatibilit\'e des technologies}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+En terme de performance, j'ai utilis\'e la fen\^etre de degoguage de Google Chrome pour savoir la vitesse d'\'ex\'ecution de nos deux technologies. Les deux site donnant le m\^eme r\'esultat, il serait normal de croire que le temps n\'ecessaire pour que le site soit pr\^et pour l'utilisateur soit identique. Malheuresement, ce n'est pas le cas. Pour Bootstrap, leur script est charg\'e en 3,33 secondes en moyenne tandis que celui de Polymer met 6,2 en moyenne. Ensuite, celui de Polymer doit effectuer ses traitements pour tranformer les \'el\'ements. Tout ceci a \'evidemment un cout en terme de performance. Avec Polymer, le site met en moyenne 400 ms pour apparaitre tandis qu'avec Bootstrap, cela tombe \`a 200 ms. L\`a encore, Polymer est encore en dessous de Bootstrap.
+
+\newpage
+\section{Comment teste-t-on les capacit\'es d'adaptations ?}
+
+\hspace*{0.6cm}Pour tester l'affichage et l'adapatation de nos \'el\'ements \`a la fen\^etre, il existe plusieurs voies envisageables. J'ai utilis\'e plusieurs d'entre elle pour effectuer mes tests. La premi\`ere m\'ethode a \'et\'e de modifier la taille de la fen\^etre sous windows.\\
+\begin{wrapfigure}[12]{l}{5.5cm}
+\vspace{-12pt}
+\centering
+\includegraphics[width=5.5cm]{double}
+\caption{\textit{Adaptation du site \`a la largeur de la page.}}
+\end{wrapfigure} 
+\lipsum[1]
+
+\par
+
+\newpage
+\section{Documentations, Outils, liens utiles} 
+
+\textbf{Wikip\'edia}\\
+Le site d'o\'u j'ai d\'emarr\'e mes recherches, il contient une bonne d\'efinition des sites RWD.\\
+\textit{https://fr.wikipedia.org/wiki/Site\_web\_adaptatif}
+\vspace{0.5cm}\\
+\textbf{What is a responsible web design ?}\\
+Les liens suivant sont les articles ou vid\'eos que j'ai analys\'e pour \'ecrire ce rapport.\\
+\textit{https://www.youtube.com/watch?t=133\&v=iSY38POjLYc}
+\vspace{0.5cm}\\
+\textbf{Ethan Marcotte}\\
+Le site du createur du RWD qui montre la diff\'erence entre un site adpatable et un site responsive.\\
+\textit{http://alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html}\\
+\textit{http://alistapart.com/d/responsive-web-design/ex/ex-site-linearize.html}
+\vspace{0.5cm}\\
+\textbf{Responsible typesetting}\\
+Un article qui traite du responsible typesetting.\\
+\textit{http://blog.line0.eu/responsible-typesetting/}
+\vspace{0.5cm}\\
+\textbf{Fitt's law}\\
+La description de la loi de Fitt\\
+\textit{https://en.wikipedia.org/wiki/Fitts's\_law}\\
+\textit{http://webdesign.tutsplus.com/articles/applying-fitts-law-to-mobile-interface-design--webdesign-6919}
+\vspace{0.5cm}\\
+\textbf{Media queries}\\
+Les medias queries sont int\'erressants mais limit\'es. Le futur serait plutot du cot\'e des \'el\'ements queries.\\
+\textit{http://ianstormtaylor.com/media-queries-are-a-hack/}\\
+\textit{http://www.smashingmagazine.com/2013/06/media-queries-are-not-the-answer-element-query-polyfill/}\\
 
 \newpage
 Mais cela n'est qu'un hack qui permet de faire ce que je d\'esire. On peux le faire mais on ne devrais pas le faire. Le gros probl\`eme ici est que ce code est non maintenable. Si jamais je changeais de point de rupture par exemple, je devrais changer la valeur de ce m\'edia query. Si il n'y a que celui-l\`a, ce n'est trop long et fatiguant. Mais si le projet a quelques milliers de modules, cela risque d'\^etre tr\`es long.
@@ -391,53 +452,7 @@ Le site est aussi \textit{responsible typesetting}. La taille en pixel du texte 
 \end{wrapfigure} 
 {\hspace*{0.6cm}L'un est purement li\'e \`a la technologie, il est rare d'avoir un t\'el\'ephone branch\'e en Ethernet. Ceci implique que le d\'ebit moyen d'un utilisateur sur t\'el\'ephone est souvent inf\'erieur \`a celui d'un utilisateur sur ordinateur. J'\'evite ainsi \`a l'utilisateur sur t\'el\'ephone de charger trop d'informations qui n'appartiennent pas au contenue principal de la page. Ce ne sont que des publicit\'es pour les autres musiques du m\^eme chanteur. Deuxi\`emement, et c'est sans doute le point le plus important, suivant \textbf{la loi de Fitt}, que je sois sur t\'el\'ephone ou ordinateur l'indice de difficult\'e doit rest\'e le m\^eme. La loi calcul donne un indice de difficult\'e par rapport au temps requis pour aller rapidement d'une position de d\'epart \`a une zone finale de destination. L'utilisateur doit arriver avec la m\^eme rapidit\'e et la m\^eme facilit\'e aux diff\'erentes parties du site. Si l'on regarde l'image sur la droite qui repr\'esente le site sur un t\'el\'ephone BlackBerry, on remarque que le temps pour parvenir \`a la derni\`ere vid\'eo en rapport avec le chanteur est aussi rapide sur le t\'el\'ephone que sur ordinateur. Certes ce n'est pas la m\^eme, mais cela reste la derni\`ere vid\'eo. Si j'avais juste r\'earrang\'e les choses, il aurait d'abord fallu descendre pour arriver \`a la derni\`ere vid\'eo. Cela ne para\^it pas beaucoup plus compliqu\'e mais sans cela, le site se retrouverait complexifi\'e d'apr\`es la loi de Fitts.}\\
 
-\section{Comment teste-t-on les capacit\'es d'adaptations ?}
-
-\hspace*{0.6cm}Pour tester l'affichage et l'adapatation de nos \'el\'ements \`a la fen\^etre, il existe plusieurs voies envisageables. J'ai utilis\'e plusieurs d'entre elle pour effectuer mes tests. La premi\`ere m\'ethode a \'et\'e de modifier la taille de la fen\^etre sous windows.\\
-\begin{wrapfigure}[12]{l}{5.5cm}
-\vspace{-12pt}
-\centering
-\includegraphics[width=5.5cm]{double}
-\caption{\textit{Adaptation du site \`a la largeur de la page.}}
-\end{wrapfigure} 
-\lipsum[1]
-
-\par
-
 \newpage
-
-\section{Boostraps}
-
-
-\section{Documentations, Outils, liens utiles} 
-
-\textbf{Wikip\'edia}\\
-Le site d'o\'u j'ai d\'emarr\'e mes recherches, il contient une bonne d\'efinition des sites RWD.\\
-\textit{https://fr.wikipedia.org/wiki/Site\_web\_adaptatif}
-\vspace{0.5cm}\\
-\textbf{What is a responsible web design ?}\\
-Les liens suivant sont les articles ou vid\'eos que j'ai analys\'e pour \'ecrire ce rapport.\\
-\textit{https://www.youtube.com/watch?t=133\&v=iSY38POjLYc}
-\vspace{0.5cm}\\
-\textbf{Ethan Marcotte}\\
-Le site du createur du RWD qui montre la diff\'erence entre un site adpatable et un site responsive.\\
-\textit{http://alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html}\\
-\textit{http://alistapart.com/d/responsive-web-design/ex/ex-site-linearize.html}
-\vspace{0.5cm}\\
-\textbf{Responsible typesetting}\\
-Un article qui traite du responsible typesetting.\\
-\textit{http://blog.line0.eu/responsible-typesetting/}
-\vspace{0.5cm}\\
-\textbf{Fitt's law}\\
-La description de la loi de Fitt\\
-\textit{https://en.wikipedia.org/wiki/Fitts's\_law}\\
-\textit{http://webdesign.tutsplus.com/articles/applying-fitts-law-to-mobile-interface-design--webdesign-6919}
-\vspace{0.5cm}\\
-\textbf{Media queries}\\
-Les medias queries sont int\'erressants mais limit\'es. Le futur serait plutot du cot\'e des \'el\'ements queries.\\
-\textit{http://ianstormtaylor.com/media-queries-are-a-hack/}\\
-\textit{http://www.smashingmagazine.com/2013/06/media-queries-are-not-the-answer-element-query-polyfill/}\\
-
 \section{Difficult\'es rencontr\'es}
 \hspace*{0.6cm}Le premier probl\`eme rencontr\'e fut lorsque que j'essaya de coder une balise div de telle mani\`ere que celle-ci remplisse enti\`erement l'espace de l'application. Cette chose extr\`emement simple n'est pourtant pas impl\'ement\'e dans Bootstrap 3.0 et les versions sup\'erieur alors que cela se trouvait dans les versions ant\'erieur avec la class span. Apr\'es de longue recherches, il apparait donc impossible en pur Bootstrap de remplir un div \`a cent pour cent de la balise parent.De ce fait, j'ai du modifi\'e le CSS pour r\'ealiser le remplissage de la page. Pourquoi un tel choix des d\'eveloppeur de bootstrap ?
 
