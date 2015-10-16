@@ -363,18 +363,54 @@ La documentation est aussi un point fondamentale d'une technologie. Elle permet 
 En terme de performance, j'ai utilis\'e la fen\^etre de degoguage de Google Chrome pour savoir la vitesse d'\'ex\'ecution de nos deux technologies. Les deux site donnant le m\^eme r\'esultat, il serait normal de croire que le temps n\'ecessaire pour que le site soit pr\^et pour l'utilisateur soit identique. Malheuresement, ce n'est pas le cas. Pour Bootstrap, leur script est charg\'e en 3,33 secondes en moyenne tandis que celui de Polymer met 6,2 en moyenne. Ensuite, celui de Polymer doit effectuer ses traitements pour tranformer les \'el\'ements. Tout ceci a \'evidemment un cout en terme de performance. Avec Polymer, le site met en moyenne 400 ms pour apparaitre tandis qu'avec Bootstrap, cela tombe \`a 200 ms. L\`a encore, Polymer est encore en dessous de Bootstrap.
 
 \newpage
+\section{L'exemple de A \`a Z}
+
+\newpage
 \section{Comment teste-t-on les capacit\'es d'adaptations ?}
 
-\hspace*{0.6cm}Pour tester l'affichage et l'adapatation de nos \'el\'ements \`a la fen\^etre, il existe plusieurs voies envisageables. J'ai utilis\'e plusieurs d'entre elle pour effectuer mes tests. La premi\`ere m\'ethode a \'et\'e de modifier la taille de la fen\^etre sous windows.\\
-\begin{wrapfigure}[12]{l}{5.5cm}
-\vspace{-12pt}
-\centering
-\includegraphics[width=5.5cm]{double}
-\caption{\textit{Adaptation du site \`a la largeur de la page.}}
-\end{wrapfigure} 
-\lipsum[1]
+\subsection{Outils de test}
 
-\par
+\hspace*{0.6cm}Pour tester l'affichage et l'adapatation de nos \'el\'ements \`a la fen\^etre, il existe plusieurs voies envisageables. J'ai utilis\'e plusieurs d'entre elle pour effectuer mes tests. La premi\`ere m\'ethode a \'et\'e de modifier la taille de la fen\^etre sous windows.\\
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{double}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Redimensionnement de la fen\^etre sous windows}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+L'exemple de la figure 14 montre le site \`a deux dimensions diff\'erentes. Comme on peux le voir, le site s'adapte bien \`a la largeur de la fen\^etre. Sur la gauche, le site est plus grand. La taille plus grande permet de mettre deux clips vid\'eos l'un \`a cot\'e de l'autre. Sur la droite, le site est plus petit et ne permet de n'afficher qu'un clip vid\'eo par ligne. Les autres \'el\'ements quant \`a eux se redimensionne pour s'adapter \`a la page. J'ai r\'ealis\'e cette op\'eration avec chacun des navigateurs avec Bootstrap. Le r\'esultat obtenue est le m\^eme sur chacun des navigateurs. Avec Polymer, on ne peux test\'e qu'avec quelques navigateurs d\`u au probl\`eme de compatibilit\'e que j'ai \'evoqu\'e pr\'ec\'edemment.\\
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p16}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Test au format iphone 5}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+Pour test\'e l'adaptation sur des appareils en particuliers, Google Chrome dispose d'un outil redimensionnant la fen\^etre \`a la dimension exacte d'un appareil en particulier. J'ai utilis\'e cet outil pour voir le r\'esultat sous diff\'erentes tablettes et t\'el\'ephones actuellement sur le march\'e. Pour activer cet option sous le navigateur, il suffit d'appuyer sur F12 puis le bouton repr\'esentant un t\'el\'ephone nomm\'e \og toggle device mode \fg{}.
+\vspace{0.5cm}\\
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p17}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Responsinator.com}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Il est aussi possible de passer par des sites qui permettent de tester l'adaptation de nos sites comme responsinator.com. J'ai aussi test\'e mon site sous cet \'el\'ement. On voit sur ce site un grand ensemble d'appareil avec notre site \`a l'int\'erieur. Le seul probl\`eme de cette m\'ethode est qu'il faut charger X fois le m\^eme site, ce qui peut s'av\'erer plutot long si le site en question est relativement lourd.\\
+
+\subsection{\'El\'ements adaptatifs}
+
+L'ensemble du site contient des \'el\'ements qui s'adaptent \`a la largeur de la fen\^etre. Que ce soit le menu, la vid\'eo principale, les images, le texte, chaque \'el\'ement \`a sa propre fa\c{c}on de se positionner, de se redimensionner suivant la largeur de la fen\^etre.
 
 \newpage
 \section{Documentations, Outils, liens utiles} 
