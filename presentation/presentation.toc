@@ -8,13 +8,13 @@
 \contentsline {subsection}{\numberline {2.1}Installation}{11}
 \contentsline {subsection}{\numberline {2.2}Creation des containers}{11}
 \contentsline {subsection}{\numberline {2.3}Barre de menu}{14}
-\contentsline {section}{\numberline {3}Bootstrap ou Polymer}{15}
-\contentsline {subsection}{\numberline {3.1}Compatibilit\'e}{15}
-\contentsline {subsection}{\numberline {3.2}Documentation}{15}
-\contentsline {subsection}{\numberline {3.3}Vitesse de chargement}{15}
-\contentsline {section}{\numberline {4}Comment teste-t-on les capacit\'es d'adaptations ?}{16}
-\contentsline {subsection}{\numberline {4.1}Outils de test}{16}
-\contentsline {subsection}{\numberline {4.2}\'El\'ements adaptatifs}{16}
-\contentsline {section}{\numberline {5}Documentations, Outils, liens utiles}{17}
-\contentsline {section}{\numberline {6}Difficult\'es rencontr\'es}{22}
-\contentsline {section}{\numberline {7}Simple trouvaille d'optimisation}{22}
+\contentsline {section}{\numberline {3}Bootstrap ou Polymer}{19}
+\contentsline {subsection}{\numberline {3.1}Compatibilit\'e}{19}
+\contentsline {subsection}{\numberline {3.2}Documentation}{19}
+\contentsline {subsection}{\numberline {3.3}Vitesse de chargement}{19}
+\contentsline {section}{\numberline {4}Comment teste-t-on les capacit\'es d'adaptations ?}{20}
+\contentsline {subsection}{\numberline {4.1}Outils de test}{20}
+\contentsline {subsection}{\numberline {4.2}\'El\'ements adaptatifs}{20}
+\contentsline {section}{\numberline {5}Documentations, Outils, liens utiles}{21}
+\contentsline {section}{\numberline {6}Difficult\'es rencontr\'es}{26}
+\contentsline {section}{\numberline {7}Simple trouvaille d'optimisation}{26}

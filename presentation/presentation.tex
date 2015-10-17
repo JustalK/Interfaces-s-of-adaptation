@@ -490,9 +490,216 @@ Ainsi nous obtenons le m\^eme r\'esultat avec les deux technologies. Nos contain
 \begin{center}
 \vspace{0.5cm}
 \includegraphics[width=\textwidth]{p19}
-\vspace{0.5cm}\\
 \end{center}
 
+Le menu est compos\'e de ma signature \og Latsuj \fg{}, tout simplement mon nom \`a l'envers ainsi qu'un bouton pour afficher ou cacher le menu. J'ai choisi de mettre ma signature \`a gauche \`a cause de la nature de l'utilisateur. Un humain lit toujours de mani`ere inconsciente en diagonale. C'est aussi ce que l'on nomme lecture-rapide. Le premier mot que l'utilisateur verra sera donc ma signature. Ensuite, j'ai mis le bouton \`a droite pour faire echo au texte \`a gauche, la nature pr\'ef\`ere ce qui est sym\'etrique, ainsi que pour utiliser toutes la place disponible. Sous Bootstrap, comme toujours nous avons des classes pour r\'ealiser cela sans trop se fatiguer. Par rapport \`a ce dont j'ai parl\'e pr\'ec\'edemment, il y aura 3 nouvelles classes ici que je n'ai pas encore \'evoqu\'e : \og pull-left \fg{},\og pull-right \fg{}, \og btn \fg{}. Les deux classes \og pull \fg{} permettent de pousser leurs contenues vers la gauche ou la droite. \og btn \fg{} permet quant \`a elle de mettre le style d'un bouton sur le composant o\`u on l'utilise. On obtient alors notre menu assez facilement :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}<nav class="navbar navbar-default navbar-static-top">\\
+\hspace*{1.2cm}<div class="container"> 	\\
+\hspace*{1.8cm}<div class="row">\\   
+\hspace*{2.4cm}<div class="col-sm-12 col-md-12 col-lg-12">\\
+\hspace*{3.0cm}<div class="pull-left">\\
+\hspace*{3.6cm}<strong class="navbar-brand">Latsuj</strong>\\
+\hspace*{3.0cm}</div>\\
+\hspace*{3.0cm}<div class="pull-right navbar-brand">\\
+\hspace*{3.6cm}<div class="menu-toggle btn btn-default">Menu Hide/Show</div>\\
+\hspace*{3.0cm}</div>\\
+\hspace*{2.4cm}</div>\\
+\hspace*{1.8cm}</div>\\
+\hspace*{1.2cm}</div>\\
+\hspace*{0.6cm}</nav>
+}}
+\vspace{0.5cm}\\
+A noter ici que nous aurions pu sp\'ecifier que notre signature prenne 2 colonnes, que le bouton en prenne aussi 2 colonnes et mettre un offset entre les deux de 8 colonnes. Cependant, j'ai pr\'ef\'er\'e cette m\'ethode car cela me fait moins de ligne de code donc un code plus clair. Les classes dont je n'explique pas le r\^ole ne sont l\`a que pour rendre les choses plus jolie et ne sont pas n\'eccesaire pour reproduire l'architecture de mon site/exemple. Avec le simple exemple, ci-dessus, nous obtenons sous Bootstrap notre menu. Sous Polymer, il va falloir comme pr\'ec\'edemment reproduire le comportement des blocs de Bootstrap en cr\'eant de nouvelles nodes. Dans le code qui va suivre, il n'y a rien de nouveau, ni de compliqu\'e, ce n'est que du CSS :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-row">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>	\\	
+\hspace*{1.8cm}:host \{\\
+\hspace*{2.4cm}display: block;\\
+\hspace*{2.4cm}position: relative;\\
+\hspace*{2.4cm}margin-right: -15px;\\
+\hspace*{2.4cm}margin-left: -15px;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}</style>\\
+\hspace*{1.2cm}<content></content>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "my-row"\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}
+
+Il n'y a rien de particulier sur ce module \og my-row \fg{} qui reproduit le comportement de la classe \og row \fg{} de Boostrap. Notons cependant que dans Polymer, les nouveaux modules sont toujours sp\'ecifi\'e comme \og display:inline \fg{}, il faut donc tr\`es souvent les passer en \og display:bloc \fg{}. Notons par ailleurs l'utilisation de box-sizing qui n'est peut-\^etre pas n\'ecessaire ici. Ayant voulu cr\'e\'e un site fonctionnant sur tout les navigateurs, cet attribut est essentiel. Cependant, Polymer \'etant tr\`es mal support\'e pour l'instant, cet attribut perd de son int\'eret au jour d'aujourd'hui. Si les navigateurs s'effor\c{c}aient de faire le n\'ecessaire pour supporter Polymer, il n'y aurait pas besoin de modifier mon exemple car j'aurais d\'ej\`a pr\'evu cela.
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="col-top">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>\\
+\hspace*{1.8cm}:host \{\\
+\hspace*{2.4cm}display: block;\\
+\hspace*{2.4cm}position: relative;\\
+\hspace*{2.4cm}padding-right: 15px;\\
+\hspace*{2.4cm}padding-left: 15px;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{2.4cm}height: 50px; \\  
+\hspace*{2.4cm}float: left;\\
+\hspace*{2.4cm}width: 100\%;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.8cm}</style>\\
+\hspace*{1.8cm}<content></content>\\
+\hspace*{1.2cm}</template>\\
+\hspace*{1.2cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "col-top"\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}
+d
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="pull-left">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>\\
+\hspace*{1.8cm}:host \{\\
+\hspace*{2.4cm}display: block;\\
+\hspace*{2.4cm}float: left!important;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{2.4cm}margin-left: -15px;\\  		
+\hspace*{2.4cm}height: 50px;\\
+\hspace*{2.4cm}padding: 15px 15px;\\
+\hspace*{2.4cm}font-size: 18px;\\
+\hspace*{2.4cm}line-height: 40px;\\
+\hspace*{2.4cm}margin-top: -15px;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.8cm}</style>	\\
+\hspace*{1.8cm}<content></content> 	\\
+\hspace*{1.2cm}</template>\\
+\hspace*{1.2cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "pull-left"\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}
+ d
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="pull-right">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>\\
+\hspace*{1.8cm}:host \{\\
+\hspace*{2.4cm}display: block;\\
+\hspace*{2.4cm}float: right!important;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{2.4cm}margin-left: -15px;\\  		
+\hspace*{2.4cm}height: 50px;\\
+\hspace*{2.4cm}padding: 15px 15px;\\
+\hspace*{2.4cm}font-size: 18px;\\
+\hspace*{2.4cm}line-height: 40px;\\
+\hspace*{2.4cm}margin-top: -15px;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.8cm}</style>	\\
+\hspace*{1.8cm}<content></content> 	\\
+\hspace*{1.2cm}</template>\\
+\hspace*{1.2cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "pull-right"\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm} 
+  
+ d
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="title-top">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>\\
+\hspace*{1.8cm}:host \{ \\   
+\hspace*{2.4cm}margin-left:-15px;\\
+\hspace*{2.4cm}line-height: 40px;\\
+\hspace*{2.4cm}float: left;\\
+\hspace*{2.4cm}height: 50px;\\
+\hspace*{2.4cm}padding: 15px 15px;\\
+\hspace*{2.4cm}font-size: 18px;\\
+\hspace*{2.4cm}margin-top: -12px;	\\	
+\hspace*{2.4cm}color:\#777;\\
+\hspace*{1.8cm}\}	  	\\			  	
+\hspace*{1.8cm}b,strong \{\\
+\hspace*{2.4cm}font-weight:700;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}</style>\\
+\hspace*{1.8cm}<strong>Latsuj</strong>\\ 	
+\hspace*{1.2cm}</template>\\
+\hspace*{1.2cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "title-top"\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm} 
+
+ d
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-button">
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>	\\	
+\hspace*{1.8cm}:host \{	\\
+\hspace*{2.4cm}color: \#333;\\
+\hspace*{2.4cm}background-color: \#FFF;\\
+\hspace*{2.4cm}display: inline-block;\\
+\hspace*{2.4cm}margin-bottom: 0px;\\
+\hspace*{2.4cm}font-weight: normal;\\
+\hspace*{2.4cm}text-align: center;\\
+\hspace*{2.4cm}vertical-align: middle;\\
+\hspace*{2.4cm}cursor: pointer;\\
+\hspace*{2.4cm}background-image: none;\\
+\hspace*{2.4cm}border: 1px solid \#CCC;\\
+\hspace*{2.4cm}white-space: nowrap;\\
+\hspace*{2.4cm}padding: 6px 12px;\\
+\hspace*{2.4cm}font-size: 14px;\\
+\hspace*{2.4cm}line-height: 1.42857;\\
+\hspace*{2.4cm}border-radius: 4px;\\
+\hspace*{2.4cm}-moz-user-select: none;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.8cm}:host(:focus)\{\\
+\hspace*{2.4cm}color: \#333;\\
+\hspace*{2.4cm}background-color: \#E6E6E6;\\
+\hspace*{2.4cm}border-color: \#8C8C8C;	\\	
+\hspace*{1.8cm}\}	\\	
+\hspace*{1.8cm}:host(:active) \{\\
+\hspace*{2.4cm}color: \#333;\\
+\hspace*{2.4cm}background-color: \#D4D4D4;\\
+\hspace*{2.4cm}border-color: \#8C8C8C;\\
+\hspace*{2.4cm}outline: 0px none;\\
+\hspace*{2.4cm}background-image: none;\\
+\hspace*{2.4cm}box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.125) inset;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}</style>\\
+\hspace*{1.8cm}<div>Menu Hide/Show</div>\\
+\hspace*{1.2cm}</template>\\
+\hspace*{1.2cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "my-button"\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm} 
 
 \newpage
 \section{Bootstrap ou Polymer}
