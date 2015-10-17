@@ -548,7 +548,7 @@ Il n'y a rien de particulier sur ce module \og my-row \fg{} qui reproduit le com
 \hspace*{2.4cm}padding-right: 15px;\\
 \hspace*{2.4cm}padding-left: 15px;\\
 \hspace*{2.4cm}box-sizing: border-box;\\
-\hspace*{2.4cm}height: 50px; \\  
+\hspace*{2.4cm}min-height: 50px; \\  
 \hspace*{2.4cm}float: left;\\
 \hspace*{2.4cm}width: 100\%;\\
 \hspace*{1.8cm}\}\\
@@ -563,9 +563,10 @@ Il n'y a rien de particulier sur ce module \og my-row \fg{} qui reproduit le com
 </dom-module>
 }}
 \vspace{0.5cm}
-d
+
+Ce module \og col-top \fg{} reprend la d\'efinition de la classe \og col \fg{} de Bootstrap. Il n'y a rien de sp\'ecial dans ce module, l'ensemble de ces attributs on d\'ej\`a \'et\'e comment\'e.  
 \vspace{0.5cm}\\
-\fbox{\parbox{\textwidth}{
+\fbox{\parbox{0.5\textwidth}{
 <dom-module id="pull-left">\\
 \hspace*{0.6cm}<template>\\
 \hspace*{1.2cm}<style>\\
@@ -574,7 +575,7 @@ d
 \hspace*{2.4cm}float: left!important;\\
 \hspace*{2.4cm}box-sizing: border-box;\\
 \hspace*{2.4cm}margin-left: -15px;\\  		
-\hspace*{2.4cm}height: 50px;\\
+\hspace*{2.4cm}min-height: 50px;\\
 \hspace*{2.4cm}padding: 15px 15px;\\
 \hspace*{2.4cm}font-size: 18px;\\
 \hspace*{2.4cm}line-height: 40px;\\
@@ -590,10 +591,7 @@ d
 \hspace*{0.6cm}</script>\\
 </dom-module>
 }}
-\vspace{0.5cm}
- d
-\vspace{0.5cm}\\
-\fbox{\parbox{\textwidth}{
+\fbox{\parbox{0.5\textwidth}{
 <dom-module id="pull-right">\\
 \hspace*{0.6cm}<template>\\
 \hspace*{1.2cm}<style>\\
@@ -602,7 +600,7 @@ d
 \hspace*{2.4cm}float: right!important;\\
 \hspace*{2.4cm}box-sizing: border-box;\\
 \hspace*{2.4cm}margin-left: -15px;\\  		
-\hspace*{2.4cm}height: 50px;\\
+\hspace*{2.4cm}min-height: 50px;\\
 \hspace*{2.4cm}padding: 15px 15px;\\
 \hspace*{2.4cm}font-size: 18px;\\
 \hspace*{2.4cm}line-height: 40px;\\
@@ -620,7 +618,7 @@ d
 }}
 \vspace{0.5cm} 
   
- d
+Ces deux modules servent \`a aligner leurs contenues \`a droite ou \`a gauche dans leurs containers. Pour des raisons graphiques, j'ai ajout\'e un attribut \og margin-top \fg{}. La seul diff\'erence entre ces deux blocs r\'eside dans leur float. On aurais pu cr\'eer un seul \'el\'ement et sp\'ecifi\'e ensuite dans le fichier index.html un style particulier vers la gauche ou la droite. Cependant, j'ai trouv\'e plus int\'err\'essant de s\'eparer tout l'aspect graphique de l'index et des modules. Polymer proscrit l'emploie de feuille de style s\'epar\'e pour la page HTML qui sera affich\'e. Les r\`egles CSS se trouve soit dans le module ou alors dans une balise style d\'efinit \og is="custom-style" \fg{}.  
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="title-top">\\
@@ -649,12 +647,11 @@ d
 \hspace*{0.6cm}</script>\\
 </dom-module>
 }}
-\vspace{0.5cm} 
-
- d
+\vspace{0.5cm}\\
+Le module \og title-top \fg{} est le module qui permet d'afficher le titre. J'ai pr\'ef\'er\'e l\`a aussi en faire un module car cela permet de bien d\'ecouper mon code. Je sais o\`u se trouve toutes les r\`egles CSS en rapport avec ce dernier. 
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
-<dom-module id="my-button">
+<dom-module id="my-button">\\
 \hspace*{0.6cm}<template>\\
 \hspace*{1.2cm}<style>	\\	
 \hspace*{1.8cm}:host \{	\\
@@ -673,6 +670,8 @@ d
 \hspace*{2.4cm}font-size: 14px;\\
 \hspace*{2.4cm}line-height: 1.42857;\\
 \hspace*{2.4cm}border-radius: 4px;\\
+}}
+\fbox{\parbox{\textwidth}{
 \hspace*{2.4cm}-moz-user-select: none;\\
 \hspace*{2.4cm}box-sizing: border-box;\\
 \hspace*{1.8cm}\}\\
@@ -699,7 +698,46 @@ d
 \hspace*{0.6cm}</script>\\
 </dom-module>
 }}
-\vspace{0.5cm} 
+\vspace{0.5cm}\\
+Ce gros module est celui qui va repr\'senter notre bouton en haut \`a droite. Je vais m'attarder sur une petite particularit\'e. Dans le code, on retrouve deux blocs de r\`egles qui sont li\'e \`a des \'ev\`enements. Le premier \og :focus \fg{} permet de d\'efinir des r\`egles CSS lorsque le bouton aura le focus dans la fen\^etre. Le deuxi\`eme est un \'ev\`enement lorsque le bouton a \'et\'e cliqu\'e. On aurait pu aussi d\'efinir ces changements de r\`egles avec Javascript mais j'ai choisi d'accomplir cela comme il est indiqu\'e dans la documentation de Polymer. 
+\vspace{0.5cm}\\
+Nos modules \'etant cr\'e\'e, nous pouvons maintenant nous en servir pour reproduire le menu comme sur Bootstrap. Le code obtenu apr\`es tout ces efforts est simple et clair :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<bar-top>\\
+\hspace*{0.6cm}<my-container>\\
+\hspace*{1.2cm}<my-row>\\
+\hspace*{1.8cm}<col-top>\\
+\hspace*{2.4cm}<pull-left>\\
+\hspace*{3.0cm}<title-top></title-top>\\
+\hspace*{2.4cm}</pull-left>\\
+\hspace*{2.4cm}<pull-right>\\
+\hspace*{3.0cm}<my-button></my-button>\\
+\hspace*{2.4cm}</pull-right>\\
+\hspace*{1.8cm}</col-top>\\
+\hspace*{1.2cm}</my-row>\\
+\hspace*{0.6cm}</my-container>\\
+</bar-top>
+}}
+\subsection{Le carousel}
+
+Le carousel est la partie qui m'a demand\'e le plus de temps sous Polymer car rien n'a \'et\'e mis en place dans ce framework (structure logicielle). D'un autre cot\'e, Bootstrap a mis en place plusieurs classes pour avoir du conenue anim\'e facile \`a impl\'ement\'e. Le carousel est une de ces animations. Sous Bootstrap, seul 3 classes sont n\'ecessaire pour faire un carousel digne de ce nom : \og carousel \fg{}, \og carousel-inner \fg{} et \og item \fg{}. La premi\`ere classe permet d'initialiser le carousel et permet si il y a plusieurs carousel de faire la distinction entre ces derniers en sp\'ecifiant un ID. La deuxi\`eme classe d\'efinie la zone pour la page actuelle du carousel. Enfin, la derni\`ere classe permet de d\'efinir une slide du carousel. On utilise ainsi ces classes sous Bootstrap pour ainsi cr\'e\'e notre carousel :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<div class="container-fluid black">\\
+\hspace*{0.6cm}<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">\\
+\hspace*{1.2cm}<div class="carousel-inner" role="listbox">\\
+\hspace*{1.8cm}<div class="item active" >\\
+\hspace*{2.4cm}...\\
+\hspace*{1.8cm}</div>\\
+\hspace*{1.8cm}<div class="item" >\\
+\hspace*{2.4cm}...\\
+\hspace*{1.8cm}</div>\\
+\hspace*{1.2cm}</div>\\
+\hspace*{0.6cm}</div>\\
+</div>
+}}	
+\vspace{0.5cm}\\ 
 
 \newpage
 \section{Bootstrap ou Polymer}
