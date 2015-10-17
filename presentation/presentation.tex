@@ -721,7 +721,7 @@ Nos modules \'etant cr\'e\'e, nous pouvons maintenant nous en servir pour reprod
 }}
 \subsection{Le carousel}
 
-Le carousel est la partie qui m'a demand\'e le plus de temps sous Polymer car rien n'a \'et\'e mis en place dans ce framework (structure logicielle). D'un autre cot\'e, Bootstrap a mis en place plusieurs classes pour avoir du conenue anim\'e facile \`a impl\'ement\'e. Le carousel est une de ces animations. Sous Bootstrap, seul 3 classes sont n\'ecessaire pour faire un carousel digne de ce nom : \og carousel \fg{}, \og carousel-inner \fg{} et \og item \fg{}. La premi\`ere classe permet d'initialiser le carousel et permet si il y a plusieurs carousel de faire la distinction entre ces derniers en sp\'ecifiant un ID. La deuxi\`eme classe d\'efinie la zone pour la page actuelle du carousel. Enfin, la derni\`ere classe permet de d\'efinir une slide du carousel. On utilise ainsi ces classes sous Bootstrap pour ainsi cr\'e\'e notre carousel :
+Le carousel est la partie qui m'a demand\'e le plus de temps sous Polymer car rien n'a \'et\'e mis en place dans ce framework (structure logicielle). D'un autre cot\'e, Bootstrap a mis en place plusieurs classes pour avoir du conenue anim\'e facile \`a impl\'ement\'e. Le carousel est une de ces animations. Sous Bootstrap, seul 3 classes sont n\'ecessaire pour faire un carousel digne de ce nom : \og carousel \fg{}, \og carousel-inner \fg{} et \og item \fg{}. La premi\`ere classe permet d'initialiser le carousel et permet si il y a plusieurs carousel de faire la distinction entre ces derniers en sp\'ecifiant un ID. La deuxi\`eme classe d\'efinie la zone pour la page actuelle du carousel. Enfin, la derni\`ere classe permet de d\'efinir une slide du carousel. Pourquoi avoir choisit le carousel ? Tout simplement car il s'agit d'une m\'ethode d'animation simple et facile \`a comprendre. Elle permet d'avoir tout le contenue du site sur une page. Cependant, cela peut amener un probl\`eme qui d'ailleurs se trouve dans mon exemple. Lors du chargement de la premi\`ere page, on remarque que le site est relativement long \`a se charger. C'est tout simplement car mon site charge en fait l'ensemble des slides au chargement de la premi\`ere slide. Il y a alors une possibilit\'e qu'on retrouve sur facebook : ne charger qu'une partie du contenue. Cependant, cela veut aussi dire que l'utilisateur devra charger toutes les X slides, les prochaines slides. Il y a donc un compromis \`a prendre. J'ai pr\'ef\'er\'e sur mon exemple, au vue du nombre faible de slide sur le site, faire que l'utilisateur charge l'ensemble des slides. Ainsi il ne souffre d'aucun ralentissement pendant l'utilisation.
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <div class="container-fluid black">\\
@@ -738,6 +738,145 @@ Le carousel est la partie qui m'a demand\'e le plus de temps sous Polymer car ri
 </div>
 }}	
 \vspace{0.5cm}\\ 
+L'attribut \og data-ride \fg{} permet de marquer le carousel comme anim\'e au chargement de la page. L'attribut \og data-interval \fg{} indique quant \`a lui renseigne sur le temps avant qu'une slide change \`a la suivante automatiquement. Enfin la classe \og active \fg{} indique simplement que le contenue de la div sera la premi\`ere slide du carousel.\\
+Sous Polymer, c'est bien plus compliqu\'e pour fabriquer notre carousel. Pour arriver \`a faire cela, je me suis tout simplement bas\'e sur du JavaScript. Le fonctionnement est assez simple, toutes les slides sont positionn\'e \`a gauche de la fen\^etre sauf une qui sera affich\'e sur l'\'ecran de l'utilisateur. Lorsque l'on clique sur une fl\`eche vers la gauche ou la droite, la slide suivante se placera respectivement \`a droite ou \`a gauche de la slide courante. Enfin, on d\'eplace vers la gauche ou la droite, la slide courante et la slide suivante pour remplac\'e la slide actuelle par la suivante. Il n'y avait aucun moyen fournis dans Polymer pour effectuer cela autrement qu'en utilisant JavaScript.\\
+Dans un premier temps, il faut cr\'e\'e les nouvelles nodes qui nous permettrons de faire le changement de slide. C'est \`a dire les fl\`eches sur la gauche et la droite de la vid\'eo principale.
+\vspace{0.5cm}\\
+\fbox{\parbox{0.5\textwidth}{
+<dom-module id="my-right">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>	\\
+\hspace*{1.8cm}img \{\\		
+\hspace*{2.4cm}position:absolute;\\
+\hspace*{2.4cm}right:1\%;\\
+\hspace*{2.4cm}top:0;\\
+\hspace*{2.4cm}bottom:0;\\
+\hspace*{2.4cm}margin:auto;\\
+\hspace*{2.4cm}z-index:1000;\\
+\hspace*{2.4cm}opacity: 0.4;\\
+\hspace*{2.4cm}transform:scale(1.1,1.1);\\
+\hspace*{2.4cm}cursor:pointer;\\
+\hspace*{1.8cm}\}	\\
+\hspace*{1.8cm}img:hover \{\\
+\hspace*{2.4cm}opacity: 1;\\
+\hspace*{1.8cm}\}\\	
+\hspace*{1.2cm}</style>\\
+\hspace*{1.2cm}<img src="rightw.png"></img>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{0.6cm}Polymer(\{\\
+\hspace*{1.2cm}is: "my-right"\\
+\hspace*{0.6cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}	
+\fbox{\parbox{0.5\textwidth}{
+<dom-module id="my-left">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>	\\
+\hspace*{1.8cm}img \{\\		
+\hspace*{2.4cm}position:absolute;\\
+\hspace*{2.4cm}left:1\%;\\
+\hspace*{2.4cm}top:0;\\
+\hspace*{2.4cm}bottom:0;\\
+\hspace*{2.4cm}margin:auto;\\
+\hspace*{2.4cm}z-index:1000;\\
+\hspace*{2.4cm}opacity: 0.4;\\
+\hspace*{2.4cm}transform:scale(1.1,1.1);\\
+\hspace*{2.4cm}cursor:pointer;\\
+\hspace*{1.8cm}\}	\\
+\hspace*{1.8cm}img:hover \{\\
+\hspace*{2.4cm}opacity: 1;\\
+\hspace*{1.8cm}\}\\	
+\hspace*{1.2cm}</style>\\
+\hspace*{1.2cm}<img src="rightw.png"></img>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{0.6cm}Polymer(\{\\
+\hspace*{1.2cm}is: "my-left"\\
+\hspace*{0.6cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}	
+\vspace{0.5cm}\\ 
+On mettra ces \'el\'ements dans chacune des slides. Le code global de la page devient alors celui la :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+...\\
+<body>\\
+\hspace*{0.6cm}<bar-top>\\
+\hspace*{1.2cm}<my-container>\\
+\hspace*{1.2cm}</my-container>\\
+\hspace*{0.6cm}</bar-top>\\
+\hspace*{0.6cm}<my-container-full id="XX">\\
+\hspace*{1.2cm}<my-container>\\
+\hspace*{1.8cm}<my-row>\\
+\hspace*{2.4cm}<col-mid>\\
+\hspace*{3.0cm}<my-left></my-left>\\
+\hspace*{3.0cm}<my-right></my-right>\\
+\hspace*{2.4cm}</col-mid>\\
+\hspace*{1.8cm}</my-row>\\
+\hspace*{1.2cm}</my-container>\\
+\hspace*{0.6cm}</my-container-full>\\
+</body>\\
+...
+}}
+\vspace{0.5cm}\\
+
+Le \og container-full \fg{} a comme on peux le voir un ID. Ce module repr\'esente une slide. Avec un peu de code PHP (car j'aime pas trop la duplication de code), je reproduis ce morceau de code plusieurs fois en incr\'ementant l'ID de 1. Cela permet d'identifier les slides facilement dans le script JavaScript qui est dessous : 
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+var slide=1;\\
+var SLIDE\_MAX=4;\\
+var SLIDE\_MIN=1;\\
+\$("my-left").click(function() \{\\
+\hspace*{0.6cm}\$("\#"+slide).css("right","0px");\\
+\hspace*{0.6cm}\$("\#"+slide).animate(\{right: -\$(window).width()+"px"\},500);\\
+\hspace*{0.6cm}slide++;\\
+\hspace*{0.6cm}nextslide();\\
+\hspace*{0.6cm}\$("\#"+slide).css("left","auto");\\
+\hspace*{0.6cm}\$("\#"+slide).css("right",\$(window).width()+"px");\\
+\hspace*{0.6cm}\$("\#"+slide).animate(\{right: \$("my-menu").width()+"px"\},350,function() \{\\
+\hspace*{1.2cm}\$("\#"+slide).css("right","auto");\\	
+\hspace*{0.6cm}\});\\
+\});\\
+\$("my-right").click(function() \{\\
+\hspace*{0.6cm}\$("\#"+slide).css("left","0px");\\
+\hspace*{0.6cm}\$("\#"+slide).animate(\{left: -\$(window).width()+"px"\},500);\\
+\hspace*{0.6cm}slide--;\\
+\hspace*{0.6cm}nextslide();\\
+\hspace*{0.6cm}\$("\#"+slide).css("right","auto");\\
+\hspace*{0.6cm}\$("\#"+slide).css("left",\$(window).width()+"px");\\
+\hspace*{0.6cm}\$("\#"+slide).animate(\{left: \$("my-menu").width()+"px"\},350,function() \{\\
+\hspace*{1.2cm}\$("\#"+slide).css("left","auto");\\
+\hspace*{0.6cm}\});		\\
+\});\\
+function nextslide() \{\\
+\hspace*{0.6cm}if(slide<1) \{\\
+\hspace*{1.2cm}slide=SLIDE\_MAX;\\
+\hspace*{0.6cm}\} \\
+\hspace*{0.6cm}if(slide>4) \{\\
+\hspace*{1.2cm}slide=SLIDE\_MIN;\\
+\hspace*{0.6cm}\}\\
+\}
+}}	
+\vspace{0.5cm}\\ 
+
+Comme dit plus haut, sous Polymer, il n'y a aucune autre mani\`ere d'ffectuer cela. Certains d\'eveloppeurs du projet Polymer sont actuellement entrain d'impl\'ementer un module pour pouvoir en quelques minutes avoir un carousel fonctionnel. Pour l'instant, le carousel ne fonctionne qu'avec des images, ce qui n'\'etait pas suffisant pour effectuer ce que je voulais faire.
+
+\subsection{Le bloc d'informations}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p5}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Les 12 divisions d'un container}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Le bloc d'informations est la petite partie cach\'e du site qui regroupe toutes les informations sur un morceau de musique. J'ai cach\'e cette partie pour que 
 
 \newpage
 \section{Bootstrap ou Polymer}

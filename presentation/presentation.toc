@@ -9,13 +9,14 @@
 \contentsline {subsection}{\numberline {2.2}Creation des containers}{11}
 \contentsline {subsection}{\numberline {2.3}Barre de menu}{14}
 \contentsline {subsection}{\numberline {2.4}Le carousel}{18}
-\contentsline {section}{\numberline {3}Bootstrap ou Polymer}{20}
-\contentsline {subsection}{\numberline {3.1}Compatibilit\'e}{20}
-\contentsline {subsection}{\numberline {3.2}Documentation}{20}
-\contentsline {subsection}{\numberline {3.3}Vitesse de chargement}{20}
-\contentsline {section}{\numberline {4}Comment teste-t-on les capacit\'es d'adaptations ?}{21}
-\contentsline {subsection}{\numberline {4.1}Outils de test}{21}
-\contentsline {subsection}{\numberline {4.2}\'El\'ements adaptatifs}{21}
-\contentsline {section}{\numberline {5}Documentations, Outils, liens utiles}{22}
-\contentsline {section}{\numberline {6}Difficult\'es rencontr\'es}{27}
-\contentsline {section}{\numberline {7}Simple trouvaille d'optimisation}{27}
+\contentsline {subsection}{\numberline {2.5}Le bloc d'informations}{21}
+\contentsline {section}{\numberline {3}Bootstrap ou Polymer}{22}
+\contentsline {subsection}{\numberline {3.1}Compatibilit\'e}{22}
+\contentsline {subsection}{\numberline {3.2}Documentation}{22}
+\contentsline {subsection}{\numberline {3.3}Vitesse de chargement}{22}
+\contentsline {section}{\numberline {4}Comment teste-t-on les capacit\'es d'adaptations ?}{23}
+\contentsline {subsection}{\numberline {4.1}Outils de test}{23}
+\contentsline {subsection}{\numberline {4.2}\'El\'ements adaptatifs}{23}
+\contentsline {section}{\numberline {5}Documentations, Outils, liens utiles}{24}
+\contentsline {section}{\numberline {6}Difficult\'es rencontr\'es}{29}
+\contentsline {section}{\numberline {7}Simple trouvaille d'optimisation}{29}

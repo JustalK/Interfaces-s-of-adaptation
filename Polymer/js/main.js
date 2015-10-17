@@ -2,6 +2,8 @@ $( document ).ready(function() {
 	
 	$( "bloc-information" ).hide();
 	var slide=1;
+	var SLIDE_MAX=4;
+	var SLIDE_MIN=1;
 	
 	$("my-left").click(function() {
 		$("#"+slide).css("right","0px");
@@ -30,10 +32,10 @@ $( document ).ready(function() {
 	
 	function nextslide() {
 		if(slide<1) {
-			slide=4;
+			slide=SLIDE_MAX;
 		} 
 		if(slide>4) {
-			slide=1;
+			slide=SLIDE_MIN;
 		}
 	}
 	
