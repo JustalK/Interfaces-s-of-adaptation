@@ -949,12 +949,228 @@ Le tableau est \'evidement lui aussi compos\'e d'un peu de PHP. Il n'y a rien d'
 </div>
 }}
 \vspace{0.5cm}\\
-Ce bloc fait r\'ef\'erence au parole de la chanson. J'ai uilis\'e la balise H2 pour faire du \og responsive typesetting \fg{}.
+Ce bloc fait r\'ef\'erence au parole de la chanson. J'ai utilis\'e la balise H2 pour faire du \og responsive typesetting \fg{}. La taille en pixel du texte varie suivant la taille de la fen\^etre. Pour l'utilisateur, il est sans aucun doute plus agr\'eable de pouvoir lire les paroles d'une chanson phrase par phrase. Or, si la taille du texte restait la m\^eme pour toutes dimensions de fen\`etre, soit le texte serait illisible \`a une grande r\'esolution, soit le site serait incommode \`a basse r\'esolution. Pour r\'esoudre ce probl\`eme, une proportions a \'et\'e sp\'ecifier pour l'ensemble des textes suivant la largeur de la fen\`etre ou de l'appareil. Sur le site, on retrouve cette particularit\'e sur plusieurs titres et sur les paroles comme nous pouvons le constater ci-dessous. \`A gauche, on retrouve les paroles des chansons sur t\'el\'ephone portable tandis que \`a droite, on retrouve les m\^emes paroles \'ecrite avec une plus grande police sur tablette.
 
-
-
-
-
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=0.8\textwidth]{textes}
+\vspace{0.5cm}\\
+\end{center}
+Avec l'ensemble de ces parties de code, on arrive \`a reproduire notre bloc d'information sous Bootstrap, il s'agissait bien comme je le disais en d\'ebut de partie d'une affaire de positionnement dans la grille.\\
+Sous Polymer, le code est moins long et moins complexe \`a mes yeux. Cependant, il faut l\`a encore cr\'eer un gros nombre de nouveaux modules, ce qui repr\'esente un travail fastidieux et long. Le code dans l'index se r\'esume \`a cela :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<bloc-information>\\
+\hspace*{0.6cm}<my-col-50-100>\\
+\hspace*{1.2cm}<my-col-50-50>\\
+\hspace*{1.8cm}<my-col-hidden-1200>\\
+\hspace*{1.8cm}<my-img-responsive link="<?php echo \$movie[0]['IMG']; ?>"></my-img-responsive>\\
+\hspace*{1.8cm}</my-col-hidden-1200>\\
+\hspace*{1.2cm}</my-col-50-50>\\
+\hspace*{1.2cm}<my-col-50-50>\\
+\hspace*{1.8cm}<my-informations studio="<?php echo \$movie[0]['STUDIO']; ?>" singer="<?php echo \$movie[0]['SINGER']; ?>" duration="<?php echo \$movie[0]['DURATION']; ?>" genre="<?php echo \$movie[0]['GENRE']; ?>" publication="<?php echo \$movie[0]['PUBLICATION']; ?>" download="ddl/<?php echo \$movie[0]['CODE']; ?>.mp3"></my-informations>\\
+\hspace*{1.2cm}</my-col-50-50>\\
+\hspace*{0.6cm}</my-col-50-100>\\
+\hspace*{0.6cm}<my-col-50-100>\\
+\hspace*{1.2cm}<my-lyric>\\
+\hspace*{1.8cm}<?php echo \$movie[0]['LYRIC']; ?>\\
+\hspace*{1.2cm}</my-lyric>\\
+\hspace*{0.6cm}</my-col-50-100>\\
+</bloc-information>
+}}
+\vspace{0.5cm}\\
+Je vais \'evidemment expliqu\'e l'ensemble de mes modules ci-dessous. Je tiens avant d'indiqu\'e que l'utilisation de PHP ne peux se faire dans les modules que l'on cr\'e\'e, il faut donc faire en sorte que le module puisse avoir des attributs. Ce qui explique pourquoi ma balise MY-INFORMATION prend beaucoup d'informations.\\
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-informations">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{0.6cm}<style>	\\
+\hspace*{0.6cm}...(se reporter \`a mon GIT ou voir sur Bootstrap pour avoir le style exact)\\
+\hspace*{0.6cm}</style>	\\
+\hspace*{0.6cm}<div style="display: flex;">\\
+\hspace*{0.6cm}<div style="align-self: center;width:100\%;">	\\
+\hspace*{0.6cm}<table class="table table-bordered">\\
+\hspace*{0.6cm}<tbody>\\
+\hspace*{0.6cm}<tr>\\
+\hspace*{0.6cm}<td>Studio</td>\\
+\hspace*{0.6cm}<td>\{\{studio\}\}</td>\\
+\hspace*{0.6cm}</tr>\\
+\hspace*{0.6cm}<tr>\\
+\hspace*{0.6cm}<td>Singer</td>\\
+\hspace*{0.6cm}<td>\{\{singer\}\}</td>\\
+\hspace*{0.6cm}</tr>\\
+\hspace*{0.6cm}<tr>\\
+\hspace*{0.6cm}<td>Duration</td>\\
+\hspace*{0.6cm}<td>\{\{duration\}\}</td>\\
+\hspace*{0.6cm}</tr>\\
+\hspace*{0.6cm}<tr>\\
+\hspace*{0.6cm}<td>Genre</td>\\
+\hspace*{0.6cm}<td>\{\{genre\}\}</td>\\
+\hspace*{0.6cm}</tr>\\
+\hspace*{0.6cm}<tr>\\
+\hspace*{0.6cm}<td>Publication</td>\\
+\hspace*{0.6cm}<td>\{\{publication\}\}</td>\\
+\hspace*{0.6cm}</tr>\\
+\hspace*{0.6cm}</tbody>\\
+\hspace*{0.6cm}</table>	\\
+\hspace*{0.6cm}<a href="\{\{download\}\}" class="btn btn-success btn-sm full" download>DOWNLOAD</a>\\
+\hspace*{0.6cm}</div>	\\
+\hspace*{0.6cm}</div>\\		
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{0.6cm}\color{red}{Polymer(\{\\
+\hspace*{0.6cm}is: "my-informations",\\
+\hspace*{0.6cm}properties: \{\\
+\hspace*{0.6cm}link: String,\\
+\hspace*{0.6cm}studio: String,\\
+\hspace*{0.6cm}singer: String,\\
+\hspace*{0.6cm}duration: String,\\
+\hspace*{0.6cm}genre: String,\\
+\hspace*{0.6cm}publication: String,\\
+\hspace*{0.6cm}download: String\\
+\hspace*{0.6cm}\}\\
+\hspace*{0.6cm}\});}\\
+\hspace*{0.6cm}\color{black}{</script> \\
+</dom-module>}
+}}
+\vspace{0.5cm}\\
+Ce module repr\'esente le tableau avec toutes ces informations. Ici, j'ai utilis\'e comme dit plus haut des propri\'et\'es pour cet \'el\'ement. En rouge, on trouve les propri\'et\'es du bloc, j'ai d\'efini ces derni\`ere comme des strings. Pour ensuite, les utiliser dans le bloc, il suffit d'\'ecrire \{\{ NOM DE LA PROPRIETE \}\}.
+\vspace{0.5cm}\\
+\fbox{\parbox{0.5\textwidth}{
+<dom-module id="my-col-50-50">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>		\\
+\hspace*{1.2cm}:host \{		\\
+\hspace*{1.8cm}position: relative;\\
+\hspace*{1.8cm}min-height: 1px;\\
+\hspace*{1.8cm}padding-left: 15px;\\
+\hspace*{1.8cm}padding-right: 15px;\\
+\hspace*{1.8cm}float:left;\\
+\hspace*{1.8cm}width:50\%;\\
+\hspace*{1.8cm}box-sizing: border-box;\\
+\hspace*{1.8cm}vertical-align:middle;\\
+\hspace*{1.2cm}\}\\
+\hspace*{1.2cm}@media (max-width:1500px) \{\\
+\hspace*{1.8cm}:host \{\\
+\hspace*{2.4cm}margin-bottom: 20px;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}\}	\\
+\hspace*{1.2cm}@media (max-width:1200px) \{\\
+\hspace*{1.8cm}:host \{\\
+\hspace*{2.4cm}width:100\%;\\
+\hspace*{2.4cm}margin-bottom: 0px;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}\}\\
+\hspace*{1.2cm}</style>	\\
+\hspace*{1.2cm}<content></content>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "my-col-50-50"\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\fbox{\parbox{0.5\textwidth}{
+<dom-module id="my-col-50-100">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>	\\
+\hspace*{1.8cm}:host \{	\\	
+\hspace*{2.4cm}position: relative;\\
+\hspace*{2.4cm}min-height: 1px;\\
+\hspace*{2.4cm}padding-left: 15px;\\
+\hspace*{2.4cm}padding-right: 15px;\\
+\hspace*{2.4cm}float:left;\\
+\hspace*{2.4cm}width:50\%;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.8cm}@media (max-width:1500px) \{\\
+\hspace*{2.4cm}:host \{\\
+\hspace*{3.0cm}width:100\%;\\
+\hspace*{2.4cm}\}\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.8cm}</style>\\
+\hspace*{1.8cm}<content></content>\\
+\hspace*{1.2cm}</template>\\
+\hspace*{1.2cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "my-col-50-100"\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}\\
+Comme vue pr\'ec\'edemment, ce sont ces modules qui joueront le role de positionnement sous Polymer. L'utilisation des m\'edia queries permet de fixer la taille de zone dont dispose l'\'el\'ement en fonction de la largeur de l'\'ecran.
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-img-responsive">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>		\\
+\hspace*{1.8cm}:host \{	\\	
+\hspace*{2.4cm}width:100\%;\\
+\hspace*{2.4cm}height: auto;\\
+\hspace*{1.8cm}\}		\\
+\hspace*{1.2cm}</style>\\
+\hspace*{1.2cm}<img src="{{link}}"></img>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "my-img-responsive",\\
+\hspace*{1.8cm}properties: { link: String }\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}\\
+Ce module permet de faire des images responsives. Comme dit au tout d\'epart de mon document. Une image responsive n'est qu'une image avec un largeur de 100\% et une hauteur enfonction de son ratio. Dans ce module, j'ai aussi ajou\'e une propri\'et\'e qui est bien \'evidemment l'adresse de l'image en question.
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-lyric">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>	\\
+\hspace*{1.8cm}:host \{	\\	
+\hspace*{2.4cm}display: block;\\
+\hspace*{2.4cm}overflow-y: scroll;\\
+\hspace*{2.4cm}max-height: 300px;\\
+\hspace*{2.4cm}background: \#F8F8F8 none repeat scroll 0\% 0\%;\\
+\hspace*{2.4cm}border: 1px solid \#000;\\
+\hspace*{2.4cm}text-align: center;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{2.4cm}padding-top: 20px;\\
+\hspace*{1.8cm}\}	\\	
+\hspace*{1.8cm}h2 \{\\
+\hspace*{2.4cm}font-family: inherit;\\
+\hspace*{2.4cm}font-weight: 500;\\
+\hspace*{2.4cm}line-height: 1.1;\\
+\hspace*{2.4cm}color: inherit;\\
+\hspace*{2.4cm}font-size: 14px;\\
+\hspace*{1.8cm}\}	\\
+\hspace*{1.8cm}@media(max-width:600px)\{\\
+\hspace*{2.4cm}h2\{font-size: 10px;\}\\
+\hspace*{1.8cm}\}	\\
+\hspace*{1.8cm}@media(min-width:601px)\{\\
+\hspace*{2.4cm}h2\{font-size: 14px;\}\\
+\hspace*{1.8cm}\}\\	
+\hspace*{1.8cm}@media(min-width:1200px)\{\\
+\hspace*{2.4cm}h2\{font-size: 14px;\}\\
+\hspace*{1.8cm}\}		\\
+\hspace*{1.8cm}@media(min-width:1500px)\{\\
+\hspace*{2.4cm}h2\{font-size: 14px;\}\\
+\hspace*{1.8cm}\}	\\
+\hspace*{1.2cm}</style>\\
+\hspace*{1.2cm}<div><h2><content></content></h2></div>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{1.2cm}Polymer(\{\\
+\hspace*{1.8cm}is: "my-lyric", \\
+\hspace*{1.8cm}properties: \{\\
+\hspace*{2.4cm}link: String\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}\});\\
+\hspace*{0.6cm}</script> \\
+</dom-module>
+}}
+\vspace{0.5cm}\\
 \newpage
 \section{Bootstrap ou Polymer}
 
@@ -1098,12 +1314,7 @@ Le site s'adapte donc aux dimensions de notre appareil ou fen\`etre.\`A quoi cel
 Mais ce n'est pas tout, l'adaptation seul ne permet pas d'\'etablir ce que l'on peut appeler un site web adaptatif. Le cr\'eateur de cette vision, Mr. Ethan Marcotte, a implement\'e un site (\textit{http://alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html}) qui s'adapte \`a la largeur de l'\'ecran. Cependant, il pointe du doigt certains d\'etails. Par exemple, lorsque l'on redimensionne la page, les \'el\'ements vont bel et bien se redimensionner mais les images et le texte \`a tr\`es basse r\'esolution deviendront illisible. Il faut donc que les \'el\'ements se repositionnent dans la page afin que le contenue soit lisible et agr\'eable \`a arpenter pour l'utilisateur. C'est pourquoi dans l'exemple ci-dessus, le nombre de bloc par ligne d\'ecroit au fur et \`a mesure que l'on r\'eduit la fen\^etre.
 \vspace{0.5cm}\\
 
-Le site est aussi \textit{responsible typesetting}. La taille en pixel du texte varie suivant la taille de la fen\^etre. Pour l'utilisateur, il est sans aucun doute plus agr\'eable de pouvoir lire les paroles d'une chanson phrase par phrase. Or, si la taille du texte restait la m\^eme pour toutes dimensions de fen\`etre, soit le texte serait illisible \`a une grande r\'esolution, soit le site serait incommode \`a basse r\'esolution. Pour r\'esoudre ce probl\`eme, une proportions a \'et\'e sp\'ecifier pour l'ensemble des textes suivant la largeur de la fen\`etre ou de l'appareil. Sur le site, on retrouve cette particularit\'e sur plusieurs titres et sur les paroles comme nous pouvons le constater ci-dessous. \`A gauche, on retrouve les paroles des chansons sur t\'el\'ephone portable tandis que \`a droite, on retrouve les m\^emes paroles \'ecrite avec une plus grande police sur tablette.
-\begin{center}
-\vspace{0.5cm}
-\includegraphics[width=0.8\textwidth]{textes}
-\vspace{0.5cm}\\
-\end{center}
+Le site est aussi \textit{responsible typesetting}. 
 
 \newpage
 
