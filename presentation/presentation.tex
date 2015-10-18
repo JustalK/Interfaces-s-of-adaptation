@@ -860,8 +860,7 @@ function nextslide() \{\\
 \hspace*{0.6cm}\}\\
 \}
 }}	
-\vspace{0.5cm}\\ 
-
+\vspace{0.5cm}\\
 Comme dit plus haut, sous Polymer, il n'y a aucune autre mani\`ere d'ffectuer cela. Certains d\'eveloppeurs du projet Polymer sont actuellement entrain d'impl\'ementer un module pour pouvoir en quelques minutes avoir un carousel fonctionnel. Pour l'instant, le carousel ne fonctionne qu'avec des images, ce qui n'\'etait pas suffisant pour effectuer ce que je voulais faire.
 
 \subsection{Le bloc d'informations}
@@ -869,14 +868,92 @@ Comme dit plus haut, sous Polymer, il n'y a aucune autre mani\`ere d'ffectuer ce
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-25pt}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{p5}
+    \includegraphics[width=0.48\textwidth]{p20}
   \end{center}
   \vspace{-20pt}
-  \caption{Les 12 divisions d'un container}
+  \caption{Lecture du site}
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Le bloc d'informations est la petite partie cach\'e du site qui regroupe toutes les informations sur un morceau de musique. J'ai cach\'e cette partie pour que 
+Le bloc d'informations est la petite partie cach\'e du site qui regroupe toutes les informations sur un morceau de musique. J'ai volontairement cach\'e l'int\'erieur de cette partie car je souhaitais un site rapide \`a parcourir. L'oeil humain fonctionne par \'etape : progression, retour \`a la ligne et r\'egression. Mon but \'etait que l'utilisateur effectue en environs 1 seconde, la lecture enti\`ere d'une page du site. Il fallait donc que je limite le nombre de points de fixation (un point d'arr\^et dans la lecture). L'oeil s'arr\^etera entre 10 \`a 30 ms sur ces points. Mon site comporte 4 points d'arr\^ets comme on peux le voir sur la figure 13. Si j'avais laiss\'e mon bloc d'information visible, il y aurait 7 points d'arr\^ets. De plus, mon site peut ici tenir sur une page sans devoir descendre dans la page, ce qui n'aurait pas \'et\'e le cas si j'avais laiss\'e ce bloc visible.\\
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p5}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Le bloc d'informations}
+  \vspace{-10pt}
+\end{wrapfigure} 
+
+Les informations cach\'es sont compos\'es d'une image qui s'adapte \`a la largeur de la page, d'un tableau avec quelques informations sur le clips vid\'eos, d'un bouton pour t\'el\'echarger la musique au format MP3 et des paroles de la musique. L'ensembles de ces informations s'adapte \`a la largeur de la fen\^etre pour que la lecture ainsi que la manipulation soit la plus simple possible pour l'utilisateur. Notons que l'image disparait lorsque nous atteignons certains points de rupture (faible r\'esolutions). J'ai effectu\'e ce choix car je pense que l'utilisateur sur son t\'el\'ephone ne dispose d'une connexion ph\'enom\'enale comme on pourrait en avoir sur ordinateur connect\'e en ethernet. L'image n'\'etant pas une donn\'e essentielle et prenant une part importante de ressources, j'ai jug\'e bon de la supprim\'e \`a basse r\'esolution pour le confort de l'utilisateur.\\
+
+Sous Bootstrap, il n'y a rien de nouveau sur ce que j'ai cit\'e plus haut. Il s'agit maintenant seulement de placement des \'el\'ement dans une grille de positionnement. Le code ci-dessous r\'ealise ce que j'ai fait. Si il y a un point incompris, vous avez donc rat\'e un point dans mes explications pr\'ec\'edentes :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<div class="title text-center">\\
+\hspace*{0.6cm}<strong><?php echo \$movie[0]['TITLE']; ?></strong>\\
+</div>
+}}
+\vspace{0.5cm}\\
+Ce petit bout de code permet d'afficher la barre de bleu avec le titre de la musique en son centre.Notons le petit emploie de PHP pour ne pas faire de travail trop r\'ep\'etitive entre mes pages.
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<div class="hidden-xs hidden-sm col-md-6 col-lg-6 text-center pagination-centered">\\
+\hspace*{0.6cm}<img src="<?php echo \$movie[0]['IMG']; ?>" class="img-responsive" alt="Responsive image">\\
+</div>
+}}
+\vspace{0.5cm}\\
+Ce code est celui qui servira pour afficher l'image. Comme on peux le voir l'image est responsive et sera cach\'e lorsque la largeur de la fen\^etre sera inf\'erieur \`a \og sm \fg{}.
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<div class="col-md-6 col-lg-6 text-center pagination-centered center-block" style="display: flex;">\\
+\hspace*{0.6cm}<div style="align-self: center;width:100\%;">\\
+\hspace*{0.6cm}<table class="table table-bordered">\\
+\hspace*{1.2cm}<tbody>\\
+\hspace*{1.8cm}<tr>\\
+\hspace*{2.4cm}<td>Studio</td>\\
+\hspace*{2.4cm}<td><?php echo \$movie[0]['STUDIO']; ?></td>\\
+\hspace*{1.8cm}</tr>\\
+\hspace*{1.8cm}<tr>\\
+\hspace*{2.4cm}<td>Singer</td>\\
+\hspace*{2.4cm}<td><?php echo \$movie[0]['SINGER']; ?></td>\\
+\hspace*{1.8cm}</tr>\\
+\hspace*{1.8cm}<tr>\\
+\hspace*{2.4cm}<td>Duration</td>\\
+\hspace*{2.4cm}<td><?php echo \$movie[0]['DURATION']; ?></td>\\
+\hspace*{1.8cm}</tr>\\
+\hspace*{1.8cm}<tr>\\
+\hspace*{2.4cm}<td>Genre</td>\\
+\hspace*{2.4cm}<td><?php echo \$movie[0]['GENRE']; ?></td>\\
+\hspace*{1.8cm}</tr>\\
+\hspace*{1.8cm}<tr>\\
+\hspace*{2.4cm}<td>Publication</td>\\
+\hspace*{2.4cm}<td><?php echo \$movie[0]['PUBLICATION']; ?></td>\\
+\hspace*{1.8cm}</tr>\\
+\hspace*{1.2cm}</tbody>\\
+\hspace*{0.6cm}</table>\\
+\hspace*{0.6cm}<a href="ddl/<?php echo \$movie[0]['CODE']; ?>.mp3" class="btn btn-success btn-sm full" download>DOWNLOAD</a>\\
+\hspace*{0.6cm}</div>\\
+</div>
+}}
+\vspace{0.5cm}\\
+Le tableau est \'evidement lui aussi compos\'e d'un peu de PHP. Il n'y a rien d'exceptionnel, il s'agit seulement d'une balise TABLE utilisant le style de Boostrap avec la classe \og table \fg{}. A noter ici, la petite astuces qui permet au tableau de prendre 100\% de l'espace lorsque l'image disparait. Je n'ai pas sp\'ecifi\'e volontairement le fait que tableau prenne 12 colonnes, je n'ai rien mis pour les petites r\'esolutions car par d\'efaut Bootstrap force les \'el\'ements \`a prendre le plus d'espace possible. Je n'ai donc pas eu \`a le rajouter. 
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<div class="col-md-12 col-lg-6">\\
+\hspace*{0.6cm}<div class="text-center write">\\
+\hspace*{1.2cm}<h2><?php echo \$movie[0]['LYRIC']; ?></h2>\\
+\hspace*{0.6cm}</div>\\
+</div>
+}}
+\vspace{0.5cm}\\
+Ce bloc fait r\'ef\'erence au parole de la chanson. J'ai uilis\'e la balise H2 pour faire du \og responsive typesetting \fg{}.
+
+
+
+
 
 \newpage
 \section{Bootstrap ou Polymer}
@@ -962,7 +1039,6 @@ L'ensemble du site contient des \'el\'ements qui s'adaptent \`a la largeur de la
 
 \newpage
 \section{Documentations, Outils, liens utiles} 
-
 \textbf{Wikip\'edia}\\
 Le site d'o\'u j'ai d\'emarr\'e mes recherches, il contient une bonne d\'efinition des sites RWD.\\
 \textit{https://fr.wikipedia.org/wiki/Site\_web\_adaptatif}
@@ -988,7 +1064,11 @@ La description de la loi de Fitt\\
 \textbf{Media queries}\\
 Les medias queries sont int\'erressants mais limit\'es. Le futur serait plutot du cot\'e des \'el\'ements queries.\\
 \textit{http://ianstormtaylor.com/media-queries-are-a-hack/}\\
-\textit{http://www.smashingmagazine.com/2013/06/media-queries-are-not-the-answer-element-query-polyfill/}\\
+\textit{http://www.smashingmagazine.com/2013/06/media-queries-are-not-the-answer-element-query-polyfill/}
+\vspace{0.5cm}\\
+\textbf{Le champs visuels}\\
+Le champs visuels est une aide pr\'ecieuse pour designer une interface.\\
+\textit{http://sophie.raufaste.free.fr/Saccades\%20fixations\%20et\%20champs\%20visuel.htm}\\
 
 \newpage
 Mais cela n'est qu'un hack qui permet de faire ce que je d\'esire. On peux le faire mais on ne devrais pas le faire. Le gros probl\`eme ici est que ce code est non maintenable. Si jamais je changeais de point de rupture par exemple, je devrais changer la valeur de ce m\'edia query. Si il n'y a que celui-l\`a, ce n'est trop long et fatiguant. Mais si le projet a quelques milliers de modules, cela risque d'\^etre tr\`es long.
