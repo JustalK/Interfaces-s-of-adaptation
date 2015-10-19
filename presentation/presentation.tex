@@ -15,7 +15,7 @@
  }
 
 
-\title{Document pour l'adapation des interfaces}
+\title{Document pour l'adaptation des interfaces}
 \author{Justal Kevin}
 \date{28/09/2015}
 \renewcommand{\contentsname}{Table des mati\`eres} 
@@ -49,7 +49,7 @@ DOSSIER D'ANALYSE DES DIFFERENCES\\
 
 \newpage
 
-\section{Comment avez vous r\'ealis\'e l'exemple ?}
+\section{Techniques de conceptions adaptatives utilis\'es}
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-20pt}
@@ -76,7 +76,7 @@ Pour d\'evelopper, je suis parti de la version ordinateur \`a une taille relativ
   \vspace{-10pt}
 \end{wrapfigure}
 
-Les deux technologies que j'ai choisie partage la m\^eme structure de base. C'est \`a dire un d\'ecoupage en cinq grands blocs. Sur la figure 2, le bloc en rouge repr\'esente la barre principale. En jaune, on retrouve la zone de lecture principale des clips musicaux. En vert, il s'agit d'un bouton permettant d'ouvrir un bloc d'information concernant le clip de la zone jaune. En bleu, il s'agit simplement d'autres clips musicaux en rapport avec le chanteur chantant dans le clip de la zone jaune. En rose, on retrouve un menu que l'on peux ou non affich\'e gr\^ace \`a un bouton se trouvant dans la zone rouge. Si le menu est rentr\'e, la zone violet n'existe plus et on se retrouve avec seulement quatres blocs qui prendront la totalit\'e de la fen\^etre comme on peux l'observ\'e sur l'image suivante :\\
+Les deux technologies que j'ai choisi partage la m\^eme structure de base. C'est \`a dire un d\'ecoupage en cinq grands blocs. Sur la figure 2, le bloc en rouge repr\'esente la barre principale. En jaune, on retrouve la zone de lecture principale des clips musicaux. En vert, il s'agit d'un bouton permettant d'ouvrir un bloc d'information concernant le clip de la zone jaune. En bleu, il s'agit simplement d'autres clips musicaux en rapport avec le chanteur chantant dans le clip de la zone jaune. En rose, on retrouve un menu que l'on peux ou non afficher gr\^ace \`a un bouton se trouvant dans la zone rouge. Si le menu est rentr\'e, la zone violet n'existe plus et on se retrouve avec seulement quatres blocs qui prendront la totalit\'e de la fen\^etre comme on peux l'observer sur l'image suivante :\\
 
 \begin{center}
   \includegraphics[width=0.8\textwidth]{p1}
@@ -84,17 +84,17 @@ Les deux technologies que j'ai choisie partage la m\^eme structure de base. C'es
 
 \subsection{Images flexibles}
 
-Pour observer pr\'ecis\'ement les diff\'erents principes de RWD sur notre site, nous allons nous int\'erresser \`a certaines zones du site. Pour commencer, nous allons d'abord nous int\'eress\'e au menu (zone violet). Cette derni\'ere illustre \`a la perfection le principe d'image flexible que l'on attend d'un site adaptatif. Qu'est ce qu'une image flexible ? Il s'agit d'une image qui se redimensionnera en fonction de la taille de la fen\^etre. Pour r\'ealiser cela, il faut simplement donner \`a une image quelques attributs CSS. Il faut lui sp\'ecifi\'e de prendre toute la longueur disponible dans le bloc o\`u elle se trouve et de prendre une hauteur automatiquement en fonction de son rapport. En CSS, cela se traduit par : \textit{\og width:100\%;height:auto; \fg{} }. Avec Polymer, j'ai cr\'e\'e un object image qui ajoutait automatiquement des images responsives. Sous Bootstrap, c'est on ne peux plus simple, une classe existe nomm\'e \textit{\og img-responsive \fg} et il suffit de la rajouter sur une balise IMG. Cela permet d'obtenir le r\'esultat suivant lorsque l'on r\'eduit la taille de la fen\^etre :\\
+Pour observer pr\'ecis\'ement les diff\'erents principes de RWD sur notre site, nous allons nous int\'erresser \`a certaines zones du site. Pour commencer, nous allons d'abord nous int\'eress\'e au menu (zone violette). Cette derni\'ere illustre \`a la perfection le principe d'image flexible que l'on attend d'un site adaptatif. Qu'est ce qu'une image flexible ? Il s'agit d'une image qui se redimensionnera en fonction de la taille de la fen\^etre. Pour r\'ealiser cela, il faut simplement donner \`a une image quelques attributs CSS. Il faut lui sp\'ecifier de prendre toute la longueur disponible dans le bloc o\`u elle se trouve et de prendre automatiquement une hauteur en fonction de son rapport. En CSS, cela se traduit par : \textit{\og width:100\%;height:auto; \fg{} }. Avec Polymer, j'ai cr\'e\'e un object image qui ajoutait automatiquement des images responsives. Sous Bootstrap, c'est on ne peux plus simple, une classe existe nomm\'e \textit{\og img-responsive \fg} et il suffit de la rajouter sur une balise IMG. Cela permet d'obtenir le r\'esultat suivant lorsque l'on r\'eduit la taille de la fen\^etre :\\
 
 \begin{center}
   \includegraphics[width=0.8\textwidth]{p4}
 \end{center}
 
-Dans mon exemple ci-dessus, on remarque bien que l'image s'adapte \`a la taille de la fen\^etre. On remarque de plus que le site est totalement diff\'erent, il s'agit l\`a de l'application des points de rupture ou Media queries dont je parlais pr\'ec\'edemment et que nous allons voir au prochain point.
+Dans mon exemple ci-dessus, on remarque bien que l'image s'adapte \`a la taille de la fen\^etre. On remarque de plus que le site est totalement diff\'erent, il s'agit l\`a de l'application des \textbf{points de rupture} ou \textbf{media queries} dont je parlais pr\'ec\'edemment et que nous allons voir au prochain chap\^itre.
 
 \subsection{Media queries ou Points de rupture}
 
-Les \textbf{media queries} ou points de rupture sont des r\`egles CSS appliqu\'ees en fonction de la largeur de l'\'ecran. Ce sont ces diff\'erentes largeurs qui sont appel\'ees \og points de rupture \fg{}, elles correpondent \`a un besoin de modifier la page \`a partir d'un seuil critique pour la facilitation de la navigation et de la lecture du contenu. Pour que cette d\'efinition soit clair, nous allons montrer leur application sur le site. \\
+Les \textbf{media queries} ou points de rupture sont des r\`egles CSS appliqu\'ees en fonction de la largeur de l'\'ecran. Ce sont ces diff\'erentes largeurs qui sont appel\'ees \og points de rupture \fg{}, elles correspondent \`a un besoin de modifier la page \`a partir d'un seuil critique pour la facilitation de la navigation et de la lecture du contenu. Pour que cette d\'efinition soit claire, nous allons montrer leur application sur le site. \\
 
 \begin{wrapfigure}{l}{0.5\textwidth}
   \vspace{-20pt}
@@ -106,13 +106,13 @@ Les \textbf{media queries} ou points de rupture sont des r\`egles CSS appliqu\'e
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Sur la figure 3, j'ai colori\'e les diff\'erents blocs chacun d'une couleur diff\'erente. Ces blocs sont simplements repr\'esent\'es par des balises DIV avec des r\`egles CSS fonction de la taille de l'\'ecran. Prenons l'exemple du bloc violet, ce bloc fait exactement 25\% du conteneur qui lui prend 100\% de la longueur de l'\'ecran. Lorsque l'on r\'eduit la fen\^etre jusqu'\`a un certain point, ce bloc prendra alors 50\% sur ces 100\%. Puis si l'on continue \`a r\'eduire la fen\^etre, ce bloc disparait.\\  
+Sur la figure 3, j'ai colori\'e les diff\'erents blocs chacun d'une couleur diff\'erente. Ces blocs sont simplement repr\'esent\'es par des balises DIV avec des r\`egles CSS fonction de la taille de l'\'ecran. Prenons l'exemple du bloc violet, ce bloc fait exactement 25\% du conteneur qui quant \`a lui prend 100\% de la largeur de l'\'ecran. Lorsque l'on r\'eduit la fen\^etre jusqu'\`a un certain point, ce bloc prendra alors 50\% sur ces 100\%. Puis si l'on continue \`a r\'eduire la fen\^etre, ce bloc dispara\^itra.\\  
 
 \begin{center}
   \includegraphics[width=0.8\textwidth]{p8}
 \end{center}
 
-Sur Bootstrap, il est assez simple de r\'ealiser ceci. Cet technologie inclue un syst\`eme de grille relativement bien ficell\'e. Il faut dans un premier temps, d\'efinir notre zone o\`u on souhaite r\'ealiser le d\'ecoupage en utilisant la classe \og container \fg{} dans une balise DIV :
+Sur Bootstrap, il est assez simple de r\'ealiser ceci. Cette technologie inclue un syst\`eme de grille relativement solide et pratique. Il faut dans un premier temps, d\'efinir notre zone o\`u l'on souhaite r\'ealiser le d\'ecoupage en utilisant la classe \og container \fg{} dans une balise DIV :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{<div class="container">\\
 </div>}}
@@ -126,14 +126,14 @@ Sur Bootstrap, il est assez simple de r\'ealiser ceci. Cet technologie inclue un
   \caption{Zone du container}
   \vspace{-10pt}
 \end{wrapfigure} 
-\hspace*{0.6cm}On a ainsi sp\'ecifi\'e o\`u se trouvait notre zone par dessus laquelle nous allons poser une grille. J'entrerais dans les d\'etails au chapitre suivant, pour l'instant il faut voir cela comme une subdivision en 12 partie de la partie rouge sur la figure 4. Comme je l'ai d\'ej\`a sp\'ecifi\'e pr\'ec\'edement, l'image dans la partie rouge ne repr\'esente que 25\% de cette zone lorsque l'\'ecran est sup\'erieur \`a 1500px (valeur choisie par mes soins). Pour ensuite, sp\'ecifi\'e \`a Bootstrap que nous allons couper notre container en plusieurs parties, il faut utiliser la classe \og row \fg{} : 
+\hspace*{0.6cm}On a ainsi sp\'ecifi\'e o\`u se trouvait notre zone par dessus laquelle nous allons poser une grille. Je n'entrerai dans les d\'etails qu'au chap\^itre suivant, pour l'instant il faut imaginer cela comme une subdivision en 12 parties de la zone rouge sur la figure 4. Comme je l'ai d\'ej\`a expliqu\'e pr\'ec\'edement, l'image dans la zone rouge ne repr\'esente que 25\% de cette zone lorsque l'\'ecran est sup\'erieur \`a 1500px (valeur choisie par mes soins). Ensuite, pour sp\'ecifier \`a Bootstrap que nous allons couper notre container en plusieurs parties, il faut utiliser la classe \og row \fg{} : 
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{<div class="container">\\
 \hspace*{0.6cm}<div class="row">\\
 \hspace*{0.6cm}</div>\\
 </div>}}
 \vspace{0.5cm}\\
-Nous allons maintenant entrer dans le vif du sujet, comme dit plus haut, le container est divis\'e en 12 parties que j'appellerais dans la suite colonne. On peux fixer le nombre de colonne que peux prendre un \'el\'ement. Reprenons et analysons pr\'ecisement la figure 3. Sur cette derni\`ere, la zone jaune prend 6 colonnes et les 6 colonnes restantes sont r\'eparties \'equitablement entre la zone violette et verte. Niveau code, on sp\'ecifie cela en utilisant les classes \og col-xs-X \fg,\og col-sm-X \fg,\og col-md-X \fg ou \og col-lg-X \fg. Xs, sm, md et lg repr\'esentent la taille minimum de l'\'ecran pour que les r\`egles que ces classes contiennent prennent effets. Tandis que le X dans ces classes repr\'esente tout simplement le nombre de colonnes que prendra l'\'el\'ement utilisant ces classes. Je reviendrais un peu plus loin sur ce point, pour l'instant, il est plus important de comprendre la diff\'erence entre les classes xs, sm, md et lg :
+Nous allons maintenant entrer dans le vif du sujet, comme dit plus haut, le container est divis\'e en 12 parties que j'appellerai dans la suite colonne. On peux fixer le nombre de colonnes que peux prendre un \'el\'ement. Reprenons et analysons pr\'ecisement la figure 3, sur cette derni\`ere, la zone jaune prend 6 colonnes et les 6 colonnes restantes sont r\'eparties \'equitablement entre la zone violette et verte. Au niveau du code, on sp\'ecifie cela en utilisant les classes \og col-xs-X \fg,\og col-sm-X \fg,\og col-md-X \fg ou \og col-lg-X \fg. Xs, sm, md et lg repr\'esentent la taille minimum de l'\'ecran pour que les r\`egles que ces classes contiennent prennent effets. Tandis que le X dans ces classes repr\'esente tout simplement le nombre de colonnes que prendra l'\'el\'ement utilisant ces classes. Je reviendrai un peu plus loin sur ce point. Pour l'instant, il est plus important de comprendre la diff\'erence entre les classes xs, sm, md et lg :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{<div class="container">\\
 \hspace*{0.6cm}<div class="row">\\
@@ -149,7 +149,7 @@ Nous allons maintenant entrer dans le vif du sujet, comme dit plus haut, le cont
 \hspace*{0.6cm}</div>\\
 </div>}}
 \vspace{0.5cm}\\
-Ce bout de code est suffisant pour comprendre et expliqu\'e clairement les mouvements de l'image violette dans la figure 3. Le texte en rouge pr\'ecise qu'\`a grande taille lg (sup\'erieur \`a 1500px), la zone violette et verte ont 50\% du container, soit 6 colonnes : \og col-lg-6 \fg{} . Le texte en bleu est la balise DIV directe qui contient l'image violette. Ces classes sp\'ecifies qu'\`a grande taille, ce bloc ne peux exc\'eder 6 colonnes, soit 50\%. Or, 50\% de 50\% fait bien 25\% comme je l'avais dit plus haut. Cependant cela n'est valide que lorsque la fen\^etre est sup\'erieur \`a 1500px. En dessous, les autres classes prennent le relais.\\ 
+Ce bout de code est suffisant pour comprendre et expliquer clairement les mouvements de l'image violette dans la figure 3. Le texte en rouge pr\'ecise qu'\`a grande taille lg (sup\'erieur \`a 1500px), la zone violette et verte ont 50\% du container, soit 6 colonnes : \og col-lg-6 \fg{} . Le texte en bleu est la balise DIV directe qui contient l'image violette. Ces classes sp\'ecifient qu'\`a grande taille, ce bloc ne peux exc\'eder 6 colonnes, soit 50\%. Or, 50\% de 50\% fait bien 25\% comme je l'avais dit plus haut. Cependant cela n'est valide que lorsque la fen\^etre est sup\'erieur \`a 1500px. En dessous, les autres classes prennent le relais.\\ 
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-20pt}
@@ -171,7 +171,7 @@ Ce bout de code est suffisant pour comprendre et expliqu\'e clairement les mouve
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Pour comprendre pr\'ecisement quelles sont les classes qui sont actives \`a une grandeur de fen\^etre donn\'e, il faut simplement retenir les dimensions que repr\'esentent les sigles xs, sm, md, lg. Les dimensions qui sont affich\'ees ne sont pas celles par d\'efauts de BootStrap mais celles que j'ai utilis\'e pour mon site. J'ai chang\'e les points de rupture pour que mon menu puisse s'ins\'errer joliment sur mon site. Sans cela, il se pouvait que le bouton de la barre de menu chevauche le menu, ce qui donnait un r\'esultat pl\^utot moche. La seule mani\`ere de r\'egler le probl\`eme a \'et\'e de construire une version personnalis\'e de Boostrap. Il est possible d'\'effectuer cette op\'eration sur le site officiel de Bootstrap.\\
+Pour comprendre pr\'ecisement quelles sont les classes qui sont actives \`a une grandeur de fen\^etre donn\'e, il faut simplement retenir les dimensions que repr\'esentent les sigles xs, sm, md, lg. Les dimensions qui sont affich\'ees ne sont pas celles par d\'efauts de Bootstrap mais celles que j'ai utilis\'e pour mon site. J'ai chang\'e les points de rupture pour que mon menu puisse s'ins\'erer joliment sur mon site. Sans cela, il se pouvait que le bouton de la barre de menu chevauche le menu, ce qui donnait un r\'esultat plut\^ot moche. La seule mani\`ere de r\'egler le probl\`eme a \'et\'e de construire une version personnalis\'e de Boostrap. Il est possible d'effectuer cette op\'eration sur le site officiel de Bootstrap.\\
 
 \begin{wrapfigure}{l}{0.5\textwidth}
   \vspace{-20pt}
@@ -183,7 +183,7 @@ Pour comprendre pr\'ecisement quelles sont les classes qui sont actives \`a une 
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Dans notre cas, si la fen\^etre est inf\'erieur \`a 1500px alors les classes lg ne sont plus utilis\'e. Prenons une fen\^etre de 1300px, si l'on regarde le tableau de la figure 5, on remarque que pour toutes les dimensions situ\'es entre 1200 px et 1500 px md est la classe qui est actif. On reprend notre bout de code pr\'ec\'edent et on remarque que le texte en rouge mentionne \og col-md-12 \fg{}. Cela signifie que cette div qui repr\'esente la zone violette et verte de la figure 3 prendra 100\% du container. On regarde notre texte en bleu et on lit \og col-md-6 \fg{}. L'image violette prendra donc 50\% de 100\%, elle prendra donc la moiti\'e de la longueur de la fen\^etre.\\
+Dans notre cas, si la fen\^etre est inf\'erieur \`a 1500px alors les classes lg ne sont plus utilis\'ees. Prenons une fen\^etre de 1300px, si l'on regarde le tableau de la figure 5, on remarque que pour toutes les dimensions situ\'ees entre 1200 px et 1500 px, md est la classe qui est actif. On reprend notre bout de code pr\'ec\'edent et on remarque que le texte en rouge mentionne \og col-md-12 \fg{}. Cela signifie que cette div qui repr\'esente la zone violette et verte de la figure 3 prendra 100\% du container. On regarde notre texte en bleu et on lit \og col-md-6 \fg{}. L'image violette prendra donc 50\% de 100\%, elle prendra donc la moiti\'e de la longueur de la fen\^etre.\\
 
 \begin{wrapfigure}{l}{0.5\textwidth}
   \vspace{-20pt}
@@ -195,9 +195,9 @@ Dans notre cas, si la fen\^etre est inf\'erieur \`a 1500px alors les classes lg 
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Maintenant, si nous continuons de r\'eduire la fen\^etre et atteignons une taille inf\'erieur \`a 1200px, nous arrivons dans les classes sm. Si on regarde le texte en bleu dans le bout de code pr\'ec\'edent, on voit qu'il est \'ecrit \og hidden-sm \fg{}. Cette classe signifie que le nombre de colonne prise par cet \'el\'ement sera r\'eduit \`a z\'ero. Cela se traduit par une disparition compl\`ete de l'\'el\'ement comme on peux le voir sur la figure 7. Notons au passage que je n'ai pas pr\'ecis\'e dans le texte en rouge le nombre de colonne pour les dimensions sm et xs. Je n'ai pas eu \`a le faire car Bootstrap utilise les r\`egle CSS pour r\'ealiser ces modifications. Plus pr\'ecisement, Bootstrap utilise l'h\'eritage et le cascading de CSS pour pouvoir r\'e\'ecrire des r\`egles sur des r\`egles. Si on ne d\'efini pas de xs, alors les r\`egles CSS seront celles de sm. Si elles aussi ne sont pas d\'efinis, alors ce seront celles de md qui seront prise en compte...Cela ne constitue pas une faute mais j'aurais pu omettre le \og col-md-6 \fg{} dans mon texte bleu et cela donnerais toujours le m\^eme r\'esultat.\\
+Maintenant, si nous continuons de r\'eduire la fen\^etre et atteignons une taille inf\'erieur \`a 1200px, nous arrivons dans les classes sm. Si on regarde le texte en bleu dans le bout de code pr\'ec\'edent, on voit qu'il est \'ecrit \og hidden-sm \fg{}. Cette classe signifie que le nombre de colonnes pris par cet \'el\'ement sera r\'eduit \`a z\'ero. Cela se traduit par une disparition compl\`ete de l'\'el\'ement comme on peux le voir sur la figure 7. Notons au passage que je n'ai pas pr\'ecis\'e dans le texte en rouge le nombre de colonne pour les dimensions sm et xs. Je n'ai pas eu \`a le faire car Bootstrap utilise les r\`egles CSS pour r\'ealiser ces modifications. Plus pr\'ecisement, Bootstrap utilise l'h\'eritage et le cascading de CSS pour pouvoir r\'e\'ecrire des r\`egles sur des r\`egles. Si on ne d\'efinit pas de xs, alors les r\`egles CSS seront celles de sm. Si elles aussi ne sont pas d\'efinis, alors ce seront celles de md qui seront prise en compte...Cela ne constitue pas une faute mais j'aurai pu omettre le \og col-md-6 \fg{} dans mon texte bleu et cela donnerai toujours le m\^eme r\'esultat.\\
 
-Nous avons vu comment mettre cela en place sur Bootstrap, on peux \'evidemment faire la m\^eme chose avec Polymer. Le r\'esultat obtenue est le m\^eme mais la mani\`ere d'y arriver est diff\'erente. Cependant, notons que cela est totalement contraire \`a l'id\'ee de Polymer. J'ai discut\'e de cela avec Monsieur Bidelman lui-m\^eme qui est un des fondateurs de Polymer et qui travaille actuellement chez Google. Le but est de cr\'eer des \'el\'ements r\'eutilisables. Or \`a partir du moment o\`u l'on utilise des m\'edias queries, l'\'el\'ement devient ancr\'e au site qui les utilisent. Prenons l'exemple pr\'ec\'edent, pour que l'image disparaisse \`a un certain point de rupture, j'ai cr\'e\'e un \'el\'ement qui change son attribut \og display \fg{} lorsque l'on atteint ce fameux point.
+Nous avons vu comment mettre cela en place sur Bootstrap, on peux \'evidemment faire la m\^eme chose avec Polymer. Le r\'esultat obtenu est le m\^eme mais la mani\`ere d'y arriver est diff\'erente. Cependant, notons que cela est totalement contraire \`a l'id\'ee de Polymer. J'ai discut\'e de cela avec Monsieur Bidelman lui-m\^eme qui est un des fondateurs de Polymer et qui travaille actuellement chez Google. Le but est de cr\'eer des \'el\'ements r\'eutilisables. Or \`a partir du moment o\`u l'on utilise des m\'edias queries, l'\'el\'ement devient ancr\'e au site qui les utilisent. Prenons l'exemple pr\'ec\'edent, pour que l'image disparaisse \`a un certain point de rupture, j'ai cr\'e\'e un \'el\'ement qui change son attribut \og display \fg{} lorsque l'on atteint ce fameux point.
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="my-col-hidden-900">\\
@@ -218,8 +218,8 @@ Nous avons vu comment mettre cela en place sur Bootstrap, on peux \'evidemment f
 \hspace*{0.6cm}</script>\\
 </dom-module>}}}
 \vspace{0.5cm}\\
-On a donc cr\'e\'e une nouvelle node HTML nomm\'e my-col-hidden-900. Le code en bleu est la partie la plus importante. Elle sp\'ecifie que le code se situant entre les balises \og my-col-hidden-900 \fg{} aura l'attribut \og display:none \fg{} si la taille de la fen\^etre est inf\'erieur \`a 900px. Autrement dit, tous le contenue \`a l'int\'erieur ne sera pas affich\'e.\\
-Dans le m\^eme style, j'ai cr\'e\'e un \'el\'ement du DOM dont la longueur s'adapte en fonction la largeur de la fen\^etre. La longueur ainsi que le position naturel des balises DIV avec l'attribut \og float:left \fg{} permet de r\'ealiser un semblant de grille sous Polymer :
+On a donc cr\'e\'e une nouvelle node HTML dans le DOM nomm\'e my-col-hidden-900. Le code en bleu est la partie la plus importante. Elle sp\'ecifie que le code se situant entre les balises \og my-col-hidden-900 \fg{} aura l'attribut \og display:none \fg{} si la taille de la fen\^etre est inf\'erieur \`a 900px. Autrement dit, tout le contenue \`a l'int\'erieur ne sera pas affich\'e.\\
+Dans le m\^eme style, j'ai cr\'e\'e un \'el\'ement du DOM dont la longueur s'adapte en fonction la largeur de la fen\^etre. La largeur ainsi que le position naturel des balises DIV avec l'attribut \og float:left \fg{} permet de r\'ealiser un semblant de grille sous Polymer :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="my-col-25-100">\\
@@ -267,7 +267,7 @@ Dans le m\^eme style, j'ai cr\'e\'e un \'el\'ement du DOM dont la longueur s'ada
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Ce module permet d'ajouter une nouvelle node HTML nomm\'e \og my-col-25-100 \fg{}. Ce dernier permet de faire la division et le repositionnement des clips musicaux en bas de page. J'ai colori\'e chacun des \'el\'ements utilisant ce module sur la figure 8. Sur cette figure, la dimension de la fen\^etre est sup\'erieur \`a 1500px. Dans le code pr\'ec\'edent, les r\`egles en bleu sont celles actives. On remarque que la taille (\og width \fg{} ) est sp\'ecifi\'e \`a 25\% du container. Chacun des clips prend donc 25\%, ce qui apparait bien sur la figure \`a droite. Ensuite, si l'on r\'eduit la fen\^etre, nous arriverons au point d'ancrage \`a 1500px. Les r\`egles appliqu\'es seront donc celles \'ecrites en bleu puis en rouge. Les r\`egles rouges donneront de nouvelles valeurs aux r\`egles en bleu, elles seront r\'e\'ecrites. Dans notre cas, la longueur maximal que pourra prendre un de nos clips musicaux sera de 50\% du container. Ainsi, lorsque 100\% du container est pris par 2 vide\'eos, les suivantes se placeront en dessous. Maintenant, imaginons que nous continuions \`a r\'eduire la fen\^etre jusqu'au point de rupture \`a 900px, chaque vid\'eos prendra la totalit\'e de la largeur de la fen\^etre. L'image ci-dessous montre le r\'esultat obtenue via ces points de rupture avec les mdoules pr\'ec\'dents :
+Ce module permet d'ajouter une nouvelle node HTML nomm\'e \og my-col-25-100 \fg{}. Cette derni\`ere permet de faire la division et le repositionnement des clips musicaux en bas de page. J'ai colori\'e chacun des \'el\'ements utilisant ce module sur la figure 8. Sur cette figure, la dimension de la fen\^etre est sup\'erieur \`a 1500px. Dans le code pr\'ec\'edent, les r\`egles en bleu sont celles actives. On remarque que la taille (\og width \fg{} ) est sp\'ecifi\'e \`a 25\% du container. Chacun des clips prend donc 25\%, ce qui apparait bien sur la figure \`a droite. Ensuite, si l'on r\'eduit la fen\^etre, nous arriverons au point d'ancrage \`a 1500px. Les r\`egles appliqu\'ees seront donc celles \'ecrites en bleu puis en rouge. Les r\`egles rouges donneront de nouvelles valeurs aux r\`egles en bleu, elles seront r\'e\'ecrites. Dans notre cas, la largeur maximale que pourra prendre un de nos clips musicaux sera de 50\% du container. Ainsi, lorsque 100\% du container est pris par 2 vid\'eos, les suivantes se placeront en dessous. Maintenant, imaginons que nous continuons \`a r\'eduire la fen\^etre jusqu'au point de rupture \`a 900px, chaque vid\'eos prendra la totalit\'e de la largeur de la fen\^etre. L'image ci-dessous montre le r\'esultat obtenu via ces points de rupture avec les modules pr\'ec\'edents :
 
 \begin{center}
 \vspace{0.5cm}
@@ -275,7 +275,7 @@ Ce module permet d'ajouter une nouvelle node HTML nomm\'e \og my-col-25-100 \fg{
 \vspace{0.5cm}\\
 \end{center}
 
-\`A travers ces diff\'erents exemples, nous avons pu voir comment faire des points de ruptures sous les deux technologies diff\'erentes. Sur Bootstrap, il est bien plus simple d'utiliser ces points de ruptures. L'utilisation des classes xs, sm, md et lg rendent le principe facile \`a comprendre. Cependant, nous sommes limit\'es par Bootstrap \`a suivre ces quatres points de ruptures. Si le site contient de nombreux autres points de ruptures, Bootstrap perd de sa superbe car cela reviendrait \`a faire du CSS classique. Sur Polymer, il faut bien comprendre les m\'edia queries (points de ruptures) pour pouvoir les utiliser. Comme Polymer fractionne notre code, on se retrouve avec du CSS et donc des points de ruptures qui se retrouvent \'eparpill\'e dans le code. En cas de changement de points de rupture, la maintenance peut vide devenir difficile. 
+\`A travers ces diff\'erents exemples, nous avons pu voir comment faire des points de rupture sous les deux technologies diff\'erentes. Sur Bootstrap, il est bien plus simple d'utiliser ces points de rupture. L'utilisation des classes xs, sm, md et lg rendent le principe facile \`a comprendre. Cependant, nous sommes limit\'e par Bootstrap \`a suivre ces quatres points de rupture. Si le site contient de nombreux autres points de rupture, Bootstrap perd de sa superbe car cela reviendrait \`a faire du CSS classique. Sur Polymer, il faut bien comprendre les m\'edia queries (points de rupture) pour pouvoir les utiliser. Comme Polymer fractionne notre code, on se retrouve avec du CSS et donc des points de rupture qui se retrouvent \'eparpill\'e dans le code. En cas de changement de points de rupture, la maintenance peut vite devenir difficile. 
 
 \subsection{Grille de positionnement}
 
@@ -289,7 +289,7 @@ Ce module permet d'ajouter une nouvelle node HTML nomm\'e \og my-col-25-100 \fg{
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Les grilles de positionnements consiste en un dimensionnement relatif des diff\'erents blocs de la page. J'ai d\'ej\`a partiellement \'evoqu\'e ce point. Je vais essayer de me concentrer ici sur ce point en particulier. Comme dit dans le chapitre pr\'ec\'dent, les grilles se placent dans des containers. Qu'est qu'un container ? Sur la figure 9, j'ai repr\'sent\'e en violet, le container du bas de la page. On peux aussi l'obtenir en analysant le code avec Firebug (F12). Cet espace violet est la place maximale que peux prendre le contenue ici.\\
+Les grilles de positionnement consistent en un dimensionnement relatif des diff\'erents blocs de la page. J'ai d\'ej\`a partiellement \'evoqu\'e ce point. Je vais essayer de me concentrer ici sur ce point en particulier. Comme dit dans le chap\^itre pr\'ec\'edent, les grilles se placent dans des containers. Qu'est qu'un container ? Sur la figure 9, j'ai repr\'esent\'e en violet, le container du bas de la page. On peux aussi l'obtenir en analysant le code avec Firebug (F12). Cet espace violet est la place maximale que peux prendre le contenue ici.\\
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-25pt}
@@ -301,7 +301,7 @@ Les grilles de positionnements consiste en un dimensionnement relatif des diff\'
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Lorsque l'on utilise la classe \og row \fg{} dans Bootstrap, on divise ce container en 12 parties \'egales. Avec Polymer, le principe que j'ai d\'evelopp\'e est globalement le m\^eme cependant j'ai d\`u reconstruire ces divisions de A \`a Z via les m\'edia queries et les attributs CSS (en particulier : width). Sur la figure 10, j'ai repr\'esent\'e chacune des divisions d'une couleur diff\'erente. Ensuite, on peux d\'efinir combien de colonnes ou divisions pourra prendre un \'el\'ement. (voir les explication du chapitre pr\'ec\'edent).\\
+Lorsque l'on utilise la classe \og row \fg{} dans Bootstrap, on divise ce container en 12 parties \'egales. Avec Polymer, le principe que j'ai d\'evelopp\'e est globalement le m\^eme cependant j'ai d\^u reconstruire ces divisions de A \`a Z via les m\'edia queries et les attributs CSS (en particulier : width). Sur la figure 10, j'ai repr\'esent\'e chacune des divisions d'une couleur diff\'erente. Ensuite, on peux d\'efinir combien de colonnes ou divisions pourra prendre un \'el\'ement. (voir les explications du chap\^itre pr\'ec\'edent).\\
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-25pt}
@@ -313,9 +313,9 @@ Lorsque l'on utilise la classe \og row \fg{} dans Bootstrap, on divise ce contai
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Pour les clips musicaux en bas de page, j'ai d\'efini pour chacun d'entre eux 3 divisions. Sur Bootstrap, cela se traduit par \og col-XX-3 \fg{} o\`u XX repr\'esente tout simplement les points de rupture que j'ai \'evoqu\'e dans le chapitre pr\'ec\'edent. Avec Polymer, pour r\'ealiser cela, il faut imbriqu\'e deux modules ou balises l'une dans l'autre. La premi\`ere servira de container pour r\'ealiser la m\^eme chose que sur la figure 9 tandis que la deuxi\`eme servira a r\'ealiser les divisions comme sur l'image de droite.\\
+Pour les clips musicaux en bas de page, j'ai d\'efini pour chacun d'entre eux 3 divisions. Sur Bootstrap, cela se traduit par \og col-XX-3 \fg{} o\`u XX repr\'esente tout simplement les points de rupture que j'ai \'evoqu\'e dans le chap\^itre pr\'ec\'edent. Avec Polymer, pour r\'ealiser cela, il faut imbriqu\'e deux modules ou balises l'une dans l'autre. La premi\`ere servira de container pour r\'ealiser la m\^eme chose que sur la figure 9 tandis que la deuxi\`eme servira \`a r\'ealiser les divisions comme sur l'image de droite.\\
 
-Le point important est que les \'el\'ements des grilles sont d\'efinis comme \og float:left \fg{} que ce soit sur Bootstrap ou sur Polymer. Ce qui veut dire qu'un \'el\'ement, ce positionnera toujours le plus \`a gauche possible sur la m\^eme ligne si il y a la place disponible, sinon l'\'el\'ement se positionnera sur une nouvelle ligne. De m\^eme, il y a toujours 12 colonnes sur une ligne peux importe la taille de la fen\^etre. Si jamais les \'el\'ements \'ex\'edent le nombre de colonnes disponibles sur la ligne, il se place automatiquement sur la ligne en dessous.\\
+Le point important est que les \'el\'ements des grille sont d\'efinis comme \og float:left \fg{} que ce soit sur Bootstrap ou sur Polymer. Ce qui veut dire qu'un \'el\'ement, ce positionnera toujours le plus \`a gauche possible sur la m\^eme ligne si il y a la place disponible, sinon l'\'el\'ement se positionnera sur une nouvelle ligne. De m\^eme, il y a toujours 12 colonnes sur une ligne peux importe la taille de la fen\^etre. Si jamais les \'el\'ements ex\'edent le nombre de colonnes disponibles sur la ligne, ils se placeronts automatiquement sur la ligne en dessous.\\
 
 \begin{center}
 \vspace{0.5cm}
@@ -323,9 +323,9 @@ Le point important est que les \'el\'ements des grilles sont d\'efinis comme \og
 \vspace{0.5cm}\\
 \end{center}
 
-Comme vue dans les exemples pr\'ec\'edent, les clips musicaux du bas de la page \'etaient affich\'e sur 1 ligne. Sur Bootstrap, cela \'equivaut \`a utiliser la classe \og col-XX-3 \fg{}. Il y a 4 vid\'eos qui utilisent chacune 3 divisions. Sur Polymer, on pr\'ecisera que le bloc utilise 25\% du container en CSS avec l'attribut \og width \fg{}. Maintenant sur l'image ci-dessus, il y a deux lignes. Chacune utilise un syst\`eme de 12 colonnes. La diff\'erence r\'eside simplement dans le nombre de colonne qu'on a permis \`a l'\'el\'ement d'utiliser. Ici, j'ai utilis\'e la classe \og col-XX-6 \fg{} sur Bootstrap. Pour indiquer que chaque vid\'eo prendrait 6 colonnes. Comme il y a 4 clips, les deux premieres vid\'eos ont remplit la premi\`ere ligne puis la troisi\`eme vid\'eo est automatiquement pass\'e \`a la ligne en dessous pour compl\'eter le container.\\
+Comme vu dans les exemples pr\'ec\'edent, les clips musicaux du bas de la page \'etaient affich\'es sur 1 ligne. Sur Bootstrap, cela \'equivaut \`a utiliser la classe \og col-XX-3 \fg{}. Il y a 4 vid\'eos qui utilisent chacune 3 divisions. Sur Polymer, on pr\'ecisera que le bloc utilise 25\% du container en CSS avec l'attribut \og width \fg{}. Maintenant sur l'image ci-dessus, il y a deux lignes. Chacune utilise un syst\`eme de 12 colonnes. La diff\'erence r\'eside simplement dans le nombre de colonnes qu'on a permis \`a l'\'el\'ement d'utiliser. Ici, j'ai utilis\'e la classe \og col-XX-6 \fg{} sur Bootstrap. Pour indiquer que chaque vid\'eos prendrait 6 colonnes. Comme il y a 4 clips, les deux premieres vid\'eos ont remplit la premi\`ere ligne puis la troisi\`eme vid\'eo est automatiquement pass\'ee \`a la ligne en dessous pour compl\'eter le container.\\
 
-Ainsi, nous avons une id\'ee g\'en\'erale des moyens que j'ai utilis\'e pour faire mon site ainsi qu'une compr\'ehension pouss\'e des techniques que je vais employ\'e pour comprendre comment j'ai form\'e mon site.
+Ainsi, nous avons une id\'ee g\'en\'erale des moyens que j'ai utilis\'e pour faire mon site ainsi qu'une compr\'ehension pouss\'ee des techniques que je vais employ\'e pour comprendre comment j'ai form\'e mon site.
 
 \newpage
 \section{L'exemple de A \`a Z}
@@ -341,14 +341,14 @@ Ainsi, nous avons une id\'ee g\'en\'erale des moyens que j'ai utilis\'e pour fai
   \caption{WAMP}
   \vspace{-10pt}
 \end{wrapfigure} 
-Avant m\^eme de commencer \`a d\'evelopper, il faut installer les outils n\'ecessaires pour d\'eployer et \'ex\'ecuter les exemples expliqu\'es ci-dessous. Dans un premier temps, il faut savoir que j'ai utilis\'e un peu de PHP dans mon exemple. Il faut donc commenc\'e par installer un interpr\'eteur. Dans mon cas, j'ai choisi WAMP Serveur. L'installation est relativement ais\'e et bien expliqu\'e sur le site officiel du logiciel. La seule difficult\'e possible que vous rencontr\'e sera li\'e au port 80. Certaines application comme Skype utilise ce port par d\'efaut, il faut donc le lib\'erer pour que Apache (un logiciel dans wamp) puisse s'en servir. \\
+Avant m\^eme de commencer \`a d\'evelopper, il faut installer les outils n\'ecessaires pour d\'eployer et ex\'ecuter les exemples expliqu\'es ci-dessous. Dans un premier temps, il faut savoir que j'ai utilis\'e un peu de PHP dans mon exemple. Il faut donc commencer par installer un interpr\'eteur. Dans mon cas, j'ai choisi WAMP Serveur. L'installation est relativement ais\'ee et bien expliqu\'ee sur le site officiel du logiciel. La seule difficult\'e possible que vous rencontr\'erez sera li\'e au port 80. Certaines applications comme Skype utilisent ce port par d\'efaut, il faut donc le lib\'erer pour que Apache (un logiciel dans wamp) puisse s'en servir. \\
 Une fois le logiciel install\'e et fonctionnant sans probl\`eme (icone vert), il faut remplir un peu la base de donn\'ee avec quelques informations pour que mon exemple ci-dessous puisse fonctionner sans probl\`eme. Ci-dessous figure la structure globale de la base de donnée (PhpMyAdmin dans wamp) :
 \begin{center}
 \vspace{0.5cm}
 \includegraphics[width=\textwidth]{p26}
 \vspace{0.5cm}\\
 \end{center}
-Pour plus de facilit\'e lors de la cr\'eation de la base de donn\'ee, il existe une fonction \`a \'ex\'ecuter dans le fichier sql.php qui se trouve dans inc qui se nomme : setup(). Cette fonction va automatiquement cr\'eer la base de donn\'ee suivant le sch\'ema que j'utiliserais ensuite. Il suffit alors de remplir la base \og latsuj \fg{}.  
+Pour plus de facilit\'e lors de la cr\'eation de la base de donn\'ee, il existe une fonction \`a ex\'ecuter dans le fichier sql.php qui se trouve dans inc qui se nomme : setup(). Cette fonction va automatiquement cr\'eer la base de donn\'ee suivant le sch\'ema que j'utiliserai ensuite. Il suffit alors de remplir la base \og latsuj \fg{}.  
 \begin{center}
 \vspace{0.5cm}
 \includegraphics[width=\textwidth]{p27}
@@ -360,11 +360,11 @@ La table \og movie \fg{} permet de donner l'ensemble des informations sur une vi
 \includegraphics[width=\textwidth]{p28}
 \vspace{0.5cm}\\
 \end{center}
-La table \og pubs \fg{} permet de sp\'ecifi\'e les vid\'eos qui se trouvent en bas de page. Chaque colonne associe un lien avec un titre. Ainsi \og LINK1 \fg{} repr\'esente le lien youtube de la vid\'eo et \og TITLE1 \fg{} repr\'esente le titre de la vid\'eo. Et chacune des quatres vid\'eos suit exactement le m\^eme principe.\\
-Enfin la derni\`ere table n'est l\`a que pour r\'ealiser une association ONE-ONE d'une ID de la table \og movie \fg{} vers la table \og pubs \fg{}. Dans notre cas, il n'y a pas grand int\'eret ici car chaque id de "movie" sera attribu\'e a un id de "pub" qui sera au final identique. 1 va point\'e vers 1, 2 pointera vers 2...
+La table \og pubs \fg{} permet de sp\'ecifier les vid\'eos qui se trouvent en bas de page. Chaque colonne associe un lien avec un titre. Ainsi \og LINK1 \fg{} repr\'esente le lien youtube de la vid\'eo et \og TITLE1 \fg{} repr\'esente le titre de la vid\'eo. Et chacune des quatres vid\'eos suivent exactement le m\^eme principe.\\
+Enfin la derni\`ere table n'est l\`a que pour r\'ealiser une association ONE-ONE d'une ID de la table \og movie \fg{} vers la table \og pubs \fg{}. Dans notre cas, il n'y a pas grand int\'er\^et ici car chaque id de "movie" sera attribu\'e a un id de "pub" qui sera au final identique. 1 va point\'e vers 1, 2 pointera vers 2...
 \vspace{0.5cm}\\
-Si vous souhaitez simplement lancer le site ou que vous disposez des fichiers, il faudra placer l'ensemble des fichiers du site dans le r\'epertoire "www" de wamp puis lancer un navigateur internet sur l'adresse suivante pour boostrap par exemple : \textit{http://localhost/Bootstrap/index.php}.\\
-Si vous souhaitez simplement suivre le tutoriel, il faudra dans chaque technologie effectu\'e une installation suppl\'ementaire dans un fichier index.html \`a placer dans le repertoire "www" de WAMP. Pour Bootstrap, il faudra simplement rajouter les CDN dans le fichier, c'est \`a dire les fichiers CSS et JavaScript :
+Si vous souhaitez simplement lancer le site ou que vous disposez des fichiers, il faudra placer l'ensemble des fichiers du site dans le r\'epertoire "www" de wamp puis lancer un navigateur internet sur l'adresse suivante pour Boostrap par exemple : \textit{http://localhost/Bootstrap/index.php}.\\
+Si vous souhaitez simplement suivre le tutoriel, il faudra dans chaque technologie effectu\'ee une installation suppl\'ementaire dans un fichier index.html \`a placer dans le repertoire "www" de WAMP. Pour Bootstrap, il faudra simplement rajouter les CDN dans le fichier, c'est \`a dire les fichiers CSS et JavaScript :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min. css">\\
@@ -372,11 +372,11 @@ Si vous souhaitez simplement suivre le tutoriel, il faudra dans chaque technolog
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 }}
 \vspace{0.5cm}\\
-Pour Polymer, c'est un petit peu plus complexe, il faudra install\'e Node.js puis suivre \`a la lettre toutes les commandes indiqu\'e sur la page officiel de Polymer pour cr\'eer un projet Polymer.
+Pour Polymer, c'est un petit peu plus complexe, il faudra install\'e Node.js puis suivre \`a la lettre toutes les commandes indiqu\'ees sur la page officielle de Polymer pour cr\'eer un projet Polymer.
 
 \subsection{Creation des containers}
 
-Il est maintenant temps de commencer l'application de ce que nous avons vu pr\'ec\'edent dans un exemple concret. Nous allons reproduire l'ensemble de mon site sous les deux technologies que sont Polymer et Bootstrap. Si vous avez compris ce que j'ai expliqu\'e dans le chapitre suivant, il faut commencer par cr\'eer nos container. C'est \`a dire nos \'el\'ements qui serviront de base \`a nos grilles de positionnement.\\
+Il est maintenant temps de commencer l'application de ce que nous avons vu pr\'ec\'edent dans un exemple concret. Nous allons reproduire l'ensemble de mon site sous les deux technologies que sont Polymer et Bootstrap. Si vous avez compris ce que j'ai expliqu\'e dans le chap\^itre pr\'ec\'edent, il faut commencer par cr\'eer nos containers. C'est \`a dire nos \'el\'ements qui serviront de base \`a nos grilles de positionnement.\\
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-25pt}
@@ -388,9 +388,9 @@ Il est maintenant temps de commencer l'application de ce que nous avons vu pr\'e
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Sur mon exemple, il y a deux grands blocs principaux. Un container ou plutot une barre principale qui se trouve en haut du site (couleur rouge sur l'image \`a droite) et une partie contenue qui est en fait un grand carousel (couleur violette sur l'image \`a droite). La partie violette sera une partie du site qui sera anim\'e via un script JQuery mais suivra globalement la m\^eme structure.\\
+Sur mon exemple, il y a deux grands blocs principaux. Un container ou plut\^ot une barre principale qui se trouve en haut du site (couleur rouge sur l'image \`a droite) et une partie contenue qui est en fait un grand carrousel (couleur violette sur l'image \`a droite). La partie violette sera une partie du site qui sera anim\'ee via un script JQuery mais suivra globalement la m\^eme structure.\\
 
-Sous Bootstrap, j'ai utilis\' trois classes sur des balises HTML pour r\'ealiser cela facilement : \og container-fluid \fg{}, \og navbar \fg{} et \og container \fg{}. La premi\`ere permet de sp\'ecifi\'e que nous utiliserons 100\% de la largeur de la fen\^etre. La seconde est la balise pour sp\'ecifi\'e o\`u se trouve notre menu de navigation. La derni\`ere permet de prendre la dimension en pixel avant le point de rupture. Les autres classes qui se trouvent dans l'exemple ci-dessous ne sont que des classes am\'eliorant le design et ne sont donc pas n\'ec\'essaire pour reproduire mon exemple. Ainsi je n'expliquerais pas leurs utilit\'e, la plupart \'etant expliqu\'e dans la documentation de Bootstrap. 
+Sous Bootstrap, j'ai utilis\'e trois classes sur des balises HTML pour r\'ealiser cela facilement : \og container-fluid \fg{}, \og navbar \fg{} et \og container \fg{}. La premi\`ere permet de sp\'ecifier que nous utiliserons 100\% de la largeur de la fen\^etre. La seconde est la balise pour sp\'ecifier o\`u se trouve notre menu de navigation. La derni\`ere permet de prendre la dimension en pixel avant le point de rupture. Les autres classes qui se trouvent dans l'exemple ci-dessous ne sont que des classes am\'eliorant le design et ne sont donc pas n\'ec\'essaire pour reproduire mon exemple. Ainsi je n'expliquerais pas leurs utilit\'e, la plupart \'etant expliqu\'e dans la documentation de Bootstrap. 
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 ...\\
@@ -405,7 +405,7 @@ Sous Bootstrap, j'ai utilis\' trois classes sur des balises HTML pour r\'ealiser
 ...
 }}
 \vspace{0.5cm}\\
-Sous Polymer, nous allons simplement reproduire le comportement des classes pr\'ec\'edentes et en faire de nouveaux \'el\'ements   du DOM (Document Object Model). Pour faire cela proprement, j'ai utilis\'e Firebugs et est analys\'e le CSS utilis\'e sur Bootstrap pour reproduire le style de ces classes. Le code sous Polymer dans la page index est le suivant :
+Sous Polymer, nous allons simplement reproduire le comportement des classes pr\'ec\'edentes et en faire de nouveaux \'el\'ements   du DOM (Document Object Model). Pour faire cela proprement, j'ai utilis\'e Firebugs et a analys\'e le CSS utilis\'e sur Bootstrap pour reproduire le style de ces classes. Le code sous Polymer dans la page index est le suivant :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 ...\\
@@ -429,7 +429,7 @@ Pour que ce code fonctionne correctement, il faut bien \'evidemment cr\'eer les 
 }}
 \vspace{0.5cm}\\
 
-Le fichier bar-top.html qui repr\'esentera notre nouveau \'el\'ement du DOM aura son style CSS fix\'e \`a lui. \`A noter que la syntaxe est extr\^emement importante. Un module doit obligatoirement \^etre nomm\'e de la fa\c{c}on suivante (xxxx-xxxx). Le code ci-dessous est \`a ajouter au m\^eme niveau que index.html dans le fichier \textbf{bar-top.html} :
+Le fichier bar-top.html qui repr\'esentera notre nouvelle \'el\'ement du DOM aura son style CSS fix\'e \`a lui. \`A noter que la syntaxe est extr\^emement importante. Un module doit obligatoirement \^etre nomm\'e de la fa\c{c}on suivante (xxxx-xxxx). Le code ci-dessous est \`a ajouter au m\^eme niveau que index.html dans le fichier \textbf{bar-top.html} :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="bar-top">\\
@@ -462,7 +462,7 @@ Le fichier bar-top.html qui repr\'esentera notre nouveau \'el\'ement du DOM aura
 </dom-module>}
 }}
 \vspace{0.5cm}\\
-Comme dit plus haut, il s'agit du module \og bar-top \fg{}, le lien avec ce code est r\'ealiser avec l'id du dom-module ainsi que le script qui sp\'ecifie son nom. \og :host \fg{} repr\'esente le module lui-m\^eme. Tous les r\`egles CSS inscritent dans ce tag prendra automatiquement effet pour tout \'el\'ement <bar-top></bar-top>. Enfin la balise \og content \fg{} est le point d'ancrage du nouvelle \'el\'ement. C'est \`a dire que le code se trouvant entre les balises <bar-top> et </bar-top> se positionnera \`a l'int\'erieur des balises \og content \fg{}. Pour les m\'edia queries, j'ai d\'ej\`a expliqu\'e leurs fonctionnements dans le chapitre pr\'ec\'edent.\\
+Comme dit plus haut, il s'agit du module \og bar-top \fg{}, le lien avec ce code est r\'ealiser avec l'id du dom-module ainsi que le script qui sp\'ecifie son nom. \og :host \fg{} repr\'esente le module lui-m\^eme. Toutes les r\`egles CSS inscritent dans ce tag prendra automatiquement effet pour tout \'el\'ement <bar-top></bar-top>. Enfin la balise \og content \fg{} est le point d'ancrage du nouvelle \'el\'ement. C'est \`a dire que le code se trouvant entre les balises <bar-top> et </bar-top> se positionnera \`a l'int\'erieur des balises \og content \fg{}. Pour les m\'edia queries, j'ai d\'ej\`a expliqu\'e leurs fonctionnements dans le chapitre pr\'ec\'edent.\\
 Ainsi la cr\'eation de module prendra toujours la m\^eme forme, il faut reproduire l'op\'eration pour que les deux autres modules prennent eux aussi effet :   
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
@@ -525,7 +525,7 @@ Ainsi la cr\'eation de module prendra toujours la m\^eme forme, il faut reprodui
 </dom-module>
 }}
 \vspace{0.5cm}\\
-Ainsi nous obtenons le m\^eme r\'esultat avec les deux technologies. Nos containers \'etant maintenant pr\^et, nous allons nous occup\'e de la barre du haut (zone rouge dans la figure 12).
+Ainsi nous obtenons le m\^eme r\'esultat avec les deux technologies. Nos containers \'etant maintenant pr\^et, nous allons nous occuper de la barre du haut (zone rouge dans la figure 12).
 
 \subsection{Barre de menu}
 
@@ -534,7 +534,7 @@ Ainsi nous obtenons le m\^eme r\'esultat avec les deux technologies. Nos contain
 \includegraphics[width=\textwidth]{p19}
 \end{center}
 
-Le menu est compos\'e de ma signature \og Latsuj \fg{}, tout simplement mon nom \`a l'envers ainsi qu'un bouton pour afficher ou cacher le menu. J'ai choisi de mettre ma signature \`a gauche \`a cause de la nature de l'utilisateur. Un humain lit toujours de mani`ere inconsciente en diagonale. C'est aussi ce que l'on nomme lecture-rapide. Le premier mot que l'utilisateur verra sera donc ma signature. Ensuite, j'ai mis le bouton \`a droite pour faire echo au texte \`a gauche, la nature pr\'ef\`ere ce qui est sym\'etrique, ainsi que pour utiliser toutes la place disponible. Sous Bootstrap, comme toujours nous avons des classes pour r\'ealiser cela sans trop se fatiguer. Par rapport \`a ce dont j'ai parl\'e pr\'ec\'edemment, il y aura 3 nouvelles classes ici que je n'ai pas encore \'evoqu\'e : \og pull-left \fg{},\og pull-right \fg{}, \og btn \fg{}. Les deux classes \og pull \fg{} permettent de pousser leurs contenues vers la gauche ou la droite. \og btn \fg{} permet quant \`a elle de mettre le style d'un bouton sur le composant o\`u on l'utilise. On obtient alors notre menu assez facilement :
+Le menu est compos\'e de ma signature \og Latsuj \fg{}, tout simplement mon nom \`a l'envers ainsi qu'un bouton pour afficher ou cacher le menu. J'ai choisi de mettre ma signature \`a gauche \`a cause de la nature de l'utilisateur. Un humain lit toujours de mani`ere inconsciente en diagonale. C'est aussi ce que l'on nomme lecture-rapide. Le premier mot que l'utilisateur verra sera donc ma signature. Ensuite, j'ai mis le bouton \`a droite pour faire \'echo au texte \`a gauche, la nature pr\'ef\`ere ce qui est sym\'etrique, ainsi que pour utiliser toutes la place disponible. Sous Bootstrap, comme toujours nous avons des classes pour r\'ealiser cela sans trop se fatiguer. Par rapport \`a ce dont j'ai parl\'e pr\'ec\'edemment, il y aura 3 nouvelles classes ici que je n'ai pas encore \'evoqu\'e : \og pull-left \fg{},\og pull-right \fg{}, \og btn \fg{}. Les deux classes \og pull \fg{} permettent de pousser leurs contenus vers la gauche ou la droite. \og Btn \fg{} permet quant \`a elle de mettre le style d'un bouton sur le composant o\`u on l'utilise. On obtient alors notre menu assez facilement :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 \hspace*{0.6cm}<nav class="navbar navbar-default navbar-static-top">\\
@@ -553,7 +553,7 @@ Le menu est compos\'e de ma signature \og Latsuj \fg{}, tout simplement mon nom 
 \hspace*{0.6cm}</nav>
 }}
 \vspace{0.5cm}\\
-A noter ici que nous aurions pu sp\'ecifier que notre signature prenne 2 colonnes, que le bouton en prenne aussi 2 colonnes et mettre un offset entre les deux de 8 colonnes. Cependant, j'ai pr\'ef\'er\'e cette m\'ethode car cela me fait moins de ligne de code donc un code plus clair. Les classes dont je n'explique pas le r\^ole ne sont l\`a que pour rendre les choses plus jolie et ne sont pas n\'eccesaire pour reproduire l'architecture de mon site/exemple. Avec le simple exemple, ci-dessus, nous obtenons sous Bootstrap notre menu. Sous Polymer, il va falloir comme pr\'ec\'edemment reproduire le comportement des blocs de Bootstrap en cr\'eant de nouvelles nodes. Dans le code qui va suivre, il n'y a rien de nouveau, ni de compliqu\'e, ce n'est que du CSS :
+A noter ici que nous aurions pu sp\'ecifier que notre signature prenne 2 colonnes, que le bouton prenne aussi 2 colonnes et mettre un offset entre les deux de 8 colonnes. Cependant, j'ai pr\'ef\'er\'e cette m\'ethode car cela me fait moins de ligne de code donc un code plus clair. Les classes dont je n'explique pas le r\^ole ne sont l\`a que pour rendre les choses plus jolie et ne sont pas n\'eccesaire pour reproduire l'architecture de mon site/exemple. Avec le simple exemple ci-dessus, nous obtenons sous Bootstrap notre menu. Sous Polymer, il va falloir comme pr\'ec\'edemment reproduire le comportement des blocs de Bootstrap en cr\'eant de nouvelles nodes. Dans le code qui va suivre, il n'y a rien de nouveau, ni de compliqu\'e, ce n'est que du CSS :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="my-row">\\
@@ -578,7 +578,7 @@ A noter ici que nous aurions pu sp\'ecifier que notre signature prenne 2 colonne
 }}
 \vspace{0.5cm}
 
-Il n'y a rien de particulier sur ce module \og my-row \fg{} qui reproduit le comportement de la classe \og row \fg{} de Boostrap. Notons cependant que dans Polymer, les nouveaux modules sont toujours sp\'ecifi\'e comme \og display:inline \fg{}, il faut donc tr\`es souvent les passer en \og display:bloc \fg{}. Notons par ailleurs l'utilisation de box-sizing qui n'est peut-\^etre pas n\'ecessaire ici. Ayant voulu cr\'e\'e un site fonctionnant sur tout les navigateurs, cet attribut est essentiel. Cependant, Polymer \'etant tr\`es mal support\'e pour l'instant, cet attribut perd de son int\'eret au jour d'aujourd'hui. Si les navigateurs s'effor\c{c}aient de faire le n\'ecessaire pour supporter Polymer, il n'y aurait pas besoin de modifier mon exemple car j'aurais d\'ej\`a pr\'evu cela.
+Il n'y a rien de particulier sur ce module \og my-row \fg{} qui reproduit le comportement de la classe \og row \fg{} de Boostrap. Notons cependant que dans Polymer, les nouveaux modules sont toujours sp\'ecifi\'e comme \og display:inline \fg{}, il faut donc tr\`es souvent les passer en \og display:bloc \fg{}. Notons par ailleurs l'utilisation de box-sizing qui n'est peut-\^etre pas n\'ecessaire ici. Ayant voulu cr\'eer un site fonctionnant sur tous les navigateurs, cet attribut est essentiel. Cependant, Polymer \'etant tr\`es mal support\'e pour l'instant, cet attribut perd de son int\'er\^et au jour d'aujourd'hui. Si les navigateurs s'effor\c{c}aient de faire le n\'ecessaire pour supporter Polymer, il n'y aurait pas besoin de modifier mon exemple car j'aurais d\'ej\`a pr\'evu cela.
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="col-top">\\
@@ -659,6 +659,10 @@ Ce module \og col-top \fg{} reprend la d\'efinition de la classe \og col \fg{} d
 </dom-module>
 }}
 \vspace{0.5cm} 
+  
+=================================================>
+sdfsdfsdfsf
+=================================================>  
   
 Ces deux modules servent \`a aligner leurs contenues \`a droite ou \`a gauche dans leurs containers. Pour des raisons graphiques, j'ai ajout\'e un attribut \og margin-top \fg{}. La seul diff\'erence entre ces deux blocs r\'eside dans leur float. On aurais pu cr\'eer un seul \'el\'ement et sp\'ecifi\'e ensuite dans le fichier index.html un style particulier vers la gauche ou la droite. Cependant, j'ai trouv\'e plus int\'err\'essant de s\'eparer tout l'aspect graphique de l'index et des modules. Polymer proscrit l'emploie de feuille de style s\'epar\'e pour la page HTML qui sera affich\'e. Les r\`egles CSS se trouve soit dans le module ou alors dans une balise style d\'efinit \og is="custom-style" \fg{}.  
 \vspace{0.5cm}\\
