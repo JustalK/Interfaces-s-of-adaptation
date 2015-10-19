@@ -1315,45 +1315,102 @@ Ce code reproduit donc le comportement pr\'ec\'edent sur Polymer. Il n'y a rien 
 
 Petit \`a petit au travers de nos exemples, on peux remarquer que le d\'eveloppement sous Polymer devient plus rapide que celui sur Bootstrap car nous pouvons r\'eutiliser nos \'el\'ements. Le code devient alors du simple HTML.
 
-\subsection{Vid\eo principale}
+\subsection{Vid\'eo principale}
 
+Il s'agit du clip musicale principale, celui en plein centre de l'application. Pour afficher la vid\'eo, j'ai utilis\'e la balise IFRAME. Cependant, il faut que cette balise s'adapte elle aussi \`a la largeur de la fen\^etre. Pour cela, on l'incorpore dans une balise DIV o\`u qui se redimensionne. Sous Bootstrap, j'ai utilis\'e les classes fournis : \og embed-responsive \fg{} et \og embed-responsive-16by9 \fg{}. La premi\`ere classe permet de r\'ealiser le redimensionnement et l'adaptation de la vid\'eo \`a la largeur de la fen\^etre. La deuxi\`eme classe est seulement pour un aspect design, elle permet de forcer la vid\'eo \`a prendre un ratio 16/9.
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<div id="aze" class="embed-responsive embed-responsive-16by9">\\
+<iframe class="movie embed-responsive-item" src="https://www.youtube.com/embed/<?php echo \$movie[0]['CODE']; ?>?rel=0\&loop=1\&hd=1\&vq=hd1080\&playlist=<?php echo \$movie[0]['CODE']; ?>\&modestbranding=1\&showinfo=0"></iframe>\\
+</div>
+}}
+\vspace{0.5cm}\\
+Le lien est relativement long car j'ai utilis\'e l'API de Youtube pour r\'ealiser quelques modifications de comportement sur la vid\'eo. Par exemple, \'etant grand fan de musique, il m'arrive d'\'ecouter la m\^eme musique en boucle. Cette fonction est absente de youtube mais peut-\^etre ajout\'e sur d'autre site via leur API. En ajoutant \og loop=1 \fg{}, on peux alors jouer la vid\'eo en boucle. De m\^eme, je trouve que sur youtube le nombre d'information affich\'e sur la vid\'eo est trop importante et embrouille l'utilisateur plus qu'autre chose. Comme dit un peu plus haut, je souhaitais un site simple d'utilisation. J'ai donc effac\'e les informations superflue via la commande \og showinfo=0 \fg{}.  
+\vspace{0.5cm}\\
+Sous Polymer, le principe est le m\^eme sauf que nous allons cr\'e\'e un module pour afficher la vid\'eo. Le code dans l'index se r\'eduit une fois le module impl\'ement\'e \`a une simple ligne de code :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<my-movie link="https://www.youtube.com/embed/<?php echo \$movie[0]['CODE']; ?>?rel=0\&loop=1\&hd=1\&vq=hd1080\&playlist=<?php echo \$movie[0]['CODE']; ?>\&modestbranding=1\&showinfo=0"></my-movie>
+}}
+\vspace{0.5cm}
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-movie">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>	\\	
+\hspace*{1.8cm}:host \{	\\	
+\hspace*{2.4cm}position:relative;\\
+\hspace*{2.4cm}display:block;\\
+\hspace*{2.4cm}height:0;\\
+\hspace*{2.4cm}padding:0;\\
+\hspace*{2.4cm}overflow:hidden;\\
+\hspace*{2.4cm}padding-bottom:56.25%;\\
+\hspace*{1.8cm}\}	\\
+\hspace*{1.8cm}iframe \{\\
+\hspace*{2.4cm}position: absolute;\\
+\hspace*{2.4cm}top: 0;\\
+\hspace*{2.4cm}left: 0;\\
+\hspace*{2.4cm}width: 100\%;\\
+\hspace*{2.4cm}height: 100\%;\\
+\hspace*{2.4cm}padding-bottom: 56.25\%;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}</style>\\
+\hspace*{1.2cm}<iframe src="\{\{link\}\}" frameBorder="0"></iframe>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{0.6cm}Polymer(\{\\
+\hspace*{1.2cm}is: "my-movie",\\
+\hspace*{1.2cm}properties: \{\\
+\hspace*{1.8cm}link: String\\
+\hspace*{1.2cm}\}\\
+\hspace*{0.6cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}\\
 
+\subsection{Le menu}
 
-\newpage
-\section{Bootstrap ou Polymer}
-
-\subsection{Compatibilit\'e}
 
 \begin{wrapfigure}{r}{0.5\textwidth}
-  \vspace{-25pt}
+  \vspace{-20pt}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{p14}
+    \includegraphics[width=0.48\textwidth]{p2}
   \end{center}
   \vspace{-20pt}
-  \caption{Compatibilit\'e des technologies}
+  \caption{Le menu \`a droite sur la version PC}
   \vspace{-10pt}
 \end{wrapfigure}
-
-Il s'agit sans doute de la premi\`ere chose \`a comparer. Bootstrap est support\'e par presque tout les navigateurs, Bootstrap n'est pas compatible avec Op\'era sur t\'el\'ephone et Safari sur Windows. Tandis que Polymer n'est compatible totalement qu'avec Google Chrome. Pour les autres navigateurs, Polymer est partiellement support\'e ou encore n'est pas du tout support\'e comme sur Internet explorer.En s'int\'eressant seulement \`a nos utilisateurs, on peux d\`es le d\'epart \'eliminer une des technologie. Polymer n'est clairement pas destin\'e \`a viser un large public. Notons de plus que les d\'eveloppeur de Mozilla Firefox ont d'ores et d\'ej\`a annonc\'e qu'il ne ferait aucun effort pour que leur navigateur supporte Polymer.\\
-
-\subsection{Documentation}
-
-La documentation est aussi un point fondamentale d'une technologie. Elle permet de faire la liason entre les utilisateurs et les nouvelles m\'ethodes de programmation. Sur Bootstrap, la documentation est claire et concise avec \`a chaque fois un exemple claire et simple \`a comprendre. Sur Polymer, ce point est mauvais. J'ai pass\'e de long moment \`a arpenter la documentation pour trouver certaines informations essentielles, ce qui repr\'esente une perte de temps non n\'egligeable. Par exemple, le point d'ancrage du nouveau composant est indiqu\'e par l'utilisation de la balise <content> dans le nouveau module. Cette information fondamentale ne se retrouve pas sur les exemples de base sur l'API (Application Program Interface) de Polymer.
-
-\subsection{Vitesse de chargement}
-
-\begin{wrapfigure}{l}{0.5\textwidth}
-  \vspace{-25pt}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{p15}
-  \end{center}
-  \vspace{-20pt}
-  \caption{Compatibilit\'e des technologies}
-  \vspace{-10pt}
-\end{wrapfigure}
-
-En terme de performance, j'ai utilis\'e la fen\^etre de degoguage de Google Chrome pour savoir la vitesse d'\'ex\'ecution de nos deux technologies. Les deux site donnant le m\^eme r\'esultat, il serait normal de croire que le temps n\'ecessaire pour que le site soit pr\^et pour l'utilisateur soit identique. Malheuresement, ce n'est pas le cas. Pour Bootstrap, leur script est charg\'e en 3,33 secondes en moyenne tandis que celui de Polymer met 6,2 en moyenne. Ensuite, celui de Polymer doit effectuer ses traitements pour tranformer les \'el\'ements. Tout ceci a \'evidemment un cout en terme de performance. Avec Polymer, le site met en moyenne 400 ms pour apparaitre tandis qu'avec Bootstrap, cela tombe \`a 200 ms. L\`a encore, Polymer est encore en dessous de Bootstrap.
-
+Le menu est la partie \`a droite du site qu'il est possible d'afficher ou non. Par d\'efaut, cette partie est cach\'e pour les m\^eme raison que le bloc d'information (nombre de points de fixation). Le menu prend aussi une taille diff\'erente en fonction du premier points de rupture que l'on va rencontr\'e lorsque l'on r\'eduit la fen\^etre. Lorsque nous somme \`a la plus basse r\'esolution le menu prend 100\% de la largeur de la fen\^etre, j'ai trouv\'e que cela \'etait ce qu'il y avait de mieux au niveau utilisation sans ab\^imer la simplicit\'e du site et l'ergonomie.\\
+Sur les deux technologies, j'ai utilis\'e la m\^eme technique. L'ensemble du site est englobl\'e dans une balise DIV dont la largeur peux varier via un script JavaScript. De l'autre, le menu est aussi compris dans une balise DIV dont l\`a aussi la largeur variera entre 0 et un nombre d\'ependant de la largeur pris par le contenue du site. \\
+\vspace{0.5cm}\\
+\fbox{\parbox{0.5\textwidth}{
+...\\
+<body>\\
+\hspace*{0.6cm}<div id="content" style="width:100\%; height:auto; float: left;">\\
+\hspace*{1.2cm}...(contenue du site)\\
+\hspace*{0.6cm}</div>\\
+\hspace*{0.6cm}<div id="menu" style="width:0\%; background:\#000000; float: right;">\\
+\hspace*{1.2cm}...(menu)
+\hspace*{0.6cm}</div>\\
+</body>\\
+...
+}}
+\fbox{\parbox{0.5\textwidth}{
+...\\
+<body>\\
+\hspace*{0.6cm}<my-content>\\
+\hspace*{1.2cm}...(contenue du site)\\
+\hspace*{0.6cm}</my-content>\\
+\hspace*{0.6cm}<my-menu>\\
+\hspace*{1.2cm}...(menu)
+\hspace*{0.6cm}</my-menu>\\
+</body>\\
+...
+}}
+\vspace{0.5cm}\\
+Ce code ci-dessus montre la mani\`ere dont j'ai positionn\'e les balises pour r\'ealiser ce menu. Sous Bootstrap, il n'y avait rien pour r\'ealiser cela de mani\`ere "Bootstrapsienne". J'aurais pu mettre le code dans un document style mais j'ai pr\'ef\'er\'e \'eviter cela pour bien montrer que Bootstrap ne permet pas d'effectuer cela de mani\`ere simple. Notons par ailleurs qu'ici, j'ai d\'ecouvert aussi un probl\`eme ennuyant. Il n'est pas possible d'utiliser le syst\`eme de grille de Bootstrap lorsque l'on d\'efinit un \'el\'ement comme \og fixed \fg{}. Ce que je voulais faire au d\'epart, j'ai donc du me raviser.
+\vspace{0.5cm}\\
+Si vous avez suivi l'int\'egralit\'e des explications ci-dessus, vous \^etes apte \`a cr\'eer l'application de vos r\^eves en utilisant Bootstrap ou Polymer. Cependant pour d\'ecider quelles applications est le plus adapt\'e \`a vos besoins, il faudra r\'efl\'echir en fonction des utilisateurs que vous viser. Les deux technologies n'\'etant pas support\'e de la m\^eme mani\`ere. 
 \newpage
 \section{Comment teste-t-on les capacit\'es d'adaptations ?}
 

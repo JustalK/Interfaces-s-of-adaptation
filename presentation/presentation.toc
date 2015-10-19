@@ -11,13 +11,11 @@
 \contentsline {subsection}{\numberline {2.4}Le carousel}{18}
 \contentsline {subsection}{\numberline {2.5}Le bloc d'informations}{21}
 \contentsline {subsection}{\numberline {2.6}Clips vid\'eos suppl\'ementaires}{28}
-\contentsline {section}{\numberline {3}Bootstrap ou Polymer}{32}
-\contentsline {subsection}{\numberline {3.1}Compatibilit\'e}{32}
-\contentsline {subsection}{\numberline {3.2}Documentation}{32}
-\contentsline {subsection}{\numberline {3.3}Vitesse de chargement}{32}
-\contentsline {section}{\numberline {4}Comment teste-t-on les capacit\'es d'adaptations ?}{33}
-\contentsline {subsection}{\numberline {4.1}Outils de test}{33}
-\contentsline {subsection}{\numberline {4.2}\'El\'ements adaptatifs}{33}
-\contentsline {section}{\numberline {5}Documentations, Outils, liens utiles}{34}
-\contentsline {section}{\numberline {6}Difficult\'es rencontr\'es}{37}
-\contentsline {section}{\numberline {7}Simple trouvaille d'optimisation}{37}
+\contentsline {subsection}{\numberline {2.7}Vid\'eo principale}{32}
+\contentsline {subsection}{\numberline {2.8}Le menu}{33}
+\contentsline {section}{\numberline {3}Comment teste-t-on les capacit\'es d'adaptations ?}{35}
+\contentsline {subsection}{\numberline {3.1}Outils de test}{35}
+\contentsline {subsection}{\numberline {3.2}\'El\'ements adaptatifs}{35}
+\contentsline {section}{\numberline {4}Documentations, Outils, liens utiles}{36}
+\contentsline {section}{\numberline {5}Difficult\'es rencontr\'es}{39}
+\contentsline {section}{\numberline {6}Simple trouvaille d'optimisation}{39}
