@@ -331,7 +331,49 @@ Ainsi, nous avons une id\'ee g\'en\'erale des moyens que j'ai utilis\'e pour fai
 \section{L'exemple de A \`a Z}
 
 \subsection{Installation}
-Installation ?
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[width=0.28\textwidth]{p25}
+  \end{center}
+  \vspace{-20pt}
+  \caption{WAMP}
+  \vspace{-10pt}
+\end{wrapfigure} 
+Avant m\^eme de commencer \`a d\'evelopper, il faut installer les outils n\'ecessaires pour d\'eployer et \'ex\'ecuter les exemples expliqu\'es ci-dessous. Dans un premier temps, il faut savoir que j'ai utilis\'e un peu de PHP dans mon exemple. Il faut donc commenc\'e par installer un interpr\'eteur. Dans mon cas, j'ai choisi WAMP Serveur. L'installation est relativement ais\'e et bien expliqu\'e sur le site officiel du logiciel. La seule difficult\'e possible que vous rencontr\'e sera li\'e au port 80. Certaines application comme Skype utilise ce port par d\'efaut, il faut donc le lib\'erer pour que Apache (un logiciel dans wamp) puisse s'en servir. \\
+Une fois le logiciel install\'e et fonctionnant sans probl\`eme (icone vert), il faut remplir un peu la base de donn\'ee avec quelques informations pour que mon exemple ci-dessous puisse fonctionner sans probl\`eme. Ci-dessous figure la structure globale de la base de donnée (PhpMyAdmin dans wamp) :
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=\textwidth]{p26}
+\vspace{0.5cm}\\
+\end{center}
+Pour plus de facilit\'e lors de la cr\'eation de la base de donn\'ee, il existe une fonction \`a \'ex\'ecuter dans le fichier sql.php qui se trouve dans inc qui se nomme : setup(). Cette fonction va automatiquement cr\'eer la base de donn\'ee suivant le sch\'ema que j'utiliserais ensuite. Il suffit alors de remplir la base \og latsuj \fg{}.  
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=\textwidth]{p27}
+\vspace{0.5cm}\\
+\end{center}
+La table \og movie \fg{} permet de donner l'ensemble des informations sur une vid\'eo. \og TITLE \fg{} repr\'esente le titre de la musique. \og CODE \fg{} repr\'esente le code youtube du clip. \og STUDIO \fg{} repr\'esente le studio de d\'eveloppement de la musique. \og SINGER \fg{} repr\'esente le nom de l'artiste. \og DURATION \fg{} repr\'esente la dur\'ee exacte de la musique. \og GENRE \fg{} repr\'esente le genre de la musique. \og PUBLICATION \fg{} repr\'esente la date de la sortie de la musique. \og IMG \fg{} repr\'esente le lien de la jaquette de la musique. Et enfin \og LYRIC \fg{} repr\'esente les paroles de la musique.          
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=\textwidth]{p28}
+\vspace{0.5cm}\\
+\end{center}
+La table \og pubs \fg{} permet de sp\'ecifi\'e les vid\'eos qui se trouvent en bas de page. Chaque colonne associe un lien avec un titre. Ainsi \og LINK1 \fg{} repr\'esente le lien youtube de la vid\'eo et \og TITLE1 \fg{} repr\'esente le titre de la vid\'eo. Et chacune des quatres vid\'eos suit exactement le m\^eme principe.\\
+Enfin la derni\`ere table n'est l\`a que pour r\'ealiser une association ONE-ONE d'une ID de la table \og movie \fg{} vers la table \og pubs \fg{}. Dans notre cas, il n'y a pas grand int\'eret ici car chaque id de "movie" sera attribu\'e a un id de "pub" qui sera au final identique. 1 va point\'e vers 1, 2 pointera vers 2...
+\vspace{0.5cm}\\
+Si vous souhaitez simplement lancer le site ou que vous disposez des fichiers, il faudra placer l'ensemble des fichiers du site dans le r\'epertoire "www" de wamp puis lancer un navigateur internet sur l'adresse suivante pour boostrap par exemple : \textit{http://localhost/Bootstrap/index.php}.\\
+Si vous souhaitez simplement suivre le tutoriel, il faudra dans chaque technologie effectu\'e une installation suppl\'ementaire dans un fichier index.html \`a placer dans le repertoire "www" de WAMP. Pour Bootstrap, il faudra simplement rajouter les CDN dans le fichier, c'est \`a dire les fichiers CSS et JavaScript :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min. css">\\
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">\\
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+}}
+\vspace{0.5cm}\\
+Pour Polymer, c'est un petit peu plus complexe, il faudra install\'e Node.js puis suivre \`a la lettre toutes les commandes indiqu\'e sur la page officiel de Polymer pour cr\'eer un projet Polymer.
+
 \subsection{Creation des containers}
 
 Il est maintenant temps de commencer l'application de ce que nous avons vu pr\'ec\'edent dans un exemple concret. Nous allons reproduire l'ensemble de mon site sous les deux technologies que sont Polymer et Bootstrap. Si vous avez compris ce que j'ai expliqu\'e dans le chapitre suivant, il faut commencer par cr\'eer nos container. C'est \`a dire nos \'el\'ements qui serviront de base \`a nos grilles de positionnement.\\
@@ -1410,10 +1452,51 @@ Sur les deux technologies, j'ai utilis\'e la m\^eme technique. L'ensemble du sit
 \vspace{0.5cm}\\
 Ce code ci-dessus montre la mani\`ere dont j'ai positionn\'e les balises pour r\'ealiser ce menu. Sous Bootstrap, il n'y avait rien pour r\'ealiser cela de mani\`ere "Bootstrapsienne". J'aurais pu mettre le code dans un document style mais j'ai pr\'ef\'er\'e \'eviter cela pour bien montrer que Bootstrap ne permet pas d'effectuer cela de mani\`ere simple. Notons par ailleurs qu'ici, j'ai d\'ecouvert aussi un probl\`eme ennuyant. Il n'est pas possible d'utiliser le syst\`eme de grille de Bootstrap lorsque l'on d\'efinit un \'el\'ement comme \og fixed \fg{}. Ce que je voulais faire au d\'epart, j'ai donc du me raviser.
 \vspace{0.5cm}\\
-Si vous avez suivi l'int\'egralit\'e des explications ci-dessus, vous \^etes apte \`a cr\'eer l'application de vos r\^eves en utilisant Bootstrap ou Polymer. Cependant pour d\'ecider quelles applications est le plus adapt\'e \`a vos besoins, il faudra r\'efl\'echir en fonction des utilisateurs que vous viser. Les deux technologies n'\'etant pas support\'e de la m\^eme mani\`ere. 
+Si vous avez suivi l'int\'egralit\'e des explications ci-dessus, vous \^etes apte \`a cr\'eer l'application de vos r\^eves en utilisant Bootstrap ou Polymer. Cependant pour d\'ecider quelles applications est le plus adapt\'e \`a vos besoins, il faudra r\'efl\'echir en fonction des utilisateurs que vous viser. Les deux technologies n'\'etant pas support\'e de la m\^eme mani\`ere.
+ 
 \newpage
-\section{Comment teste-t-on les capacit\'es d'adaptations ?}
+\section{Outils de d\'eveloppement et test}
 
+\subsection{Outils de d\'eveloppement}
+
+Pour r\'ealiser mon site adaptatif, j'ai eu besoin de plusieurs outils. Chacun ayant une part plus ou moins importantes, je vais partir du plus utile dans mon exemple au moins utile mais qui a tout de m\^eme eu un role \`a jouer un moment ou \`a un autre.\\
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p22}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Le logo d'\'eclipse}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+L'outils que j'ai le plus utilis\'e, Eclipse, mon environnement de d\'eveloppement int\'egr\'e pr\'ef\'er\'e. Un IDE (Integrated Development Environment) est un outil qui permet d'augmenter la productivit\'e d'un d\'eveloppeur. Tous les boutons, toutes les fonctions qui se trouvent \`a l'int\'erieur de ce logiciel ont \'et\'e pens\'e pour le d\'eveloppeur. Ayant travaill\'e de nombreuses fois et pour diff\'erents projets avec ce logiciel, j'ai mes propres rep\`eres et cela me permet d'\^etre tr\`es rapide lors de la phase d'impl\'ementation.\\
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p23}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Le logo d'\'eclipse}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+Depuis ce qui s'est pass\'e lors de mon rattrapage en SI3, je ne me s\'epare plus de github lorsque je travaille sur un projet. Si jamais mon PC tombe en panne un jour avant la date limite de rendue (ce qui m'est arriv\'e), j'aurais toujours quelques choses \`a montrer. Cela me permet aussi de voir mes progr\`es sur mon projet. De revenir \`a une version ant\'erieur si jamais une erreur inconnue s'est gliss\'e dans le code... Ce petit logiciel anodin insoup\c{c}onn\'e peut devenir un vrai sauveur de temps si un probl\`eme survient. Je regrette une seule chose : ne pas l'avoir utilis\'e plus t\^ot !
+\vspace{0.5cm}\\
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-50pt}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{p24}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Les APIs}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+Les API (Application Programming Interface) de Bootstrap ainsi que Polymer ont \'et\'e d'une aide pr\'ecieuse. Une API est un service web qui donne une description plus ou moins pouss\'e sur un programme ou langage. Elles sont souvent accompagn\'es de tutoriels et exemples qui permettent de comprendre rapidement comment fonctionne la technologie. Gr\^ace \`a ces API, j'ai pu d\'evelopper sans trop de difficult\'e mes deux exemples.
+\vspace{0.5cm}\\
+Enfin, j'ai utilis\'e \`a moindre \'echelle d'autre outils pour finaliser certains d\'etails qui ne le pouvais \^etre autrement. J'ai donc utilis\'e \textbf{JQuery} pour effectuer mon carousel sous Polymer. Bootstrap utilise aussi cette biblioth\`eque pour effectuer leur propre carousel. J'ai aussi utilis\'e \textbf{PhpMyAdmin et Wamp}. Comme certaines pages \'etaient identiques en tout points et seul le contenue diff\'erait, j'ai jug\'e bon d'automatiser certaines taches en utilisant un peu de PHP.
+\newpage
 \subsection{Outils de test}
 
 \hspace*{0.6cm}Pour tester l'affichage et l'adapatation de nos \'el\'ements \`a la fen\^etre, il existe plusieurs voies envisageables. J'ai utilis\'e plusieurs d'entre elle pour effectuer mes tests. La premi\`ere m\'ethode a \'et\'e de modifier la taille de la fen\^etre sous windows.\\
@@ -1454,10 +1537,6 @@ Pour test\'e l'adaptation sur des appareils en particuliers, Google Chrome dispo
 
 Il est aussi possible de passer par des sites qui permettent de tester l'adaptation de nos sites comme responsinator.com. J'ai aussi test\'e mon site sous cet \'el\'ement. On voit sur ce site un grand ensemble d'appareil avec notre site \`a l'int\'erieur. Le seul probl\`eme de cette m\'ethode est qu'il faut charger X fois le m\^eme site, ce qui peut s'av\'erer plutot long si le site en question est relativement lourd.\\
 
-\subsection{\'El\'ements adaptatifs}
-
-L'ensemble du site contient des \'el\'ements qui s'adaptent \`a la largeur de la fen\^etre. Que ce soit le menu, la vid\'eo principale, les images, le texte, chaque \'el\'ement \`a sa propre fa\c{c}on de se positionner, de se redimensionner suivant la largeur de la fen\^etre.
-
 \newpage
 \section{Documentations, Outils, liens utiles} 
 \textbf{Wikip\'edia}\\
@@ -1490,47 +1569,5 @@ Les medias queries sont int\'erressants mais limit\'es. Le futur serait plutot d
 \textbf{Le champs visuels}\\
 Le champs visuels est une aide pr\'ecieuse pour designer une interface.\\
 \textit{http://sophie.raufaste.free.fr/Saccades\%20fixations\%20et\%20champs\%20visuel.htm}\\
-
-\newpage
-Mais cela n'est qu'un hack qui permet de faire ce que je d\'esire. On peux le faire mais on ne devrais pas le faire. Le gros probl\`eme ici est que ce code est non maintenable. Si jamais je changeais de point de rupture par exemple, je devrais changer la valeur de ce m\'edia query. Si il n'y a que celui-l\`a, ce n'est trop long et fatiguant. Mais si le projet a quelques milliers de modules, cela risque d'\^etre tr\`es long.
-
-
-
-\newpage
-
-
-Le site s'adapte donc aux dimensions de notre appareil ou fen\`etre.\`A quoi cela peut-il bien servir ? Il serait plus adapté de se demander quels sont probl\`emes que cela r\'esout-il ? Comme on le voit autour de nous, les ordinateurs ne sont plus les seuls \'el\'ements ou gadgets nous entourant, ils existent maintenant une innombrable quantit\'e d'apareil informatique de tous types et de toutes dimensions. Il est important qu'un site internet ne laisse aucun utilisateur sur le bas cot\'e. Comme il est impensable de concevoir une application ou un site internet pour chaque appareil, il faut donc faire un site qui puisse s'adapter suivant les dimensions de l'appareil. 
-\vspace{0.5cm}\\
-Mais ce n'est pas tout, l'adaptation seul ne permet pas d'\'etablir ce que l'on peut appeler un site web adaptatif. Le cr\'eateur de cette vision, Mr. Ethan Marcotte, a implement\'e un site (\textit{http://alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html}) qui s'adapte \`a la largeur de l'\'ecran. Cependant, il pointe du doigt certains d\'etails. Par exemple, lorsque l'on redimensionne la page, les \'el\'ements vont bel et bien se redimensionner mais les images et le texte \`a tr\`es basse r\'esolution deviendront illisible. Il faut donc que les \'el\'ements se repositionnent dans la page afin que le contenue soit lisible et agr\'eable \`a arpenter pour l'utilisateur. C'est pourquoi dans l'exemple ci-dessus, le nombre de bloc par ligne d\'ecroit au fur et \`a mesure que l'on r\'eduit la fen\^etre.
-\vspace{0.5cm}\\
-
-Le site est aussi \textit{responsible typesetting}. 
-
-\newpage
-
-\newpage
-\section{Difficult\'es rencontr\'es}
-\hspace*{0.6cm}Le premier probl\`eme rencontr\'e fut lorsque que j'essaya de coder une balise div de telle mani\`ere que celle-ci remplisse enti\`erement l'espace de l'application. Cette chose extr\`emement simple n'est pourtant pas impl\'ement\'e dans Bootstrap 3.0 et les versions sup\'erieur alors que cela se trouvait dans les versions ant\'erieur avec la class span. Apr\'es de longue recherches, il apparait donc impossible en pur Bootstrap de remplir un div \`a cent pour cent de la balise parent.De ce fait, j'ai du modifi\'e le CSS pour r\'ealiser le remplissage de la page. Pourquoi un tel choix des d\'eveloppeur de bootstrap ?
-
-margin-bottom : Seriously ?
-
-Compatibilite : WTF polymer !
-
-min-height ? WTF do not work !OK parce que tous ces putain d'elements sont en inline et non en block...Ok l'erreur
-
-Suivre un ordre pour appeler les modules au depart, les enfant en premier.
-
-encapsulation des elements ? content :X Merci la doc....pourrie.
-
-Le carousel une horreur sur Polymer....
-
-Bootstrap, position fixed et col does not work.
-
-J'ai du recompiler le bootstrap.
-
-\section{Simple trouvaille d'optimisation}
-En farfouillant sur les documentations de Bootstrap, je suis tomb\'e sur une optimisation qui a retenu mon attention. Une chose simple et pourtant efficace que je ne faisait pas moi non plus. Les developpeurs de Bootstrap mettent toujours les scripts javascript en fin de page afin d'accelerer le chargement de la page. Cela peut paraitre stupide comme remarque mais je tiens \`a m'en souvenir, j'en fait donc par dans mon document.
-
-Petite astuce, enlever les ; sur le dernier elements de css pour gagner un caractere de lecture.
 
 \end{document}
