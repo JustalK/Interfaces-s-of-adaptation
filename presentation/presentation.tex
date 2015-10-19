@@ -1171,6 +1171,65 @@ Ce module permet de faire des images responsives. Comme dit au tout d\'epart de 
 </dom-module>
 }}
 \vspace{0.5cm}\\
+Le module \og my-lyric \fg{} repr\'esente le petit bloc avec les paroles de la chanson. Comme dit pr\'ec\'emment, je r\'ealise ici un changement de police suivant la largeur de la fen\^etre. J'ai d\'ej\`a expliqu\'e pourquoi j'ai fait ce choix mais je n'avais pas encore montr\'e la mani\`ere de proc\'ec\'d\'e. Il s'agit comme on peux le voir d'un simple changement de la taille de la police.\\
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-col-hidden-1200">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>			\\	
+\hspace*{1.8cm}@media (max-width:1200px) \{\\
+\hspace*{2.4cm}:host \{\\
+\hspace*{3.0cm}display: none;\\
+\hspace*{2.4cm}\}\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}</style>\\	
+\hspace*{1.2cm}<content></content>\\
+\hspace*{1.2cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{0.6cm}Polymer(\{\\
+\hspace*{1.2cm}is: "my-col-hidden-1200"\\
+\hspace*{0.6cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}\\
+Ce dernier module est ici pour reproduire le comportement de la classe \og col-hidden-sm \fg{}. C'est \`a dire que ce module permet de supprimer un \'el\'ement \`a partir d'une certaine largeur de fen\`etre (1200px dans ce cas).\\
+Avec toutes ces informations, nous sommes maintenant capable de reproduire ce que j'ai r\'ealis\'e. Il ne reste plus qu'\`a reproduire le comportement pour cacher ou afficher ces informations. Ce m\'echanisme est produit via JQuery avec les m\'ethodes \og slide-toggle \fg{} et \og clic \fg{} :  
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+\$( "my-bar-title" ).click(function() \{\\
+\hspace*{0.6cm}\$( "bloc-information" ).slideToggle( "fast");\\
+\});
+}}
+\vspace{0.5cm}\\
+
+\subsection{Clips vid\'eos suppl\'ementaires}
+
+Les clips vid\'eos suppl\'ementaires sont les vid\'eos qui se trouvent en bas de la page. Ces vid\'eos sont au nombre de 4 \`a grandes r\'esolutions et au nombres de 2 \`a basses r\'esolutions. Pour bien comprendre pourquoi j'ai fait ce choix, colorions chaque divisions de cette partie du site d'une couleur unique.
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=0.8\textwidth]{pc4}
+\vspace{0.5cm}
+\end{center}
+
+Si nous r\'eduisons la largeur de la fenetre, le contenu s'adaptera. Dans un premier temps, il n'y aura plus que deux blocs par ligne. Puis, si nous continuons de r\'eduire la fen\`etre, il n'y aura plus qu'un seul bloc par ligne et les deux derniers auront \'et\'e cach\'e.
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=0.8\textwidth]{pc7}
+\vspace{0.5cm}\\
+\end{center}
+
+\hspace*{0.6cm}Pourquoi ais-je supprim\'e les deux derniers blocs sur la navigation \`a basse r\'esolution ? Ce n'est pas une d\'ecision anodine. En supprimant ces deux blocs, j'am\'eliore l'exp\'erience de l'utilisateur sur deux aspects.\\
+\begin{wrapfigure}{r}{3cm}
+\vspace{-13pt}
+\centering
+\includegraphics[width=3cm]{blackberry}
+\caption{\textit{Affichage du site sous BlackBerry (via Google Chrome).}}
+\end{wrapfigure} 
+{\hspace*{0.6cm}L'un est purement li\'e \`a la technologie, il est rare d'avoir un t\'el\'ephone branch\'e en Ethernet. Ceci implique que le d\'ebit moyen d'un utilisateur sur t\'el\'ephone est souvent inf\'erieur \`a celui d'un utilisateur sur ordinateur. J'\'evite ainsi \`a l'utilisateur sur t\'el\'ephone de charger trop d'informations qui n'appartiennent pas au contenue principal de la page. Ce ne sont que des publicit\'es pour les autres musiques du m\^eme chanteur. Deuxi\`emement, et c'est sans doute le point le plus important, suivant \textbf{la loi de Fitt}, que je sois sur t\'el\'ephone ou ordinateur l'indice de difficult\'e doit rest\'e le m\^eme. La loi calcul donne un indice de difficult\'e par rapport au temps requis pour aller rapidement d'une position de d\'epart \`a une zone finale de destination. L'utilisateur doit arriver avec la m\^eme rapidit\'e et la m\^eme facilit\'e aux diff\'erentes parties du site. Si l'on regarde l'image sur la droite qui repr\'esente le site sur un t\'el\'ephone BlackBerry, on remarque que le temps pour parvenir \`a la derni\`ere vid\'eo en rapport avec le chanteur est aussi rapide sur le t\'el\'ephone que sur ordinateur. Certes ce n'est pas la m\^eme, mais cela reste la derni\`ere vid\'eo. Si j'avais juste r\'earrang\'e les choses, il aurait d'abord fallu descendre pour arriver \`a la derni\`ere vid\'eo. Cela ne para\^it pas beaucoup plus compliqu\'e mais sans cela, le site se retrouverait complexifi\'e d'apr\`es la loi de Fitts.}\\
+
+Que cela soit...
+
 \newpage
 \section{Bootstrap ou Polymer}
 
@@ -1294,21 +1353,6 @@ Mais cela n'est qu'un hack qui permet de faire ce que je d\'esire. On peux le fa
 \newpage
 
 
-Ne pas oublier de detailler le changement de point de rupture.
-
-Colorions chaque divisions de cette partie du site d'une couleur unique.
-\begin{center}
-\vspace{0.5cm}
-\includegraphics[width=0.8\textwidth]{pc4}
-\vspace{0.5cm}
-\end{center}
-Si nous r\'eduisons la largeur de la fenetre, le contenu s'adaptera. Dans un premier temps, il n'y aura plus que deux blocs par ligne. Puis, si nous continuons de r\'eduire la fen\`etre, il n'y aura plus qu'un seul bloc par ligne et les deux derniers auront \'et\'e cach\'e.
-\begin{center}
-\vspace{0.5cm}
-\includegraphics[width=0.8\textwidth]{pc7}
-\vspace{0.5cm}\\
-\end{center}
-
 Le site s'adapte donc aux dimensions de notre appareil ou fen\`etre.\`A quoi cela peut-il bien servir ? Il serait plus adapté de se demander quels sont probl\`emes que cela r\'esout-il ? Comme on le voit autour de nous, les ordinateurs ne sont plus les seuls \'el\'ements ou gadgets nous entourant, ils existent maintenant une innombrable quantit\'e d'apareil informatique de tous types et de toutes dimensions. Il est important qu'un site internet ne laisse aucun utilisateur sur le bas cot\'e. Comme il est impensable de concevoir une application ou un site internet pour chaque appareil, il faut donc faire un site qui puisse s'adapter suivant les dimensions de l'appareil. 
 \vspace{0.5cm}\\
 Mais ce n'est pas tout, l'adaptation seul ne permet pas d'\'etablir ce que l'on peut appeler un site web adaptatif. Le cr\'eateur de cette vision, Mr. Ethan Marcotte, a implement\'e un site (\textit{http://alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html}) qui s'adapte \`a la largeur de l'\'ecran. Cependant, il pointe du doigt certains d\'etails. Par exemple, lorsque l'on redimensionne la page, les \'el\'ements vont bel et bien se redimensionner mais les images et le texte \`a tr\`es basse r\'esolution deviendront illisible. Il faut donc que les \'el\'ements se repositionnent dans la page afin que le contenue soit lisible et agr\'eable \`a arpenter pour l'utilisateur. C'est pourquoi dans l'exemple ci-dessus, le nombre de bloc par ligne d\'ecroit au fur et \`a mesure que l'on r\'eduit la fen\^etre.
@@ -1317,15 +1361,6 @@ Mais ce n'est pas tout, l'adaptation seul ne permet pas d'\'etablir ce que l'on 
 Le site est aussi \textit{responsible typesetting}. 
 
 \newpage
-
-\hspace*{0.6cm}Pourquoi ais-je supprim\'e les deux derniers blocs sur la navigation \`a basse r\'esolution ? Ce n'est pas une d\'ecision anodine. En supprimant ces deux blocs, j'am\'eliore l'exp\'erience de l'utilisateur sur deux aspects.\\
-\begin{wrapfigure}{r}{3cm}
-\vspace{-13pt}
-\centering
-\includegraphics[width=3cm]{blackberry}
-\caption{\textit{Affichage du site sous BlackBerry (via Google Chrome).}}
-\end{wrapfigure} 
-{\hspace*{0.6cm}L'un est purement li\'e \`a la technologie, il est rare d'avoir un t\'el\'ephone branch\'e en Ethernet. Ceci implique que le d\'ebit moyen d'un utilisateur sur t\'el\'ephone est souvent inf\'erieur \`a celui d'un utilisateur sur ordinateur. J'\'evite ainsi \`a l'utilisateur sur t\'el\'ephone de charger trop d'informations qui n'appartiennent pas au contenue principal de la page. Ce ne sont que des publicit\'es pour les autres musiques du m\^eme chanteur. Deuxi\`emement, et c'est sans doute le point le plus important, suivant \textbf{la loi de Fitt}, que je sois sur t\'el\'ephone ou ordinateur l'indice de difficult\'e doit rest\'e le m\^eme. La loi calcul donne un indice de difficult\'e par rapport au temps requis pour aller rapidement d'une position de d\'epart \`a une zone finale de destination. L'utilisateur doit arriver avec la m\^eme rapidit\'e et la m\^eme facilit\'e aux diff\'erentes parties du site. Si l'on regarde l'image sur la droite qui repr\'esente le site sur un t\'el\'ephone BlackBerry, on remarque que le temps pour parvenir \`a la derni\`ere vid\'eo en rapport avec le chanteur est aussi rapide sur le t\'el\'ephone que sur ordinateur. Certes ce n'est pas la m\^eme, mais cela reste la derni\`ere vid\'eo. Si j'avais juste r\'earrang\'e les choses, il aurait d'abord fallu descendre pour arriver \`a la derni\`ere vid\'eo. Cela ne para\^it pas beaucoup plus compliqu\'e mais sans cela, le site se retrouverait complexifi\'e d'apr\`es la loi de Fitts.}\\
 
 \newpage
 \section{Difficult\'es rencontr\'es}
