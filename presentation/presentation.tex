@@ -1228,7 +1228,96 @@ Si nous r\'eduisons la largeur de la fenetre, le contenu s'adaptera. Dans un pre
 \end{wrapfigure} 
 {\hspace*{0.6cm}L'un est purement li\'e \`a la technologie, il est rare d'avoir un t\'el\'ephone branch\'e en Ethernet. Ceci implique que le d\'ebit moyen d'un utilisateur sur t\'el\'ephone est souvent inf\'erieur \`a celui d'un utilisateur sur ordinateur. J'\'evite ainsi \`a l'utilisateur sur t\'el\'ephone de charger trop d'informations qui n'appartiennent pas au contenue principal de la page. Ce ne sont que des publicit\'es pour les autres musiques du m\^eme chanteur. Deuxi\`emement, et c'est sans doute le point le plus important, suivant \textbf{la loi de Fitt}, que je sois sur t\'el\'ephone ou ordinateur l'indice de difficult\'e doit rest\'e le m\^eme. La loi calcul donne un indice de difficult\'e par rapport au temps requis pour aller rapidement d'une position de d\'epart \`a une zone finale de destination. L'utilisateur doit arriver avec la m\^eme rapidit\'e et la m\^eme facilit\'e aux diff\'erentes parties du site. Si l'on regarde l'image sur la droite qui repr\'esente le site sur un t\'el\'ephone BlackBerry, on remarque que le temps pour parvenir \`a la derni\`ere vid\'eo en rapport avec le chanteur est aussi rapide sur le t\'el\'ephone que sur ordinateur. Certes ce n'est pas la m\^eme, mais cela reste la derni\`ere vid\'eo. Si j'avais juste r\'earrang\'e les choses, il aurait d'abord fallu descendre pour arriver \`a la derni\`ere vid\'eo. Cela ne para\^it pas beaucoup plus compliqu\'e mais sans cela, le site se retrouverait complexifi\'e d'apr\`es la loi de Fitts.}\\
 
-Que cela soit...
+Que cela soit sur Bootstrap ou Polymer, nous savons normalement comment faire cela \`a partir des informations et techniques que nous avons d\'ej\`a \'evoqu\'e pr\'c\'edemment. Cette partie reprend le positionnement et l'affichage ou le non affichage de certaines informations en fonction de la largeur de la fen\^etre.
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<nav class="navbar navbar-default navbar-static-bottom">\\
+\hspace*{1.2cm}<div class="container">\\
+\hspace*{1.8cm}<div class="row">\\
+\hspace*{2.4cm}<div class="col-xs-push col-sm-6 col-md-6 col-lg-3 text-center">\\
+\hspace*{3.0cm}<h2><strong><?php echo \$pubs[0]['TITLE1']; ?></strong></h2>\\
+\hspace*{3.0cm}<div class="embed-responsive embed-responsive-16by9">\\
+\hspace*{3.0cm}<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ <?php echo \$pubs[0]['LINK1']; ?>?showinfo=0\&controls=0"></iframe>\\
+\hspace*{3.0cm}</div>\\
+\hspace*{2.4cm}</div>\\
+\hspace*{2.4cm}<div class="col-xs-push col-sm-6 col-md-6 col-lg-3 text-center">\\
+\hspace*{3.0cm}<h2><strong><?php echo \$pubs[0]['TITLE2']; ?></strong></h2>\\
+\hspace*{3.0cm}<div class="embed-responsive embed-responsive-16by9">\\
+\hspace*{3.0cm}<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ <?php echo \$pubs[0]['LINK2']; ?>?showinfo=0\&controls=0"></iframe>\\
+\hspace*{3.0cm}</div>\\
+\hspace*{2.4cm}</div>\\
+\hspace*{2.4cm}<div class="hidden-xs col-sm-6 col-md-6 col-lg-3 text-center">\\
+\hspace*{3.0cm}<h2><strong><?php echo \$pubs[0]['TITLE3']; ?></strong></h2>\\
+\hspace*{3.0cm}<div class="embed-responsive embed-responsive-16by9">\\
+\hspace*{3.0cm}<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ <?php echo \$pubs[0]['LINK3']; ?>?showinfo=0\&controls=0"></iframe>\\
+\hspace*{3.0cm}</div>\\
+\hspace*{2.4cm}</div>\\
+\hspace*{2.4cm}<div class="hidden-xs col-sm-6 col-md-6 col-lg-3 text-center">\\
+\hspace*{3.0cm}<h2><strong><?php echo \$pubs[0]['TITLE4']; ?></strong></h2>\\
+\hspace*{3.0cm}<div class="embed-responsive embed-responsive-16by9">\\
+\hspace*{3.0cm}<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ <?php echo \$pubs[0]['LINK4']; ?>?showinfo=0\&controls=0"></iframe>\\
+\hspace*{3.0cm}</div>\\
+\hspace*{2.4cm}</div>\\
+\hspace*{1.8cm}</div>\\
+\hspace*{1.2cm}</div>\\
+</nav>
+}}
+\vspace{0.5cm}\\
+Sous Bootstrap, il faut donc simplement d\'efinir le nombre de colonne utilis\'e par chaque petit bloc. La moiti\'e seront d\'efini comme \og hidden \fg{} comme on peux l'observer sur le code. Sous Polymer, cela sera beaucoup plus rapide car cela reprend une grosse partie des modules qui ont \'et\'e d\'efinis pr\'ec\'edemment, ainsi le code devient plus facile \`a impl\'ement\'e car il n'y presque pas de nouveaux modules :
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<my-bar-pubs>\\
+\hspace*{0.6cm}<my-container>\\
+\hspace*{1.2cm}<my-col-25-100>\\
+\hspace*{2.4cm}<resp-div name="<?php echo \$pubs[0]['TITLE1']; ?>" link="https:// www.youtube.com/embed/<?php echo \$pubs[0]['LINK1']; ?>?showinfo=0\&controls=0"></resp-div>\\
+\hspace*{1.2cm}</my-col-25-100>\\
+\hspace*{1.2cm}<my-col-25-100>\\
+\hspace*{2.4cm}<resp-div name="<?php echo \$pubs[0]['TITLE2']; ?>" link="https:// www.youtube.com/embed/<?php echo \$pubs[0]['LINK2']; ?>?showinfo=0\&controls=0"></resp-div>\\
+\hspace*{1.2cm}</my-col-25-100>\\
+\hspace*{1.2cm}<my-col-hidden-900>\\
+\hspace*{1.8cm}<my-col-25-100>\\
+\hspace*{2.4cm}<resp-div name="<?php echo \$pubs[0]['TITLE3']; ?>" link="https:// www.youtube.com/embed/<?php echo \$pubs[0]['LINK3']; ?>?showinfo=0\&controls=0"></resp-div>\\
+\hspace*{1.8cm}</my-col-25-100>\\
+\hspace*{1.2cm}</my-col-hidden-900>\\
+\hspace*{1.2cm}<my-col-hidden-900>\\
+\hspace*{1.8cm}<my-col-25-100>\\
+\hspace*{2.4cm}<resp-div name="<?php echo \$pubs[0]['TITLE4']; ?>" link="https:// www.youtube.com/embed/<?php echo \$pubs[0]['LINK4']; ?>?showinfo=0\&controls=0"></resp-div>\\
+\hspace*{1.8cm}</my-col-25-100>\\
+\hspace*{1.2cm}</my-col-hidden-900>\\
+\hspace*{0.6cm}</my-container>\\
+</my-bar-pubs>
+}}
+\vspace{0.5cm}\\
+Ce code reproduit donc le comportement pr\'ec\'edent sur Polymer. Il n'y a rien que normalement d'inconnue ici \`a part le \og my-bar-pubs \fg{} mais il s'agit simplement d'une barre avec une couleur en fond comme on peux le voir ci-dessous : 
+\vspace{0.5cm}\\
+\fbox{\parbox{\textwidth}{
+<dom-module id="my-bar-pubs">\\
+\hspace*{0.6cm}<template>\\
+\hspace*{1.2cm}<style>\\		
+\hspace*{1.8cm}:host \{	\\	
+\hspace*{2.4cm}background-color: \#f8f8f8;\\
+\hspace*{2.4cm}text-align: center;\\
+\hspace*{2.4cm}float: left;\\
+\hspace*{2.4cm}width: 100\%;\\
+\hspace*{2.4cm}box-sizing: border-box;\\
+\hspace*{1.8cm}\}\\
+\hspace*{1.2cm}</style>\\
+\hspace*{1.2cm}<content></content>\\
+\hspace*{0.6cm}</template>\\
+\hspace*{0.6cm}<script>\\
+\hspace*{0.6cm}Polymer(\{\\
+\hspace*{1.2cm}is: "my-bar-pubs"\\
+\hspace*{0.6cm}\});\\
+\hspace*{0.6cm}</script>\\
+</dom-module>
+}}
+\vspace{0.5cm}\\
+
+Petit \`a petit au travers de nos exemples, on peux remarquer que le d\'eveloppement sous Polymer devient plus rapide que celui sur Bootstrap car nous pouvons r\'eutiliser nos \'el\'ements. Le code devient alors du simple HTML.
+
+\subsection{Vid\eo principale}
+
+
 
 \newpage
 \section{Bootstrap ou Polymer}
