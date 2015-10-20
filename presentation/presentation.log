@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  20 OCT 2015 09:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  20 OCT 2015 09:32
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -625,695 +625,690 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-<p7.png, id=34, 785.93625pt x 967.615pt>
+[6 <./p6.png>] <p7.png, id=37, 785.93625pt x 967.615pt>
 File: p7.png Graphic file (type png)
  <use p7.png>
-Package pdftex.def Info: p7.png used on input line 191.
+Package pdftex.def Info: p7.png used on input line 192.
 (pdftex.def)             Requested size: 206.40038pt x 254.11348pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
-
- []
-
-[6 <./p6.png> <./p7.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 200--259
+Underfull \hbox (badness 10000) in paragraph at lines 243--243
+
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 201--260
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 200--259
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 201--260
 [] 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 200--259
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 201--260
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--259
+Underfull \hbox (badness 10000) in paragraph at lines 201--260
 
  []
 
-[7] <pc4.png, id=42, 1927.2pt x 1022.82124pt>
+[7 <./p7.png>] <pc4.png, id=42, 1927.2pt x 1022.82124pt>
 File: pc4.png Graphic file (type png)
  <use pc4.png>
-Package pdftex.def Info: pc4.png used on input line 263.
+Package pdftex.def Info: pc4.png used on input line 264.
 (pdftex.def)             Requested size: 206.40038pt x 109.52974pt.
-
-<pc7.png, id=43, 1788.6825pt x 745.78625pt>
+ [8 <./pc4.png>] <pc7.png, id=46, 1788.6825pt x 745.78625pt>
 File: pc7.png Graphic file (type png)
  <use pc7.png>
-Package pdftex.def Info: pc7.png used on input line 274.
+Package pdftex.def Info: pc7.png used on input line 275.
 (pdftex.def)             Requested size: 344.005pt x 143.43059pt.
- [8 <./pc4.png>]
+
 <p10.png, id=47, 1848.9075pt x 987.69pt>
 File: p10.png Graphic file (type png)
  <use p10.png>
-Package pdftex.def Info: p10.png used on input line 285.
+Package pdftex.def Info: p10.png used on input line 286.
 (pdftex.def)             Requested size: 206.40038pt x 110.25882pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
 <p12.png, id=48, 1848.9075pt x 987.69pt>
 File: p12.png Graphic file (type png)
  <use p12.png>
-Package pdftex.def Info: p12.png used on input line 297.
+Package pdftex.def Info: p12.png used on input line 298.
 (pdftex.def)             Requested size: 206.40038pt x 110.25882pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
-<p11.png, id=49, 1848.9075pt x 987.69pt>
+[9 <./pc7.png> <./p10.png> <./p12.png>]
+<p11.png, id=53, 1848.9075pt x 987.69pt>
 File: p11.png Graphic file (type png)
  <use p11.png>
-Package pdftex.def Info: p11.png used on input line 309.
+Package pdftex.def Info: p11.png used on input line 311.
 (pdftex.def)             Requested size: 206.40038pt x 110.25882pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
-[9 <./pc7.png> <./p10.png> <./p12.png> <./p11.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 <p13.png, id=54, 1162.3425pt x 1001.7425pt>
 File: p13.png Graphic file (type png)
  <use p13.png>
-Package pdftex.def Info: p13.png used on input line 322.
+Package pdftex.def Info: p13.png used on input line 324.
 (pdftex.def)             Requested size: 344.005pt x 296.47446pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
-[10 <./p13.png>] <p25.png, id=58, 96.36pt x 96.36pt>
+[10 <./p11.png> <./p13.png>] [11] <p25.png, id=61, 96.36pt x 96.36pt>
 File: p25.png Graphic file (type png)
- <use p25.png>
-Package pdftex.def Info: p25.png used on input line 338.
-(pdftex.def)             Requested size: 120.40076pt x 120.40115pt.
 
-<p26.png, id=59, 1865.97125pt x 533.995pt>
+<use p25.png>
+Package pdftex.def Info: p25.png used on input line 340.
+(pdftex.def)             Requested size: 120.40076pt x 120.40115pt.
+ <p26.png, id=62, 1865.97125pt x 533.995pt>
 File: p26.png Graphic file (type png)
  <use p26.png>
-Package pdftex.def Info: p26.png used on input line 348.
+Package pdftex.def Info: p26.png used on input line 350.
 (pdftex.def)             Requested size: 430.00462pt x 123.05255pt.
 
-<p27.png, id=60, 1865.97125pt x 533.995pt>
+<p27.png, id=63, 1865.97125pt x 533.995pt>
 File: p27.png Graphic file (type png)
  <use p27.png>
-Package pdftex.def Info: p27.png used on input line 354.
+Package pdftex.def Info: p27.png used on input line 356.
 (pdftex.def)             Requested size: 430.00462pt x 123.05255pt.
 
-<p28.png, id=61, 1865.97125pt x 533.995pt>
+<p28.png, id=64, 1865.97125pt x 533.995pt>
 File: p28.png Graphic file (type png)
  <use p28.png>
-Package pdftex.def Info: p28.png used on input line 360.
+Package pdftex.def Info: p28.png used on input line 362.
 (pdftex.def)             Requested size: 430.00462pt x 123.05255pt.
- [11 <./p25.png> <./p26.png> <./p27.png>]
-Overfull \hbox (8.73741pt too wide) in paragraph at lines 373--373
+ [12 <./p25.png> <./p26.png> <./p27.png>]
+Overfull \hbox (8.73741pt too wide) in paragraph at lines 375--375
 []\T1/lmr/m/n/10 <link rel="stylesheet" href="https ://maxcdn.bootstrapcdn.com/
 bootstrap/3.3.5/css/bootstrap.min.
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 363--376
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 365--378
 []
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
-
- []
-
-<p18.png, id=65, 1864.9675pt x 987.69pt>
+<p18.png, id=68, 1864.9675pt x 987.69pt>
 File: p18.png Graphic file (type png)
  <use p18.png>
-Package pdftex.def Info: p18.png used on input line 384.
+Package pdftex.def Info: p18.png used on input line 386.
 (pdftex.def)             Requested size: 206.40038pt x 109.30936pt.
 
-Underfull \hbox (badness 1540) in paragraph at lines 391--392
+Underfull \hbox (badness 1540) in paragraph at lines 393--394
 [][]\T1/lmr/m/n/10 Sur mon exemple, il y a deux grands
  []
 
 
-Underfull \hbox (badness 3098) in paragraph at lines 391--392
-\T1/lmr/m/n/10 site (cou-leur rouge sur l'image à droite)
+Underfull \hbox (badness 3229) in paragraph at lines 393--394
+\T1/lmr/m/n/10 blocs prin-ci-paux. Un contai-ner ou plu-tôt
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 391--392
+Underfull \hbox (badness 1571) in paragraph at lines 393--394
+\T1/lmr/m/n/10 du site (zone rouge sur l'image à droite)
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 393--394
 \T1/lmr/m/n/10 et une par-tie conte-nue qui est en fait un
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 391--392
+Underfull \hbox (badness 1242) in paragraph at lines 393--394
 \T1/lmr/m/n/10 tie du site qui sera ani-mée via un script
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
 
  []
 
-[12 <./p28.png> <./p18.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 393--431
+[13 <./p28.png> <./p18.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 395--433
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 393--431
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 395--433
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 393--431
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 395--433
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--431
+Underfull \hbox (badness 10000) in paragraph at lines 395--433
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 432--529
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 434--531
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 432--529
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 434--531
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 432--529
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 434--531
 []
  []
 
-[13] [14] [15] <p19.png, id=79, 1848.9075pt x 50.1875pt>
+[14] [15] [16] <p19.png, id=82, 1848.9075pt x 50.1875pt>
 File: p19.png Graphic file (type png)
  <use p19.png>
-Package pdftex.def Info: p19.png used on input line 534.
+Package pdftex.def Info: p19.png used on input line 536.
 (pdftex.def)             Requested size: 430.00462pt x 11.67229pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 537--580
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 539--582
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 537--580
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 539--582
 []
  []
 
-[16 <./p19.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 581--608
+[17 <./p19.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 583--610
 []
  []
 
 
-Overfull \hbox (15.82217pt too wide) in paragraph at lines 609--662
+Overfull \hbox (15.82217pt too wide) in paragraph at lines 611--664
 [] []
  []
 
-[17]
-Overfull \hbox (4.56111pt too wide) in paragraph at lines 663--666
-[]\T1/lmr/m/n/10 =================================================> sdf-sdf-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 719--719
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 717--717
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 667--768
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 665--766
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 667--768
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 665--766
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 667--768
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 665--766
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 667--768
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 665--766
 [] 
  []
 
-[18] [19]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 770--871
+[19] [20]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 768--869
 []
  []
 
 
-Overfull \hbox (15.82217pt too wide) in paragraph at lines 770--871
+Overfull \hbox (15.82217pt too wide) in paragraph at lines 768--869
 [] []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 770--871
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 768--869
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 770--871
+Underfull \hbox (badness 10000) in paragraph at lines 768--869
 
  []
 
-[20] [21]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 872--911
+[21] [22]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 870--909
 []
  []
 
-[22] <p20.png, id=102, 1864.9675pt x 1022.82124pt>
+[23] <p20.png, id=105, 1864.9675pt x 1022.82124pt>
 File: p20.png Graphic file (type png)
  <use p20.png>
-Package pdftex.def Info: p20.png used on input line 917.
+Package pdftex.def Info: p20.png used on input line 915.
 (pdftex.def)             Requested size: 206.40038pt x 113.19739pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 924--925
+Underfull \hbox (badness 10000) in paragraph at lines 922--923
 
  []
 
 File: p5.png Graphic file (type png)
 <use p5.png>
-Package pdftex.def Info: p5.png used on input line 929.
+Package pdftex.def Info: p5.png used on input line 927.
 (pdftex.def)             Requested size: 206.40038pt x 110.37938pt.
- [23 <./p20.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 936--937
+ [24 <./p20.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 934--935
 
  []
 
 
-Underfull \hbox (badness 5756) in paragraph at lines 952--952
+Underfull \hbox (badness 5756) in paragraph at lines 950--950
 | \T1/lmr/m/n/10 <img src="< ?php echo $mo-vie[0]['IMG'] ; ?>" class="img-respo
 nsive" alt="Responsive
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 938--999
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 936--997
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 938--999
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 936--997
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 938--999
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 936--997
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 938--999
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 936--997
 []
  []
 
-[24] <textes.png, id=109, 990.70125pt x 301.125pt>
+[25] <textes.png, id=113, 990.70125pt x 301.125pt>
 File: textes.png Graphic file (type png)
  <use textes.png>
-Package pdftex.def Info: textes.png used on input line 1002.
+Package pdftex.def Info: textes.png used on input line 1000.
 (pdftex.def)             Requested size: 344.005pt x 104.55907pt.
- [25]
-Underfull \hbox (badness 1406) in paragraph at lines 1026--1026
+ [26]
+Underfull \hbox (badness 1406) in paragraph at lines 1024--1024
 | \T1/lmr/m/n/10 <my-informations stu-dio="< ?php echo $mo-vie[0]['STUDIO'] ; ?
 >" sin-ger="< ?php
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1024
 \T1/lmr/m/n/10 echo $mo-vie[0]['SINGER'] ; ?>" du-ra-tion="< ?php echo $mo-vie[
 0]['DURATION'] ; ?>"
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1024
 \T1/lmr/m/n/10 genre="< ?php echo $mo-vie[0]['GENRE'] ; ?>" pu-bli-ca-tion="< ?
 php echo $mo-
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1005--1251
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1003--1249
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1005--1251
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1003--1249
 []
  []
 
 
-Overfull \hbox (15.82217pt too wide) in paragraph at lines 1005--1251
+Overfull \hbox (15.82217pt too wide) in paragraph at lines 1003--1249
 [] []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1005--1251
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1003--1249
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1005--1251
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1003--1249
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1005--1251
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1003--1249
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1005--1251
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1003--1249
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1251
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1249
 
  []
 
-[26 <./textes.png>] [27] [28] [29]
+[27 <./textes.png>] [28] [29] [30]
 File: pc4.png Graphic file (type png)
  <use pc4.png>
-Package pdftex.def Info: pc4.png used on input line 1257.
+Package pdftex.def Info: pc4.png used on input line 1255.
 (pdftex.def)             Requested size: 344.005pt x 182.57039pt.
- [30]
+ [31]
 File: pc7.png Graphic file (type png)
  <use pc7.png>
-Package pdftex.def Info: pc7.png used on input line 1264.
+Package pdftex.def Info: pc7.png used on input line 1262.
 (pdftex.def)             Requested size: 344.005pt x 143.43059pt.
 
-<blackberry.png, id=130, 589.20125pt x 1022.82124pt>
+<blackberry.png, id=134, 589.20125pt x 1022.82124pt>
 File: blackberry.png Graphic file (type png)
  <use blackberry.png>
-Package pdftex.def Info: blackberry.png used on input line 1272.
+Package pdftex.def Info: blackberry.png used on input line 1270.
 (pdftex.def)             Requested size: 85.35826pt x 148.17262pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1273--1273
+Underfull \hbox (badness 10000) in paragraph at lines 1271--1271
 \T1/lmr/m/it/10 Black-Berry (via
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1268--1274
+Underfull \hbox (badness 10000) in paragraph at lines 1266--1272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1276
+Underfull \hbox (badness 10000) in paragraph at lines 1272--1274
 
  []
 
 
-Overfull \hbox (9.7605pt too wide) in paragraph at lines 1310--1310
+Overfull \hbox (9.7605pt too wide) in paragraph at lines 1308--1308
 | \T1/lmr/m/n/10 <iframe class="embed-responsive-item" src="https ://www.youtub
 e.com/embed/
  []
 
 
-Overfull \hbox (9.7605pt too wide) in paragraph at lines 1310--1310
+Overfull \hbox (9.7605pt too wide) in paragraph at lines 1308--1308
 | \T1/lmr/m/n/10 <iframe class="embed-responsive-item" src="https ://www.youtub
 e.com/embed/
  []
 
 
-Overfull \hbox (9.7605pt too wide) in paragraph at lines 1310--1310
+Overfull \hbox (9.7605pt too wide) in paragraph at lines 1308--1308
 | \T1/lmr/m/n/10 <iframe class="embed-responsive-item" src="https ://www.youtub
 e.com/embed/
  []
 
 
-Overfull \hbox (9.7605pt too wide) in paragraph at lines 1310--1310
+Overfull \hbox (9.7605pt too wide) in paragraph at lines 1308--1308
 | \T1/lmr/m/n/10 <iframe class="embed-responsive-item" src="https ://www.youtub
 e.com/embed/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1335
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1333
 | \T1/lmr/m/n/10 <resp-div name="< ?php echo $pubs[0]['TITLE1'] ; ?>" link="htt
 ps ://
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1335
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1333
 | \T1/lmr/m/n/10 <resp-div name="< ?php echo $pubs[0]['TITLE2'] ; ?>" link="htt
 ps ://
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1335
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1333
 | \T1/lmr/m/n/10 <resp-div name="< ?php echo $pubs[0]['TITLE3'] ; ?>" link="htt
 ps ://
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1335
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1333
 | \T1/lmr/m/n/10 <resp-div name="< ?php echo $pubs[0]['TITLE4'] ; ?>" link="htt
 ps ://
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1277--1361
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1275--1359
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1277--1361
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1275--1359
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1277--1361
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1275--1359
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1277--1361
+Underfull \hbox (badness 10000) in paragraph at lines 1275--1359
 
  []
 
-[31 <./blackberry.png>] [32] [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1372--1372
+[32 <./blackberry.png>] [33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1370
 \T1/lmr/m/n/10 echo $mo-vie[0]['CODE'] ; ?> ?rel=0&loop=1&hd=1&vq=hd1080&playli
 st=< ?php echo $mo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1380--1380
+Underfull \hbox (badness 10000) in paragraph at lines 1378--1378
 []\T1/lmr/m/n/10 <my-movie link="https ://www.youtube.com/embed/< ?php echo $mo
 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1380--1380
+Underfull \hbox (badness 10000) in paragraph at lines 1378--1378
 \T1/lmr/m/n/10 vie[0]['CODE'] ; ?> ?rel=0&loop=1&hd=1&vq=hd1080&playlist=< ?php
  echo $mo-
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1366--1416
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1364--1414
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1366--1416
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1364--1414
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1366--1416
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1364--1414
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1416
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1414
 
  []
 
-[34]
+[35]
 File: p2.png Graphic file (type png)
  <use p2.png>
-Package pdftex.def Info: p2.png used on input line 1423.
+Package pdftex.def Info: p2.png used on input line 1421.
 (pdftex.def)             Requested size: 206.40038pt x 109.30936pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1441
 | \T1/lmr/m/n/10 <div id="content" style="width :100% ;
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 1443--1443
+Underfull \hbox (badness 1264) in paragraph at lines 1441--1441
 | \T1/lmr/m/n/10 <div id="menu" style="width :0% ; back-
  []
 
 
-Overfull \hbox (15.82217pt too wide) in paragraph at lines 1429--1460
+Overfull \hbox (15.82217pt too wide) in paragraph at lines 1427--1458
 [] []
  []
 
-[35] [36] <p22.png, id=150, 803.0pt x 427.5975pt>
+[36] [37] <p22.png, id=154, 803.0pt x 427.5975pt>
 File: p22.png Graphic file (type png)
  <use p22.png>
-Package pdftex.def Info: p22.png used on input line 1470.
+Package pdftex.def Info: p22.png used on input line 1468.
 (pdftex.def)             Requested size: 206.40038pt x 109.90695pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1466--1475
+Underfull \hbox (badness 10000) in paragraph at lines 1464--1473
 
  []
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-1478.
+1476.
 
-<p23.png, id=151, 1017.8025pt x 635.37375pt>
+<p23.png, id=155, 1017.8025pt x 635.37375pt>
 File: p23.png Graphic file (type png)
  <use p23.png>
-Package pdftex.def Info: p23.png used on input line 1481.
+Package pdftex.def Info: p23.png used on input line 1479.
 (pdftex.def)             Requested size: 206.40038pt x 128.84668pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1477--1486
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1484
 
  []
 
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 14
-86.
+84.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-1490.
+1488.
 
-<p24.png, id=152, 150.5625pt x 106.3975pt>
+<p24.png, id=156, 150.5625pt x 106.3975pt>
 File: p24.png Graphic file (type png)
  <use p24.png>
-Package pdftex.def Info: p24.png used on input line 1493.
+Package pdftex.def Info: p24.png used on input line 1491.
 (pdftex.def)             Requested size: 206.40038pt x 145.87083pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1488--1498
+Underfull \hbox (badness 10000) in paragraph at lines 1486--1496
 
  []
 
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 14
-98.
+96.
 
-[37 <./p22.png> <./p23.png> <./p24.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1506--1507
+[38 <./p22.png> <./p23.png> <./p24.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1504--1505
 
  []
 
-<double.png, id=159, 1489.565pt x 849.1725pt>
+<double.png, id=162, 1489.565pt x 849.1725pt>
 File: double.png Graphic file (type png)
  <use double.png>
-Package pdftex.def Info: double.png used on input line 1511.
+Package pdftex.def Info: double.png used on input line 1509.
 (pdftex.def)             Requested size: 206.40038pt x 117.66534pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1518--1519
+Underfull \hbox (badness 10000) in paragraph at lines 1516--1517
 
  []
 
-<p16.png, id=160, 1543.7675pt x 843.15pt>
+<p16.png, id=163, 1543.7675pt x 843.15pt>
 File: p16.png Graphic file (type png)
  <use p16.png>
-Package pdftex.def Info: p16.png used on input line 1523.
+Package pdftex.def Info: p16.png used on input line 1521.
 (pdftex.def)             Requested size: 206.40038pt x 112.72678pt.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-1532.
+1530.
 
-<p17.png, id=161, 1527.7075pt x 781.92125pt>
+<p17.png, id=164, 1527.7075pt x 781.92125pt>
 File: p17.png Graphic file (type png)
  <use p17.png>
-Package pdftex.def Info: p17.png used on input line 1535.
+Package pdftex.def Info: p17.png used on input line 1533.
 (pdftex.def)             Requested size: 206.40038pt x 105.63832pt.
 
-Underfull \hbox (badness 2970) in paragraph at lines 1530--1540
+Underfull \hbox (badness 2970) in paragraph at lines 1528--1538
 \T1/lmr/m/n/10 ou-til re-di-men-sion-nant la fe-nêtre à la di-
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 1530--1540
+Underfull \hbox (badness 1596) in paragraph at lines 1528--1538
 \T1/lmr/m/n/10 J'ai uti-lisé cet ou-til pour voir le ré-sul-tat
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 1530--1540
+Underfull \hbox (badness 1552) in paragraph at lines 1528--1538
 \T1/lmr/m/n/10 sous dif-fé-rentes ta-blettes et té-lé-phones ac-
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 1530--1540
+Underfull \hbox (badness 3635) in paragraph at lines 1528--1538
 \T1/lmr/m/n/10 op-tion sous le na-vi-ga-teur, il suf-fit d'ap-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1540
+Underfull \hbox (badness 10000) in paragraph at lines 1528--1538
 
  []
 
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 15
-40.
+38.
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 1542--1543
+Underfull \hbox (badness 1275) in paragraph at lines 1540--1541
 [][]\T1/lmr/m/n/10 Il est aussi pos-sible de pas-ser par des
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 1542--1543
+Underfull \hbox (badness 1389) in paragraph at lines 1540--1541
 \T1/lmr/m/n/10 sites qui per-mettent de tes-ter l'adap-ta-tion
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 1542--1543
+Underfull \hbox (badness 1331) in paragraph at lines 1540--1541
 \T1/lmr/m/n/10 ce site un grand en-semble d'ap-pa-reil avec
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 1542--1543
+Underfull \hbox (badness 1533) in paragraph at lines 1540--1541
 \T1/lmr/m/n/10 le même site, ce qui peut s'avé-rer plu-tôt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1543
+Underfull \hbox (badness 10000) in paragraph at lines 1540--1541
 
  []
 
-[38 <./double.png> <./p16.png> <./p17.png>]
-Overfull \hbox (4.69139pt too wide) in paragraph at lines 1546--1576
+[39 <./double.png> <./p16.png> <./p17.png>]
+Overfull \hbox (4.69139pt too wide) in paragraph at lines 1544--1574
 \T1/lmr/m/it/10 http ://webdesign.tutsplus.com/articles/applying-fitts-law-to-m
 obile-interface-design--webdesign-6919
  []
 
 
-Overfull \hbox (18.74698pt too wide) in paragraph at lines 1546--1576
+Overfull \hbox (18.74698pt too wide) in paragraph at lines 1544--1574
 \T1/lmr/m/it/10 http ://www.smashingmagazine.com/2013/06/media-queries-are-not-
 the-answer-element-query-polyfill/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1546--1576
+Underfull \hbox (badness 10000) in paragraph at lines 1544--1574
 
  []
 
-[39] (presentation.aux) ) 
+[40] (presentation.aux) ) 
 Here is how much of TeX's memory you used:
  3770 strings out of 493673
  50593 string characters out of 3141527
@@ -1328,9 +1323,9 @@ C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program
 Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmri10.pfb>
-Output written on presentation.pdf (39 pages, 16524071 bytes).
+Output written on presentation.pdf (40 pages, 16524712 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
+ 191 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -185,6 +185,7 @@ Pour comprendre pr\'ecisement quelles sont les classes qui sont actives \`a une 
 
 Dans notre cas, si la fen\^etre est inf\'erieur \`a 1500px alors les classes lg ne sont plus utilis\'ees. Prenons une fen\^etre de 1300px, si l'on regarde le tableau de la figure 5, on remarque que pour toutes les dimensions situ\'ees entre 1200 px et 1500 px, md est la classe qui est actif. On reprend notre bout de code pr\'ec\'edent et on remarque que le texte en rouge mentionne \og col-md-12 \fg{}. Cela signifie que cette div qui repr\'esente la zone violette et verte de la figure 3 prendra 100\% du container. On regarde notre texte en bleu et on lit \og col-md-6 \fg{}. L'image violette prendra donc 50\% de 100\%, elle prendra donc la moiti\'e de la longueur de la fen\^etre.\\
 
+\newpage
 \begin{wrapfigure}{l}{0.5\textwidth}
   \vspace{-20pt}
   \begin{center}
@@ -195,7 +196,7 @@ Dans notre cas, si la fen\^etre est inf\'erieur \`a 1500px alors les classes lg 
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Maintenant, si nous continuons de r\'eduire la fen\^etre et atteignons une taille inf\'erieur \`a 1200px, nous arrivons dans les classes sm. Si on regarde le texte en bleu dans le bout de code pr\'ec\'edent, on voit qu'il est \'ecrit \og hidden-sm \fg{}. Cette classe signifie que le nombre de colonnes pris par cet \'el\'ement sera r\'eduit \`a z\'ero. Cela se traduit par une disparition compl\`ete de l'\'el\'ement comme on peux le voir sur la figure 7. Notons au passage que je n'ai pas pr\'ecis\'e dans le texte en rouge le nombre de colonne pour les dimensions sm et xs. Je n'ai pas eu \`a le faire car Bootstrap utilise les r\`egles CSS pour r\'ealiser ces modifications. Plus pr\'ecisement, Bootstrap utilise l'h\'eritage et le cascading de CSS pour pouvoir r\'e\'ecrire des r\`egles sur des r\`egles. Si on ne d\'efinit pas de xs, alors les r\`egles CSS seront celles de sm. Si elles aussi ne sont pas d\'efinis, alors ce seront celles de md qui seront prise en compte...Cela ne constitue pas une faute mais j'aurai pu omettre le \og col-md-6 \fg{} dans mon texte bleu et cela donnerai toujours le m\^eme r\'esultat.\\
+Si nous continuons de r\'eduire la fen\^etre et atteignons une taille inf\'erieur \`a 1200px, nous arrivons dans les classes sm. Si on regarde le texte en bleu dans le bout de code pr\'ec\'edent, on voit qu'il est \'ecrit \og hidden-sm \fg{}. Cette classe signifie que le nombre de colonnes pris par cet \'el\'ement sera r\'eduit \`a z\'ero. Cela se traduit par une disparition compl\`ete de l'\'el\'ement comme on peux le voir sur la figure 7. Notons au passage que je n'ai pas pr\'ecis\'e dans le texte en rouge le nombre de colonne pour les dimensions sm et xs. Je n'ai pas eu \`a le faire car Bootstrap utilise les r\`egles CSS pour r\'ealiser ces modifications. Plus pr\'ecisement, Bootstrap utilise l'h\'eritage et le cascading de CSS pour pouvoir r\'e\'ecrire des r\`egles sur des r\`egles. Si on ne d\'efinit pas de xs, alors les r\`egles CSS seront celles de sm. Si elles aussi ne sont pas d\'efinis, alors ce seront celles de md qui seront prise en compte...Cela ne constitue pas une faute mais j'aurai pu omettre le \og col-md-6 \fg{} dans mon texte bleu et cela donnerai toujours le m\^eme r\'esultat.\\
 
 Nous avons vu comment mettre cela en place sur Bootstrap, on peux \'evidemment faire la m\^eme chose avec Polymer. Le r\'esultat obtenu est le m\^eme mais la mani\`ere d'y arriver est diff\'erente. Cependant, notons que cela est totalement contraire \`a l'id\'ee de Polymer. J'ai discut\'e de cela avec Monsieur Bidelman lui-m\^eme qui est un des fondateurs de Polymer et qui travaille actuellement chez Google. Le but est de cr\'eer des \'el\'ements r\'eutilisables. Or \`a partir du moment o\`u l'on utilise des m\'edias queries, l'\'el\'ement devient ancr\'e au site qui les utilisent. Prenons l'exemple pr\'ec\'edent, pour que l'image disparaisse \`a un certain point de rupture, j'ai cr\'e\'e un \'el\'ement qui change son attribut \og display \fg{} lorsque l'on atteint ce fameux point.
 \vspace{0.5cm}\\
@@ -303,6 +304,7 @@ Les grilles de positionnement consistent en un dimensionnement relatif des diff\
 
 Lorsque l'on utilise la classe \og row \fg{} dans Bootstrap, on divise ce container en 12 parties \'egales. Avec Polymer, le principe que j'ai d\'evelopp\'e est globalement le m\^eme cependant j'ai d\^u reconstruire ces divisions de A \`a Z via les m\'edia queries et les attributs CSS (en particulier : width). Sur la figure 10, j'ai repr\'esent\'e chacune des divisions d'une couleur diff\'erente. Ensuite, on peux d\'efinir combien de colonnes ou divisions pourra prendre un \'el\'ement. (voir les explications du chap\^itre pr\'ec\'edent).\\
 
+\newpage
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-25pt}
   \begin{center}
@@ -376,7 +378,7 @@ Pour Polymer, c'est un petit peu plus complexe, il faudra install\'e Node.js pui
 
 \subsection{Creation des containers}
 
-Il est maintenant temps de commencer l'application de ce que nous avons vu pr\'ec\'edent dans un exemple concret. Nous allons reproduire l'ensemble de mon site sous les deux technologies que sont Polymer et Bootstrap. Si vous avez compris ce que j'ai expliqu\'e dans le chap\^itre pr\'ec\'edent, il faut commencer par cr\'eer nos containers. C'est \`a dire nos \'el\'ements qui serviront de base \`a nos grilles de positionnement.\\
+Il est maintenant temps de commencer l'application de ce que nous avons vu pr\'ec\'edent dans un exemple concret. Nous allons reproduire l'ensemble de mon site sous les deux technologies que sont Polymer et Bootstrap. Si vous avez compris ce que j'ai expliqu\'e dans le chap\^itre pr\'ec\'edent, il faut commencer par cr\'eer nos containers. C'est \`a dire nos \'el\'ements qui serviront de base \`a nos grilles de positionnement.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-25pt}
@@ -388,7 +390,7 @@ Il est maintenant temps de commencer l'application de ce que nous avons vu pr\'e
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Sur mon exemple, il y a deux grands blocs principaux. Un container ou plut\^ot une barre principale qui se trouve en haut du site (couleur rouge sur l'image \`a droite) et une partie contenue qui est en fait un grand carrousel (couleur violette sur l'image \`a droite). La partie violette sera une partie du site qui sera anim\'ee via un script JQuery mais suivra globalement la m\^eme structure.\\
+Sur mon exemple, il y a deux grands blocs principaux. Un container ou plut\^ot une barre principale qui se trouve en haut du site (zone rouge sur l'image \`a droite) et une partie contenue qui est en fait un grand carrousel (couleur violette sur l'image \`a droite). La partie violette sera une partie du site qui sera anim\'ee via un script JQuery mais suivra globalement la m\^eme structure.\\
 
 Sous Bootstrap, j'ai utilis\'e trois classes sur des balises HTML pour r\'ealiser cela facilement : \og container-fluid \fg{}, \og navbar \fg{} et \og container \fg{}. La premi\`ere permet de sp\'ecifier que nous utiliserons 100\% de la largeur de la fen\^etre. La seconde est la balise pour sp\'ecifier o\`u se trouve notre menu de navigation. La derni\`ere permet de prendre la dimension en pixel avant le point de rupture. Les autres classes qui se trouvent dans l'exemple ci-dessous ne sont que des classes am\'eliorant le design et ne sont donc pas n\'ec\'essaire pour reproduire mon exemple. Ainsi je n'expliquerais pas leurs utilit\'e, la plupart \'etant expliqu\'e dans la documentation de Bootstrap. 
 \vspace{0.5cm}\\
@@ -659,10 +661,6 @@ Ce module \og col-top \fg{} reprend la d\'efinition de la classe \og col \fg{} d
 </dom-module>
 }}
 \vspace{0.5cm} 
-  
-=================================================>
-sdfsdfsdfsf
-=================================================>  
   
 Ces deux modules servent \`a aligner leurs contenues \`a droite ou \`a gauche dans leurs containers. Pour des raisons graphiques, j'ai ajout\'e un attribut \og margin-top \fg{}. La seule diff\'erence entre ces deux blocs r\'eside dans leur float. On aurais pu cr\'eer un seul \'el\'ement et sp\'ecifier ensuite dans le fichier index.html un style particulier vers la gauche ou la droite. Cependant, j'ai trouv\'e plus int\'err\'essant de s\'eparer tout l'aspect graphique de l'index et des modules. Polymer proscrit l'emploie de feuille de style s\'epar\'e pour la page HTML qui sera affich\'e. Les r\`egles CSS se trouve soit dans le module ou alors dans une balise style d\'efini \og is="custom-style" \fg{}.  
 \vspace{0.5cm}\\

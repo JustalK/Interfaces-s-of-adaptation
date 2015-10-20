@@ -4,16 +4,16 @@
 \contentsline {subsection}{\numberline {1.2}Images flexibles}{4}
 \contentsline {subsection}{\numberline {1.3}Media queries ou Points de rupture}{4}
 \contentsline {subsection}{\numberline {1.4}Grille de positionnement}{9}
-\contentsline {section}{\numberline {2}L'exemple de A \`a Z}{11}
-\contentsline {subsection}{\numberline {2.1}Installation}{11}
-\contentsline {subsection}{\numberline {2.2}Creation des containers}{12}
-\contentsline {subsection}{\numberline {2.3}Barre de menu}{16}
-\contentsline {subsection}{\numberline {2.4}Le carousel}{20}
-\contentsline {subsection}{\numberline {2.5}Le bloc d'informations}{23}
-\contentsline {subsection}{\numberline {2.6}Clips vid\'eos suppl\'ementaires}{30}
-\contentsline {subsection}{\numberline {2.7}Vid\'eo principale}{34}
-\contentsline {subsection}{\numberline {2.8}Le menu}{35}
-\contentsline {section}{\numberline {3}Outils de d\'eveloppement et test}{37}
-\contentsline {subsection}{\numberline {3.1}Outils de d\'eveloppement}{37}
-\contentsline {subsection}{\numberline {3.2}Outils de test}{38}
-\contentsline {section}{\numberline {4}Documentations, Outils, liens utiles}{39}
+\contentsline {section}{\numberline {2}L'exemple de A \`a Z}{12}
+\contentsline {subsection}{\numberline {2.1}Installation}{12}
+\contentsline {subsection}{\numberline {2.2}Creation des containers}{13}
+\contentsline {subsection}{\numberline {2.3}Barre de menu}{17}
+\contentsline {subsection}{\numberline {2.4}Le carousel}{21}
+\contentsline {subsection}{\numberline {2.5}Le bloc d'informations}{24}
+\contentsline {subsection}{\numberline {2.6}Clips vid\'eos suppl\'ementaires}{31}
+\contentsline {subsection}{\numberline {2.7}Vid\'eo principale}{35}
+\contentsline {subsection}{\numberline {2.8}Le menu}{36}
+\contentsline {section}{\numberline {3}Outils de d\'eveloppement et test}{38}
+\contentsline {subsection}{\numberline {3.1}Outils de d\'eveloppement}{38}
+\contentsline {subsection}{\numberline {3.2}Outils de test}{39}
+\contentsline {section}{\numberline {4}Documentations, Outils, liens utiles}{40}
