@@ -664,7 +664,7 @@ Ce module \og col-top \fg{} reprend la d\'efinition de la classe \og col \fg{} d
 sdfsdfsdfsf
 =================================================>  
   
-Ces deux modules servent \`a aligner leurs contenues \`a droite ou \`a gauche dans leurs containers. Pour des raisons graphiques, j'ai ajout\'e un attribut \og margin-top \fg{}. La seul diff\'erence entre ces deux blocs r\'eside dans leur float. On aurais pu cr\'eer un seul \'el\'ement et sp\'ecifi\'e ensuite dans le fichier index.html un style particulier vers la gauche ou la droite. Cependant, j'ai trouv\'e plus int\'err\'essant de s\'eparer tout l'aspect graphique de l'index et des modules. Polymer proscrit l'emploie de feuille de style s\'epar\'e pour la page HTML qui sera affich\'e. Les r\`egles CSS se trouve soit dans le module ou alors dans une balise style d\'efinit \og is="custom-style" \fg{}.  
+Ces deux modules servent \`a aligner leurs contenues \`a droite ou \`a gauche dans leurs containers. Pour des raisons graphiques, j'ai ajout\'e un attribut \og margin-top \fg{}. La seule diff\'erence entre ces deux blocs r\'eside dans leur float. On aurais pu cr\'eer un seul \'el\'ement et sp\'ecifier ensuite dans le fichier index.html un style particulier vers la gauche ou la droite. Cependant, j'ai trouv\'e plus int\'err\'essant de s\'eparer tout l'aspect graphique de l'index et des modules. Polymer proscrit l'emploie de feuille de style s\'epar\'e pour la page HTML qui sera affich\'e. Les r\`egles CSS se trouve soit dans le module ou alors dans une balise style d\'efini \og is="custom-style" \fg{}.  
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="title-top">\\
@@ -745,9 +745,9 @@ Le module \og title-top \fg{} est le module qui permet d'afficher le titre. J'ai
 </dom-module>
 }}
 \vspace{0.5cm}\\
-Ce gros module est celui qui va repr\'senter notre bouton en haut \`a droite. Je vais m'attarder sur une petite particularit\'e. Dans le code, on retrouve deux blocs de r\`egles qui sont li\'e \`a des \'ev\`enements. Le premier \og :focus \fg{} permet de d\'efinir des r\`egles CSS lorsque le bouton aura le focus dans la fen\^etre. Le deuxi\`eme est un \'ev\`enement lorsque le bouton a \'et\'e cliqu\'e. On aurait pu aussi d\'efinir ces changements de r\`egles avec Javascript mais j'ai choisi d'accomplir cela comme il est indiqu\'e dans la documentation de Polymer. 
+Ce gros module est celui qui va repr\'senter notre bouton en haut \`a droite. Je vais m'attarder sur une petite particularit\'e. Dans le code, on retrouve deux blocs de r\`egles qui sont li\'e \`a des \'ev\`enements. Le premier \og :focus \fg{} permet de d\'efinir des r\`egles CSS lorsque le bouton aura le focus dans la fen\^etre. Le deuxi\`eme est un \'ev\`enement lorsque le bouton a \'et\'e cliqu\'e. On aurait pu aussi d\'efinir ces changements de r\`egles avec JavaScript mais j'ai choisi d'accomplir cela comme il est indiqu\'e dans la documentation de Polymer. 
 \vspace{0.5cm}\\
-Nos modules \'etant cr\'e\'e, nous pouvons maintenant nous en servir pour reproduire le menu comme sur Bootstrap. Le code obtenu apr\`es tout ces efforts est simple et clair :
+Nos modules \'etant cr\'e\'e, nous pouvons maintenant nous en servir pour reproduire le menu comme sur Bootstrap. Le code obtenu apr\`es tous ces efforts est simple et clair :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <bar-top>\\
@@ -767,7 +767,7 @@ Nos modules \'etant cr\'e\'e, nous pouvons maintenant nous en servir pour reprod
 }}
 \subsection{Le carousel}
 
-Le carousel est la partie qui m'a demand\'e le plus de temps sous Polymer car rien n'a \'et\'e mis en place dans ce framework (structure logicielle). D'un autre cot\'e, Bootstrap a mis en place plusieurs classes pour avoir du conenue anim\'e facile \`a impl\'ement\'e. Le carousel est une de ces animations. Sous Bootstrap, seul 3 classes sont n\'ecessaire pour faire un carousel digne de ce nom : \og carousel \fg{}, \og carousel-inner \fg{} et \og item \fg{}. La premi\`ere classe permet d'initialiser le carousel et permet si il y a plusieurs carousel de faire la distinction entre ces derniers en sp\'ecifiant un ID. La deuxi\`eme classe d\'efinie la zone pour la page actuelle du carousel. Enfin, la derni\`ere classe permet de d\'efinir une slide du carousel. Pourquoi avoir choisit le carousel ? Tout simplement car il s'agit d'une m\'ethode d'animation simple et facile \`a comprendre. Elle permet d'avoir tout le contenue du site sur une page. Cependant, cela peut amener un probl\`eme qui d'ailleurs se trouve dans mon exemple. Lors du chargement de la premi\`ere page, on remarque que le site est relativement long \`a se charger. C'est tout simplement car mon site charge en fait l'ensemble des slides au chargement de la premi\`ere slide. Il y a alors une possibilit\'e qu'on retrouve sur facebook : ne charger qu'une partie du contenue. Cependant, cela veut aussi dire que l'utilisateur devra charger toutes les X slides, les prochaines slides. Il y a donc un compromis \`a prendre. J'ai pr\'ef\'er\'e sur mon exemple, au vue du nombre faible de slide sur le site, faire que l'utilisateur charge l'ensemble des slides. Ainsi il ne souffre d'aucun ralentissement pendant l'utilisation.
+Le carousel est la partie qui m'a demand\'e le plus de temps sous Polymer car rien n'a \'et\'e mis en place dans ce framework (structure logicielle). D'un autre cot\'e, Bootstrap a mis en place plusieurs classes pour avoir du contenu anim\'e facile \`a impl\'ement\'e. Le carousel est une de ces animations. Sous Bootstrap, 3 classes sont n\'ecessaire pour faire un carousel digne de ce nom : \og carousel \fg{}, \og carousel-inner \fg{} et \og item \fg{}. La premi\`ere classe permet d'initialiser le carousel et permet si il y a plusieurs carousels de faire la distinction entre ces derniers en sp\'ecifiant un ID. La deuxi\`eme classe d\'efinie la zone pour la page actuelle du carousel. Enfin, la derni\`ere classe permet de d\'efinir une slide du carousel. Pourquoi avoir choisi le carousel ? Tout simplement car il s'agit d'une m\'ethode d'animation simple et facile \`a comprendre. Elle permet d'avoir tout le contenu du site sur une page. Cependant, cela peut amener un probl\`eme qui d'ailleurs se trouve dans mon exemple. Lors du chargement de la premi\`ere page, on remarque que le site est relativement long \`a se charger. C'est tout simplement car mon site charge en fait l'ensemble des slides au chargement de la premi\`ere slide. On pourrait faire comme sur facebook et ne charger qu'une partie du contenu. Cependant, cela veut aussi dire que l'utilisateur devra charger toutes les X slides, les prochaines slides. Il y a donc un compromis \`a prendre. J'ai pr\'ef\'er\'e sur mon exemple, au vu du nombre faible de slide sur le site, faire que l'utilisateur charge l'ensemble des slides. Ainsi il ne souffre d'aucun ralentissement pendant l'utilisation.
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <div class="container-fluid black">\\
@@ -784,9 +784,9 @@ Le carousel est la partie qui m'a demand\'e le plus de temps sous Polymer car ri
 </div>
 }}	
 \vspace{0.5cm}\\ 
-L'attribut \og data-ride \fg{} permet de marquer le carousel comme anim\'e au chargement de la page. L'attribut \og data-interval \fg{} indique quant \`a lui renseigne sur le temps avant qu'une slide change \`a la suivante automatiquement. Enfin la classe \og active \fg{} indique simplement que le contenue de la div sera la premi\`ere slide du carousel.\\
+L'attribut \og data-ride \fg{} permet de marquer le carousel comme anim\'e au chargement de la page. L'attribut \og data-interval \fg{} quant \`a lui renseigne sur le temps avant qu'une slide change \`a la suivante automatiquement. Enfin la classe \og active \fg{} indique simplement que le contenu de la div sera la premi\`ere slide du carousel.\\
 Sous Polymer, c'est bien plus compliqu\'e pour fabriquer notre carousel. Pour arriver \`a faire cela, je me suis tout simplement bas\'e sur du JavaScript. Le fonctionnement est assez simple, toutes les slides sont positionn\'e \`a gauche de la fen\^etre sauf une qui sera affich\'e sur l'\'ecran de l'utilisateur. Lorsque l'on clique sur une fl\`eche vers la gauche ou la droite, la slide suivante se placera respectivement \`a droite ou \`a gauche de la slide courante. Enfin, on d\'eplace vers la gauche ou la droite, la slide courante et la slide suivante pour remplac\'e la slide actuelle par la suivante. Il n'y avait aucun moyen fournis dans Polymer pour effectuer cela autrement qu'en utilisant JavaScript.\\
-Dans un premier temps, il faut cr\'e\'e les nouvelles nodes qui nous permettrons de faire le changement de slide. C'est \`a dire les fl\`eches sur la gauche et la droite de la vid\'eo principale.
+Dans un premier temps, il faut cr\'eer les nouvelles nodes qui nous permettrons de faire le changement de slide. C'est \`a dire les fl\`eches sur la gauche et la droite de la vid\'eo principale.
 \vspace{0.5cm}\\
 \fbox{\parbox{0.5\textwidth}{
 <dom-module id="my-right">\\
@@ -869,7 +869,7 @@ On mettra ces \'el\'ements dans chacune des slides. Le code global de la page de
 }}
 \vspace{0.5cm}\\
 
-Le \og container-full \fg{} a comme on peux le voir un ID. Ce module repr\'esente une slide. Avec un peu de code PHP (car j'aime pas trop la duplication de code), je reproduis ce morceau de code plusieurs fois en incr\'ementant l'ID de 1. Cela permet d'identifier les slides facilement dans le script JavaScript qui est dessous : 
+Le \og container-full \fg{} a comme on peux le voir un ID. Ce module repr\'esente une slide. Avec un peu de code PHP (car j'aime pas la duplication de code), je reproduis ce morceau de code plusieurs fois en incr\'ementant l'ID de 1. Cela permet d'identifier les slides facilement dans le script JavaScript qui est dessous : 
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 var slide=1;\\
@@ -907,7 +907,7 @@ function nextslide() \{\\
 \}
 }}	
 \vspace{0.5cm}\\
-Comme dit plus haut, sous Polymer, il n'y a aucune autre mani\`ere d'ffectuer cela. Certains d\'eveloppeurs du projet Polymer sont actuellement entrain d'impl\'ementer un module pour pouvoir en quelques minutes avoir un carousel fonctionnel. Pour l'instant, le carousel ne fonctionne qu'avec des images, ce qui n'\'etait pas suffisant pour effectuer ce que je voulais faire.
+Comme dit plus haut, sous Polymer, il n'y a aucune autre mani\`ere d'effectuer cela. Certains d\'eveloppeurs du projet Polymer sont actuellement entrain d'impl\'ementer un module pour pouvoir en quelques minutes avoir un carousel fonctionnel. Pour l'instant, le carousel ne fonctionne qu'avec des images, ce qui n'\'etait pas suffisant pour effectuer ce que je voulais faire.
 
 \subsection{Le bloc d'informations}
 
@@ -921,7 +921,7 @@ Comme dit plus haut, sous Polymer, il n'y a aucune autre mani\`ere d'ffectuer ce
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Le bloc d'informations est la petite partie cach\'e du site qui regroupe toutes les informations sur un morceau de musique. J'ai volontairement cach\'e l'int\'erieur de cette partie car je souhaitais un site rapide \`a parcourir. L'oeil humain fonctionne par \'etape : progression, retour \`a la ligne et r\'egression. Mon but \'etait que l'utilisateur effectue en environs 1 seconde, la lecture enti\`ere d'une page du site. Il fallait donc que je limite le nombre de points de fixation (un point d'arr\^et dans la lecture). L'oeil s'arr\^etera entre 10 \`a 30 ms sur ces points. Mon site comporte 4 points d'arr\^ets comme on peux le voir sur la figure 13. Si j'avais laiss\'e mon bloc d'information visible, il y aurait 7 points d'arr\^ets. De plus, mon site peut ici tenir sur une page sans devoir descendre dans la page, ce qui n'aurait pas \'et\'e le cas si j'avais laiss\'e ce bloc visible.\\
+Le bloc d'informations est la petite partie cach\'e du site qui regroupe toutes les informations sur un morceau de musique. J'ai volontairement cach\'e l'int\'erieur de cette partie car je souhaitais un site rapide \`a parcourir. L'oeil humain fonctionne par \'etape : progression, retour \`a la ligne et r\'egression. Mon but \'etait que l'utilisateur effectue en environs 1 seconde, la lecture enti\`ere d'une page du site. Il fallait donc que je limite le nombre de points de fixation (un point d'arr\^et dans la lecture). L'oeil s'arr\^etera entre 10 \`a 30 ms sur ces points. Mon site comporte 4 points d'arr\^ets comme on peux le voir sur la figure 13. Si j'avais laiss\'e mon bloc d'informations visible, il y aurait 7 points d'arr\^ets. \\
 
 \begin{wrapfigure}{l}{0.5\textwidth}
   \vspace{-25pt}
@@ -933,7 +933,7 @@ Le bloc d'informations est la petite partie cach\'e du site qui regroupe toutes 
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Les informations cach\'es sont compos\'es d'une image qui s'adapte \`a la largeur de la page, d'un tableau avec quelques informations sur le clips vid\'eos, d'un bouton pour t\'el\'echarger la musique au format MP3 et des paroles de la musique. L'ensembles de ces informations s'adapte \`a la largeur de la fen\^etre pour que la lecture ainsi que la manipulation soit la plus simple possible pour l'utilisateur. Notons que l'image disparait lorsque nous atteignons certains points de rupture (faible r\'esolutions). J'ai effectu\'e ce choix car je pense que l'utilisateur sur son t\'el\'ephone ne dispose d'une connexion ph\'enom\'enale comme on pourrait en avoir sur ordinateur connect\'e en ethernet. L'image n'\'etant pas une donn\'e essentielle et prenant une part importante de ressources, j'ai jug\'e bon de la supprim\'e \`a basse r\'esolution pour le confort de l'utilisateur.\\
+Les informations cach\'ees sont compos\'ees d'une image qui s'adapte \`a la largeur de la page, d'un tableau avec quelques informations sur le clips vid\'eos, d'un bouton pour t\'el\'echarger la musique au format MP3 et des paroles de la musique. L'ensemble de ces informations s'adapte \`a la largeur de la fen\^etre pour que la lecture ainsi que la manipulation soit la plus simple possible pour l'utilisateur. Notons que l'image disparait lorsque nous atteignons certains points de rupture (faible r\'esolutions). J'ai effectu\'e ce choix car je pense que l'utilisateur sur son t\'el\'ephone ne dispose pas forc\'ement d'une connexion ph\'enom\'enale comme on pourrait en avoir sur un ordinateur connect\'e en Ethernet. L'image n'\'etant pas une donn\'ee essentielle et prenant une part importante de ressources, j'ai jug\'e bon de la supprim\'e \`a basse r\'esolution pour le confort de l'utilisateur.\\
 
 Sous Bootstrap, il n'y a rien de nouveau sur ce que j'ai cit\'e plus haut. Il s'agit maintenant seulement de placement des \'el\'ement dans une grille de positionnement. Le code ci-dessous r\'ealise ce que j'ai fait. Si il y a un point incompris, vous avez donc rat\'e un point dans mes explications pr\'ec\'edentes :
 \vspace{0.5cm}\\
@@ -951,7 +951,7 @@ Ce petit bout de code permet d'afficher la barre de bleu avec le titre de la mus
 </div>
 }}
 \vspace{0.5cm}\\
-Ce code est celui qui servira pour afficher l'image. Comme on peux le voir l'image est responsive et sera cach\'e lorsque la largeur de la fen\^etre sera inf\'erieur \`a \og sm \fg{}.
+Ce code est celui qui servira pour afficher l'image. Comme on peux le voir l'image est "responsive" et sera cach\'ee lorsque la largeur de la fen\^etre sera inf\'erieur \`a \og sm \fg{}.
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <div class="col-md-6 col-lg-6 text-center pagination-centered center-block" style="display: flex;">\\
@@ -985,7 +985,7 @@ Ce code est celui qui servira pour afficher l'image. Comme on peux le voir l'ima
 </div>
 }}
 \vspace{0.5cm}\\
-Le tableau est \'evidement lui aussi compos\'e d'un peu de PHP. Il n'y a rien d'exceptionnel, il s'agit seulement d'une balise TABLE utilisant le style de Boostrap avec la classe \og table \fg{}. A noter ici, la petite astuces qui permet au tableau de prendre 100\% de l'espace lorsque l'image disparait. Je n'ai pas sp\'ecifi\'e volontairement le fait que tableau prenne 12 colonnes, je n'ai rien mis pour les petites r\'esolutions car par d\'efaut Bootstrap force les \'el\'ements \`a prendre le plus d'espace possible. Je n'ai donc pas eu \`a le rajouter. 
+Le tableau est \'evidement lui aussi compos\'e d'un peu de PHP. Il n'y a rien d'exceptionnel, il s'agit seulement d'une balise TABLE utilisant le style de Boostrap avec la classe \og table \fg{}. A noter ici, la petite astuce qui permet au tableau de prendre 100\% de l'espace lorsque l'image disparait. Je n'ai pas sp\'ecifi\'e volontairement le fait que le tableau prenne 12 colonnes, je n'ai rien mis pour les petites r\'esolutions car par d\'efaut Bootstrap force les \'el\'ements \`a prendre le plus d'espace possible. Je n'ai donc pas eu \`a le rajouter. 
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <div class="col-md-12 col-lg-6">\\
@@ -995,14 +995,14 @@ Le tableau est \'evidement lui aussi compos\'e d'un peu de PHP. Il n'y a rien d'
 </div>
 }}
 \vspace{0.5cm}\\
-Ce bloc fait r\'ef\'erence au parole de la chanson. J'ai utilis\'e la balise H2 pour faire du \og responsive typesetting \fg{}. La taille en pixel du texte varie suivant la taille de la fen\^etre. Pour l'utilisateur, il est sans aucun doute plus agr\'eable de pouvoir lire les paroles d'une chanson phrase par phrase. Or, si la taille du texte restait la m\^eme pour toutes dimensions de fen\`etre, soit le texte serait illisible \`a une grande r\'esolution, soit le site serait incommode \`a basse r\'esolution. Pour r\'esoudre ce probl\`eme, une proportions a \'et\'e sp\'ecifier pour l'ensemble des textes suivant la largeur de la fen\`etre ou de l'appareil. Sur le site, on retrouve cette particularit\'e sur plusieurs titres et sur les paroles comme nous pouvons le constater ci-dessous. \`A gauche, on retrouve les paroles des chansons sur t\'el\'ephone portable tandis que \`a droite, on retrouve les m\^emes paroles \'ecrite avec une plus grande police sur tablette.
+Ce bloc fait r\'ef\'erence au parole de la chanson. J'ai utilis\'e la balise H2 pour faire du \og responsive typesetting \fg{}. La taille en pixel du texte varie suivant la taille de la fen\^etre. Pour l'utilisateur, il est sans aucun doute plus agr\'eable de pouvoir lire les paroles d'une chanson phrase par phrase. Or, si la taille du texte restait la m\^eme pour toutes dimensions de fen\`etre, soit le texte serait illisible \`a une grande r\'esolution, soit le site serait incommode \`a basse r\'esolution. Pour r\'esoudre ce probl\`eme, une proportion a \'et\'e sp\'ecifi\'e pour l'ensemble des textes suivant la largeur de la fen\`etre ou de l'appareil. Sur le site, on retrouve cette particularit\'e sur plusieurs titres et sur les paroles comme nous pouvons le constater ci-dessous. \`A gauche, on retrouve les paroles des chansons sur t\'el\'ephone portable tandis que \`a droite, on retrouve les m\^emes paroles \'ecrite avec une plus grande police sur tablette.
 
 \begin{center}
 \vspace{0.5cm}
 \includegraphics[width=0.8\textwidth]{textes}
 \vspace{0.5cm}\\
 \end{center}
-Avec l'ensemble de ces parties de code, on arrive \`a reproduire notre bloc d'information sous Bootstrap, il s'agissait bien comme je le disais en d\'ebut de partie d'une affaire de positionnement dans la grille.\\
+Avec l'ensemble de ces parties de code, on arrive \`a reproduire notre bloc d'informations sous Bootstrap, il s'agissait bien comme je le disais en d\'ebut de partie d'une affaire de positionnement.\\
 Sous Polymer, le code est moins long et moins complexe \`a mes yeux. Cependant, il faut l\`a encore cr\'eer un gros nombre de nouveaux modules, ce qui repr\'esente un travail fastidieux et long. Le code dans l'index se r\'esume \`a cela :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
@@ -1025,7 +1025,7 @@ Sous Polymer, le code est moins long et moins complexe \`a mes yeux. Cependant, 
 </bloc-information>
 }}
 \vspace{0.5cm}\\
-Je vais \'evidemment expliqu\'e l'ensemble de mes modules ci-dessous. Je tiens avant d'indiqu\'e que l'utilisation de PHP ne peux se faire dans les modules que l'on cr\'e\'e, il faut donc faire en sorte que le module puisse avoir des attributs. Ce qui explique pourquoi ma balise MY-INFORMATION prend beaucoup d'informations.\\
+Je vais \'evidemment expliquer l'ensemble de mes modules ci-dessous. Je tiens avant d'indiquer que l'utilisation de PHP est proscrite dans les modules que l'on cr\'e\'e, il faut donc faire en sorte que le module puisse avoir des attributs. Ce qui explique pourquoi ma balise MY-INFORMATION prend beaucoup d'informations.\\
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="my-informations">\\
@@ -1080,7 +1080,7 @@ Je vais \'evidemment expliqu\'e l'ensemble de mes modules ci-dessous. Je tiens a
 </dom-module>}
 }}
 \vspace{0.5cm}\\
-Ce module repr\'esente le tableau avec toutes ces informations. Ici, j'ai utilis\'e comme dit plus haut des propri\'et\'es pour cet \'el\'ement. En rouge, on trouve les propri\'et\'es du bloc, j'ai d\'efini ces derni\`ere comme des strings. Pour ensuite, les utiliser dans le bloc, il suffit d'\'ecrire \{\{ NOM DE LA PROPRIETE \}\}.
+Ce module repr\'esente le tableau avec toutes ces informations. Ici, j'ai utilis\'e comme dit plus haut des propri\'et\'es pour cet \'el\'ement. En rouge, on trouve les propri\'et\'es du bloc, j'ai d\'efini ces derni\`eres comme des strings. Pour ensuite, les utiliser dans le bloc, il suffit d'\'ecrire \{\{ NOM DE LA PROPRIETE \}\}.
 \vspace{0.5cm}\\
 \fbox{\parbox{0.5\textwidth}{
 <dom-module id="my-col-50-50">\\
@@ -1146,7 +1146,7 @@ Ce module repr\'esente le tableau avec toutes ces informations. Ici, j'ai utilis
 </dom-module>
 }}
 \vspace{0.5cm}\\
-Comme vue pr\'ec\'edemment, ce sont ces modules qui joueront le role de positionnement sous Polymer. L'utilisation des m\'edia queries permet de fixer la taille de zone dont dispose l'\'el\'ement en fonction de la largeur de l'\'ecran.
+Comme vu pr\'ec\'edemment, ce sont ces modules qui joueront le r\^ole de positionnement sous Polymer. L'utilisation des m\'edia queries permet de fixer la taille de la zone dont dispose l'\'el\'ement en fonction de la largeur de l'\'ecran.
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="my-img-responsive">\\
@@ -1168,7 +1168,7 @@ Comme vue pr\'ec\'edemment, ce sont ces modules qui joueront le role de position
 </dom-module>
 }}
 \vspace{0.5cm}\\
-Ce module permet de faire des images responsives. Comme dit au tout d\'epart de mon document. Une image responsive n'est qu'une image avec un largeur de 100\% et une hauteur enfonction de son ratio. Dans ce module, j'ai aussi ajou\'e une propri\'et\'e qui est bien \'evidemment l'adresse de l'image en question.
+Ce module permet de faire des images responsives. Comme dit au tout d\'epart de mon document. Une image responsive n'est qu'une image avec un largeur de 100\% et une hauteur fonction de son ratio. Dans ce module, j'ai aussi ajout\'e une propri\'et\'e qui est bien \'evidemment l'adresse de l'image en question.
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="my-lyric">\\
@@ -1258,23 +1258,23 @@ Les clips vid\'eos suppl\'ementaires sont les vid\'eos qui se trouvent en bas de
 \vspace{0.5cm}
 \end{center}
 
-Si nous r\'eduisons la largeur de la fenetre, le contenu s'adaptera. Dans un premier temps, il n'y aura plus que deux blocs par ligne. Puis, si nous continuons de r\'eduire la fen\`etre, il n'y aura plus qu'un seul bloc par ligne et les deux derniers auront \'et\'e cach\'e.
+Si nous r\'eduisons la largeur de la fen\^etre, le contenu s'adaptera. Dans un premier temps, il n'y aura plus que deux blocs par ligne. Puis, si nous continuons de r\'eduire la fen\^etre, il n'y aura plus qu'un seul bloc par ligne et les deux derniers auront \'et\'e cach\'e.
 \begin{center}
 \vspace{0.5cm}
 \includegraphics[width=0.8\textwidth]{pc7}
 \vspace{0.5cm}\\
 \end{center}
 
-\hspace*{0.6cm}Pourquoi ais-je supprim\'e les deux derniers blocs sur la navigation \`a basse r\'esolution ? Ce n'est pas une d\'ecision anodine. En supprimant ces deux blocs, j'am\'eliore l'exp\'erience de l'utilisateur sur deux aspects.\\
+\hspace*{0.6cm}Pourquoi ai-je supprim\'e les deux derniers blocs sur la navigation \`a basse r\'esolution ? Ce n'est pas une d\'ecision anodine. En supprimant ces deux blocs, j'am\'eliore l'exp\'erience de l'utilisateur sur deux aspects.\\
 \begin{wrapfigure}{r}{3cm}
 \vspace{-13pt}
 \centering
 \includegraphics[width=3cm]{blackberry}
 \caption{\textit{Affichage du site sous BlackBerry (via Google Chrome).}}
 \end{wrapfigure} 
-{\hspace*{0.6cm}L'un est purement li\'e \`a la technologie, il est rare d'avoir un t\'el\'ephone branch\'e en Ethernet. Ceci implique que le d\'ebit moyen d'un utilisateur sur t\'el\'ephone est souvent inf\'erieur \`a celui d'un utilisateur sur ordinateur. J'\'evite ainsi \`a l'utilisateur sur t\'el\'ephone de charger trop d'informations qui n'appartiennent pas au contenue principal de la page. Ce ne sont que des publicit\'es pour les autres musiques du m\^eme chanteur. Deuxi\`emement, et c'est sans doute le point le plus important, suivant \textbf{la loi de Fitt}, que je sois sur t\'el\'ephone ou ordinateur l'indice de difficult\'e doit rest\'e le m\^eme. La loi calcul donne un indice de difficult\'e par rapport au temps requis pour aller rapidement d'une position de d\'epart \`a une zone finale de destination. L'utilisateur doit arriver avec la m\^eme rapidit\'e et la m\^eme facilit\'e aux diff\'erentes parties du site. Si l'on regarde l'image sur la droite qui repr\'esente le site sur un t\'el\'ephone BlackBerry, on remarque que le temps pour parvenir \`a la derni\`ere vid\'eo en rapport avec le chanteur est aussi rapide sur le t\'el\'ephone que sur ordinateur. Certes ce n'est pas la m\^eme, mais cela reste la derni\`ere vid\'eo. Si j'avais juste r\'earrang\'e les choses, il aurait d'abord fallu descendre pour arriver \`a la derni\`ere vid\'eo. Cela ne para\^it pas beaucoup plus compliqu\'e mais sans cela, le site se retrouverait complexifi\'e d'apr\`es la loi de Fitts.}\\
+{\hspace*{0.6cm}L'un est purement li\'e \`a la technologie, il est rare d'avoir un t\'el\'ephone branch\'e en Ethernet. Ceci implique que le d\'ebit moyen d'un utilisateur sur t\'el\'ephone est souvent inf\'erieur \`a celui d'un utilisateur sur ordinateur. J'\'evite ainsi \`a l'utilisateur sur t\'el\'ephone de charger trop d'informations qui n'appartiennent pas au contenu principal de la page. Ce ne sont que des publicit\'es pour les autres musiques du m\^eme chanteur. Deuxi\`emement, et c'est sans doute le point le plus important, suivant \textbf{la loi de Fitt}, que je sois sur t\'el\'ephone ou ordinateur l'indice de difficult\'e doit rester le m\^eme. La loi calcul un indice de difficult\'e par rapport au temps requis pour aller rapidement d'une position de d\'epart \`a une zone finale de destination. L'utilisateur doit arriver avec la m\^eme rapidit\'e et la m\^eme facilit\'e aux diff\'erentes parties du site. Si l'on regarde l'image sur la droite qui repr\'esente le site sur un t\'el\'ephone BlackBerry, on remarque que le temps pour parvenir \`a la derni\`ere vid\'eo en rapport avec le chanteur est aussi rapide sur le t\'el\'ephone que sur ordinateur. Certes ce n'est pas la m\^eme, mais cela reste la derni\`ere vid\'eo. Si j'avais juste r\'earrang\'e les choses, il aurait d'abord fallu descendre pour arriver \`a la derni\`ere vid\'eo. Cela ne para\^it pas beaucoup plus compliqu\'e mais sans cela, le site se retrouverait complexifi\'e d'apr\`es la loi de Fitts.}\\
 
-Que cela soit sur Bootstrap ou Polymer, nous savons normalement comment faire cela \`a partir des informations et techniques que nous avons d\'ej\`a \'evoqu\'e pr\'c\'edemment. Cette partie reprend le positionnement et l'affichage ou le non affichage de certaines informations en fonction de la largeur de la fen\^etre.
+Que cela soit sur Bootstrap ou Polymer, nous savons normalement comment faire cela \`a partir des informations et techniques que nous avons d\'ej\`a \'evoqu\'e jusqu'ici. Cette partie reprend le positionnement et l'affichage ou le non affichage de certaines informations en fonction de la largeur de la fen\^etre.
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <nav class="navbar navbar-default navbar-static-bottom">\\
@@ -1309,7 +1309,7 @@ Que cela soit sur Bootstrap ou Polymer, nous savons normalement comment faire ce
 </nav>
 }}
 \vspace{0.5cm}\\
-Sous Bootstrap, il faut donc simplement d\'efinir le nombre de colonne utilis\'e par chaque petit bloc. La moiti\'e seront d\'efini comme \og hidden \fg{} comme on peux l'observer sur le code. Sous Polymer, cela sera beaucoup plus rapide car cela reprend une grosse partie des modules qui ont \'et\'e d\'efinis pr\'ec\'edemment, ainsi le code devient plus facile \`a impl\'ement\'e car il n'y presque pas de nouveaux modules :
+Sous Bootstrap, il faut donc simplement d\'efinir le nombre de colonne utilis\'e par chaque petit bloc. La moiti\'e seront d\'efini comme \og hidden \fg{} comme on peux l'observer sur le code. Sous Polymer, cela sera beaucoup plus rapide car cela reprend une grosse partie des modules qui ont \'et\'e d\'efini pr\'ec\'edemment, ainsi le code devient plus facile \`a impl\'ementer car il n'y a presque pas de nouveaux modules :
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <my-bar-pubs>\\
@@ -1334,7 +1334,7 @@ Sous Bootstrap, il faut donc simplement d\'efinir le nombre de colonne utilis\'e
 </my-bar-pubs>
 }}
 \vspace{0.5cm}\\
-Ce code reproduit donc le comportement pr\'ec\'edent sur Polymer. Il n'y a rien que normalement d'inconnue ici \`a part le \og my-bar-pubs \fg{} mais il s'agit simplement d'une barre avec une couleur en fond comme on peux le voir ci-dessous : 
+Ce code reproduit donc le comportement pr\'ec\'edent sur Polymer. Il n'y a rien normalement qui ne vous soit inconnu ici \`a part le \og my-bar-pubs \fg{} mais il s'agit simplement d'une barre avec une couleur en fond comme on peux le voir ci-dessous : 
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <dom-module id="my-bar-pubs">\\
@@ -1359,11 +1359,11 @@ Ce code reproduit donc le comportement pr\'ec\'edent sur Polymer. Il n'y a rien 
 }}
 \vspace{0.5cm}\\
 
-Petit \`a petit au travers de nos exemples, on peux remarquer que le d\'eveloppement sous Polymer devient plus rapide que celui sur Bootstrap car nous pouvons r\'eutiliser nos \'el\'ements. Le code devient alors du simple HTML.
+Petit \`a petit au travers de nos exemples, on peux remarquer que le d\'eveloppement sous Polymer devient de plus en plus rapide car nous pouvons r\'eutiliser nos \'el\'ements. Le code se r\'eduit alors \`a du simple HTML.
 
 \subsection{Vid\'eo principale}
 
-Il s'agit du clip musicale principale, celui en plein centre de l'application. Pour afficher la vid\'eo, j'ai utilis\'e la balise IFRAME. Cependant, il faut que cette balise s'adapte elle aussi \`a la largeur de la fen\^etre. Pour cela, on l'incorpore dans une balise DIV o\`u qui se redimensionne. Sous Bootstrap, j'ai utilis\'e les classes fournis : \og embed-responsive \fg{} et \og embed-responsive-16by9 \fg{}. La premi\`ere classe permet de r\'ealiser le redimensionnement et l'adaptation de la vid\'eo \`a la largeur de la fen\^etre. La deuxi\`eme classe est seulement pour un aspect design, elle permet de forcer la vid\'eo \`a prendre un ratio 16/9.
+Il s'agit du clip musicale principale, celui en plein centre de l'application. Pour afficher la vid\'eo, j'ai utilis\'e la balise IFRAME. Cependant, il faut que cette balise s'adapte elle aussi \`a la largeur de la fen\^etre. Pour cela, on l'incorpore dans une balise DIV qui se redimensionne. Sous Bootstrap, j'ai utilis\'e les classes fournies : \og embed-responsive \fg{} et \og embed-responsive-16by9 \fg{}. La premi\`ere classe permet de r\'ealiser le redimensionnement et l'adaptation de la vid\'eo \`a la largeur de la fen\^etre. La deuxi\`eme classe est seulement pour un aspect design, elle permet de forcer la vid\'eo \`a prendre un ratio 16/9.
 \vspace{0.5cm}\\
 \fbox{\parbox{\textwidth}{
 <div id="aze" class="embed-responsive embed-responsive-16by9">\\
@@ -1371,7 +1371,7 @@ Il s'agit du clip musicale principale, celui en plein centre de l'application. P
 </div>
 }}
 \vspace{0.5cm}\\
-Le lien est relativement long car j'ai utilis\'e l'API de Youtube pour r\'ealiser quelques modifications de comportement sur la vid\'eo. Par exemple, \'etant grand fan de musique, il m'arrive d'\'ecouter la m\^eme musique en boucle. Cette fonction est absente de youtube mais peut-\^etre ajout\'e sur d'autre site via leur API. En ajoutant \og loop=1 \fg{}, on peux alors jouer la vid\'eo en boucle. De m\^eme, je trouve que sur youtube le nombre d'information affich\'e sur la vid\'eo est trop importante et embrouille l'utilisateur plus qu'autre chose. Comme dit un peu plus haut, je souhaitais un site simple d'utilisation. J'ai donc effac\'e les informations superflue via la commande \og showinfo=0 \fg{}.  
+Le lien est relativement long car j'ai utilis\'e l'API de Youtube pour r\'ealiser quelques modifications de comportement sur la vid\'eo. Par exemple, \'etant grand fan de musique, il m'arrive d'\'ecouter la m\^eme musique en boucle. Cette fonction est absente de youtube mais peut-\^etre ajout\'e sur d'autre site via leur API. En ajoutant \og loop=1 \fg{}, on peux alors jouer la vid\'eo en boucle. De m\^eme, je trouve que sur youtube le nombre d'informations affich\'es sur la vid\'eo est trop importante et embrouille l'utilisateur plus qu'autre chose. Comme dit un peu plus haut, je souhaitais un site simple d'utilisation. J'ai donc effac\'e les informations superflues via la commande \og showinfo=0 \fg{}.  
 \vspace{0.5cm}\\
 Sous Polymer, le principe est le m\^eme sauf que nous allons cr\'e\'e un module pour afficher la vid\'eo. Le code dans l'index se r\'eduit une fois le module impl\'ement\'e \`a une simple ligne de code :
 \vspace{0.5cm}\\
@@ -1426,8 +1426,8 @@ Sous Polymer, le principe est le m\^eme sauf que nous allons cr\'e\'e un module 
   \caption{Le menu \`a droite sur la version PC}
   \vspace{-10pt}
 \end{wrapfigure}
-Le menu est la partie \`a droite du site qu'il est possible d'afficher ou non. Par d\'efaut, cette partie est cach\'e pour les m\^eme raison que le bloc d'information (nombre de points de fixation). Le menu prend aussi une taille diff\'erente en fonction du premier points de rupture que l'on va rencontr\'e lorsque l'on r\'eduit la fen\^etre. Lorsque nous somme \`a la plus basse r\'esolution le menu prend 100\% de la largeur de la fen\^etre, j'ai trouv\'e que cela \'etait ce qu'il y avait de mieux au niveau utilisation sans ab\^imer la simplicit\'e du site et l'ergonomie.\\
-Sur les deux technologies, j'ai utilis\'e la m\^eme technique. L'ensemble du site est englobl\'e dans une balise DIV dont la largeur peux varier via un script JavaScript. De l'autre, le menu est aussi compris dans une balise DIV dont l\`a aussi la largeur variera entre 0 et un nombre d\'ependant de la largeur pris par le contenue du site. \\
+Le menu est la partie \`a droite du site qu'il est possible d'afficher ou non. Par d\'efaut, cette partie est cach\'e pour les m\^eme raison que le bloc d'informations (nombre de points de fixation). Le menu prend aussi une taille diff\'erente en fonction du premier points de rupture que l'on va rencontr\'e lorsque l'on r\'eduit la fen\^etre. Lorsque nous sommes \`a la plus basse r\'esolution le menu prend 100\% de la largeur de la fen\^etre, j'ai trouv\'e que cela \'etait ce qu'il y avait de mieux au niveau utilisation sans ab\^imer la simplicit\'e du site et l'ergonomie.\\
+Sur les deux technologies, j'ai utilis\'e la m\^eme technique. L'ensemble du site est englobl\'e dans une balise DIV dont la largeur peux varier via un script JavaScript. De l'autre, le menu est aussi compris dans une balise DIV qui l\`a aussi \`a sa largeur qui pourra varier entre 0 et un nombre d\'ependant de la largeur pris par le contenu du site. \\
 \vspace{0.5cm}\\
 \fbox{\parbox{0.5\textwidth}{
 ...\\
@@ -1454,16 +1454,16 @@ Sur les deux technologies, j'ai utilis\'e la m\^eme technique. L'ensemble du sit
 ...
 }}
 \vspace{0.5cm}\\
-Ce code ci-dessus montre la mani\`ere dont j'ai positionn\'e les balises pour r\'ealiser ce menu. Sous Bootstrap, il n'y avait rien pour r\'ealiser cela de mani\`ere "Bootstrapsienne". J'aurais pu mettre le code dans un document style mais j'ai pr\'ef\'er\'e \'eviter cela pour bien montrer que Bootstrap ne permet pas d'effectuer cela de mani\`ere simple. Notons par ailleurs qu'ici, j'ai d\'ecouvert aussi un probl\`eme ennuyant. Il n'est pas possible d'utiliser le syst\`eme de grille de Bootstrap lorsque l'on d\'efinit un \'el\'ement comme \og fixed \fg{}. Ce que je voulais faire au d\'epart, j'ai donc du me raviser.
+Ce code ci-dessus montre la mani\`ere dont j'ai positionn\'e les balises pour r\'ealiser ce menu. Sous Bootstrap, il n'y avait rien pour r\'ealiser cela de mani\`ere "Bootstrapsienne". J'aurai pu mettre le code dans un document style mais j'ai pr\'ef\'er\'e \'eviter cela pour bien montrer que Bootstrap ne permet pas d'effectuer cela de mani\`ere simple. Notons par ailleurs qu'ici, j'ai d\'ecouvert aussi un probl\`eme ennuyant. Il n'est pas possible d'utiliser le syst\`eme de grille de Bootstrap lorsque l'on d\'efinit un \'el\'ement comme \og fixed \fg{}. Ce que je voulais faire au d\'epart, j'ai donc d\^u me raviser.
 \vspace{0.5cm}\\
-Si vous avez suivi l'int\'egralit\'e des explications ci-dessus, vous \^etes apte \`a cr\'eer l'application de vos r\^eves en utilisant Bootstrap ou Polymer. Cependant pour d\'ecider quelles applications est le plus adapt\'e \`a vos besoins, il faudra r\'efl\'echir en fonction des utilisateurs que vous viser. Les deux technologies n'\'etant pas support\'e de la m\^eme mani\`ere.
+Si vous avez suivi l'int\'egralit\'e des explications ci-dessus, vous \^etes maintenant apte \`a cr\'eer l'application de vos r\^eves en utilisant Bootstrap ou Polymer. Cependant pour d\'ecider quelles applications est la plus adapt\'e \`a vos besoins, il faudra r\'efl\'echir en fonction des utilisateurs que vous viser. Les deux technologies n'\'etant pas support\'e de la m\^eme mani\`ere.
  
 \newpage
 \section{Outils de d\'eveloppement et test}
 
 \subsection{Outils de d\'eveloppement}
 
-Pour r\'ealiser mon site adaptatif, j'ai eu besoin de plusieurs outils. Chacun ayant une part plus ou moins importantes, je vais partir du plus utile dans mon exemple au moins utile mais qui a tout de m\^eme eu un role \`a jouer un moment ou \`a un autre.\\
+Pour r\'ealiser mon site adaptatif, j'ai eu besoin de plusieurs outils. Chacun ayant une part plus ou moins importante, je vais partir du plus utile dans mon exemple au moins utile mais qui a tout de m\^eme eu un role \`a jouer un moment ou \`a un autre.\\
 \begin{wrapfigure}{r}{0.5\textwidth}
   \vspace{-20pt}
   \begin{center}
@@ -1499,11 +1499,11 @@ Depuis ce qui s'est pass\'e lors de mon rattrapage en SI3, je ne me s\'epare plu
 
 Les API (Application Programming Interface) de Bootstrap ainsi que Polymer ont \'et\'e d'une aide pr\'ecieuse. Une API est un service web qui donne une description plus ou moins pouss\'e sur un programme ou langage. Elles sont souvent accompagn\'es de tutoriels et exemples qui permettent de comprendre rapidement comment fonctionne la technologie. Gr\^ace \`a ces API, j'ai pu d\'evelopper sans trop de difficult\'e mes deux exemples.
 \vspace{0.5cm}\\
-Enfin, j'ai utilis\'e \`a moindre \'echelle d'autre outils pour finaliser certains d\'etails qui ne le pouvais \^etre autrement. J'ai donc utilis\'e \textbf{JQuery} pour effectuer mon carousel sous Polymer. Bootstrap utilise aussi cette biblioth\`eque pour effectuer leur propre carousel. J'ai aussi utilis\'e \textbf{PhpMyAdmin et Wamp}. Comme certaines pages \'etaient identiques en tout points et seul le contenue diff\'erait, j'ai jug\'e bon d'automatiser certaines taches en utilisant un peu de PHP.
+Enfin, j'ai utilis\'e \`a moindre \'echelle d'autre outils pour finaliser certains d\'etails. J'ai donc utilis\'e \textbf{JQuery} pour effectuer mon carousel sous Polymer. Bootstrap utilise aussi cette biblioth\`eque pour effectuer leur propre carousel. J'ai aussi utilis\'e \textbf{PhpMyAdmin et Wamp}. Comme certaines pages \'etaient identiques en tout points et seul le contenu diff\'erait, j'ai jug\'e bon d'automatiser certaines taches en utilisant un peu de PHP.
 \newpage
 \subsection{Outils de test}
 
-\hspace*{0.6cm}Pour tester l'affichage et l'adapatation de nos \'el\'ements \`a la fen\^etre, il existe plusieurs voies envisageables. J'ai utilis\'e plusieurs d'entre elle pour effectuer mes tests. La premi\`ere m\'ethode a \'et\'e de modifier la taille de la fen\^etre sous windows.\\
+\hspace*{0.6cm}Pour tester l'affichage et l'adaptation de nos \'el\'ements \`a la fen\^etre, il existe plusieurs voies envisageables. J'ai utilis\'e plusieurs d'entre elles pour effectuer mes tests. La premi\`ere m\'ethode a \'et\'e de modifier la taille de la fen\^etre sous windows.\\
 
 \begin{wrapfigure}{l}{0.5\textwidth}
   \vspace{-25pt}
@@ -1539,7 +1539,7 @@ Pour test\'e l'adaptation sur des appareils en particuliers, Google Chrome dispo
   \vspace{-10pt}
 \end{wrapfigure} 
 
-Il est aussi possible de passer par des sites qui permettent de tester l'adaptation de nos sites comme responsinator.com. J'ai aussi test\'e mon site sous cet \'el\'ement. On voit sur ce site un grand ensemble d'appareil avec notre site \`a l'int\'erieur. Le seul probl\`eme de cette m\'ethode est qu'il faut charger X fois le m\^eme site, ce qui peut s'av\'erer plutot long si le site en question est relativement lourd.\\
+Il est aussi possible de passer par des sites qui permettent de tester l'adaptation de nos sites comme responsinator.com. J'ai aussi test\'e mon site sur ce site. On voit sur ce site un grand ensemble d'appareil avec notre site \`a l'int\'erieur. Le seul probl\`eme de cette m\'ethode est qu'il faut charger X fois le m\^eme site, ce qui peut s'av\'erer plut\^ot long si le site en question est relativement lourd.\\
 
 \newpage
 \section{Documentations, Outils, liens utiles} 
@@ -1552,7 +1552,7 @@ Les liens suivant sont les articles ou vid\'eos que j'ai analys\'e pour \'ecrire
 \textit{https://www.youtube.com/watch?t=133\&v=iSY38POjLYc}
 \vspace{0.5cm}\\
 \textbf{Ethan Marcotte}\\
-Le site du createur du RWD qui montre la diff\'erence entre un site adpatable et un site responsive.\\
+Le site du createur du RWD qui montre la diff\'erence entre un site adaptable et un vrai site responsive.\\
 \textit{http://alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html}\\
 \textit{http://alistapart.com/d/responsive-web-design/ex/ex-site-linearize.html}
 \vspace{0.5cm}\\
@@ -1566,7 +1566,7 @@ La description de la loi de Fitt\\
 \textit{http://webdesign.tutsplus.com/articles/applying-fitts-law-to-mobile-interface-design--webdesign-6919}
 \vspace{0.5cm}\\
 \textbf{Media queries}\\
-Les medias queries sont int\'erressants mais limit\'es. Le futur serait plutot du cot\'e des \'el\'ements queries.\\
+Les medias queries sont int\'erressants mais limit\'es. Le futur serait plutot du cot\'e des \'el\'ements queries (media queries sur \'el\'ements et non par rapport au viewport).\\
 \textit{http://ianstormtaylor.com/media-queries-are-a-hack/}\\
 \textit{http://www.smashingmagazine.com/2013/06/media-queries-are-not-the-answer-element-query-polyfill/}
 \vspace{0.5cm}\\
