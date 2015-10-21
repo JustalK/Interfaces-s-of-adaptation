@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  20 OCT 2015 09:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  21 OCT 2015 22:03
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -485,11 +485,11 @@ LaTeX Info: Redefining \up on input line 28.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<pc.png, id=1, 1927.2pt x 1022.82124pt>
-File: pc.png Graphic file (type png)
- <use pc.png>
-Package pdftex.def Info: pc.png used on input line 35.
-(pdftex.def)             Requested size: 430.00462pt x 228.20518pt.
+<p1.png, id=1, 1864.9675pt x 987.69pt>
+File: p1.png Graphic file (type png)
+ <use p1.png>
+Package pdftex.def Info: p1.png used on input line 35.
+(pdftex.def)             Requested size: 430.00462pt x 227.72154pt.
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 40.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
@@ -520,11 +520,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 40.
  [1
 
-{C:/Users/Latsuj/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pc.png>]
-
-(presentation.toc)
+{D:/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./p1.png>] (presentatio
+n.toc)
 \tf@toc=\write3
- [2] <p2.png, id=12, 1864.9675pt x 987.69pt>
+ [2]
+<p2.png, id=12, 1864.9675pt x 987.69pt>
 File: p2.png Graphic file (type png)
  <use p2.png>
 Package pdftex.def Info: p2.png used on input line 57.
@@ -544,9 +544,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-<p1.png, id=14, 1864.9675pt x 987.69pt>
 File: p1.png Graphic file (type png)
- <use p1.png>
+<use p1.png>
 Package pdftex.def Info: p1.png used on input line 82.
 (pdftex.def)             Requested size: 344.005pt x 182.17723pt.
 
@@ -554,7 +553,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
-[3 <./p2.png> <./p3.png> <./p1.png>] <p4.png, id=20, 1858.945pt x 752.8125pt>
+[3 <./p2.png> <./p3.png>] <p4.png, id=19, 1858.945pt x 752.8125pt>
 File: p4.png Graphic file (type png)
 
 <use p4.png>
@@ -565,7 +564,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-<p5.png, id=22, 1846.9pt x 987.69pt>
+<p5.png, id=21, 1846.9pt x 987.69pt>
 File: p5.png Graphic file (type png)
  <use p5.png>
 Package pdftex.def Info: p5.png used on input line 102.
@@ -575,12 +574,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-<p8.png, id=23, 1858.945pt x 423.5825pt>
+<p8.png, id=22, 1858.945pt x 423.5825pt>
 File: p8.png Graphic file (type png)
  <use p8.png>
 Package pdftex.def Info: p8.png used on input line 112.
 (pdftex.def)             Requested size: 344.005pt x 78.38092pt.
- [4 <./p4.png> <./p5.png>] <p9.png, id=28, 1846.9pt x 987.69pt>
+ [4 <./p4.png> <./p5.png>] <p9.png, id=27, 1846.9pt x 987.69pt>
 File: p9.png Graphic file (type png)
  <use p9.png>
 Package pdftex.def Info: p9.png used on input line 123.
@@ -615,7 +614,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
-<p6.png, id=33, 1350.04375pt x 980.66376pt>
+<p6.png, id=32, 1350.04375pt x 980.66376pt>
 File: p6.png Graphic file (type png)
  <use p6.png>
 Package pdftex.def Info: p6.png used on input line 179.
@@ -625,7 +624,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-[6 <./p6.png>] <p7.png, id=37, 785.93625pt x 967.615pt>
+[6 <./p6.png>] <p7.png, id=36, 785.93625pt x 967.615pt>
 File: p7.png Graphic file (type png)
  <use p7.png>
 Package pdftex.def Info: p7.png used on input line 192.
@@ -660,18 +659,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--260
 
  []
 
-[7 <./p7.png>] <pc4.png, id=42, 1927.2pt x 1022.82124pt>
+[7 <./p7.png>] <pc4.png, id=41, 1927.2pt x 1022.82124pt>
 File: pc4.png Graphic file (type png)
  <use pc4.png>
 Package pdftex.def Info: pc4.png used on input line 264.
 (pdftex.def)             Requested size: 206.40038pt x 109.52974pt.
- [8 <./pc4.png>] <pc7.png, id=46, 1788.6825pt x 745.78625pt>
+ [8 <./pc4.png>] <pc7.png, id=45, 1788.6825pt x 745.78625pt>
 File: pc7.png Graphic file (type png)
  <use pc7.png>
 Package pdftex.def Info: pc7.png used on input line 275.
 (pdftex.def)             Requested size: 344.005pt x 143.43059pt.
 
-<p10.png, id=47, 1848.9075pt x 987.69pt>
+<p10.png, id=46, 1848.9075pt x 987.69pt>
 File: p10.png Graphic file (type png)
  <use p10.png>
 Package pdftex.def Info: p10.png used on input line 286.
@@ -681,7 +680,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
-<p12.png, id=48, 1848.9075pt x 987.69pt>
+<p12.png, id=47, 1848.9075pt x 987.69pt>
 File: p12.png Graphic file (type png)
  <use p12.png>
 Package pdftex.def Info: p12.png used on input line 298.
@@ -692,7 +691,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 305--306
  []
 
 [9 <./pc7.png> <./p10.png> <./p12.png>]
-<p11.png, id=53, 1848.9075pt x 987.69pt>
+<p11.png, id=52, 1848.9075pt x 987.69pt>
 File: p11.png Graphic file (type png)
  <use p11.png>
 Package pdftex.def Info: p11.png used on input line 311.
@@ -707,7 +706,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
-<p13.png, id=54, 1162.3425pt x 1001.7425pt>
+<p13.png, id=53, 1162.3425pt x 1001.7425pt>
 File: p13.png Graphic file (type png)
  <use p13.png>
 Package pdftex.def Info: p13.png used on input line 324.
@@ -717,25 +716,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
-[10 <./p11.png> <./p13.png>] [11] <p25.png, id=61, 96.36pt x 96.36pt>
+[10 <./p11.png> <./p13.png>] [11] <p25.png, id=60, 96.36pt x 96.36pt>
 File: p25.png Graphic file (type png)
 
 <use p25.png>
 Package pdftex.def Info: p25.png used on input line 340.
 (pdftex.def)             Requested size: 120.40076pt x 120.40115pt.
- <p26.png, id=62, 1865.97125pt x 533.995pt>
+ <p26.png, id=61, 1865.97125pt x 533.995pt>
 File: p26.png Graphic file (type png)
  <use p26.png>
 Package pdftex.def Info: p26.png used on input line 350.
 (pdftex.def)             Requested size: 430.00462pt x 123.05255pt.
 
-<p27.png, id=63, 1865.97125pt x 533.995pt>
+<p27.png, id=62, 1865.97125pt x 533.995pt>
 File: p27.png Graphic file (type png)
  <use p27.png>
 Package pdftex.def Info: p27.png used on input line 356.
 (pdftex.def)             Requested size: 430.00462pt x 123.05255pt.
 
-<p28.png, id=64, 1865.97125pt x 533.995pt>
+<p28.png, id=63, 1865.97125pt x 533.995pt>
 File: p28.png Graphic file (type png)
  <use p28.png>
 Package pdftex.def Info: p28.png used on input line 362.
@@ -751,7 +750,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 365--378
 []
  []
 
-<p18.png, id=68, 1864.9675pt x 987.69pt>
+<p18.png, id=67, 1864.9675pt x 987.69pt>
 File: p18.png Graphic file (type png)
  <use p18.png>
 Package pdftex.def Info: p18.png used on input line 386.
@@ -821,7 +820,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 434--531
 []
  []
 
-[14] [15] [16] <p19.png, id=82, 1848.9075pt x 50.1875pt>
+[14] [15] [16] <p19.png, id=81, 1848.9075pt x 50.1875pt>
 File: p19.png Graphic file (type png)
  <use p19.png>
 Package pdftex.def Info: p19.png used on input line 536.
@@ -896,7 +895,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 870--909
 []
  []
 
-[23] <p20.png, id=105, 1864.9675pt x 1022.82124pt>
+[23] <p20.png, id=104, 1864.9675pt x 1022.82124pt>
 File: p20.png Graphic file (type png)
  <use p20.png>
 Package pdftex.def Info: p20.png used on input line 915.
@@ -941,7 +940,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 936--997
 []
  []
 
-[25] <textes.png, id=113, 990.70125pt x 301.125pt>
+[25] <textes.png, id=112, 990.70125pt x 301.125pt>
 File: textes.png Graphic file (type png)
  <use textes.png>
 Package pdftex.def Info: textes.png used on input line 1000.
@@ -1015,7 +1014,7 @@ File: pc7.png Graphic file (type png)
 Package pdftex.def Info: pc7.png used on input line 1262.
 (pdftex.def)             Requested size: 344.005pt x 143.43059pt.
 
-<blackberry.png, id=134, 589.20125pt x 1022.82124pt>
+<blackberry.png, id=133, 589.20125pt x 1022.82124pt>
 File: blackberry.png Graphic file (type png)
  <use blackberry.png>
 Package pdftex.def Info: blackberry.png used on input line 1270.
@@ -1161,7 +1160,7 @@ Overfull \hbox (15.82217pt too wide) in paragraph at lines 1427--1458
 [] []
  []
 
-[36] [37] <p22.png, id=154, 803.0pt x 427.5975pt>
+[36] [37] <p22.png, id=153, 803.0pt x 427.5975pt>
 File: p22.png Graphic file (type png)
  <use p22.png>
 Package pdftex.def Info: p22.png used on input line 1468.
@@ -1175,7 +1174,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1464--1473
 Package wrapfig Warning: Collision between wrapping environments on input line 
 1476.
 
-<p23.png, id=155, 1017.8025pt x 635.37375pt>
+<p23.png, id=154, 1017.8025pt x 635.37375pt>
 File: p23.png Graphic file (type png)
  <use p23.png>
 Package pdftex.def Info: p23.png used on input line 1479.
@@ -1193,7 +1192,7 @@ Package wrapfig Warning: Stationary wrapfigure forced to float on input line 14
 Package wrapfig Warning: Collision between wrapping environments on input line 
 1488.
 
-<p24.png, id=156, 150.5625pt x 106.3975pt>
+<p24.png, id=155, 150.5625pt x 106.3975pt>
 File: p24.png Graphic file (type png)
  <use p24.png>
 Package pdftex.def Info: p24.png used on input line 1491.
@@ -1212,7 +1211,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1504--1505
 
  []
 
-<double.png, id=162, 1489.565pt x 849.1725pt>
+<double.png, id=161, 1489.565pt x 849.1725pt>
 File: double.png Graphic file (type png)
  <use double.png>
 Package pdftex.def Info: double.png used on input line 1509.
@@ -1222,7 +1221,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1516--1517
 
  []
 
-<p16.png, id=163, 1543.7675pt x 843.15pt>
+<p16.png, id=162, 1543.7675pt x 843.15pt>
 File: p16.png Graphic file (type png)
  <use p16.png>
 Package pdftex.def Info: p16.png used on input line 1521.
@@ -1232,7 +1231,7 @@ Package pdftex.def Info: p16.png used on input line 1521.
 Package wrapfig Warning: Collision between wrapping environments on input line 
 1530.
 
-<p17.png, id=164, 1527.7075pt x 781.92125pt>
+<p17.png, id=163, 1527.7075pt x 781.92125pt>
 File: p17.png Graphic file (type png)
  <use p17.png>
 Package pdftex.def Info: p17.png used on input line 1533.
@@ -1310,10 +1309,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1544--1574
 
 [40] (presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3770 strings out of 493673
- 50593 string characters out of 3141527
+ 3766 strings out of 493673
+ 50546 string characters out of 3141527
  233345 words of memory out of 3000000
- 7031 multiletter control sequences out of 15000+200000
+ 7027 multiletter control sequences out of 15000+200000
  43448 words of font info for 34 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  28i,7n,30p,1705b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1323,9 +1322,9 @@ C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program
 Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmri10.pfb>
-Output written on presentation.pdf (40 pages, 16524712 bytes).
+Output written on presentation.pdf (40 pages, 15406974 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
+ 190 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 
